@@ -5,29 +5,16 @@ import { View, TextInput,Pressable,Text,StyleSheet, TouchableOpacity } from 'rea
 
 import {useNavigation} from "@react-navigation/native";
 
-//import AsyncStorage from "@react-native-async-storage/async-storage";
-//import { AuthContext } from './AuthContext';
 
 export default function Login() {
   
   const navigation=useNavigation();
-  //const {updateauthstate}=useContext(AuthContext);
   const [userInfo, setUserInfo] = useState({ 
-    email: "", password: "" 
+    email: "",
+   password: "" 
   });
 
   
-  const handleSignin = async () => {
-    // TODO: validate your userInfo
-    
-
-const apiresjson=axios.post("http://localhost:5051/login",{
-  email:userInfo.email,
-  password:userInfo.password,
-})
-    //updateauthstate({loggedin:true,profile:apiresjson.profile});
-    //await AsyncStorage.setItem("auth_token",apiresjson.token)
-  };
   return (
     <View style={{backgroundColor:"#F1F0F3"}}>
       <Text>Login</Text>

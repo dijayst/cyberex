@@ -56,23 +56,3 @@ const styles = StyleSheet.create({
     }
   });
 
-
-
-
-/*  font-family: Satoshi;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0em;
-  text-align: left;
-  
-  font-family: Lato;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0em;
-  text-align: left;
-  
-*/
-
-

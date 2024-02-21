@@ -4,11 +4,6 @@ import {NavigationContainer} from "@react-navigation/native"
 import Stacknav from './Navigation/Stacknav';
 
 export default function App() {
-  const[fontsLoaded]= useFonts({
-    'outfit':require('./assets/fonts/Outfit-Regular.ttf'),
-    'outfit-medium':require('./assets/fonts/Outfit-Medium.ttf'),
-    'outfit-bold':require('./assets/fonts/Outfit-Bold.ttf'),
-  });
 
   const[LatoLoaded]= useFonts({
     'lato-black':require('./assets/Lato/Lato-Black.ttf'),
@@ -27,6 +22,3 @@ export default function App() {
    </NavigationContainer>
   );
 }
-
-// <Text style={{color:colors.White,fontSize:50,fontWeight:"bold",}}>CyberEx</Text>
-   

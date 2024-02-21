@@ -15,15 +15,8 @@ export default function Verifyemail() {
   });
 
   const handleSignup = async () => {
-    // TODO: validate your userInfo
-
-    axios.post("http://localhost:5051/Signup",{
-     input1:emailverify.input1,
-    input2:emailverify.input2,
-    input3:emailverify.input3,
-    input4:emailverify.input4,
-    })
-    //  authenticate();
+    
+   
      navigation.navigate("login")
   
   };
@@ -87,7 +80,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         width:56,
         height:56,
-        //marginVertical: 20,
+       
         color:colors.neural200,
         borderRadius:8
       },
@@ -116,18 +109,14 @@ const styles = StyleSheet.create({
         height:300,
         marginLeft:15,
         borderRadius:15,
-       // borderColor:"#001262"
+      
     },
     backbtncontainer:{
-      //  position:"absolute",
-        zIndex:10,
+         zIndex:10,
         padding:20,
         marginTop:68,
         marginLeft:20,
-        //display:"flex",
-        //flexDirection:"row",
-        //alignItems:"center",
-       // gap:10,
+       
       
     },
     
@@ -135,8 +124,7 @@ jsicon:{
     display:"flex",
     flexWrap:"wrap",
     flexDirection:"row",
-    //justifyContent:"flex-start",
-  marginRight:130
+   marginRight:130
     },
     infocontainer:{
         padding:20,

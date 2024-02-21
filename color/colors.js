@@ -10,27 +10,3 @@ export default{
 neural200:'#B4B5B6'
 
 }
- {/*
-#444748 almost black 
-
-width: 228px
-height: 32px
-
-
-width: 12px
-height: 12px
-top: 6px
-border-radius: 2px
-border: 1px
-
-
-
-width: Fixed (350px)
-height: Fixed (56px)
-padding: 10px
-border-radius: 8px
-gap: 10px
-
-
-*/}
-    //#555758

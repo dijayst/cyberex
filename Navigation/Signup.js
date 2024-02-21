@@ -24,14 +24,7 @@ import CheckBox from 'expo-checkbox'
   
     
     const handleSignup = async () => {
-      // TODO: validate your userInfo
-  
-      axios.post("http://localhost:5051/Signup",{
-       name:userInfo.name,
-      email:userInfo.email,
-      referancecode:userInfo.referancecode,
-      })
-      //  authenticate();
+     
        navigation.navigate("verify")
     
     };
@@ -50,14 +43,6 @@ import CheckBox from 'expo-checkbox'
     }; 
   
     
-    const onSubmit = () => { 
-      
-      // Perform your desired action with 
-      // the phone number and country code 
-      Alert.alert('Form Submitted', 
-          `Phone Number: ${phoneNumber} 
-                  \nCountry Code: ${countryCode}`); 
-  }; 
 
   const toggleCountryPicker = () => { 
       setCountryPickerVisible(!countryPickerVisible); 
