@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
 import {NavigationContainer} from "@react-navigation/native"
-import Stacknav from './Navigation/Stacknav';
+
+import Tabnavigation from './Bottomtabnav/Tabnavigation';
 
 export default function App() {
 
@@ -18,7 +19,7 @@ export default function App() {
   });
   return (
    <NavigationContainer>
-    <Stacknav/>
+    <Tabnavigation/>
    </NavigationContainer>
   );
 }

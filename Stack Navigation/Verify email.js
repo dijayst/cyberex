@@ -17,7 +17,7 @@ export default function Verifyemail() {
   const handleSignup = async () => {
     
    
-     navigation.navigate("login")
+     navigation.navigate("password")
   
   };
 
