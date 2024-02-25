@@ -2,12 +2,12 @@ import {  View,Image,  Text, SafeAreaView, ScrollView,FlatList,StyleSheet,  Touc
 import Quickactions from './Utilities/Quickactions';
 import { print } from './Global';
 import React,{useEffect, useState} from 'react'
-import Heading from './Heading';
+import Heading2 from './Heading2';
 import colors from '../color/colors';
 import { Ionicons,Entypo } from '@expo/vector-icons';
 
 
-export default function Home({navigation}) {
+export default function Bitcoinacct ({navigation}) {
     const [gamesTab, setGamesTab] = useState(1);
    
   const colors = ['#1F2223','#009400']; // Define your colors here
@@ -25,6 +25,7 @@ export default function Home({navigation}) {
       <View style={{ backgroundColor: colors.background, padding:18 }}>
         <SafeAreaView>
               <ScrollView >
+                
           <View style={styles.ProfileMainContainer}>
               <View style={styles.ProfileContainer}>
                   <Image source={require("../image1/img.png")} style={styles.userimage} />
@@ -37,7 +38,7 @@ export default function Home({navigation}) {
 
               </View>
           </View>
-          <Heading />
+          <Heading2 />
 
           <Quickactions text="Quick Actions"  style={{fontSize:16,color:colors.Textcolor}} />
                  <FlatList
@@ -58,7 +59,7 @@ export default function Home({navigation}) {
             fontSize: 14,
            fontWeight:700,gamesTab:10,
             fontFamily: 'Roboto-Medium',textAlign:"center"
-          }}>{item.shoetype}</Text>
+          }}>{item.Quickactions}</Text>
                
                  
                       </TouchableOpacity>)} />

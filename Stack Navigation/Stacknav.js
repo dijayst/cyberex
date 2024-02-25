@@ -12,6 +12,8 @@ import Forgotpassword from './Forgotpassword';
 import Entercode from './Entercode';
 import Changepassword from './Changepassword';
 import Home from '../Bottomtabnav/Home';
+import Bitcoinacct from '../Bottomtabnav/Bitcoinacct';
+import Bottomtabstack from '../Bottomtabnav/Bottomtabstack';
 
 
     const Stack = createStackNavigator();
@@ -46,6 +48,10 @@ import Home from '../Bottomtabnav/Home';
       <Stack.Screen name="change" component={Changepassword} />
 
       <Stack.Screen name="home" component={Home} />
+      
+      <Stack.Screen name="btc" component={Bitcoinacct} />
+      
+      
     </Stack.Navigator>
 
 

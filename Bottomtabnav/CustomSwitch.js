@@ -56,8 +56,8 @@ export default function CustomSwitch({
       <View>
       <Text
           style={{
-            color: getSelectionMode == 1 ? '#FF6C00' : 'black',
-            fontSize: 16,
+            color:colors.Textcolor,
+            fontSize: 14,
            fontWeight:700,
             fontFamily: 'Roboto-Medium',
           }}ellipsizeMode='tail'>
@@ -100,8 +100,8 @@ export default function CustomSwitch({
       <View>
       <Text
           style={{
-            color: getSelectionMode == 2 ? '#FF6C00' : 'black',
-            fontSize: 16,
+            color:colors.Textcolor,
+            fontSize: 14,
             fontWeight:"bold",
             fontFamily: 'Roboto-Medium',
           }}>
@@ -146,8 +146,8 @@ export default function CustomSwitch({
       <View>
       <Text
           style={{
-            color: getSelectionMode == 3 ? '#FF6C00' : 'black',
-            fontSize: 16,
+            color:colors.Textcolor,
+            fontSize: 14,
             fontWeight:"bold",
             fontFamily: 'Roboto-Medium',
           }}>
@@ -197,8 +197,8 @@ export default function CustomSwitch({
       <View>
       <Text
           style={{
-            color: getSelectionMode == 4 ? '#FF6C00' : 'black',
-            fontSize: 16,
+            color:colors.Textcolor,
+            fontSize: 14,
             fontWeight:"bold",
             fontFamily: 'Roboto-Medium',
           }}>

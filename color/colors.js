@@ -4,13 +4,14 @@ export default {
     background: "#F6F6F6",
     GREen: "#D2D3D3",
     Textcolor: "#1F2223",
-    smalltext: "#1F2223",
     white: "#FFFFFF",
     neuralblack: "#444748",
     neural200: '#B4B5B6',
     Gobackicon: "#1C1B1F",
     Imagecolor: "#FEE0D6",
     neural400: "#6A6C6C",
+    neural800: "#36474F",
+    flutter:"#009400"
 
 
 }
