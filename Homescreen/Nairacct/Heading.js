@@ -1,9 +1,9 @@
 import { View, Text,StyleSheet,TextInput,Image, TouchableOpacity, Modal } from 'react-native'
 import React,{useState} from 'react';
 import { AntDesign,Feather,Entypo } from '@expo/vector-icons';
-import colors from '../JSON AND COLOR/colors';
 import {useNavigation} from "@react-navigation/native";
 import Quickactions from './Quickactions';
+import colors from '../JSON AND COLOR/colors';
 
 export default function Heading ({text}) {
   const navigation=useNavigation();
@@ -20,7 +20,7 @@ console.log(showModal)
       <View style={{ display: "flex", flexDirection: "row",gap:109 }}>
         <Text style={{ width: 109, height: 16, fontSize: 12, fontWeight: "500", lineHeight: 16, color: colors.neuralblack , }}>Available Balance</Text>
         <TouchableOpacity  style={{backgroundColor:colors.background,borderRadius:32,height:24,width:95,flexDirection:"row",gap:4,alignItems: 'center',justifyContent:"center",}}  onPress={handleshowmodal}>
-        <Text style={{ color: colors.Textcolor, fontSize: 8.71, fontWeight: "500",}}>Naira Account</Text>
+        <Text style={{ color:colors.Textcolor, fontSize: 8.71, fontWeight: "500",}}>Naira Account</Text>
         <Entypo name="chevron-small-down" size={14} color={colors.Orange} />
         </TouchableOpacity>
        </View>

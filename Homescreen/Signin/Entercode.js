@@ -3,7 +3,6 @@ import React,{useState} from 'react'
 import {useNavigation} from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
-import axios from "react-native-axios";
 
 export default function Entercode() {
    const navigation=useNavigation();
@@ -22,7 +21,7 @@ export default function Entercode() {
   };
 
   return (
-    <View style={{ backgroundColor: colors.background, flex: 1 }}>
+    <View style={{ backgroundColor:colors.background, flex: 1 }}>
       <TouchableOpacity style={styles.backbtncontainer} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={30} color="black" />
       </TouchableOpacity>

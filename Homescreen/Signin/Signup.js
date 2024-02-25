@@ -3,12 +3,11 @@ import { View, Text ,StyleSheet,
     TouchableOpacity,
     } from 'react-native'
   import React,{useState} from 'react'
-  import axios from "react-native-axios";
   import {useNavigation} from "@react-navigation/native";
-import colors from '../JSON AND COLOR/colors';
 import PhoneInput  from 'react-native-phone-input'; 
 import CountryPicker  from 'react-native-country-picker-modal'; 
 import CheckBox from 'expo-checkbox'
+import colors from '../JSON AND COLOR/colors';
 
 
   
@@ -56,7 +55,7 @@ import CheckBox from 'expo-checkbox'
 
   
     return (
-      <View style={{ backgroundColor: colors.background, flex: 1, padding: 18 }}>
+      <View style={{ backgroundColor:colors.background, flex: 1, padding: 18 }}>
 
         <View style={{ height: 60, width: 237, marginTop: 68, marginLeft: 20, gap: 6 }}>
           <Text style={{ fontSize: 24, fontWeight: "700", color: colors.Textcolor, lineHeight: 28.8 }}>Create your account</Text>
@@ -149,7 +148,7 @@ import CheckBox from 'expo-checkbox'
 
           <View style={{ width: 350, height: 120, gap: 16 }}>
 
-            <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup}>
+            <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup}>
               <Text style={styles.buttonText}>Sign Up</Text>
             </TouchableOpacity>
 

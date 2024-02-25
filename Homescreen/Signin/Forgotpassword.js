@@ -2,8 +2,8 @@ import { View, Text,Image ,StyleSheet,TextInput,TouchableOpacity,} from 'react-n
 import React,{useState} from 'react'
 import axios from "react-native-axios";
 import {useNavigation} from "@react-navigation/native";
-import colors from '../JSON AND COLOR/colors';
 import { AntDesign,Ionicons } from '@expo/vector-icons';
+import colors from '../JSON AND COLOR/colors';
 
       
    
@@ -34,7 +34,7 @@ const [isChecked, setisChecked] = useState(false);
 
 
   return (
-    <View style={{ backgroundColor: colors.background, flex: 1, padding: 18 }}>
+    <View style={{ backgroundColor:colors.background, flex: 1, padding: 18 }}>
       <TouchableOpacity style={styles.backbtncontainer} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={30} color={colors.Gobackicon} />
       </TouchableOpacity>

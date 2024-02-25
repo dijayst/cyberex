@@ -3,12 +3,10 @@ import React from 'react'
 import colors from '../JSON AND COLOR/colors'
 
 export default function Quickactions({text,isViewAll=false}) {
-  return (
+return (
     <View style={styles.container}>
       <Text style={styles.heading}>{text}</Text>
-            
-            {isViewAll && <Text style={{fontSize:16,color:colors.Orange}}>See all</Text>}
-          
+            {isViewAll && <Text style={{fontSize:16,color:colors.Textcolor}}>See all</Text>}
     </View>
   )
 }

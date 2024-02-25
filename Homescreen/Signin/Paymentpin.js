@@ -1,10 +1,8 @@
 import { View, Text,TouchableOpacity,StyleSheet,TextInput } from 'react-native'
 import React ,{useState}from 'react'
-
 import { Ionicons } from '@expo/vector-icons';
-import colors from '../JSON AND COLOR/colors';
-
 import {useNavigation} from "@react-navigation/native";
+import colors from '../JSON AND COLOR/colors';
 
 export default function Paymentpin() {
   
@@ -23,7 +21,7 @@ export default function Paymentpin() {
  
  };
   return (
-    <View style={{ backgroundColor: colors.background, flex: 1 }}>
+    <View style={{ backgroundColor:colors.background, flex: 1 }}>
       <TouchableOpacity style={styles.backbtncontainer} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={30} color="black" />
       </TouchableOpacity>
@@ -65,7 +63,7 @@ export default function Paymentpin() {
         />
       </View>
 
-      <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 59, marginLeft: 20, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup}>
+      <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 59, marginLeft: 20, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup}>
         <Text style={styles.buttonText}>Done</Text>
       </TouchableOpacity>
 

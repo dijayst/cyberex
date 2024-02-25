@@ -1,10 +1,10 @@
 
 import { View, Text,StyleSheet,Image,TouchableOpacity,TextInput} from 'react-native'
 import React,{useState} from 'react'
-import colors from '../JSON AND COLOR/colors';
 import { AntDesign } from '@expo/vector-icons';
 import {useNavigation} from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
+import colors from '../JSON AND COLOR/colors';
 
 export default function Password() {
 
@@ -26,7 +26,7 @@ const handleSignup = async () => {
 
 
   return (
-    <View style={{ backgroundColor: colors.background, flex: 1, padding: 18 }}>
+    <View style={{ backgroundColor:colors.background, flex: 1, padding: 18 }}>
       <TouchableOpacity style={styles.backbtncontainer} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={30} color="black" />
       </TouchableOpacity>

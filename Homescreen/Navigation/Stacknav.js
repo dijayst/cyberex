@@ -15,6 +15,7 @@ import Home from '../Nairacct/Home';
 import Bitcoinacct from '../BTCacct/Bitcoinacct';
 import Bitcointransactiondetails from '../BTCacct/Bitcointransactiondetails';
 import Nairatransactiondetails from '../Nairacct/Nairatransactiondetails';
+import Notificationscreen from '../Notification/Notificationscreen';
 
 
     const Stack = createStackNavigator();
@@ -55,6 +56,8 @@ import Nairatransactiondetails from '../Nairacct/Nairatransactiondetails';
       <Stack.Screen name="btctrans" component={Bitcointransactiondetails} />
       
       <Stack.Screen name="nairatrans" component={Nairatransactiondetails} />
+      
+      <Stack.Screen name="notify" component={Notificationscreen} />
       
       
     </Stack.Navigator>

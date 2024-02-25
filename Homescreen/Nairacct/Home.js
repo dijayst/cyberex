@@ -1,9 +1,10 @@
 import {  View,Image,  Text, SafeAreaView, ScrollView,FlatList,StyleSheet,  TouchableOpacity,} from 'react-native';
 import Quickactions from './Quickactions';
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import Heading from './Heading';
-import {print,colors} from '../JSON AND COLOR/colors';
 import { Ionicons,Entypo } from '@expo/vector-icons';
+import { print } from '../JSON AND COLOR/Data';
+import colors from '../JSON AND COLOR/colors';
 
 
 export default function Home({navigation}) {
@@ -21,7 +22,7 @@ export default function Home({navigation}) {
    
     
   return (
-      <View style={{ backgroundColor: colors.background, padding:18 }}>
+      <View style={{ backgroundColor:colors.background, padding:18 }}>
         <SafeAreaView>
               <ScrollView >
           <View style={styles.ProfileMainContainer}>
@@ -31,7 +32,7 @@ export default function Home({navigation}) {
                       <Text style={{ width: 99, height: 18, color: colors.neural400,fontSize: 16, }}>Welcome Back,</Text>
                       <Text style={{ fontSize: 16, fontFamily: 'oufit', color: "#000000" ,fontWeight:"700"}}>Leonard Victor</Text>
                   </View>
-                  <Ionicons style={styles.notification} name="notifications" size={24} color="black" />
+                  <Ionicons style={styles.notification} name="notifications" size={24} color="black" onPress={()=>navigation.push("notify")} />
 
 
               </View>
@@ -92,10 +93,11 @@ export default function Home({navigation}) {
                      
              </TouchableOpacity>
           
-                    )} /> : <View style={{backgroundColor:colors.white,height:320,width:380}}>
+                    )} /> 
+                    : <View style={{backgroundColor:colors.white,height:320,width:380}}>
                     <Image source={require("../image1/img.png")} style={{width:176,height:176,opacity:"80%"}} />
-            <Text>No transaction</Text>
-            <Text>You’ve not made any transaction</Text>
+            <Text style={{fontSize:24,fontWeight:"700",color:"#000000"}}>No transaction</Text>
+            <Text style={{fontSize:14,fontWeight:"700",color:colors.Textcolor}}>You’ve not made any transaction</Text>
                 </View> }
 
 
@@ -143,7 +145,7 @@ borderRadius:21,
        display:"flex",
        flexDirection:"row",
        width:316,
-       height:51,
+       height:61,
     },
       iconcontainer:{
           //backgroundColor:"#8E3FFF",

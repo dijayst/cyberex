@@ -2,8 +2,8 @@ import { View, Text,Image ,StyleSheet,TextInput,TouchableOpacity,} from 'react-n
 import React,{useState} from 'react'
 import axios from "react-native-axios";
 import {useNavigation} from "@react-navigation/native";
-import colors from '../JSON AND COLOR/colors';
 import { AntDesign } from '@expo/vector-icons';
+import colors from '../JSON AND COLOR/colors';
 
 
 
@@ -82,7 +82,7 @@ const [isChecked, setisChecked] = useState(false);
 
         <View style={{ width: 350, height: 120, gap: 16 }}>
 
-          <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup}>
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup}>
             <Text style={styles.buttonText}>Log In</Text>
           </TouchableOpacity>
 

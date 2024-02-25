@@ -3,7 +3,6 @@ import React,{useState} from 'react'
 import {useNavigation} from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
-import axios from "react-native-axios";
 
 export default function Verifyemail() {
    const navigation=useNavigation();

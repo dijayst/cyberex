@@ -1,8 +1,9 @@
 import { View, Text ,TouchableOpacity,StyleSheet} from 'react-native'
 import Carousel from "pinar";
-import { Slid,colors} from '../JSON AND COLOR/colors';
 import React from 'react'
 import {useNavigation} from "@react-navigation/native";
+import { Slid } from '../JSON AND COLOR/Data';
+import colors from '../JSON AND COLOR/colors';
 
 export default function Slider() {
     
@@ -11,8 +12,7 @@ export default function Slider() {
   return (
     <View style={styles.container}>
       <Carousel activeDotStyle={[styles.dotStyle, { width: 32, height: 10, borderRadius: 8, backgroundColor: colors.Orange, }]} dotStyle={styles.dotStyle} style={{ width: 350, height: 238, marginTop: 580, marginLeft: 20, gap: 32 }} showsControls={false} >
-        {
-          Slid.map((item) => (
+        {Slid.map((item) => (
             <View key={item.id}>
               <View style={{ marginBottom: 10, height: 40, width: 320, }}>
                 <Text style={{ fontSize: 28, fontWeight: 700, color: colors.Textcolor, lineHeight: 40, fontFamily: "lato-bold" }}>{item.title}</Text>
