@@ -1,14 +1,13 @@
 import React from 'react';
 import { StyleSheet,Text } from 'react-native'
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import Stacknav from '../Stack Navigation/Stacknav';
-import Giftcard from './Giftcard';
-import Support from './Support';
-import Profile from './Profile';
+import Stacknav from './Stacknav';
+import Giftcard from '../Bottomtabnav/Giftcard';
+import Support from '../Bottomtabnav/Support';
+import Profile from '../Bottomtabnav/Profile';
 
 import { FontAwesome,MaterialCommunityIcons,MaterialIcons } from '@expo/vector-icons';
-import colors from '../color/colors';
-import Bottomtabstack from './Bottomtabstack';
+import colors from '../JSON AND COLOR/colors';
 
 
     const Tab = createBottomTabNavigator();

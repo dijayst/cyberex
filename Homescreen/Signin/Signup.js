@@ -5,7 +5,7 @@ import { View, Text ,StyleSheet,
   import React,{useState} from 'react'
   import axios from "react-native-axios";
   import {useNavigation} from "@react-navigation/native";
-import colors from '../color/colors';
+import colors from '../JSON AND COLOR/colors';
 import PhoneInput  from 'react-native-phone-input'; 
 import CountryPicker  from 'react-native-country-picker-modal'; 
 import CheckBox from 'expo-checkbox'

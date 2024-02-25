@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
 import {NavigationContainer} from "@react-navigation/native"
 
-import Tabnavigation from './Bottomtabnav/Tabnavigation';
+import Tabnavigation from './Homescreen/Navigation/Tabnavigation';
 
 export default function App() {
 

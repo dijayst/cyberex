@@ -1,11 +1,11 @@
 import { View, Text,StyleSheet,TextInput,Image, TouchableOpacity, Modal } from 'react-native'
 import React,{useState} from 'react';
 import { AntDesign,Feather,Entypo } from '@expo/vector-icons';
-import colors from '../color/colors';
+import colors from '../JSON AND COLOR/colors';
 import {useNavigation} from "@react-navigation/native";
-import Quickactions from './Utilities/Quickactions';
+import Quickactions from './Quickactions';
 
-export default function Heading2 ({text}) {
+export default function Heading ({text}) {
   const navigation=useNavigation();
   const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
@@ -20,18 +20,26 @@ console.log(showModal)
       <View style={{ display: "flex", flexDirection: "row",gap:109 }}>
         <Text style={{ width: 109, height: 16, fontSize: 12, fontWeight: "500", lineHeight: 16, color: colors.neuralblack , }}>Available Balance</Text>
         <TouchableOpacity  style={{backgroundColor:colors.background,borderRadius:32,height:24,width:95,flexDirection:"row",gap:4,alignItems: 'center',justifyContent:"center",}}  onPress={handleshowmodal}>
-        <Text style={{ color: colors.Textcolor, fontSize: 8.71, fontWeight: "500",}}>BTC Account</Text>
+        <Text style={{ color: colors.Textcolor, fontSize: 8.71, fontWeight: "500",}}>Naira Account</Text>
         <Entypo name="chevron-small-down" size={14} color={colors.Orange} />
         </TouchableOpacity>
        </View>
 
       <View style={{ display: "flex", flexDirection: "row" }}>
-        <Text style={{color:colors.Textcolor,lineHeight:37,fontSize:28,fontWeight:"900",width:174,height:38}}>$100,000.00</Text>
+        <Text style={{color:colors.Textcolor,lineHeight:37,fontSize:28,fontWeight:"900",width:174,height:38}}>₦500,000.00</Text>
         <AntDesign style={{ justifyContent: "center", marginTop: 4,marginLeft:9.69,height:25,width:25 }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color={colors.neural400} onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
 
       </View>
-           <Text style={{color:colors.Textcolor,textAlign:"center",marginLeft:-190}}>2.0324505658869 <Text style={{color:colors.Orange,}}>BTC</Text></Text>
-         
+      <View style={{ display: "flex", flexDirection: "row",gap:19, }}>
+        <TouchableOpacity style={{backgroundColor:colors.Imagecolor,borderRadius:32,height:44,width:153,flexDirection:"row",alignItems: 'center',justifyContent:"center",}}>
+          <Text style={{color:colors.Orange,textAlign:"center"}}>Add Money</Text>
+          <AntDesign name="plus" size={18} color={colors.Orange} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{backgroundColor:colors.Imagecolor,borderRadius:32,height:44,width:153,flexDirection:"row",alignItems: 'center',justifyContent:"center",}}>
+          <Text style={{color:colors.Orange ,textAlign:"center"}}>Transfer</Text>
+          <Feather name="share" size={18} color={colors.Orange} />
+        </TouchableOpacity>
+      </View>
       
 <Modal animationType="slide"
  visible={showModal} transparent={true}>

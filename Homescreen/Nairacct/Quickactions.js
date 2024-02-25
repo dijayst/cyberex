@@ -1,6 +1,6 @@
 import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
-import colors from '../../color/colors'
+import colors from '../JSON AND COLOR/colors'
 
 export default function Quickactions({text,isViewAll=false}) {
   return (

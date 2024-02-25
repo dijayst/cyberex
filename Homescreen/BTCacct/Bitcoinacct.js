@@ -1,16 +1,15 @@
 import {  View,Image,  Text, SafeAreaView, ScrollView,FlatList,StyleSheet,  TouchableOpacity,} from 'react-native';
-import Quickactions from './Utilities/Quickactions';
-import { print } from './Global';
+import Quickactions from '../Nairacct/Quickactions';
 import React,{useEffect, useState} from 'react'
 import Heading2 from './Heading2';
-import colors from '../color/colors';
+import {colors,print} from '../JSON AND COLOR/colors';
 import { Ionicons,Entypo } from '@expo/vector-icons';
 
 
 export default function Bitcoinacct ({navigation}) {
     const [gamesTab, setGamesTab] = useState(1);
    
-  const Colors = ['#1F2223','#009400']; // Define your colors here
+  const Colors = ['#009400','#1F2223',]; // Define your colors here
  
     //const renderBanner = ({item, index}) => {return <BannerSlider data={item} />;};
   
@@ -71,13 +70,13 @@ export default function Bitcoinacct ({navigation}) {
 
              {print.data?.length>0? <FlatList
                 data={print.data}
-                style={{marginTop:35,backgroundColor:colors.white,height:320,width:380,gap:28,padding:16,borderRadius:8}}
+                style={{marginTop:35,backgroundColor:colors.white,height:320,width:375.5,gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
-                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("itemdetails",{item:item})}>
+                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("btctrans",{item:item})}>
                   <Image source={item.image1} alt="img" style={styles.image}/>
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.recieved}</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:12,color:colors.neural800,fontWeight:"700"}}>{item.wallet}</Text>
+                      <Text style={{fontFamily:"outfit-bold",fontSize:12,color:colors.neural800,fontWeight:"700"}}>{item.recipient}</Text>
                   </View>
                   <View style={styles.subcontainer}>
                      <Text style={{ color: Colors[index % Colors.length],marginTop:15,marginLeft:10,fontSize:14,fontWeight:"700"}}>{item.btcprice}</Text>

@@ -1,19 +1,20 @@
 import React from 'react';
 import { StyleSheet } from 'react-native'
 import {createStackNavigator} from "@react-navigation/stack";
-import Login from './Login';
-import Signup from './Signup';
-import Slider from './Slider';
-import Verifyemail from './Verify email';
-import Password from './Password';
-import Paymentpin from './Paymentpin';
-import Welcomebackscreen from './Welcomebackscreen';
-import Forgotpassword from './Forgotpassword';
-import Entercode from './Entercode';
-import Changepassword from './Changepassword';
-import Home from '../Bottomtabnav/Home';
-import Bitcoinacct from '../Bottomtabnav/Bitcoinacct';
-import Bottomtabstack from '../Bottomtabnav/Bottomtabstack';
+import Login from '../Signin/Login';
+import Signup from '../Signin/Signup';
+import Slider from '../Landingpage/Slider';
+import Verifyemail from '../Signin/Verify email';
+import Password from '../Signin/Password';
+import Paymentpin from '../Signin/Paymentpin';
+import Welcomebackscreen from '../Signin/Welcomebackscreen';
+import Forgotpassword from '../Signin/Forgotpassword';
+import Entercode from '../Signin/Entercode';
+import Changepassword from '../Signin/Changepassword';
+import Home from '../Nairacct/Home';
+import Bitcoinacct from '../BTCacct/Bitcoinacct';
+import Bitcointransactiondetails from '../BTCacct/Bitcointransactiondetails';
+import Nairatransactiondetails from '../Nairacct/Nairatransactiondetails';
 
 
     const Stack = createStackNavigator();
@@ -50,6 +51,10 @@ import Bottomtabstack from '../Bottomtabnav/Bottomtabstack';
       <Stack.Screen name="home" component={Home} />
       
       <Stack.Screen name="btc" component={Bitcoinacct} />
+      
+      <Stack.Screen name="btctrans" component={Bitcointransactiondetails} />
+      
+      <Stack.Screen name="nairatrans" component={Nairatransactiondetails} />
       
       
     </Stack.Navigator>

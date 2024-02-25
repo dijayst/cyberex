@@ -1,9 +1,8 @@
 import {  View,Image,  Text, SafeAreaView, ScrollView,FlatList,StyleSheet,  TouchableOpacity,} from 'react-native';
-import Quickactions from './Utilities/Quickactions';
-import { print } from './Global';
+import Quickactions from './Quickactions';
 import React,{useEffect, useState} from 'react'
 import Heading from './Heading';
-import colors from '../color/colors';
+import {print,colors} from '../JSON AND COLOR/colors';
 import { Ionicons,Entypo } from '@expo/vector-icons';
 
 
@@ -65,8 +64,8 @@ export default function Home({navigation}) {
 
 
                      
-             <View style={{backgroundColor:colors.white,width:380,height:96,borderRadius:8,marginTop:29,marginLeft:2}}>
-              <View style={styles.ProfileContainer}> 
+             <View style={{backgroundColor:colors.white,width:375.5,height:96,borderRadius:8,marginTop:29,}}>
+             <View style={styles.ProfileContainer}> 
                 <Image source={require("../image1/img2.png")} style={styles.userimage2}/>
                 <View style={{gap:9,marginTop:12}}>
                 <Text style={{ width: 230, height: 21, color: colors.Textcolor,fontSize:14,fontWeight:"700" }}>link a bank account to your wallet</Text>
@@ -81,15 +80,15 @@ export default function Home({navigation}) {
 
              {print.data?.length>0?  <FlatList
                 data={print.data}
-                style={{marginTop:45,backgroundColor:colors.white,height:320,width:380,gap:28,padding:16,borderRadius:8}}
+                style={{marginTop:45,backgroundColor:colors.white,height:320,width:375.5,gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
-                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("itemdetails",{item:item})}>
+                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("nairatrans",{item:item})}>
                   <Image source={item.image1} alt="img" style={styles.image}/>
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.title}</Text>
                       <Text style={{fontFamily:"outfit-bold",fontSize:13,color:colors.neuralblack}}>{item.time}</Text>
                   </View>
-                     <Text style={{ color: Colors[index % Colors.length],marginTop:15,marginLeft:130,fontWeight:"700",fontSize:16}}>{item.price}</Text>
+                     <Text style={{ color: Colors[index % Colors.length],marginTop:15,marginLeft:119,fontWeight:"700",fontSize:16}}>{item.price}</Text>
                      
              </TouchableOpacity>
           
@@ -182,7 +181,10 @@ ProfileMainContainer:{
     display:"flex",
     flexDirection:"row",
     alignContent:"center",
-    gap:9
+    gap:9,
+    padding:2,
+    //backgroundColor:"red",
+    //borderRadius:8
   },
 textinput:{
   padding:7,

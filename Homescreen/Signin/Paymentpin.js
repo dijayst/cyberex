@@ -2,7 +2,7 @@ import { View, Text,TouchableOpacity,StyleSheet,TextInput } from 'react-native'
 import React ,{useState}from 'react'
 
 import { Ionicons } from '@expo/vector-icons';
-import colors from '../color/colors';
+import colors from '../JSON AND COLOR/colors';
 
 import {useNavigation} from "@react-navigation/native";
 

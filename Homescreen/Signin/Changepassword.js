@@ -1,7 +1,7 @@
 
 import { View, Text,StyleSheet,Image,TouchableOpacity,TextInput} from 'react-native'
 import React,{useState} from 'react'
-import colors from '../color/colors';
+import colors from '../JSON AND COLOR/colors';
 import { AntDesign } from '@expo/vector-icons';
 import {useNavigation} from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';

@@ -2,7 +2,7 @@ import { View, Text,Image ,StyleSheet,TextInput,TouchableOpacity,} from 'react-n
 import React,{useState} from 'react'
 import axios from "react-native-axios";
 import {useNavigation} from "@react-navigation/native";
-import colors from '../color/colors';
+import colors from '../JSON AND COLOR/colors';
 import { AntDesign,Ionicons } from '@expo/vector-icons';
 
       
