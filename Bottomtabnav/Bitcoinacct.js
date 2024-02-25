@@ -10,7 +10,7 @@ import { Ionicons,Entypo } from '@expo/vector-icons';
 export default function Bitcoinacct ({navigation}) {
     const [gamesTab, setGamesTab] = useState(1);
    
-  const colors = ['#1F2223','#009400']; // Define your colors here
+  const Colors = ['#1F2223','#009400']; // Define your colors here
  
     //const renderBanner = ({item, index}) => {return <BannerSlider data={item} />;};
   
@@ -30,7 +30,7 @@ export default function Bitcoinacct ({navigation}) {
               <View style={styles.ProfileContainer}>
                   <Image source={require("../image1/img.png")} style={styles.userimage} />
                   <View style={{marginTop:-9}}>
-                      <Text style={{ width: 99, height: 18, color: colors.neural400,fontSize: 16, }}>Welcome Back,</Text>
+                      <Text style={{ width: 109, height: 18, color: colors.neural400,fontSize: 16, }}>Welcome Back,</Text>
                       <Text style={{ fontSize: 16, fontFamily: 'oufit', color: "#000000" ,fontWeight:"700"}}>Leonard Victor</Text>
                   </View>
                   <Ionicons style={styles.notification} name="notifications" size={24} color="black" />
@@ -66,35 +66,30 @@ export default function Bitcoinacct ({navigation}) {
 
 
                      
-             <View style={{backgroundColor:colors.white,width:380,height:96,borderRadius:8,marginTop:29,marginLeft:2}}>
-              <View style={styles.ProfileContainer}> 
-                <Image source={require("../image1/img2.png")} style={styles.userimage2}/>
-                <View style={{gap:9,marginTop:12}}>
-                <Text style={{ width: 230, height: 21, color: colors.Textcolor,fontSize:14,fontWeight:"700" }}>link a bank account to your wallet</Text>
-                <Text style={{ width: 230, height: 36, color: colors.neural800,fontSize:12,fontWeight:"500" }}>finish your account setup to enjoy your banking experience</Text>
-                </View>
-                <View style={{height:96,width:35,gap:10,}}>
-                <Entypo name="chevron-right" size={24} color={colors.Orange} style={{marginTop:32}}  />
-                </View>
-                  </View>
-             </View>
+           
              <Quickactions text="Transaction"  isViewAll={true}/>
 
-                      <FlatList
+             {print.data?.length>0? <FlatList
                 data={print.data}
-                style={{marginTop:45,backgroundColor:colors.white,height:320,width:380,gap:28,padding:16,borderRadius:8}}
+                style={{marginTop:35,backgroundColor:colors.white,height:320,width:380,gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
                   <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("itemdetails",{item:item})}>
                   <Image source={item.image1} alt="img" style={styles.image}/>
                   <View style={styles.subcontainer}>
-                      <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.title}</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:13,color:colors.neuralblack}}>{item.time}</Text>
+                      <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.recieved}</Text>
+                      <Text style={{fontFamily:"outfit-bold",fontSize:12,color:colors.neural800,fontWeight:"700"}}>{item.wallet}</Text>
                   </View>
-                     <Text style={{ color: colors[index % colors.length],marginTop:15,marginLeft:130,}}>{item.price}</Text>
-                     
+                  <View style={styles.subcontainer}>
+                     <Text style={{ color: Colors[index % Colors.length],marginTop:15,marginLeft:10,fontSize:14,fontWeight:"700"}}>{item.btcprice}</Text>
+                    <Text style={{ marginLeft:20,color:colors.neural800,fontSize:12,fontWeight:"500",lineHeight:16.2}}>{item.btcptime}</Text>
+                     </View>
              </TouchableOpacity>
           
-                    )} />
+                    )} /> : <View style={{backgroundColor:colors.white,height:320,width:380}}>
+                        <Image source={require("../image1/img.png")} style={{width:176,height:176,opacity:"80%"}} />
+                <Text>No transaction</Text>
+                <Text>You’ve not made any transaction</Text>
+                    </View> }
 
               </ScrollView>
           </SafeAreaView>
@@ -112,10 +107,11 @@ const styles = StyleSheet.create({
     subcontainer:{
       display:"flex",
       flexDirection:"column",
-      width:111,
+      width:190,
       height:42,
       gap:2,
-      marginLeft:3,},
+      marginLeft:3,
+    },
 
     image:{width:42,
     height:42,

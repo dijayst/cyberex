@@ -10,7 +10,7 @@ import { Ionicons,Entypo } from '@expo/vector-icons';
 export default function Home({navigation}) {
     const [gamesTab, setGamesTab] = useState(1);
    
-  const colors = ['#1F2223','#009400']; // Define your colors here
+  const Colors = ['#1F2223','#009400']; // Define your colors here
  
     //const renderBanner = ({item, index}) => {return <BannerSlider data={item} />;};
   
@@ -79,7 +79,7 @@ export default function Home({navigation}) {
              </View>
              <Quickactions text="Transaction"  isViewAll={true}/>
 
-                      <FlatList
+             {print.data?.length>0?  <FlatList
                 data={print.data}
                 style={{marginTop:45,backgroundColor:colors.white,height:320,width:380,gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
@@ -89,11 +89,16 @@ export default function Home({navigation}) {
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.title}</Text>
                       <Text style={{fontFamily:"outfit-bold",fontSize:13,color:colors.neuralblack}}>{item.time}</Text>
                   </View>
-                     <Text style={{ color: colors[index % colors.length],marginTop:15,marginLeft:130,}}>{item.price}</Text>
+                     <Text style={{ color: Colors[index % Colors.length],marginTop:15,marginLeft:130,fontWeight:"700",fontSize:16}}>{item.price}</Text>
                      
              </TouchableOpacity>
           
-                    )} />
+                    )} /> : <View style={{backgroundColor:colors.white,height:320,width:380}}>
+                    <Image source={require("../image1/img.png")} style={{width:176,height:176,opacity:"80%"}} />
+            <Text>No transaction</Text>
+            <Text>You’ve not made any transaction</Text>
+                </View> }
+
 
               </ScrollView>
           </SafeAreaView>
