@@ -40,28 +40,89 @@ export default function Home({navigation}) {
           <Heading />
 
           <Quickactions text="Quick Actions"  style={{fontSize:16,color:colors.Textcolor}} />
-                 <FlatList
-                pagingEnabled
-                horizontal
-                style={{backgroundColor:colors.white,borderRadius:8,height:101,width:375,marginTop:35,}}
-                showsHorizontalScrollIndicator={false}
-                data={print.data}
-                renderItem={({ item, index }) => index<=3&&(
-                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("itemlistbycategoryscreen",{category:item.shoetype})}>
+              
+
+
+
+
+
+               <View  style={{backgroundColor:colors.white,borderRadius:8,height:101,width:375,marginTop:35,display:"flex",flexDirection:"row"}}>
+               <TouchableOpacity style={styles.container} onPress={()=>navigation.push("paybills")}>
                  
-                   <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
-          <Image style={styles.userimage} source={item.image1}/></View>
-     
-                    
-                    <Text  style={{
-            color:colors.Textcolor,
-            fontSize: 14,
-           fontWeight:700,gamesTab:10,
-            fontFamily: 'Roboto-Medium',textAlign:"center"
-          }}>{item.shoetype}</Text>
+                 <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
+                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+              
+        </View>
+   
+                  
+                  <Text  style={{
+          color:colors.Textcolor,
+          fontSize: 14,
+         fontWeight:700,gamesTab:10,
+          fontFamily: 'Roboto-Medium',textAlign:"center"
+        }}>Pay Bills</Text>
+             
                
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("buyairtime")}>
                  
-                      </TouchableOpacity>)} />
+                 <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
+                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+              
+        </View>
+   
+                  
+                  <Text  style={{
+          color:colors.Textcolor,
+          fontSize: 14,
+         fontWeight:700,gamesTab:10,
+          fontFamily: 'Roboto-Medium',textAlign:"center"
+        }}>Buy Airtime</Text>
+             
+               
+                    </TouchableOpacity>   
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("buycrpto")}>
+                 
+                 <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
+                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+              
+        </View>
+   
+                  
+                  <Text  style={{
+          color:colors.Textcolor,
+          fontSize: 14,
+         fontWeight:700,gamesTab:10,
+          fontFamily: 'Roboto-Medium',textAlign:"center"
+        }}>Buy Crypto</Text>
+             
+               
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("save")}>
+                 
+                 <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
+                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+              
+        </View>
+   
+                  
+                  <Text  style={{
+          color:colors.Textcolor,
+          fontSize: 14,
+         fontWeight:700,gamesTab:10,
+          fontFamily: 'Roboto-Medium',textAlign:"center"
+        }}>Save</Text>
+             
+               
+                    </TouchableOpacity>
+                  
+               </View>
+               
+
+
+
+
 
 
                      

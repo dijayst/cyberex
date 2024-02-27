@@ -1,5 +1,5 @@
 import {  View,Image,  Text, SafeAreaView, ScrollView,FlatList,StyleSheet,  TouchableOpacity,} from 'react-native';
-import Quickactions from '../Nairacct/Quickactions';
+import Quickactions from '../NairaAccount/Quickactions';
 import React,{useEffect, useState} from 'react'
 import Heading2 from './Heading2';
 import { Ionicons } from '@expo/vector-icons';
@@ -41,29 +41,80 @@ export default function Bitcoinacct ({navigation}) {
           <Heading2 />
 
           <Quickactions text="Quick Actions"  style={{fontSize:16,color:colors.Textcolor}} />
-                 <FlatList
-                pagingEnabled
-                horizontal
-                style={{backgroundColor:colors.white,borderRadius:8,height:101,width:375,marginTop:35,}}
-                showsHorizontalScrollIndicator={false}
-                data={print.data}
-                renderItem={({ item, index }) => index<=3&&(
-                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("itemlistbycategoryscreen",{category:item.shoetype})}>
+                
+          <View  style={{backgroundColor:colors.white,borderRadius:8,height:101,width:375,marginTop:35,display:"flex",flexDirection:"row"}}>
+               <TouchableOpacity style={styles.container} onPress={()=>navigation.push("send")}>
                  
-                   <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
-          <Image style={styles.userimage} source={item.image1}/></View>
-     
-                    
-                    <Text  style={{
-            color:colors.Textcolor,
-            fontSize: 14,
-           fontWeight:700,gamesTab:10,
-            fontFamily: 'Roboto-Medium',textAlign:"center"
-          }}>{item.Quickactions}</Text>
+                 <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
+                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+              
+        </View>
+   
+                  
+                  <Text  style={{
+          color:colors.Textcolor,
+          fontSize: 14,
+         fontWeight:700,gamesTab:10,
+          fontFamily: 'Roboto-Medium',textAlign:"center"
+        }}>Send</Text>
+             
                
-                 
-                      </TouchableOpacity>)} />
+                    </TouchableOpacity>
 
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("recieve")}>
+                 
+                 <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
+                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+              
+        </View>
+   
+                  
+                  <Text  style={{
+          color:colors.Textcolor,
+          fontSize: 14,
+         fontWeight:700,gamesTab:10,
+          fontFamily: 'Roboto-Medium',textAlign:"center"
+        }}>Recieve</Text>
+             
+               
+                    </TouchableOpacity>   
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("sell")}>
+                 
+                 <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
+                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+              
+        </View>
+   
+                  
+                  <Text  style={{
+          color:colors.Textcolor,
+          fontSize: 14,
+         fontWeight:700,gamesTab:10,
+          fontFamily: 'Roboto-Medium',textAlign:"center"
+        }}>Buy/Sell</Text>
+             
+               
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("convert")}>
+                 
+                 <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
+                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+              
+        </View>
+   
+                  
+                  <Text  style={{
+          color:colors.Textcolor,
+          fontSize: 14,
+         fontWeight:700,gamesTab:10,
+          fontFamily: 'Roboto-Medium',textAlign:"center"
+        }}>Convert</Text>
+             
+               
+                    </TouchableOpacity>
+                  
+               </View>
+               
 
                      
            
@@ -89,7 +140,8 @@ export default function Bitcoinacct ({navigation}) {
                         <Image source={require("../image1/img.png")} style={{width:176,height:176,opacity:"80%"}} />
                 <Text  style={{fontSize:24,fontWeight:"700",color:"#000000"}}>No transaction</Text>
                 <Text style={{fontSize:14,fontWeight:"700",color:colors.Textcolor}}>You’ve not made any transaction</Text>
-                    </View> }
+                    </View> 
+                    }
 
               </ScrollView>
           </SafeAreaView>

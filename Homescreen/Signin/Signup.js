@@ -74,7 +74,7 @@ import colors from '../JSON AND COLOR/colors';
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
-              <Text style={{ fontWeight: "600", color: colors.smalltext, lineHeight: 19.2, fontSize: 16 }}>Full Name</Text>
+              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Full Name</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
             </View>
             <TextInput
@@ -87,7 +87,7 @@ import colors from '../JSON AND COLOR/colors';
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
-              <Text style={{ fontWeight: "600", color: colors.smalltext, lineHeight: 19.2, fontSize: 16 }}>Email Address</Text>
+              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Email Address</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
             </View>
 
@@ -101,7 +101,7 @@ import colors from '../JSON AND COLOR/colors';
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
-              <Text style={{ fontWeight: "600", color: colors.smalltext, lineHeight: 19.2, fontSize: 16 }}>Phone Number</Text>
+              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Phone Number</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
             </View>
 
@@ -132,7 +132,7 @@ import colors from '../JSON AND COLOR/colors';
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
-              <Text style={{ fontWeight: "600", color: colors.smalltext, lineHeight: 19.2, fontSize: 16 }}>Referral code</Text>
+              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Referral code</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
             </View>
             <TextInput

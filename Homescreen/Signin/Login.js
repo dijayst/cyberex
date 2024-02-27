@@ -54,7 +54,7 @@ const [isChecked, setisChecked] = useState(false);
 
         <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
           <View style={{ display: "flex", flexDirection: "row" }}>
-            <Text style={{ fontWeight: "600", color: colors.smalltext, lineHeight: 19.2, fontSize: 16, width: 112, height: 22 }}>Email Address</Text>
+            <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16, width: 112, height: 22 }}>Email Address</Text>
             <Text style={{ color: colors.Orange }}>*</Text>
           </View>
 
@@ -69,7 +69,7 @@ const [isChecked, setisChecked] = useState(false);
 
         <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
           <View style={{ display: "flex", flexDirection: "row" }}>
-            <Text style={{ fontWeight: "600", color: colors.smalltext, lineHeight: 19.2, fontSize: 16 }}>enter password</Text>
+            <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>enter password</Text>
             <Text style={{ color: colors.Orange }}>*</Text>
           </View>
 
