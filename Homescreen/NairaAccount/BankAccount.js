@@ -2,7 +2,7 @@ import { View, Text,Image,TouchableOpacity,StyleSheet,TextInput } from 'react-na
 import React,{useState} from 'react'
 import colors from '../JSON AND COLOR/colors'
 
-export default function BankAccount() {
+export default function BankAccount({navigation}) {
   
   const [userInfo, setUserInfo] = useState({
     name: "",
@@ -63,7 +63,7 @@ export default function BankAccount() {
                 <Text  style={{fontSize:24,fontWeight:"700",color:"#000000",lineHeight:26}}>No Linked Account</Text>
                 <Text style={{fontSize:14,fontWeight:"500",color:colors.neuralblack,lineHeight:22,width:279}}>To transfer to a bank account, you need to link a bank account to your wallet</Text>
                    </View>}
-                <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 70, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 9,marginLeft:-10}} >
+                <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 70, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 9,marginLeft:-10}} onPress={() => navigation.navigate("link")} >
               <Text style={styles.buttonText}>Link Account</Text>
             </TouchableOpacity>
 

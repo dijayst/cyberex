@@ -156,7 +156,7 @@ export default function Home({navigation}) {
           
                     )} /> 
                     :  <View style={{ backgroundColor:colors.background,padding:18,marginTop:150,alignItems: 'center',justifyContent:"center",}}>
-                    <Image source={require("../image1/image8-2.webp")} style={styles.image} />
+                    <Image source={require("../image1/image8-2.webp")} style={styles.image2} />
               
           
                 <Text style={{color:colors.Textcolor,fontSize:24,fontWeight:"800",lineHeight:35.04, marginTop: 50}}>No transaction</Text>
@@ -288,7 +288,7 @@ userimage2:{
   marginTop:12
  
 },
-image:{width:185,
+image2:{width:185,
   height:185,
 borderRadius:21,
 },

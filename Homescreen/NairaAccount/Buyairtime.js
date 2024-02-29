@@ -4,7 +4,7 @@ import React from 'react'
 export default function Buyairtime() {
   return (
     <View>
-      <Text>Buyairtime</Text>
+      <Text>Buyaggiirtime</Text>
     </View>
   )
 }
