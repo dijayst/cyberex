@@ -136,11 +136,14 @@ export default function Bitcoinacct ({navigation}) {
                      </View>
              </TouchableOpacity>
           
-)} /> : <View style={{backgroundColor:colors.white,height:320,width:380}}>
-                        <Image source={require("../image1/img.png")} style={{width:176,height:176,opacity:"80%"}} />
-                <Text  style={{fontSize:24,fontWeight:"700",color:"#000000"}}>No transaction</Text>
-                <Text style={{fontSize:14,fontWeight:"700",color:colors.Textcolor}}>You’ve not made any transaction</Text>
-                    </View> 
+)} /> : <View style={{ backgroundColor:colors.background,padding:18,marginTop:150,alignItems: 'center',justifyContent:"center",}}>
+<Image source={require("../image1/image8-2.webp")} style={styles.image} />
+
+
+<Text style={{color:colors.Textcolor,fontSize:24,fontWeight:"800",lineHeight:35.04, marginTop: 50}}>No transaction</Text>
+<Text style={{fontWeight:"400",alignContent:"center",fontSize:13,lineHeight:22,width:315,height:44,color:colors.neuralblack, marginTop: 13}}>You’ve not made any transaction</Text>
+
+</View>
                     }
 
               </ScrollView>
@@ -261,7 +264,17 @@ userimage2:{
   height:51.92,
   marginTop:12
  
-}
+}, image:{width:185,
+  height:185,
+borderRadius:21,
+},
+buttonText: { 
+color: colors.white, 
+lineHeight:26,
+fontWeight:"600",
+fontSize: 16,
+
+},
 
 })
 

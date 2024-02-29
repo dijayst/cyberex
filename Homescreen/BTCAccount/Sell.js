@@ -28,12 +28,18 @@ export default function Sell({navigation}) {
              </View>
 
              <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86,marginTop:30 }}>
+             <View style={{flexDirection:"row", alignItems: "flex-start", gap: 8, width: 350, height: 86,marginTop:30 }}>
+            
                 <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Enter Amount (BTC)</Text>
               <TextInput
               style={styles.input}
               maxLength={2}
               placeholder="Enter Amount"
-              />
+              /> 
+              <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, marginTop: 34,marginLeft:-8  }}>
+              <Text style={{ justifyContent: "center",color:colors.Orange,fontSize:14,fontWeight:"700",lineHeight:18.9,paddingTop:15}}>max</Text>
+                 </View>
+                 </View>
               <Image source={require("../image1/image8-2.webp")} style={{zIndex:1,width:32,height:32,borderRadius:21,marginTop:-11,marginLeft:160}} />
                <TextInput
               style={styles.input2}
@@ -68,6 +74,7 @@ const styles = StyleSheet.create({
   backgroundColor:colors.white,
   display:"flex",
   flexDirection:"row",
+  gap:2,
   width:360,
   height:81,
    borderRadius:8,
@@ -107,16 +114,21 @@ container:{
   input: {
     // padding: 5,
      borderWidth: 1,
-     width:360,
+     borderRightWidth:0,
+     width:310,
      height:56,
+     marginTop:34,marginLeft:-150,
+   
     // marginVertical: 20,
-     borderRadius:8,
+   // borderRadius:8,
+   borderTopLeftRadius:8,
+   borderBottomLeftRadius:8,
      borderColor:colors.neural200,
    },
    input2: {
      // padding: 5,
       borderWidth: 1,
-      width:360,
+      width:350,
       height:56,
       marginTop:-19,
      // marginVertical: 20,
@@ -131,5 +143,17 @@ container:{
     fontSize: 16,
     padding:8
    
+},
+
+image:{width:185,
+  height:185,
+borderRadius:21,
+},
+buttonText: { 
+color: colors.white, 
+lineHeight:26,
+fontWeight:"600",
+fontSize: 16,
+
 },
 })

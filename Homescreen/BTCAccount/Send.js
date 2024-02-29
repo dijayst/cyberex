@@ -1,6 +1,6 @@
 import { View, Text,TouchableOpacity,Image,StyleSheet,TextInput } from 'react-native'
 import React from 'react'
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons,AntDesign,Entypo } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 
 
@@ -28,11 +28,16 @@ export default function Send({navigation}) {
              </View>
 
              <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86,marginTop:30 }}>
-                <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Enter Amount (BTC)</Text>
+             <View style={{flexDirection:"row", alignItems: "flex-start", gap: 8, width: 350, height: 86,marginTop:30 }}>
+                <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 , marginTop: 5}}>Enter Amount (BTC)</Text>
               <TextInput
               style={styles.input}
               placeholder="Enter Amount"
               />
+                <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, marginTop: 34,marginLeft:-8  }}>
+         <Text style={{ justifyContent: "center",color:colors.Orange,fontSize:14,fontWeight:"700",lineHeight:18.9,paddingTop:15}}>max</Text>
+            </View>
+            </View>
               <Image source={require("../image1/image8-2.webp")} style={{zIndex:1,width:32,height:32,borderRadius:21,marginTop:-11,marginLeft:160}} />
                <TextInput
               style={styles.input2}
@@ -41,11 +46,15 @@ export default function Send({navigation}) {
           </View>
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86,marginTop:140 }}>
                 <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Enter Address</Text>
+                <View style={{flexDirection:"row"}}>
               <TextInput
-              style={styles.input}
+              style={styles.input3}
               placeholder="Enter BTC Address"
               />
-              
+                <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>
+               <Entypo style={{ justifyContent: "center", marginTop: 16, }} name="address" size={24} color={colors.Orange} />
+            </View>
+            </View>
           </View>
           <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 30, height: 56, width: 360, alignItems: "center", padding: 10}} onPress={() => navigation.navigate("successful")} >
               <Text style={styles.buttonText}>Send</Text>
@@ -115,23 +124,39 @@ container:{
   input: {
     // padding: 5,
      borderWidth: 1,
-     width:360,
-     height:56,
+     borderRightWidth:0,
+     width:310,
+     height:56
+     ,marginTop:34,marginLeft:-150,
     // marginVertical: 20,
-     borderRadius:8,
+    borderTopLeftRadius:8,
+    borderBottomLeftRadius:8,
+    // borderRadius:8,
      borderColor:colors.neural200,
    },
    input2: {
      // padding: 5,
       borderWidth: 1,
-      width:360,
+      width:350,
       height:56,
       marginTop:-19,
      // marginVertical: 20,
       borderRadius:8,
       borderColor:colors.neural200,
     },
-    
+    input3: {
+      // padding: 5,
+       borderWidth: 1,
+       borderRightWidth:0,
+       width:310,
+       height:56,
+       //,marginTop:30,marginLeft:-60,
+      // marginVertical: 20,
+      borderTopLeftRadius:8,
+      borderBottomLeftRadius:8,
+      // borderRadius:8,
+       borderColor:colors.neural200,
+     },
   buttonText: { 
     color: colors.white, 
     lineHeight:26,
