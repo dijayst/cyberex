@@ -54,7 +54,7 @@ export default function Cyberexuser() {
           </View>
 
 
-          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 70, height: 64, width: 350, alignItems: "center", padding: 10,paddingTop: 20,marginLeft:-10}} >
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 70, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 12,marginLeft:-10}} >
               <Text style={styles.buttonText}>Send</Text>
             </TouchableOpacity>
   

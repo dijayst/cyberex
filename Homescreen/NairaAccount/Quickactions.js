@@ -6,7 +6,7 @@ export default function Quickactions({text,isViewAll=false}) {
 return (
     <View style={styles.container}>
       <Text style={styles.heading}>{text}</Text>
-            {isViewAll && <Text style={{fontSize:16,color:colors.Textcolor}}>See all</Text>}
+            {isViewAll && <Text style={{fontSize:16,color:colors.Orange,fontWeight:"700",lineHeight:21.6}}>See all</Text>}
     </View>
   )
 }
@@ -18,7 +18,7 @@ const styles=StyleSheet.create({
       flexDirection:"row",
       alignItems:"center",
       justifyContent:"space-between",
-      marginTop:-15,
+      marginTop:-9,
 marginBottom:-25,
 //backgroundColor:"blue",
 width:"90%",

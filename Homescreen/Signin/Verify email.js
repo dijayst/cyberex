@@ -21,7 +21,7 @@ export default function Verifyemail() {
   };
 
   return (
-    <View style={{backgroundColor:colors.background,flex:1}}>
+    <View style={{backgroundColor:colors.background,flex:1,padding:13}}>
          <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={30} color="black" />
             </TouchableOpacity>
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
          zIndex:10,
         padding:20,
         marginTop:68,
-        marginLeft:20,
+       
        
       
     },

@@ -9,6 +9,16 @@ export default function Heading ({text}) {
   const navigation=useNavigation();
   const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
+ // const [isclicked, setisclicked] = useState(1);
+//const handleclick=(value)=>{
+ // navigation.navigate("home")
+  //setisclicked(!isclicked)
+  //setisclicked(value) }
+
+//const handleclick2=(value)=>{
+//  navigation.navigate("btc")
+//setisclicked(value) }
+
   
   const [showModal, setshowmodal] = useState(false)
   const handleshowmodal=()=>{
@@ -19,7 +29,7 @@ console.log(showModal)
     <View style={styles.container}  onPress={()=>showModal(true)}>
       <View style={{ display: "flex", flexDirection: "row",gap:109 }}>
         <Text style={{ width: 109, height: 16, fontSize: 12, fontWeight: "500", lineHeight: 16, color: colors.neuralblack , }}>Available Balance</Text>
-        <TouchableOpacity  style={{backgroundColor:colors.background,borderRadius:32,height:24,width:95,flexDirection:"row",gap:4,alignItems: 'center',justifyContent:"center",}}  onPress={handleshowmodal}>
+        <TouchableOpacity  style={{backgroundColor:colors.background,borderRadius:32,height:24,width:95,flexDirection:"row",gap:4,alignItems: 'center',justifyContent:"center",marginLeft:0}}  onPress={handleshowmodal}>
         <Text style={{ color:colors.Textcolor, fontSize: 8.71, fontWeight: "500",}}>Naira Account</Text>
         <Entypo name="chevron-small-down" size={14} color={colors.Orange} />
         </TouchableOpacity>
@@ -48,14 +58,14 @@ console.log(showModal)
     <Text style={{fontSize:24,fontWeight:"700",lineHeight:32.4,color: "#000000",marginLeft:-254,}}>Accounts</Text>
    
     <View style={{display:"flex",flexDirection:"column",gap:9,padding:9}}>
-    <TouchableOpacity onPress={()=>navigation.navigate("home")} style={{borderColor:colors.Orange,borderWidth:1,borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5}}>
+    <TouchableOpacity onPress={()=> navigation.navigate("home")} style={{borderColor:colors.Orange,borderWidth:1,borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5,backgroundColor:colors.background}}>
     <Image source={require("../image1/img.png")} style={styles.userimage} />
     <View style={{flexDirection:"row",alignItems: 'center',justifyContent:"center",}}>
       <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,width:106,height:22}}>Naira Account</Text>
       <Text style={styles.price1}>₦100,000</Text>
       </View>
     </TouchableOpacity>
-    <TouchableOpacity onPress={()=>navigation.navigate("btc")} style={{borderColor:colors.Orange,borderWidth:1,borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5}} >
+    <TouchableOpacity onPress={()=> navigation.navigate("btc")} style={{borderColor:colors.Orange,borderWidth:1,borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5,backgroundColor:colors.background}} >
     <Image source={require("../image1/img.png")} style={styles.userimage} />
     <View style={{flexDirection:"row",alignItems: 'center',justifyContent:"center",}}>
     <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,width:106,height:22}} >BTC Account</Text>
@@ -73,11 +83,12 @@ console.log(showModal)
 const styles =StyleSheet.create({
   container:{
     backgroundColor:colors.white,
-    padding:20,
-    marginTop:41,
+    marginTop:21,
     width:"100%",
-    height:174,
-  borderRadius:8
+    height:150,
+  borderRadius:8,
+  flex: 1, padding: 19,
+  gap:5
   },
   
 userimage:{

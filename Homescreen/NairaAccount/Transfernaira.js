@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 import Tabbar from './Tabbar';
 
-export default function Transfernaira() {
+export default function Transfernaira({navigation}) {
   
   const [clickcolor, setclickcolor] = useState(true);
   
@@ -12,7 +12,7 @@ export default function Transfernaira() {
   console.log(clickcolor)
 
   return (
-    <View style={{ backgroundColor:colors.background,padding:28,marginTop:150,flex:1}}>
+    <View style={{ backgroundColor:colors.background,padding:29,marginTop:150,flex:1}}>
       <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Transfer</Text>

@@ -3,6 +3,7 @@ export const Notify=[{
   pin:"Transaction pin updated",
   message:"You have successfully updated your transaction pin",
   date:"24th sept,2023"
+  
 },
 {
   id:2,

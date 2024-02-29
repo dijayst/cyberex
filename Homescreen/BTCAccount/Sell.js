@@ -9,7 +9,7 @@ export default function Sell({navigation}) {
   
 
   return (
-    <View  style={{ backgroundColor:colors.background,padding:28,marginTop:150}}>
+    <View  style={{ backgroundColor:colors.background,padding:28,marginTop:150,flex:1}}>
         <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Sell BTC</Text>
@@ -31,6 +31,7 @@ export default function Sell({navigation}) {
                 <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Enter Amount (BTC)</Text>
               <TextInput
               style={styles.input}
+              maxLength={2}
               placeholder="Enter Amount"
               />
               <Image source={require("../image1/image8-2.webp")} style={{zIndex:1,width:32,height:32,borderRadius:21,marginTop:-11,marginLeft:160}} />

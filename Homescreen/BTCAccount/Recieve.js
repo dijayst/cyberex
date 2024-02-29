@@ -5,20 +5,22 @@ import colors from '../JSON AND COLOR/colors';
 
 export default function Recieve({navigation}) {
   return (
-    <View  style={{ backgroundColor:colors.background,padding:18,marginTop:150}}>
+    <View  style={{ backgroundColor:colors.background,padding:18,marginTop:150,flex:1,padding:19}}>
          <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Receive BTC</Text>
             </TouchableOpacity>
           <Text style={{color:"#000000",fontSize:16,fontWeight:"700",lineHeight:21.6}}>Scan QR Code</Text>
-          <Image source={require("../image1/download.png")} style={styles.userimage} />
+         <View style={{backgroundColor:colors.white,height:310,width:350,borderRadius:8,marginLeft:13,marginTop:90,alignItems: 'center', justifyContent:"center",}}>
+         <Image source={require("../image1/download.png")} style={styles.userimage} />
+         </View>
              
       <Text style={{color:"#000000",fontSize:16,fontWeight:"700",lineHeight:21.6,marginTop:19}}>or copy address</Text>
     
-    <TouchableOpacity style={{ backgroundColor:colors.white, borderRadius: 8, marginTop: 20, height: 56, width: 350, alignItems: "center", padding: 15 }}>
-    <Text style={{color:"#000000",fontSize:14,fontWeight:"500",lineHeight:18.9}}>5x26gf4648274fvwjs78evjsdhbvc45afrg34<Ionicons name="copy-sharp" size={16} color={colors.Orange}  /></Text>
+    <TouchableOpacity style={{ backgroundColor:colors.white, borderRadius: 8, marginTop: 20, height: 56, width: 350, alignItems: "center", padding: 15,marginLeft:13 }}>
+    <Text style={{color:"#000000",fontSize:14,fontWeight:"500",lineHeight:18.9}}>5x26gf4648274fvwjs78evjsdhbvc45afrg34<Ionicons name="copy-sharp" size={16} color={colors.Orange}/></Text>
     </TouchableOpacity>
-      <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 30, height: 56, width: 350, alignItems: "center", padding: 10 }} >
+      <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 30, height: 56, width: 350, alignItems: "center", padding: 10,marginLeft:13 }} >
               <Text style={styles.buttonText}>Done</Text>
             </TouchableOpacity>
              </View>
@@ -43,9 +45,6 @@ const styles = StyleSheet.create({
 userimage:{
     width:302,
     height:270,
-    marginLeft:24,
-    marginTop:90
-  
    
   },
   buttonText: { 

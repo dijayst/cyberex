@@ -4,7 +4,7 @@ import colors from '../JSON AND COLOR/colors';
 import { Ionicons } from '@expo/vector-icons';
 
 
-export default function Transactionpin() {
+export default function Transactionpin({navigation}) {
 
   
   const [emailverify, setemailverify] = useState({

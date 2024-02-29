@@ -33,7 +33,7 @@ const [isChecked, setisChecked] = useState(false);
 
 
   return (
-    <View style={{ backgroundColor:colors.background, flex: 1, padding: 18 }}>
+    <View style={{ backgroundColor:colors.background, flex: 1, padding: 13 }}>
 
       <View style={{ height: 60, width: 237, marginTop: 68, marginLeft: 20, gap: 6 }}>
         <Text style={{ fontSize: 24, fontWeight: "700", color: colors.Textcolor, lineHeight: 28.8, width: 250, height: 32, gap: 10 }}>Log in to your account</Text>
@@ -54,8 +54,8 @@ const [isChecked, setisChecked] = useState(false);
 
         <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
           <View style={{ display: "flex", flexDirection: "row" }}>
-            <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16, width: 112, height: 22 }}>Email Address</Text>
-            <Text style={{ color: colors.Orange }}>*</Text>
+            <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16, width: 112, height: 22 }}>Email Address
+            <Text style={{ color: colors.Orange }}>*</Text></Text>
           </View>
 
           <TextInput
@@ -69,8 +69,8 @@ const [isChecked, setisChecked] = useState(false);
 
         <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
           <View style={{ display: "flex", flexDirection: "row" }}>
-            <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>enter password</Text>
-            <Text style={{ color: colors.Orange }}>*</Text>
+            <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>enter password
+            <Text style={{ color: colors.Orange }}>*</Text></Text>
           </View>
 
           <View style={{ display: "flex", flexDirection: "row" }}>
@@ -82,7 +82,7 @@ const [isChecked, setisChecked] = useState(false);
               onChangeText={(password) => setUserInfo({ ...userInfo, password })}
               secureTextEntry
             />
-            <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8 }}>
+            <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, }}>
               <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
 
             </View>
@@ -92,7 +92,7 @@ const [isChecked, setisChecked] = useState(false);
         </View>
 
         <TouchableOpacity onPress={() => navigation.navigate("forgot")}>
-          <Text style={{ marginLeft: 220, marginTop: -2, lineHeight: 21.6, fontSize: 16, fontWeight: "700", color: colors.Orange, width: 134, height: 22 }}>forgot password?</Text>
+          <Text style={{ marginLeft: 220, marginTop: -17, lineHeight: 21.6, fontSize: 16, fontWeight: "700", color: colors.Orange, width: 134, height: 22 }}>Forgot Password?</Text>
         </TouchableOpacity>
 
         <View style={{ width: 350, height: 120, gap: 16 }}>
@@ -109,10 +109,10 @@ const [isChecked, setisChecked] = useState(false);
 
         </View>
 
-        <View style={{ display: "flex", flexDirection: "row", gap: 8, width: 168, height: 24, marginTop: 16, marginLeft: 91.5 }}>
+        <TouchableOpacity style={{ display: "flex", flexDirection: "row", gap: 8, width: 350, height: 56, marginTop: 16,backgroundColor:colors.white,borderRadius:8,padding:19,paddingLeft:85 }}>
           <Image style={styles.userimage} source={require("../image1/image8-2.webp")} />
           <Text style={{ color: colors.Textcolor, fontSize: 14, fontWeight: "600", lineHeight: 16.8, width: 136, height: 17 }}>Continue with google</Text>
-        </View>
+        </TouchableOpacity>
 
       </View>
     </View>
@@ -149,6 +149,7 @@ userimage:{
      width:310,
      height:56,
     // marginVertical: 20,
+    borderRightWidth:0, 
     borderTopLeftRadius:8,
     borderBottomLeftRadius:8,
      borderColor:colors.neural200,

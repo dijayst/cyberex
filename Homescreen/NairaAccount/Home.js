@@ -22,7 +22,7 @@ export default function Home({navigation}) {
    
     
   return (
-      <View style={{ backgroundColor:colors.background, padding:18 }}>
+      <View style={{ backgroundColor:colors.background, flex: 1, padding: 19 }}>
         <SafeAreaView>
               <ScrollView >
           <View style={styles.ProfileMainContainer}>
@@ -126,23 +126,23 @@ export default function Home({navigation}) {
 
 
                      
-             <View style={{backgroundColor:colors.white,width:375.5,height:96,borderRadius:8,marginTop:29,}}>
+             <TouchableOpacity style={{backgroundColor:colors.white,width:375.5,height:96,borderRadius:8,marginTop:29,}} onPress={()=>navigation.push("link")} >
              <View style={styles.ProfileContainer}> 
                 <Image source={require("../image1/img2.png")} style={styles.userimage2}/>
                 <View style={{gap:9,marginTop:12}}>
                 <Text style={{ width: 230, height: 21, color: colors.Textcolor,fontSize:14,fontWeight:"700" }}>link a bank account to your wallet</Text>
                 <Text style={{ width: 230, height: 36, color: colors.neural800,fontSize:12,fontWeight:"500" }}>finish your account setup to enjoy your banking experience</Text>
                 </View>
-                <View style={{height:96,width:35,gap:10,}}>
+                <View style={{height:96,width:35,gap:10,marginLeft:28}}>
                 <Entypo name="chevron-right" size={24} color={colors.Orange} style={{marginTop:32}}  />
                 </View>
                   </View>
-             </View>
-             <Quickactions text="Transaction"  isViewAll={true}/>
+             </TouchableOpacity>
+             <Quickactions text="Transactions"  isViewAll={true}/>
 
              {print.data?.length>0?  <FlatList
                 data={print.data}
-                style={{marginTop:45,backgroundColor:colors.white,height:320,width:375.5,gap:28,padding:16,borderRadius:8}}
+                style={{marginTop:35,backgroundColor:colors.white,height:320,width:375.5,gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
                   <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("nairatrans",{item:item})}>
                   <Image source={item.image1} alt="img" style={styles.image}/>
@@ -203,6 +203,9 @@ borderRadius:21,
   //borderRadius:15
       } ,container2:{
        // backgroundColor:colors.white,
+       marginTop:9,
+       marginBottom:9,
+         
        display:"flex",
        flexDirection:"row",
        width:316,
@@ -260,7 +263,7 @@ textinput:{
 },
 notification:{
   marginTop:15,
-  marginLeft:140,
+  marginLeft:160,
 
 },
 searchbtn:{

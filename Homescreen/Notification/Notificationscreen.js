@@ -9,14 +9,14 @@ export default function Notificationscreen() {
    const navigation=useNavigation();
  
   return (
-    <View style={{ backgroundColor:colors.background, padding:18 }}>
+    <View style={{ backgroundColor:colors.background, padding:19,flex:1 }}>
        <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Notification</Text>
             </TouchableOpacity>
             {Notify ?.length>0?    <FlatList
                 data={Notify}
-                style={{marginTop:95,backgroundColor:colors.white,height:700,width:315.5,gap:28,padding:16,borderRadius:8}}
+                style={{marginTop:95,backgroundColor:colors.background,height:700,width:315.5,gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
                   <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("nairatrans",{item:item})}>
                   <View style={styles.subcontainer}>

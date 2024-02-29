@@ -22,28 +22,28 @@ export default function Nairatransactiondetails({navigation,route}) {
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:15}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Status</Text>
-        <Text style={{marginLeft:210,color:colors.textgreen,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{Status}</Text>
+        <Text style={{marginLeft:229,color:colors.textgreen,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{Status}</Text>
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:19}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Recipient</Text>
-    <Text style={{marginLeft:100,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{recipientnaira}</Text>
+    <Text style={{marginLeft:110,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{recipientnaira}</Text>
     </View>
    </View>
 
    <View style={{backgroundColor:colors.white,display:"flex",marginTop:30,borderRadius:8,padding:16,}}>
     <View style={{flexDirection:"row",height:22,width:318,}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Transaction Ref</Text>
-    <Text  style={{marginLeft:70,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{transactionref}</Text>
+    <Text  style={{marginLeft:100,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{transactionref}</Text>
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:15}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Charges</Text>
-    <Text style={{marginLeft:190,color:"#000000",fontSize:14,fontWeight:"700",lineHeight:18.9}}>{Charges}</Text>
+    <Text style={{marginLeft:240,color:"#000000",fontSize:14,fontWeight:"700",lineHeight:18.9}}>{Charges}</Text>
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:19}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Description</Text>
     <Text  style={{marginLeft:240,color:colors.neural800,fontSize:12,fontWeight:"700",lineHeight:16.2}}>{description}</Text></View>
    </View>
-   <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 20, height: 56, width: 350, alignItems: "center", padding: 10 }}>
+   <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 20,marginLeft:5, height: 56, width: 375, alignItems: "center", padding: 10 }}>
             <Text style={styles.buttonText}>Share Reciept</Text>
           </TouchableOpacity>
 

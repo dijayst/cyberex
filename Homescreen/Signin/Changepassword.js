@@ -26,7 +26,7 @@ const handleSignup = async () => {
 
 
   return (
-    <View style={{ backgroundColor:colors.background, flex: 1, padding: 18 }}>
+    <View style={{ backgroundColor:colors.background, flex: 1, padding: 13 }}>
       <TouchableOpacity style={styles.backbtncontainer} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={30} color="black" />
       </TouchableOpacity>
@@ -46,8 +46,8 @@ const handleSignup = async () => {
 
         <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
           <View style={{ display: "flex", flexDirection: "row" }}>
-            <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Enter Password</Text>
-            <Text style={{ color: colors.Orange }}>*</Text>
+            <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Enter Password
+            <Text style={{ color: colors.Orange }}>*</Text></Text>
           </View>
 
           <View style={{ display: "flex", flexDirection: "row" }}>
@@ -59,7 +59,7 @@ const handleSignup = async () => {
               onChangeText={(password) => setUserInfo({ ...userInfo, password })}
               secureTextEntry
             />
-            <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8 }}>
+            <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>
               <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
 
             </View>
@@ -70,8 +70,8 @@ const handleSignup = async () => {
 
         <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
           <View style={{ display: "flex", flexDirection: "row" }}>
-            <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16, width: 139, height: 22 }}>Confirm Password</Text>
-            <Text style={{ color: colors.Orange }}>*</Text>
+            <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16, width: 149, height: 22 }}>Confirm Password
+            <Text style={{ color: colors.Orange }}>*</Text></Text>
           </View >
 
           <View style={{ display: "flex", flexDirection: "row" }}>
@@ -82,7 +82,7 @@ const handleSignup = async () => {
               value={userInfo.reenterpassword}
               onChangeText={(reenterpassword) => setUserInfo({ ...userInfo, reenterpassword })}
             />
-            <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8 }}>
+            <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>
               <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
 
             </View>
@@ -126,6 +126,7 @@ const styles = StyleSheet.create({
     input: {
      // padding: 5,
       borderWidth: 1,
+      borderRightWidth:0, 
       width:310,
       height:56,
     //  marginLeft:-126,
@@ -140,6 +141,7 @@ const styles = StyleSheet.create({
        borderWidth: 1,
        width:310,
        height:56,
+       borderRightWidth:0, 
       // marginVertical: 20,
       borderTopLeftRadius:8,
       borderBottomLeftRadius:8,
@@ -173,7 +175,7 @@ const styles = StyleSheet.create({
     zIndex:10,
    padding:20,
    marginTop:68,
-   marginLeft:20,
+  
   
  
 },

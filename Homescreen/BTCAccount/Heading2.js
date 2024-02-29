@@ -20,7 +20,7 @@ console.log(showModal)
       <View style={{ display: "flex", flexDirection: "row",gap:109 }}>
         <Text style={{ width: 109, height: 16, fontSize: 12, fontWeight: "500", lineHeight: 16, color: colors.neuralblack , }}>Available Balance</Text>
         <TouchableOpacity  style={{backgroundColor:colors.background,borderRadius:32,height:24,width:95,flexDirection:"row",gap:4,alignItems: 'center',justifyContent:"center",}}  onPress={handleshowmodal}>
-        <Text style={{ color: colors.Textcolor, fontSize: 8.71, fontWeight: "500",}}>BTC Account</Text>
+        <Text style={{ color: colors.Textcolor, fontSize: 8.71, fontWeight: "500",marginLeft:20}}>BTC Account</Text>
         <Entypo name="chevron-small-down" size={14} color={colors.Orange} />
         </TouchableOpacity>
        </View>
@@ -30,7 +30,7 @@ console.log(showModal)
         <AntDesign style={{ justifyContent: "center", marginTop: 4,marginLeft:9.69,height:25,width:25 }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color={colors.neural400} onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
 
       </View>
-           <Text style={{color:colors.Textcolor,textAlign:"center",marginLeft:-190}}>2.0324505658869 <Text style={{color:colors.Orange,}}>BTC</Text></Text>
+           <Text style={{color:colors.Textcolor,textAlign:"center",marginLeft:-170,fontSize:16,fontWeight:"700"}}>2.0324505658869 <Text style={{color:colors.Orange,}}>BTC</Text></Text>
          
       
 <Modal animationType="slide"
@@ -65,11 +65,12 @@ console.log(showModal)
 const styles =StyleSheet.create({
   container:{
     backgroundColor:colors.white,
-    padding:20,
-    marginTop:41,
+    marginTop:21,
     width:"100%",
     height:124,
-  borderRadius:8
+  borderRadius:8,
+  flex: 1, padding: 19,
+  gap:5
   },
   
 userimage:{

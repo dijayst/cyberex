@@ -10,8 +10,9 @@ export default{
     Gobackicon: "#1C1B1F",
     Imagecolor: "#FEE0D6",
     neural400: "#6A6C6C",
+    neural300:"#8F9091",
     neural800: "#36474F",
-    flutter:"#009400",
+    Greeen:"#009400",
     textgreen:"#2EAE4E"
 
 

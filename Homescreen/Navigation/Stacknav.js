@@ -29,6 +29,9 @@ import Transactionpin from '../BTCAccount/Transactionpin';
 import Sellsuccessfull from '../BTCAccount/Sellsuccessfull';
 import Deposit from '../NairaAccount/Deposit';
 import Transfernaira from '../NairaAccount/Transfernaira';
+import Linkbankaccount from '../NairaAccount/Linkbankaccount';
+import CyberExbot from '../Bottomtabnav/GiftCard/CyberExbot';
+import Tradegiftcard from '../Bottomtabnav/GiftCard/Tradegiftcard';
 
     const Stack = createStackNavigator();
 
@@ -96,6 +99,11 @@ import Transfernaira from '../NairaAccount/Transfernaira';
       <Stack.Screen name="deposit" component={Deposit} />
       
       <Stack.Screen name="transfer" component={Transfernaira} />
+      
+      <Stack.Screen name="link" component={Linkbankaccount} />
+      
+      <Stack.Screen name="giftcard" component={Tradegiftcard} />
+      <Stack.Screen name="bot" component={CyberExbot} />
       
     </Stack.Navigator>
 

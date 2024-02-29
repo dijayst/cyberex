@@ -7,7 +7,7 @@ export default function Bitcointransactiondetails({navigation,route}) {
     const {btcprice,Status,recipient,date,Dollars}=route.params.item;
  
   return (
-    <View style={{padding:16,borderRadius:28}}>
+    <View style={{padding:19,borderRadius:28}}>
         <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Transaction Details</Text>
@@ -23,28 +23,28 @@ export default function Bitcointransactiondetails({navigation,route}) {
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:15}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Status</Text>
-        <Text style={{marginLeft:210,color:colors.textgreen,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{Status}</Text>
+        <Text style={{marginLeft:229,color:colors.textgreen,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{Status}</Text>
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:19}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Recipient</Text>
-    <Text style={{marginLeft:100,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{recipient}</Text>
+    <Text style={{marginLeft:102,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{recipient}</Text>
     </View>
    </View>
 
    <View style={{backgroundColor:colors.white,display:"flex",marginTop:30,borderRadius:8,padding:16,}}>
     <View style={{flexDirection:"row",height:22,width:318,}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Network Fee</Text>
-    <Text  style={{marginLeft:70,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>0.002134345156 BTC ($10.00)</Text>
+    <Text  style={{marginLeft:60,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>0.002134345156 BTC ($10.00)</Text>
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:15}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Confirmations</Text>
-    <Text style={{marginLeft:190,color:"#000000",fontSize:14,fontWeight:"700",lineHeight:18.9}}>........</Text>
+    <Text style={{marginLeft:210,color:"#000000",fontSize:14,fontWeight:"700",lineHeight:18.9}}>........</Text>
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:19}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Nonce</Text>
-    <Text  style={{marginLeft:240,color:colors.neural800,fontSize:12,fontWeight:"700",lineHeight:16.2}}>319</Text></View>
+    <Text  style={{marginLeft:280,color:colors.neural800,fontSize:12,fontWeight:"700",lineHeight:16.2}}>319</Text></View>
    </View>
-   <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 20, height: 56, width: 350, alignItems: "center", padding: 10 }}>
+   <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 20, height: 56, width: 375, alignItems: "center", padding: 10 }}>
             <Text style={styles.buttonText}>Share Reciept</Text>
           </TouchableOpacity>
 

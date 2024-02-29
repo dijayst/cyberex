@@ -11,7 +11,7 @@ export default function Slider() {
     
   return (
     <View style={styles.container}>
-      <Carousel activeDotStyle={[styles.dotStyle, { width: 32, height: 10, borderRadius: 8, backgroundColor: colors.Orange, }]} dotStyle={styles.dotStyle} style={{ width: 350, height: 238, marginTop: 580, marginLeft: 20, gap: 32 }} showsControls={false} >
+      <Carousel activeDotStyle={[styles.dotStyle, { width: 32, height: 10, borderRadius: 8, backgroundColor: colors.Orange, }]} dotStyle={styles.dotStyle} style={{ width: 350, height: 238, marginTop: 550, marginLeft: 20, gap: 32 }} showsControls={false} >
         {Slid.map((item) => (
             <View key={item.id}>
               <View style={{ marginBottom: 10, height: 40, width: 320, }}>
@@ -37,6 +37,7 @@ export default function Slider() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
+      padding:19,
       backgroundColor:colors.background,
       alignItems: 'center',
       justifyContent: 'center',
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
 
     },
     dotStyle:{
-      marginBottom:315,
+      marginBottom:250,
       width:10,
       height:10,
       borderRadius:8,

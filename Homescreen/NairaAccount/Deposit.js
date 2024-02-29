@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 export default function Deposit({navigation}) {
   return (
-    <View style={{flex:1,backgroundColor:colors.background,padding:19}}>
+    <View style={{flex:1,backgroundColor:colors.background,padding:29,}}>
       <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Deposit</Text>
@@ -15,7 +15,7 @@ export default function Deposit({navigation}) {
                 <Text style={{ fontWeight: "700", color: colors.Textcolor, lineHeight: 21.6, fontSize: 16 }}>Amount</Text>
               <TextInput
               style={styles.input}
-              placeholder="Enter Amount"
+              placeholder="Amount(#)"
               />
              
              <View style={{gap:10}}>
@@ -57,7 +57,7 @@ export default function Deposit({navigation}) {
              </View>
           </View>
 
-          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 190, height: 64, width: 360, alignItems: "center", padding: 10,marginLeft:10}} >
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 150, height: 56, width: 350, alignItems: "center", padding: 10,marginLeft:10}} >
               <Text style={styles.buttonText}>Deposit</Text>
             </TouchableOpacity>
   
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 input: {
   // padding: 5,
    borderWidth: 1,
-   width:360,
+   width:350,
    height:56,
   // marginVertical: 20,
    borderRadius:8,

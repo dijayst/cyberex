@@ -55,7 +55,7 @@ import colors from '../JSON AND COLOR/colors';
 
   
     return (
-      <View style={{ backgroundColor:colors.background, flex: 1, padding: 18 }}>
+      <View style={{ backgroundColor:colors.background, flex: 1,padding:13,}}>
 
         <View style={{ height: 60, width: 237, marginTop: 68, marginLeft: 20, gap: 6 }}>
           <Text style={{ fontSize: 24, fontWeight: "700", color: colors.Textcolor, lineHeight: 28.8 }}>Create your account</Text>
@@ -74,21 +74,23 @@ import colors from '../JSON AND COLOR/colors';
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
-              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Full Name</Text>
-              <Text style={{ color: colors.Orange }}>*</Text>
+              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Full Name
+              <Text style={{ color: colors.Orange }}>*</Text></Text>
             </View>
             <TextInput
               style={styles.input}
               placeholder="E.g john doe"
               value={userInfo.name}
+              secureTextEntry
+              placeholderTextColor={colors.Textcolor}
               onChangeText={(name) => setUserInfo({ ...userInfo, name })}
             />
           </View>
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
-              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Email Address</Text>
-              <Text style={{ color: colors.Orange }}>*</Text>
+              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Email Address
+              <Text style={{ color: colors.Orange }}>*</Text></Text>
             </View>
 
             <TextInput
@@ -101,8 +103,8 @@ import colors from '../JSON AND COLOR/colors';
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
-              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Phone Number</Text>
-              <Text style={{ color: colors.Orange }}>*</Text>
+              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Phone Number
+              <Text style={{ color: colors.Orange }}>*</Text></Text>
             </View>
 
             <PhoneInput
@@ -132,8 +134,8 @@ import colors from '../JSON AND COLOR/colors';
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
-              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Referral code</Text>
-              <Text style={{ color: colors.Orange }}>*</Text>
+              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Referral code
+              <Text style={{ color: colors.Orange }}>*</Text></Text>
             </View>
             <TextInput
               style={styles.input}

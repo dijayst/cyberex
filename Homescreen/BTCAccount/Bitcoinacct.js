@@ -118,7 +118,7 @@ export default function Bitcoinacct ({navigation}) {
 
                      
            
-             <Quickactions text="Transaction"  isViewAll={true}/>
+             <Quickactions text="Transactions"  isViewAll={true}/>
 
              {print.data?.length>0? <FlatList
                 data={print.data}
@@ -185,6 +185,9 @@ borderRadius:21,
   //borderRadius:15
       } ,container2:{
        // backgroundColor:colors.white,
+       marginTop:9,
+       marginBottom:9,
+         
        display:"flex",
        flexDirection:"row",
        width:316,
@@ -239,7 +242,7 @@ textinput:{
 },
 notification:{
   marginTop:15,
-  marginLeft:140,
+  marginLeft:160,
 
 },
 searchbtn:{

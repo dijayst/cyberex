@@ -9,7 +9,7 @@ export default function Send({navigation}) {
   
 
   return (
-    <View  style={{ backgroundColor:colors.background,padding:28,marginTop:150}}>
+    <View  style={{ backgroundColor:colors.background,padding:28,marginTop:150,flex:1}}>
         <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Send BTC</Text>
@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
 }
 ,container2:{
   backgroundColor:colors.white,
+  gap:8,
   display:"flex",
   flexDirection:"row",
   width:360,
