@@ -19,28 +19,29 @@ import colors from '../JSON AND COLOR/colors';
   
  <Tab.Navigator
  screenOptions={{
-  tabBarActiveTintColor:"red",
  tabBarStyle:{height:60,backgroundColor:colors.background},
   headerShown:false,
+  tabBarInactiveTintColor:"blue",
+  tabBarActiveTintColor:"red",
   
 }}>
     
  <Tab.Screen name="stack" component={Stacknav} options={{headerShown:false,
-    tabBarLabel:({color})=>(<Text style={{color:colors.neural400,fontSize:10,marginTop:-7}}>Home</Text>),
-    tabBarIcon:()=>(<FontAwesome name="home"  color={colors.Orange} size={25}/>)}}
+    tabBarLabel:({focused})=>(<Text style={{color:focused?colors.Orange:colors.neural400,fontSize:10,marginTop:-7}}>Home</Text>),
+    tabBarIcon:({focused})=>(<FontAwesome name="home"  color={focused?colors.Orange:colors.neural400} size={25}/>)}}
   />
 
  <Tab.Screen name="Gift Card" component={Giftcard} options={{
-  tabBarIcon:()=>(<MaterialIcons name="card-giftcard" size={24} color={colors.neural400} />),
-  tabBarLabel:({color})=>(<Text style={{color:colors.neural400,fontSize:10,marginTop:-7}}>Giftcard</Text>),}}/>
+  tabBarIcon:({focused})=>(<MaterialIcons name="card-giftcard" size={24}  color={focused?colors.Orange:colors.neural400} />),
+  tabBarLabel:({focused})=>(<Text style={{color:focused?colors.Orange:colors.neural400,fontSize:10,marginTop:-7}}>Giftcard</Text>),}}/>
  
  <Tab.Screen name="support" component={Support} options={{
-  tabBarIcon:()=>(<MaterialIcons name="support-agent" size={24} color={colors.neural400} />),
-  tabBarLabel:({color})=>(<Text style={{color:colors.neural400,fontSize:10,marginTop:-7}}>Support</Text>),}}/>
+  tabBarIcon:({focused})=>(<MaterialIcons name="support-agent" size={24}  color={focused?colors.Orange:colors.neural400} />),
+  tabBarLabel:({focused})=>(<Text style={{color:focused?colors.Orange:colors.neural400,fontSize:10,marginTop:-7}}>Support</Text>),}}/>
  <Tab.Screen name="profile" component={Profile} 
   options={{
-    tabBarIcon:()=>(<MaterialCommunityIcons name="account-circle-outline" color={colors.neural400} size={25} />) ,
-     tabBarLabel:({color})=>(<Text style={{color:colors.neural400,fontSize:10,marginTop:-7}}>Profile</Text>),}}
+    tabBarIcon:({focused})=>(<MaterialCommunityIcons name="account-circle-outline"  color={focused?colors.Orange:colors.neural400} size={25} />) ,
+     tabBarLabel:({focused})=>(<Text style={{color:focused?colors.Orange:colors.neural400,fontSize:10,marginTop:-7}}>Profile</Text>),}}
   />
 
 </Tab.Navigator>

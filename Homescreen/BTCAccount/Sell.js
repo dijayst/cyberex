@@ -141,19 +141,8 @@ container:{
     lineHeight:26,
     fontWeight:"600",
     fontSize: 16,
-    padding:8
-   
+    padding:8,
+   borderRadius:8
 },
 
-image:{width:185,
-  height:185,
-borderRadius:21,
-},
-buttonText: { 
-color: colors.white, 
-lineHeight:26,
-fontWeight:"600",
-fontSize: 16,
-
-},
 })

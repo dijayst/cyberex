@@ -66,7 +66,7 @@ export default function Transactionpin({navigation}) {
   
   <Text style={{width:140,height:22,fontSize:16,fontWeight:"700",lineHeight:21.6,marginLeft:120,marginTop:15,marginBottom:20,color:colors.neuralblack}}>Resend mail ? <Text style={{color:colors.Orange,fontWeight:"700",lineHeight:21.6}}>8:04</Text></Text>
 
-  <TouchableOpacity style={{backgroundColor:colors.Orange,borderRadius:8,marginTop:44,marginLeft:20, height:56,width:350,alignItems: "center",padding:10}} >
+  <TouchableOpacity style={{backgroundColor:colors.Orange,borderRadius:8,marginTop:44,marginLeft:20, height:56,width:350,alignItems: "center",padding:10}} onPress={()=>navigation.navigate("home")} >
     <Text style={styles.buttonText}>Continue</Text>
     </TouchableOpacity> 
 

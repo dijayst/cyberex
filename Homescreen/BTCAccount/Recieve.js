@@ -20,7 +20,7 @@ export default function Recieve({navigation}) {
     <TouchableOpacity style={{ backgroundColor:colors.white, borderRadius: 8, marginTop: 20, height: 56, width: 350, alignItems: "center", padding: 15,marginLeft:13 }}>
     <Text style={{color:"#000000",fontSize:14,fontWeight:"500",lineHeight:18.9}}>5x26gf4648274fvwjs78evjsdhbvc45afrg34<Ionicons name="copy-sharp" size={16} color={colors.Orange}/></Text>
     </TouchableOpacity>
-      <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 30, height: 56, width: 350, alignItems: "center", padding: 10,marginLeft:13 }} >
+      <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 30, height: 56, width: 350, alignItems: "center", padding: 10,marginLeft:13 }} onPress={()=>navigation.navigate("btc")} >
               <Text style={styles.buttonText}>Done</Text>
             </TouchableOpacity>
              </View>

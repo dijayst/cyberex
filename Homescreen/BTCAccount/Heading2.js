@@ -40,7 +40,7 @@ console.log(showModal)
     <Text style={{fontSize:24,fontWeight:"700",lineHeight:32.4,color: "#000000",marginLeft:-254,}}>Accounts</Text>
    
     <View style={{display:"flex",flexDirection:"column",gap:9,padding:9}}>
-    <TouchableOpacity onPress={()=>navigation.navigate("home")} style={{borderColor:colors.Orange,borderWidth:1,borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5}}>
+    <TouchableOpacity onPress={()=>navigation.navigate("home")} style={{borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5}}>
     <Image source={require("../image1/img.png")} style={styles.userimage} />
     <View style={{flexDirection:"row",alignItems: 'center',justifyContent:"center",}}>
       <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,width:106,height:22}}>Naira Account</Text>
