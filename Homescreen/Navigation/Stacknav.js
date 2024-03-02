@@ -102,8 +102,6 @@ import Tradegiftcard from '../Bottomtabnav/GiftCard/Tradegiftcard';
       
       <Stack.Screen name="link" component={Linkbankaccount} />
       
-      <Stack.Screen name="giftcard" component={Tradegiftcard} />
-      <Stack.Screen name="bot" component={CyberExbot} />
       
     </Stack.Navigator>
 

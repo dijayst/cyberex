@@ -12,7 +12,7 @@ export default function Profile() {
 const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
   return (
-    <View style={{ backgroundColor:colors.background, flex: 1, padding: 19 }}>
+    <View style={{ backgroundColor:colors.background, flex: 1, padding: 29 }}>
       <ScrollView >
       <View style={styles.ProfileMainContainer}>
               <View style={styles.ProfileContainer}>
@@ -242,7 +242,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
         
         
          
-          <TouchableOpacity style={{ backgroundColor:colors.Imagecolor, borderRadius: 8, height: 56, width: 350, alignItems: "center",justifyContent:"center", padding: 10,paddingTop:-190,marginLeft:13,marginTop:100,marginBottom:50,display:"flex",flexDirection:"row",gap:100}} onPress={()=>navigation.navigate("giftcard")} >
+          <TouchableOpacity style={{ backgroundColor:colors.Imagecolor, borderRadius: 8, height: 56, width: 350, alignItems: "center",justifyContent:"center", padding: 10,paddingTop:-190,marginTop:100,marginBottom:50,display:"flex",flexDirection:"row",gap:100}} onPress={()=>navigation.navigate("giftcard")} >
           <FontAwesome name="sign-out" size={24} color="#FF0000" style={{marginLeft:-100}} /><Text style={styles.buttonText}>Sign Out</Text>
 </TouchableOpacity>
           </ScrollView>

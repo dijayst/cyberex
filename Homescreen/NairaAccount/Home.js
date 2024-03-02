@@ -19,12 +19,14 @@ export default function Home({navigation}) {
     };
 
 
+    //const [print, setprint] = useState([]);
+   
    
     
   return (
       <View style={{ backgroundColor:colors.background, flex: 1, padding: 19 }}>
-        <SafeAreaView>
-              <ScrollView >
+        
+              <ScrollView   showsVerticalScrollIndicator={false}>
           <View style={styles.ProfileMainContainer}>
               <View style={styles.ProfileContainer}>
                   <Image source={require("../image1/img.png")} style={styles.userimage} />
@@ -160,7 +162,7 @@ export default function Home({navigation}) {
               
           
                 <Text style={{color:colors.Textcolor,fontSize:24,fontWeight:"800",lineHeight:35.04, marginTop: 50}}>No transaction</Text>
-          <Text style={{fontWeight:"400",alignContent:"center",fontSize:13,lineHeight:22,width:315,height:44,color:colors.neuralblack, marginTop: 13}}>You’ve not made any transaction</Text>
+          <Text style={{fontWeight:"400",alignContent:"center",fontSize:13,lineHeight:22,width:315,height:44,color:colors.neuralblack, marginTop: 13,marginLeft:100}}>You’ve not made any transaction</Text>
           
                
             
@@ -168,7 +170,7 @@ export default function Home({navigation}) {
 
 
               </ScrollView>
-          </SafeAreaView>
+          
       </View>
   )
 }
@@ -214,7 +216,7 @@ borderRadius:21,
        display:"flex",
        flexDirection:"row",
        width:316,
-       height:61,
+       height:51,
     },
       iconcontainer:{
           //backgroundColor:"#8E3FFF",
@@ -288,8 +290,8 @@ userimage2:{
   marginTop:12
  
 },
-image2:{width:185,
-  height:185,
+image2:{width:176,
+  height:176,
 borderRadius:21,
 },
 buttonText: { 

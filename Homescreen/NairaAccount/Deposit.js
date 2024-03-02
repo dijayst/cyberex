@@ -57,7 +57,7 @@ export default function Deposit({navigation}) {
              </View>
           </View>
 
-          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 150, height: 56, width: 350, alignItems: "center", padding: 10,marginLeft:10}} >
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 150, height: 56, width: 350, alignItems: "center", padding: 10,marginLeft:10}} onPress={()=>navigation.navigate("home")} >
               <Text style={styles.buttonText}>Deposit</Text>
             </TouchableOpacity>
   

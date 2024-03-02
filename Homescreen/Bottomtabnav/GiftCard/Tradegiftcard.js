@@ -89,5 +89,5 @@ const styles = StyleSheet.create({
         width:111,
         height:42,
         gap:2,
-        marginLeft:18,},
+        marginLeft:68,},
 })

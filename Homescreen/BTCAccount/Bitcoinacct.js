@@ -18,13 +18,14 @@ export default function Bitcoinacct ({navigation}) {
       setGamesTab(value);
     };
 
-
+    //const [print, setprint] = useState([]);
+   
    
     
   return (
       <View style={{ backgroundColor:colors.background, padding:18 }}>
         <SafeAreaView>
-              <ScrollView >
+              <ScrollView showsVerticalScrollIndicator={false}>
                 
           <View style={styles.ProfileMainContainer}>
               <View style={styles.ProfileContainer}>
@@ -136,12 +137,13 @@ export default function Bitcoinacct ({navigation}) {
                      </View>
              </TouchableOpacity>
           
-)} /> : <View style={{ backgroundColor:colors.background,padding:18,marginTop:150,alignItems: 'center',justifyContent:"center",}}>
+)} /> :
+ <View style={{ backgroundColor:colors.background,padding:18,marginTop:150,alignItems: 'center',justifyContent:"center",}}>
 <Image source={require("../image1/image8-2.webp")} style={styles.image2} />
 
 
 <Text style={{color:colors.Textcolor,fontSize:24,fontWeight:"800",lineHeight:35.04, marginTop: 50}}>No transaction</Text>
-<Text style={{fontWeight:"400",alignContent:"center",fontSize:13,lineHeight:22,width:315,height:44,color:colors.neuralblack, marginTop: 13}}>You’ve not made any transaction</Text>
+<Text style={{fontWeight:"400",alignContent:"center",fontSize:13,lineHeight:22,width:315,height:44,color:colors.neuralblack, marginTop: 13,marginLeft:100}}>You’ve not made any transaction</Text>
 
 </View>
                     }
@@ -194,7 +196,7 @@ borderRadius:21,
        display:"flex",
        flexDirection:"row",
        width:316,
-       height:61,
+       height:51,
     },
       iconcontainer:{
           //backgroundColor:"#8E3FFF",
