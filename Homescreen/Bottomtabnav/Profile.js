@@ -79,7 +79,8 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
                 <View style={styles.container2} onPress={()=>navigation.push("nairatrans")}>
              
              <View style={{height:32,width:32}}>
-             <FontAwesome6 name="user-large" size={24} color={colors.Orange} />
+             <Image source={require("../image1/ICONS/phonelink_lock.png")} style={styles.userimage2} />
+   
              </View>   
               <View style={styles.subcontainer}>
               <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>Password</Text>
@@ -132,14 +133,14 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
           <View style={{marginTop:25,height:223,width:350,gap:5,}}>
           
-          <Quickactions text="about us"/>
+          <Quickactions text="About Us"/>
           
           <View style={{backgroundColor:colors.white,width:350,height:220,display:"flex",flexDirection:"column",marginTop:29,borderRadius:8,padding:9}}>
                 <View style={styles.container2} onPress={()=>navigation.push("nairatrans")}>
              
              <View style={{height:32,width:32}}>
-             <FontAwesome6 name="user-large" size={24} color={colors.Orange} />
-             </View>   
+             <Image source={require("../image1/ICONS/apartment.png")} style={styles.userimage2} />
+              </View>   
               <View style={styles.subcontainer}>
                       <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:118}}>About Cyberex</Text>
                       <View style={{height:96,width:35,gap:10,marginLeft:258,marginTop:-20}}>
@@ -166,7 +167,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
                          <View style={styles.container2} onPress={()=>navigation.push("nairatrans")}>
              
              <View style={{height:32,width:32}}>
-             <Ionicons name="finger-print" size={24} color={colors.Orange} />
+             <Image source={require("../image1/ICONS/gavel.png")} style={styles.userimage2} />
                </View>   
                  <View style={styles.subcontainer}>
                       <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:127}}>Terms & Conditions</Text>
@@ -206,7 +207,8 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
                 <View style={styles.container2} onPress={()=>navigation.push("nairatrans")}>
              
              <View style={{height:32,width:32}}>
-             <FontAwesome6 name="user-large" size={24} color={colors.Orange} />
+              <Image source={require("../image1/ICONS/contrast.png")} style={styles.userimage2} />
+   
              </View>   
               <View style={styles.subcontainer}>
               <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>Theme</Text>
@@ -222,8 +224,8 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
                         <View style={styles.container2} onPress={()=>navigation.push("nairatrans")}>
              
              <View style={{height:32,width:32}}>
-             <MaterialIcons name="password" size={24} color={colors.Orange} />
-              </View>   
+             <Image source={require("../image1/ICONS/featured_seasonal_and_gifts.png")} style={{width:24,height:24,marginTop:5}} />
+               </View>   
               <View style={styles.subcontainer}>
               <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>Earn Rewards</Text>
                       <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:155}}>Referrals</Text>
@@ -243,7 +245,9 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
         
          
           <TouchableOpacity style={{ backgroundColor:colors.Imagecolor, borderRadius: 8, height: 56, width: 350, alignItems: "center",justifyContent:"center", padding: 10,paddingTop:-190,marginTop:100,marginBottom:50,display:"flex",flexDirection:"row",gap:100}} onPress={()=>navigation.navigate("giftcard")} >
-          <FontAwesome name="sign-out" size={24} color="#FF0000" style={{marginLeft:-100}} /><Text style={styles.buttonText}>Sign Out</Text>
+          <Image source={require("../image1/ICONS/chip_extraction.png")} style={{marginLeft:-100, width:24,
+  height:24,}} />
+          <Text style={styles.buttonText}>Sign Out</Text>
 </TouchableOpacity>
           </ScrollView>
 
@@ -253,6 +257,12 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
 const styles = StyleSheet.create({
   
+userimage2:{
+  width:24,
+  height:24,
+  borderRadius:20
+ 
+},
 userimage:{
   width:80,
   height:80,
@@ -303,7 +313,9 @@ ProfileContainer:{
     color:"#FF0000",
     size:14,
     lineHeight:18.9,
-    fontWeight:"700"
+    fontWeight:"700",
+    marginLeft:-79,
+    marginRight:69
     },
   
 })

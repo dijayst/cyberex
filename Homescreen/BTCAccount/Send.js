@@ -16,7 +16,7 @@ export default function Send({navigation}) {
             </TouchableOpacity>
       
        <View style={styles.container2}>
-       <Image source={require("../image1/image8-2.webp")} style={styles.image} />
+       <Image source={require("../image1/ICONS/Group.png")} style={styles.image} />
                  <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:"#000000",fontSize:16,height:22,gap:10}}>Bitcoin</Text>
                       <Text style={{ color:"#000000",marginLeft:119,fontSize:16,fontWeight:"700"}}>Available Balance</Text>
@@ -33,26 +33,35 @@ export default function Send({navigation}) {
               <TextInput
               style={styles.input}
               placeholder="Enter Amount"
+              
+              placeholderTextColor={colors.neural300}
               />
                 <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, marginTop: 34,marginLeft:-8  }}>
          <Text style={{ justifyContent: "center",color:colors.Orange,fontSize:14,fontWeight:"700",lineHeight:18.9,paddingTop:15}}>max</Text>
             </View>
             </View>
-              <Image source={require("../image1/image8-2.webp")} style={{zIndex:1,width:32,height:32,borderRadius:21,marginTop:-11,marginLeft:160}} />
+              <Image source={require("../image1/ICONS/Frame 300.png")} style={{zIndex:1,width:32,height:32,borderRadius:21,marginTop:-11,marginLeft:160}} />
                <TextInput
               style={styles.input2}
               placeholder="Price"
+              
+              placeholderTextColor={colors.neural300}
               />
           </View>
+
+
+          
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86,marginTop:140 }}>
                 <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Enter Address</Text>
                 <View style={{flexDirection:"row"}}>
               <TextInput
               style={styles.input3}
               placeholder="Enter BTC Address"
+              
+              placeholderTextColor={colors.neural300}
               />
                 <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>
-               <Entypo style={{ justifyContent: "center", marginTop: 16, }} name="address" size={24} color={colors.Orange} />
+                <Image source={require("../image1/ICONS/scan-barcode.png")} style={{ justifyContent: "center", marginTop: 15,width:24,height:24,}}  />
             </View>
             </View>
           </View>

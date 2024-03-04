@@ -16,6 +16,8 @@ export default function Deposit({navigation}) {
               <TextInput
               style={styles.input}
               placeholder="Amount(#)"
+              
+              placeholderTextColor={colors.neural300}
               />
              
              <View style={{gap:10}}>

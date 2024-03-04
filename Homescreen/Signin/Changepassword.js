@@ -55,6 +55,8 @@ const handleSignup = async () => {
             <TextInput
               style={styles.password}
               placeholder="Enter new password"
+              
+              placeholderTextColor={colors.neural300}
               value={userInfo.password}
               onChangeText={(password) => setUserInfo({ ...userInfo, password })}
               secureTextEntry
@@ -80,6 +82,8 @@ const handleSignup = async () => {
               style={styles.input}
               placeholder="Confirm new password"
               value={userInfo.reenterpassword}
+              
+              placeholderTextColor={colors.neural300}
               onChangeText={(reenterpassword) => setUserInfo({ ...userInfo, reenterpassword })}
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>

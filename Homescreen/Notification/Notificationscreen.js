@@ -1,14 +1,14 @@
 import { View, Text,StyleSheet,TouchableOpacity,FlatList,Image} from 'react-native'
 import React ,{useState}from 'react'
 import {useNavigation} from "@react-navigation/native";
-//import { Notify } from '../JSON AND COLOR/Data';
+import { Notify } from '../JSON AND COLOR/Data';
 import colors from '../JSON AND COLOR/colors';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function Notificationscreen() {
    const navigation=useNavigation();
  
-    const [Notify, setNotify] = useState([]);
+    //const [Notify, setNotify] = useState(["name"]);
    
   return (
     <View style={{ backgroundColor:colors.background, padding:19,flex:1 }}>
@@ -34,7 +34,7 @@ export default function Notificationscreen() {
                     )} /> :
 
             <View style={{ backgroundColor:colors.background,padding:18,marginTop:150,alignItems: 'center',justifyContent:"center",}}>
-          <Image source={require("../image1/282f6a579c8b2f1c460175a93e8b5a74.png")} style={styles.image} />
+          <Image source={require("../image1/ICONS/Notification bell 3d cartoon style icon on white background  copy 1.png")} style={styles.image} />
     
 
       <Text style={{color:colors.Textcolor,fontSize:24,fontWeight:"800",lineHeight:35.04, marginTop: 50}}>No new notification</Text>

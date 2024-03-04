@@ -50,6 +50,8 @@ export default function Cyberexuser() {
               placeholder="Desc"
               value={userInfo.email}
               onChangeText={(email) => setUserInfo({ ...userInfo, email })}
+              
+              placeholderTextColor={colors.neural300}
             />
           </View>
 

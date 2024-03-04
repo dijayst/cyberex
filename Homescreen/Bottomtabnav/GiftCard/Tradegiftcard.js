@@ -35,10 +35,10 @@ export default function Tradegiftcard() {
                 renderItem={({ item, index }) =>(
                   <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("nairatrans",{item:item})}>
                    <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center",}}>
-                  <Image source={item.image1} alt="img" style={styles.image}/>
+                  <Image source={item.image4} alt="img" style={styles.image}/>
                   </View>
                   <View style={styles.subcontainer}>
-                      <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.title}</Text>
+                      <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.tradegift}</Text>
                       <Text style={{fontFamily:"outfit-bold",fontSize:13,color:colors.neuralblack}}>{item.time}</Text>
                   </View>
                   <Text style={{color:colors.Greeen,lineHeight:10.8,fontSize:8,fontWeight:"500",marginTop:29,marginLeft:-30}}>Approved</Text>

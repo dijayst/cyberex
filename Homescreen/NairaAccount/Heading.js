@@ -58,15 +58,15 @@ console.log(showModal)
     <Text style={{fontSize:24,fontWeight:"700",lineHeight:32.4,color: "#000000",marginLeft:-254,}}>Accounts</Text>
    
     <View style={{display:"flex",flexDirection:"column",gap:9,padding:9}}>
-    <TouchableOpacity onPress={()=> navigation.navigate("home")} style={{borderColor:colors.Orange,borderWidth:1,borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5,backgroundColor:colors.background}}>
-    <Image source={require("../image1/img.png")} style={styles.userimage} />
+    <TouchableOpacity onPress={()=> navigation.navigate("home")} style={{borderColor:colors.Orange,borderWidth:1,borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5,backgroundColor:colors.background,gap:6}}>
+    <Image source={require("../image1/ICONS/Frame 258 (1).png")} style={styles.userimage} />
     <View style={{flexDirection:"row",alignItems: 'center',justifyContent:"center",}}>
       <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,width:106,height:22}}>Naira Account</Text>
       <Text style={styles.price1}>₦100,000</Text>
       </View>
     </TouchableOpacity>
-    <TouchableOpacity onPress={()=> navigation.navigate("btc")} style={{borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5,backgroundColor:colors.background}} >
-    <Image source={require("../image1/img.png")} style={styles.userimage} />
+    <TouchableOpacity onPress={()=> navigation.navigate("btc")} style={{borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5,backgroundColor:colors.background,gap:6}} >
+    <Image source={require("../image1/ICONS/Frame 256.png")} style={styles.userimage} />
     <View style={{flexDirection:"row",alignItems: 'center',justifyContent:"center",}}>
     <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,width:106,height:22}} >BTC Account</Text>
       <Text style={styles.price2}>0.003245 <Text style={{color:colors.Orange,fontSize:18,fontWeight:"900"}}>BTC</Text></Text>

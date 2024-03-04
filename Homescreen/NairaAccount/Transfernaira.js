@@ -19,7 +19,7 @@ export default function Transfernaira({navigation}) {
             </TouchableOpacity>
             
             <View style={styles.container2}>
-       <Image source={require("../image1/image8-2.webp")} style={styles.image} />
+       <Image source={require("../image1/ICONS/Group (1).png")} style={styles.image} />
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:"#000000",fontSize:16,height:22,gap:10}}>Bitcoin</Text>
                       <Text style={{ color:"#000000",marginLeft:119,fontSize:16,fontWeight:"700"}}>Available Balance</Text>

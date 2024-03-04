@@ -31,7 +31,7 @@ export default function Home({navigation}) {
               <View style={styles.ProfileContainer}>
                   <Image source={require("../image1/img.png")} style={styles.userimage} />
                   <View style={{marginTop:-9}}>
-                      <Text style={{ width: 99, height: 18, color: colors.neural400,fontSize: 16, }}>Welcome Back,</Text>
+                      <Text style={{ width: 109, height: 18, color: colors.neural400,fontSize: 16, }}>Welcome Back,</Text>
                       <Text style={{ fontSize: 16, fontFamily: 'oufit', color: "#000000" ,fontWeight:"700"}}>Leonard Victor</Text>
                   </View>
                   <Ionicons style={styles.notification} name="notifications" size={24} color="black" onPress={()=>navigation.push("notify")} />
@@ -52,7 +52,7 @@ export default function Home({navigation}) {
                <TouchableOpacity style={styles.container} onPress={()=>navigation.push("paybills")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
-                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+                 <Image source={require("../image1/ICONS/bill.png")} style={styles.userimage} />
               
         </View>
    
@@ -70,7 +70,7 @@ export default function Home({navigation}) {
                     <TouchableOpacity style={styles.container} onPress={()=>navigation.push("buyairtime")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
-                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+                 <Image source={require("../image1/ICONS/mobile.png")} style={styles.userimage} />
               
         </View>
    
@@ -87,7 +87,7 @@ export default function Home({navigation}) {
                     <TouchableOpacity style={styles.container} onPress={()=>navigation.push("buycrpto")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
-                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+                 <Image source={require("../image1/ICONS/bitcoin-convert.png")} style={styles.userimage} />
               
         </View>
    
@@ -104,7 +104,7 @@ export default function Home({navigation}) {
                     <TouchableOpacity style={styles.container} onPress={()=>navigation.push("save")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
-                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+                 <Image source={require("../image1/ICONS/wallet.png")} style={styles.userimage} />
               
         </View>
    
@@ -158,7 +158,7 @@ export default function Home({navigation}) {
           
                     )} /> 
                     :  <View style={{ backgroundColor:colors.background,padding:18,marginTop:150,alignItems: 'center',justifyContent:"center",}}>
-                    <Image source={require("../image1/image8-2.webp")} style={styles.image2} />
+                    <Image source={require("../image1/ICONS/Group (2).png")} style={styles.image2} />
               
           
                 <Text style={{color:colors.Textcolor,fontSize:24,fontWeight:"800",lineHeight:35.04, marginTop: 50}}>No transaction</Text>

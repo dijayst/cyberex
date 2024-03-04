@@ -14,25 +14,27 @@ export default function BankAccount() {
     email: "",
     referancecode:""
   });
-  const [emptyinput, setemptyinput] = useState(["name"]);
+  const [emptyinput, setemptyinput] = useState([]);
   return (
     <View>
       {emptyinput.length>0 ?
       <View>
-       <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86,marginTop:140 }}>
+       <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
             <View style={{  flexDirection: "row" }}>
               <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Select Account</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
             </View>
-            <View style={{flexDirection:"row"}}>
+            <View style={{flexDirection:"row",marginTop:20,marginLeft:-10}}>
             <TextInput
               style={styles.input1}
               placeholder="Select Bank Name"
+              
+              placeholderTextColor={colors.neural300}
               value={userInfo.name}
               onChangeText={(name) => setUserInfo({ ...userInfo, name })}
             />
-              <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>
-                 <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name="down" size={24} color="black" />
+              <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, marginTop:-21 }}>
+                 <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name="down" size={14} color="black" />
             </View>
           
             </View>
@@ -46,6 +48,8 @@ export default function BankAccount() {
             <TextInput
               style={styles.input}
               placeholder="Amount to deposit"
+              
+              placeholderTextColor={colors.neural300}
               value={userInfo.name}
               onChangeText={(name) => setUserInfo({ ...userInfo, name })}
             />
@@ -60,6 +64,8 @@ export default function BankAccount() {
               style={styles.input}
               placeholder="Desc"
               value={userInfo.name}
+              
+              placeholderTextColor={colors.neural300}
               onChangeText={(name) => setUserInfo({ ...userInfo, name })}
             />
                
@@ -116,7 +122,7 @@ const styles = StyleSheet.create({
       borderRightWidth:0,
       width:310,
       height:56
-      ,marginTop:34,marginLeft:-150,
+      ,marginTop:-21,
      // marginVertical: 20,
      borderTopLeftRadius:8,
      borderBottomLeftRadius:8,

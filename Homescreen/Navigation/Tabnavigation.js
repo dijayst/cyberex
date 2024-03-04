@@ -5,10 +5,9 @@ import Stacknav from './Stacknav';
 //import Giftcard from '../Bottomtabnav/GiftCard/Giftcard';
 import Support from '../Bottomtabnav/Support';
 import Profile from '../Bottomtabnav/Profile';
-
 import { FontAwesome,MaterialCommunityIcons,MaterialIcons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
-import Giftcardstack from './giftcardstack';
+import Giftcardstack from './Giftcardstack';
 
 
     const Tab = createBottomTabNavigator();

@@ -81,6 +81,7 @@ import colors from '../JSON AND COLOR/colors';
               style={styles.input}
               placeholder="E.g john doe"
               value={userInfo.name}
+              
               secureTextEntry
               placeholderTextColor={colors.Textcolor}
               onChangeText={(name) => setUserInfo({ ...userInfo, name })}

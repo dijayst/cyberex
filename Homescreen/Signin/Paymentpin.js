@@ -36,6 +36,7 @@ export default function Paymentpin() {
         <TextInput
           style={styles.input}
 
+          placeholderTextColor={colors.neural300}
           value={emailverify.input1}
           onChangeText={(input1) => setemailverify({ ...emailverify, input1 })}
           secureTextEntry
@@ -46,11 +47,14 @@ export default function Paymentpin() {
           value={emailverify.input2}
           onChangeText={(input2) => setemailverify({ ...emailverify, input2 })}
           secureTextEntry
+          
+          placeholderTextColor={colors.neural300}
         />
 
         <TextInput
           style={styles.input}
 
+          placeholderTextColor={colors.neural300}
           value={emailverify.input3}
           onChangeText={(input3) => setemailverify({ ...emailverify, input3 })}
           secureTextEntry
@@ -58,6 +62,8 @@ export default function Paymentpin() {
         <TextInput
           style={styles.input}
           value={emailverify.input4}
+          
+          placeholderTextColor={colors.neural300}
           onChangeText={(input4) => setemailverify({ ...emailverify, input4 })}
           secureTextEntry
         />

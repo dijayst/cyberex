@@ -62,6 +62,8 @@ const [isChecked, setisChecked] = useState(false);
             style={styles.input}
             placeholder="Example@gmail.com"
             value={userInfo.email}
+            
+            placeholderTextColor={colors.neural300}
             onChangeText={(email) => setUserInfo({ ...userInfo, email })}
           />
         </View>
@@ -79,6 +81,7 @@ const [isChecked, setisChecked] = useState(false);
               style={styles.password}
               placeholder="Password"
               value={userInfo.password}
+              placeholderTextColor={colors.neural300}
               onChangeText={(password) => setUserInfo({ ...userInfo, password })}
               secureTextEntry
             />

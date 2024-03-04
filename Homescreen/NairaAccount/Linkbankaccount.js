@@ -1,6 +1,6 @@
 import { View, Text,StyleSheet,TouchableOpacity,TextInput } from 'react-native'
 import React,{useState} from 'react'
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons ,AntDesign} from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 
 
@@ -30,13 +30,20 @@ export default function Linkbankaccount({navigation}) {
               <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Bank Name</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
             </View>
+
+<View style={{flexDirection:"row",marginTop:20,marginLeft:-10}}>
             <TextInput
-              style={styles.input}
+              style={styles.input1}
               placeholder="Select Bank Name"
-              placeholderTextColor={colors.neural300}
               value={userInfo.name}
+              placeholderTextColor={colors.neural300}
               onChangeText={(name) => setUserInfo({ ...userInfo, name })}
             />
+              <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, marginTop:-21 }}>
+                 <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name="down" size={14} color="black" />
+            </View>
+          
+            </View>
           </View>
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
@@ -112,4 +119,18 @@ input: {
     lineHeight:21.6,
     fontWeight:"700"
     },
+    
+   input1: {
+    // padding: 5,
+     borderWidth: 1,
+     borderRightWidth:0,
+     width:310,
+     height:56
+     ,marginTop:-21,
+    // marginVertical: 20,
+    borderTopLeftRadius:8,
+    borderBottomLeftRadius:8,
+    // borderRadius:8,
+     borderColor:colors.neural200,
+   },
  })

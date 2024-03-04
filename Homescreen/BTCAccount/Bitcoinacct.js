@@ -47,7 +47,7 @@ export default function Bitcoinacct ({navigation}) {
                <TouchableOpacity style={styles.container} onPress={()=>navigation.push("send")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
-                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+                 <Image source={require("../image1/ICONS/money-send.png")} style={styles.userimage} />
               
         </View>
    
@@ -65,7 +65,7 @@ export default function Bitcoinacct ({navigation}) {
                     <TouchableOpacity style={styles.container} onPress={()=>navigation.push("recieve")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
-                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+                 <Image source={require("../image1/ICONS/qr_code.png")} style={styles.userimage} />
               
         </View>
    
@@ -82,7 +82,7 @@ export default function Bitcoinacct ({navigation}) {
                     <TouchableOpacity style={styles.container} onPress={()=>navigation.push("sell")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
-                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+                 <Image source={require("../image1/ICONS/sell.png")} style={styles.userimage} />
               
         </View>
    
@@ -99,7 +99,7 @@ export default function Bitcoinacct ({navigation}) {
                     <TouchableOpacity style={styles.container} onPress={()=>navigation.push("convert")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
-                 <Image source={require("../image1/img.png")} style={styles.userimage} />
+                 <Image source={require("../image1/ICONS/bitcoin-convert.png")} style={styles.userimage} />
               
         </View>
    
@@ -126,7 +126,9 @@ export default function Bitcoinacct ({navigation}) {
                 style={{marginTop:35,backgroundColor:colors.white,height:320,width:375.5,gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
                   <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("btctrans",{item:item})}>
-                  <Image source={item.image1} alt="img" style={styles.image}/>
+                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
+                  <Image source={item.image3} alt="img" style={styles.image}/>
+                </View>
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.recieved}</Text>
                       <Text style={{fontFamily:"outfit-bold",fontSize:12,color:colors.neural800,fontWeight:"700"}}>{item.recipient}</Text>
@@ -139,7 +141,7 @@ export default function Bitcoinacct ({navigation}) {
           
 )} /> :
  <View style={{ backgroundColor:colors.background,padding:18,marginTop:150,alignItems: 'center',justifyContent:"center",}}>
-<Image source={require("../image1/image8-2.webp")} style={styles.image2} />
+<Image source={require("../image1/ICONS/Group (2).png")} style={styles.image2} />
 
 
 <Text style={{color:colors.Textcolor,fontSize:24,fontWeight:"800",lineHeight:35.04, marginTop: 50}}>No transaction</Text>
@@ -170,8 +172,8 @@ const styles = StyleSheet.create({
       marginLeft:3,
     },
 
-    image:{width:42,
-    height:42,
+    image:{width:32,
+    height:32,
 borderRadius:21,
 
 
