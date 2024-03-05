@@ -81,7 +81,7 @@ export default function Entercode() {
 }
 const styles = StyleSheet.create({
     input: {
-        //padding: 5,
+        padding: 10,
         borderWidth: 1,
         width:56,
         height:56,

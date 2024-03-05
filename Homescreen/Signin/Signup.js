@@ -194,7 +194,7 @@ import colors from '../JSON AND COLOR/colors';
       paddingTop: 80,
     },
     input: {
-     // padding: 5,
+      padding: 10,
       borderWidth: 1,
       width:350,
       height:56,

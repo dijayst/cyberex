@@ -131,7 +131,7 @@ export default function Bitcoinacct ({navigation}) {
                 </View>
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.recieved}</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:12,color:colors.neural800,fontWeight:"700"}}>{item.recipient}</Text>
+                      <Text style={{fontSize:12,color:colors.neural800,fontWeight:"700"}}>{item.recipient}</Text>
                   </View>
                   <View style={styles.subcontainer}>
                      <Text style={{ color: Colors[index % Colors.length],marginTop:15,marginLeft:10,fontSize:14,fontWeight:"700"}}>{item.btcprice}</Text>

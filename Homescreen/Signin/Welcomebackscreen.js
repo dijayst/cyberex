@@ -119,7 +119,7 @@ userimage:{
   },
   
   password: {
-    // padding: 5,
+     padding: 10,
      borderWidth: 1,
      width:310,
      height:56,

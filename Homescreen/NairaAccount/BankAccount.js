@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     },
     
   input: {
-    // padding: 5,
+     padding: 10,
      borderWidth: 1,
      width:350,
      height:56,
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
      borderColor:colors.neural200,
    },
    input1: {
-     // padding: 5,
+      padding: 10,
       borderWidth: 1,
       borderRightWidth:0,
       width:310,

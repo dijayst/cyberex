@@ -85,7 +85,7 @@ export default function Transactionpin({navigation}) {
 
 const styles = StyleSheet.create({
   input: {
-      //padding: 5,
+      padding: 10,
       borderWidth: 1,
       width:56,
       height:56,

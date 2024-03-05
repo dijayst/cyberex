@@ -1,14 +1,14 @@
 import { View, Text,StyleSheet,TouchableOpacity,FlatList,Image} from 'react-native'
 import React ,{useState}from 'react'
 import {useNavigation} from "@react-navigation/native";
-import { Notify } from '../JSON AND COLOR/Data';
+//import { Notify } from '../JSON AND COLOR/Data';
 import colors from '../JSON AND COLOR/colors';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function Notificationscreen() {
    const navigation=useNavigation();
  
-    //const [Notify, setNotify] = useState(["name"]);
+    const [Notify, setNotify] = useState([]);
    
   return (
     <View style={{ backgroundColor:colors.background, padding:19,flex:1 }}>
@@ -25,8 +25,8 @@ export default function Notificationscreen() {
                   <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("nairatrans",{item:item})}>
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.pin}</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:12,fontWeight:"500",color:colors.neuralblack,width:295}}>{item.message}</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:12,fontWeight:"500",lineHeight:16.2,color:colors.Orange}}>{item.date}</Text>
+                      <Text style={{fontSize:12,fontWeight:"500",color:colors.neuralblack,width:295}}>{item.message}</Text>
+                      <Text style={{fontSize:12,fontWeight:"500",lineHeight:16.2,color:colors.Orange}}>{item.date}</Text>
                 
                   </View>
              </TouchableOpacity>
@@ -92,8 +92,8 @@ fontSize: 16,
                   <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("nairatrans",{item:item})}>
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.pin}</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:12,fontWeight:"500",color:colors.neuralblack,width:295}}>{item.message}</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:12,fontWeight:"500",lineHeight:16.2,color:colors.Orange}}>{item.date}</Text>
+                      <Text style={{fontSize:12,fontWeight:"500",color:colors.neuralblack,width:295}}>{item.message}</Text>
+                      <Text style={{fontSize:12,fontWeight:"500",lineHeight:16.2,color:colors.Orange}}>{item.date}</Text>
                 
                   </View>
              </TouchableOpacity>

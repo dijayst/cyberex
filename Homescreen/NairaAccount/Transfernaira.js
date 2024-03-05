@@ -25,7 +25,7 @@ export default function Transfernaira({navigation}) {
                       <Text style={{ color:"#000000",marginLeft:119,fontSize:16,fontWeight:"700"}}>Available Balance</Text>
                         </View>
                   <View style={styles.subcontainer}>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:colors.neural800,fontWeight:"700",marginTop:26,marginLeft:-318}}>NGN</Text>
+                      <Text style={{fontFamily:"lato-black",fontSize:14,color:colors.neural800,fontWeight:"700",marginTop:26,marginLeft:-318}}>NGN</Text>
                     <Text style={{ marginLeft:180,color:colors.neuralblack,fontSize:14,fontWeight:"700",lineHeight:18.9,marginTop:26,}}>₦1,000,000</Text>
                      </View>
              </View>

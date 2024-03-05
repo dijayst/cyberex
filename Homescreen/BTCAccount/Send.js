@@ -22,7 +22,7 @@ export default function Send({navigation}) {
                       <Text style={{ color:"#000000",marginLeft:119,fontSize:16,fontWeight:"700"}}>Available Balance</Text>
                         </View>
                   <View style={styles.subcontainer}>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:colors.neural800,fontWeight:"700",marginTop:26,marginLeft:-318}}>BTC</Text>
+                      <Text style={{fontSize:14,color:colors.neural800,fontWeight:"700",marginTop:26,marginLeft:-318}}>BTC</Text>
                     <Text style={{ marginLeft:170,color:colors.neuralblack,fontSize:14,fontWeight:"700",lineHeight:16.2,marginTop:26,}}>0 BTC ($0.00)</Text>
                      </View>
              </View>
@@ -131,7 +131,7 @@ container:{
   },
   
   input: {
-    // padding: 5,
+    padding: 10,
      borderWidth: 1,
      borderRightWidth:0,
      width:310,
@@ -144,7 +144,7 @@ container:{
      borderColor:colors.neural200,
    },
    input2: {
-     // padding: 5,
+      padding: 10,
       borderWidth: 1,
       width:350,
       height:56,
@@ -154,7 +154,7 @@ container:{
       borderColor:colors.neural200,
     },
     input3: {
-      // padding: 5,
+      padding: 10,
        borderWidth: 1,
        borderRightWidth:0,
        width:310,

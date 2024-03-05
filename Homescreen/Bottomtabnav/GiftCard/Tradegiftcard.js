@@ -39,12 +39,12 @@ export default function Tradegiftcard() {
                   </View>
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.tradegift}</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:13,color:colors.neuralblack}}>{item.time}</Text>
+                      <Text style={{fontSize:13,color:colors.neuralblack}}>{item.time}</Text>
                   </View>
                   <Text style={{color:colors.Greeen,lineHeight:10.8,fontSize:8,fontWeight:"500",marginTop:29,marginLeft:-30}}>Approved</Text>
                   <View style={styles.subcontainer2}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>₦100,000</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:13,color:colors.neuralblack}}>1 unit = $185.00</Text>
+                      <Text style={{fontSize:13,color:colors.neuralblack}}>1 unit = $185.00</Text>
                   </View>
                 
                         </TouchableOpacity>

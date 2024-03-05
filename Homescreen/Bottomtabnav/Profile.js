@@ -36,7 +36,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
              </View>   
               <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>Full Name</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700"}}>Leonard Victor</Text>
+                      <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700"}}>Leonard Victor</Text>
                   </View>
                         </View>
 
@@ -47,7 +47,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
               </View>   
               <View style={styles.subcontainer}>
               <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>Phone Number</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700"}}>0801 234 5678</Text>
+                      <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700"}}>0801 234 5678</Text>
                      </View>
                         </View>
 
@@ -58,7 +58,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
                </View>   
                  <View style={styles.subcontainer}>
                  <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>E-mail</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:157}}>Leonard123@gmail.com</Text>
+                      <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:157}}>Leonard123@gmail.com</Text>
             
                     </View>
               
@@ -84,7 +84,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
              </View>   
               <View style={styles.subcontainer}>
               <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>Password</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:118}}>Change Password</Text>
+                      <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:118}}>Change Password</Text>
                       <View style={{height:96,width:35,gap:10,marginLeft:258,marginTop:-70}}>
                 <Entypo name="chevron-right" size={24} color="#1C1B1F" style={{marginTop:32}}  />
                 </View>
@@ -99,7 +99,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
               </View>   
               <View style={styles.subcontainer}>
               <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>Transaction Pin</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:155}}>Change Transaction Pin</Text>
+                      <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:155}}>Change Transaction Pin</Text>
                       <View style={{height:96,width:35,gap:10,marginLeft:258,marginTop:-70}}>
                 <Entypo name="chevron-right" size={24} color="#1C1B1F" style={{marginTop:32}}  />
                 </View>
@@ -114,7 +114,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
                </View>   
                  <View style={styles.subcontainer}>
                  <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>Phone Lock</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700"}}>Lock Method</Text>
+                      <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700"}}>Lock Method</Text>
                       <View style={{height:96,width:35,gap:10,marginLeft:258,marginTop:-70}}>
                 <Entypo name="chevron-right" size={24} color="#1C1B1F" style={{marginTop:32}}  />
                 </View>
@@ -142,7 +142,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
              <Image source={require("../image1/ICONS/apartment.png")} style={styles.userimage2} />
               </View>   
               <View style={styles.subcontainer}>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:118}}>About Cyberex</Text>
+                      <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:118}}>About Cyberex</Text>
                       <View style={{height:96,width:35,gap:10,marginLeft:258,marginTop:-20}}>
                 <Entypo name="chevron-right" size={24} color="#1C1B1F"   />
                 </View>
@@ -156,7 +156,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
              <MaterialIcons name="privacy-tip" size={24} color={colors.Orange} />
               </View>   
               <View style={styles.subcontainer}>
-                     <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:155}}>Privacy Policy</Text>
+                     <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:155}}>Privacy Policy</Text>
                       <View style={{height:96,width:35,gap:10,marginLeft:258,marginTop:-25}}>
                 <Entypo name="chevron-right" size={24} color="#1C1B1F"   />
                 </View>
@@ -170,7 +170,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
              <Image source={require("../image1/ICONS/gavel.png")} style={styles.userimage2} />
                </View>   
                  <View style={styles.subcontainer}>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:127}}>Terms & Conditions</Text>
+                      <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:127}}>Terms & Conditions</Text>
                       <View style={{height:96,width:35,gap:10,marginLeft:258,marginTop:-35}}>
                 <Entypo name="chevron-right" size={24} color="#1C1B1F"   />
                 </View>
@@ -185,7 +185,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
                  
              </View>   
               <View style={styles.subcontainer}>
-                     <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:177}}>Frequently asked questions</Text>
+                     <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:177}}>Frequently asked questions</Text>
                       <View style={{height:96,width:35,gap:10,marginLeft:258,marginTop:-25}}>
                 <Entypo name="chevron-right" size={24} color="#1C1B1F"   />
                 </View>
@@ -212,7 +212,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
              </View>   
               <View style={styles.subcontainer}>
               <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>Theme</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:118}}>Dark Mode</Text>
+                      <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:118}}>Dark Mode</Text>
                       <View style={{height:96,width:35,gap:10,marginLeft:258,marginTop:-33}}>
                       <MaterialCommunityIcons name={isPasswordSecure ? "toggle-switch-off" : "toggle-switch-outline"} size={24} color="black"   onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
  
@@ -228,7 +228,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
                </View>   
               <View style={styles.subcontainer}>
               <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>Earn Rewards</Text>
-                      <Text style={{fontFamily:"outfit-bold",fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:155}}>Referrals</Text>
+                      <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:155}}>Referrals</Text>
                       <View style={{height:96,width:35,gap:10,marginLeft:258,marginTop:-60}}>
                       <Entypo name="chevron-right" size={24} color="#1C1B1F" style={{marginTop:32}}  />
                        </View>
