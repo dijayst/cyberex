@@ -5,16 +5,16 @@ import colors from '../JSON AND COLOR/colors';
 
 
 
-export default function Send({navigation}) {
+export default function Send({navigation,windowWidth, windowheight}) {
   
 
   return (
-    <View  style={{ backgroundColor:colors.background,padding:28,marginTop:150,flex:1}}>
+    <View  style={{ padding:28,marginTop:150,}}>
         <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Send BTC</Text>
             </TouchableOpacity>
-      
+      <View style={{alignItems: 'center',justifyContent:"center",}}>
        <View style={styles.container2}>
        <Image source={require("../image1/ICONS/Group.png")} style={styles.image} />
                  <View style={styles.subcontainer}>
@@ -68,7 +68,7 @@ export default function Send({navigation}) {
           <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 30, height: 56, width: 360, alignItems: "center", padding: 10}} onPress={() => navigation.navigate("successful")} >
               <Text style={styles.buttonText}>Send</Text>
             </TouchableOpacity>
-  
+  </View>
     </View>
   )
 }
@@ -131,7 +131,7 @@ container:{
   },
   
   input: {
-    padding: 10,
+    padding: 16,
      borderWidth: 1,
      borderRightWidth:0,
      width:310,
@@ -144,7 +144,7 @@ container:{
      borderColor:colors.neural200,
    },
    input2: {
-      padding: 10,
+      padding: 16,
       borderWidth: 1,
       width:350,
       height:56,
@@ -154,7 +154,7 @@ container:{
       borderColor:colors.neural200,
     },
     input3: {
-      padding: 10,
+      padding: 16,
        borderWidth: 1,
        borderRightWidth:0,
        width:310,

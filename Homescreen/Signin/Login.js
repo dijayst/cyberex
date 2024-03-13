@@ -1,5 +1,5 @@
 import { View, Text,Image ,StyleSheet,TextInput,TouchableOpacity,} from 'react-native'
-import React,{useState} from 'react'
+import React,{useState,} from 'react'
 import axios from "react-native-axios";
 import {useNavigation} from "@react-navigation/native";
 import { AntDesign } from '@expo/vector-icons';
@@ -8,10 +8,12 @@ import colors from '../JSON AND COLOR/colors';
 
 export default  function Login() {
   const navigation=useNavigation();
+  
+  //const {isLoading, login} = useContext(AuthContext);
  
 const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
-  const [userInfo, setUserInfo] = useState({
+  const [userInfor, setuserInfor] = useState({
     email: "",
     password:"",
   });
@@ -28,12 +30,12 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
 const [isChecked, setisChecked] = useState(false); 
  
-  console.log(userInfo)
+  console.log(userInfor)
   console.log(handleSignup)
 
 
   return (
-    <View style={{ backgroundColor:colors.background, flex: 1, padding: 13 }}>
+    <View style={{ backgroundColor:colors.background, flex: 1, padding: 5 }}>
 
       <View style={{ height: 60, width: 237, marginTop: 68, marginLeft: 20, gap: 6 }}>
         <Text style={{ fontSize: 24, fontWeight: "700", color: colors.Textcolor, lineHeight: 28.8, width: 250, height: 32, gap: 10 }}>Log in to your account</Text>
@@ -61,10 +63,10 @@ const [isChecked, setisChecked] = useState(false);
           <TextInput
             style={styles.input}
             placeholder="Example@gmail.com"
-            value={userInfo.email}
+            value={userInfor.email}
             
             placeholderTextColor={colors.neural300}
-            onChangeText={(email) => setUserInfo({ ...userInfo, email })}
+            onChangeText={(email) => setuserInfor({ ...userInfor, email })}
           />
         </View>
 
@@ -80,9 +82,9 @@ const [isChecked, setisChecked] = useState(false);
             <TextInput
               style={styles.password}
               placeholder="Password"
-              value={userInfo.password}
+              value={userInfor.password}
               placeholderTextColor={colors.neural300}
-              onChangeText={(password) => setUserInfo({ ...userInfo, password })}
+              onChangeText={(password) => setuserInfor({ ...userInfor, password })}
               secureTextEntry
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, }}>
@@ -137,7 +139,7 @@ userimage:{
  justifyContent:"center"
 },
   input: {
-    padding: 10,
+    padding: 16,
     borderWidth: 1,
     width:350,
     height:56,
@@ -147,7 +149,7 @@ userimage:{
   },
   
   password: {
-     padding: 10,
+     padding: 16,
      borderWidth: 1,
      width:310,
      height:56,

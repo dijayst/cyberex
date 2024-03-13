@@ -2,7 +2,7 @@ import { View, Text,TextInput,StyleSheet,TouchableOpacity } from 'react-native'
 import React,{useState} from 'react'
 import colors from '../JSON AND COLOR/colors'
 
-export default function Cyberexuser() {
+export default function Cyberexuser({ windowWidth,windowheight}) {
   
   const [userInfo, setUserInfo] = useState({
     name: "",
@@ -11,10 +11,10 @@ export default function Cyberexuser() {
   });
 
   return (
-    <View style={{gap: 20}}>
+    <View style={{gap: 20,width:windowWidth>400? 29:360}}>
      
      <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
-            <View style={{ display: "flex", flexDirection: "row" }}>
+            <View style={{ display: "flex", flexDirection: "row",marginLeft:-10 }}>
               <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Recipients Email Address</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
             </View>
@@ -27,7 +27,7 @@ export default function Cyberexuser() {
           </View>
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
-            <View style={{ display: "flex", flexDirection: "row" }}>
+            <View style={{ display: "flex", flexDirection: "row",marginLeft:-10 }}>
               <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Amount</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
             </View>
@@ -40,8 +40,8 @@ export default function Cyberexuser() {
             />
           </View>
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
-            <View style={{ display: "flex", flexDirection: "row" }}>
-              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Description</Text>
+            <View style={{ display: "flex", flexDirection: "row" ,marginLeft:-10}}>
+              <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight:19.2, fontSize: 16 }}>Description</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
             </View>
 
@@ -56,7 +56,7 @@ export default function Cyberexuser() {
           </View>
 
 
-          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 70, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 12,marginLeft:-10}} >
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 30, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 12,marginLeft:-10}} >
               <Text style={styles.buttonText}>Send</Text>
             </TouchableOpacity>
   
@@ -68,7 +68,7 @@ export default function Cyberexuser() {
 const styles = StyleSheet.create({
   
   input: {
-    // padding: 5,
+     padding: 16,
      borderWidth: 1,
      width:350,
      height:56,

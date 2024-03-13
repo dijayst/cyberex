@@ -34,7 +34,7 @@ const [isChecked, setisChecked] = useState(false);
 
 
   return (
-    <View style={{ backgroundColor: colors.background, flex: 1, padding: 13 }}>
+    <View style={{ backgroundColor: colors.background, padding: 5 }}>
 
       <View style={{ height: 60, width: 237, marginTop: 68, marginLeft: 20, gap: 6 }}>
         <Text style={{ fontSize: 24, fontWeight: "700", color: colors.Textcolor, lineHeight: 28.8, width: 260, height: 32, gap: 10 }}>Welcome Back Leonard</Text>
@@ -109,7 +109,7 @@ userimage:{
  justifyContent:"center"
 },
   input: {
-   // padding: 5,
+    padding: 5,
     borderWidth: 1,
     width:350,
     height:56,
@@ -119,7 +119,7 @@ userimage:{
   },
   
   password: {
-     padding: 10,
+     padding: 16,
      borderWidth: 1,
      width:310,
      height:56,

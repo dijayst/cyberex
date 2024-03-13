@@ -5,11 +5,11 @@ import colors from '../JSON AND COLOR/colors';
 
 
 
-export default function Sell({navigation}) {
+export default function Sell({navigation,windowWidth, windowheight}) {
   
 
   return (
-    <View  style={{ backgroundColor:colors.background,padding:28,marginTop:150,flex:1}}>
+    <View  style={{ padding:28,marginTop:150,flex:1}}>
         <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Sell BTC</Text>

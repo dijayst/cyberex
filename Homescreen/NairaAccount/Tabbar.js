@@ -9,7 +9,7 @@ import Cyberexuser from './Cyberexuser';
 import BankAccount from './BankAccount';
 
 
-export default function Tabbar({navigation}) {
+export default function Tabbar({navigation,windowWidth, windowheight}) {
   const [gamesTab, setGamesTab] = useState(1);
 
   //const renderBanner = ({item, index}) => {return <BannerSlider data={item} />;};
@@ -19,27 +19,32 @@ export default function Tabbar({navigation}) {
   };
 
   return (
-    <View >
-    
+    <View style={{width:windowWidth>400?360:360,}} >
+  
         <View style={{marginTop:10}}>
           <CustomSwitch
             selectionMode={1}
             option1="CyberEx User"
             option2="Bank Account"
                onSelectSwitch={onSelectSwitch}
+               windowWidth={windowWidth} 
+               windowheight={windowheight}
           />
         </View>
-         <View style={{padding:14,marginLeft:2}}>
+     
+         <View style={{padding:13,marginTop:10}}>
          
-        {gamesTab == 1 &&
-       <Cyberexuser/>}
+           {gamesTab == 1 &&
+       <Cyberexuser  windowWidth={windowWidth}  windowheight={windowheight}/>}
 
        
 {gamesTab == 2 &&
-       <BankAccount/>}
+       <BankAccount windowWidth={windowWidth}  windowheight={windowheight}/>}
 
+       
 
  </View>
+ 
       </View>
    
   );

@@ -34,7 +34,7 @@ const [isChecked, setisChecked] = useState(false);
 
 
   return (
-    <View style={{ backgroundColor:colors.background, flex: 1,padding:13 }}>
+    <View style={{ backgroundColor:colors.background,padding:5 }}>
       <TouchableOpacity style={styles.backbtncontainer} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={30} color={colors.Gobackicon} />
       </TouchableOpacity>
@@ -100,7 +100,7 @@ userimage:{
  justifyContent:"center"
 },
   input: {
-   padding: 10,
+   padding: 16,
     borderWidth: 1,
     width:350,
     height:56,

@@ -1,21 +1,26 @@
-import { View, Text ,StyleSheet,
-    TextInput,
-    TouchableOpacity,
-    } from 'react-native'
-  import React,{useState} from 'react'
+//import { View, Text ,StyleSheet,TextInput,TouchableOpacity,useWindowDimensions} from 'react-native'
+  //import React,{useState,useContext} from 'react'
+  import { View, Text, StyleSheet, TextInput, TouchableOpacity, useWindowDimensions, ScrollView } from 'react-native'
+import React, { useState, useContext, useEffect } from 'react'
   import {useNavigation} from "@react-navigation/native";
 import PhoneInput  from 'react-native-phone-input'; 
 import CountryPicker  from 'react-native-country-picker-modal'; 
 import CheckBox from 'expo-checkbox'
 import colors from '../JSON AND COLOR/colors';
+//import Spinner from 'react-native-loading-spinner-overlay';
+import axios from "react-native-axios";
 
 
   
   export default  function Signup() {
   
-    
+   // const {isLoading, register,updateauthstate,userInfo} = useContext(AuthContext);
+    const windowWidth=useWindowDimensions().width
+    const windowheight=useWindowDimensions().height
+
+    //const ltu=useContext(AuthContext);console.log(ltu)
     const navigation=useNavigation();
-    const [userInfo, setUserInfo] = useState({
+    const [userInfo, setuserInfo] = useState({
       name: "",
       email: "",
       referancecode:""
@@ -23,10 +28,9 @@ import colors from '../JSON AND COLOR/colors';
   
     
     const handleSignup = async () => {
-     
-       navigation.navigate("verify")
+      navigation.navigate("verify")
+};
     
-    };
   
     const [phoneNumber, setPhoneNumber] = useState(''); 
     const [countryCode, setCountryCode] = useState(''); 
@@ -50,14 +54,22 @@ import colors from '../JSON AND COLOR/colors';
 
   const [isChecked, setisChecked] = useState(false); 
    
-    console.log(userInfo)
+    console.log(userInfor)
     console.log(handleSignup)
-
+    useEffect(() => {
+    Validateform();
+    }, [userInfo.name])
+    /*
+const Validateform=()=>{
+  let Error={}
+  (!userInfo.name?Error.userInfo.name="name is required":"")
+}*/
   
     return (
-      <View style={{ backgroundColor:colors.background, flex: 1,padding:13,}}>
-
-        <View style={{ height: 60, width: 237, marginTop: 68, marginLeft: 20, gap: 6 }}>
+      
+      <View style={{ backgroundColor:colors.background,padding:11,}}>
+    
+                <View style={{ height: 60, width: 240, marginTop: 68, gap: 6,padding:11 }}>
           <Text style={{ fontSize: 24, fontWeight: "700", color: colors.Textcolor, lineHeight: 28.8 }}>Create your account</Text>
 
           <View style={{ display: "flex", flexDirection: "row" }}>
@@ -68,9 +80,7 @@ import colors from '../JSON AND COLOR/colors';
           </View>
         </View>
 
-
-
-        <View style={{ width: 350, height: 556, gap: 30, marginLeft: 20, marginTop: 50 }}>
+        <View style={{ width: 350, height: 556, gap: 30, marginTop: 35,padding:11, }}>
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
@@ -80,11 +90,11 @@ import colors from '../JSON AND COLOR/colors';
             <TextInput
               style={styles.input}
               placeholder="E.g john doe"
-              value={userInfo.name}
+              value={userInfor.name}
               
               secureTextEntry
               placeholderTextColor={colors.Textcolor}
-              onChangeText={(name) => setUserInfo({ ...userInfo, name })}
+              onChangeText={(name) => setuserInfor({ ...userInfor, name })}
             />
           </View>
 
@@ -97,8 +107,8 @@ import colors from '../JSON AND COLOR/colors';
             <TextInput
               style={styles.input}
               placeholder="Example@gmail.com"
-              value={userInfo.email}
-              onChangeText={(email) => setUserInfo({ ...userInfo, email })}
+              value={userInfor.email}
+              onChangeText={(email) => setuserInfor({ ...userInfor, email })}
             />
           </View>
 
@@ -141,8 +151,8 @@ import colors from '../JSON AND COLOR/colors';
             <TextInput
               style={styles.input}
               placeholder="Example@gmail.com"
-              value={userInfo.referancecode}
-              onChangeText={(referancecode) => setUserInfo({ ...userInfo, referancecode })}
+              value={userInfor.referancecode}
+              onChangeText={(referancecode) => setuserInfor({ ...userInfor, referancecode })}
               secureTextEntry
             />
           </View>
@@ -184,7 +194,10 @@ import colors from '../JSON AND COLOR/colors';
 
 
         </View>
+        
       </View>
+    
+ 
     )
   }
   
@@ -194,7 +207,7 @@ import colors from '../JSON AND COLOR/colors';
       paddingTop: 80,
     },
     input: {
-      padding: 10,
+      padding: 16,
       borderWidth: 1,
       width:350,
       height:56,
@@ -253,3 +266,6 @@ submitButton: {
 
 
 
+
+//<Spinner visible={isLoading} />
+   

@@ -1,14 +1,14 @@
 import { View, Text,StyleSheet,TouchableOpacity,FlatList,Image} from 'react-native'
 import React ,{useState}from 'react'
 import {useNavigation} from "@react-navigation/native";
-//import { Notify } from '../JSON AND COLOR/Data';
+import { Notify } from '../JSON AND COLOR/Data';
 import colors from '../JSON AND COLOR/colors';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function Notificationscreen() {
    const navigation=useNavigation();
  
-    const [Notify, setNotify] = useState([]);
+    //const [Notify, setNotify] = useState(["ester"]);
    
   return (
     <View style={{ backgroundColor:colors.background, padding:19,flex:1 }}>

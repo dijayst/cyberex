@@ -5,7 +5,7 @@ import colors from '../JSON AND COLOR/colors';
 import {useNavigation} from "@react-navigation/native";
 import Quickactions from '../NairaAccount/Quickactions';
 
-export default function Heading2 ({text}) {
+export default function Heading2 ({text,windowWidth, windowheight}) {
   const navigation=useNavigation();
   const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
@@ -35,7 +35,7 @@ console.log(showModal)
       
 <Modal animationType="slide"
  visible={showModal} transparent={true}>
-  <View  style={{flex:1,justifyContent:"center",alignItems:"center",backgroundColor:colors.white,marginTop:600,borderTopLeftRadius:32,borderTopRightRadius:32,}}>
+  <View  style={{flex:1,justifyContent:"center",alignItems:"center",backgroundColor:colors.white,marginTop:windowWidth>400? 600:500,borderTopLeftRadius:32,borderTopRightRadius:32,}}>
 <Quickactions  hidemodal={()=>setshowmodal(false)}/>
     <Text style={{fontSize:24,fontWeight:"700",lineHeight:32.4,color: "#000000",marginLeft:-254,}}>Accounts</Text>
    

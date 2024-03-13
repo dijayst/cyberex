@@ -3,14 +3,17 @@ import { Ionicons } from '@expo/vector-icons';
 import React from 'react'
 import colors from '../JSON AND COLOR/colors';
 
-export default function Recieve({navigation}) {
+export default function Recieve({navigation,windowWidth, windowheight}) {
   return (
-    <View  style={{ backgroundColor:colors.background,padding:18,marginTop:150,flex:1,padding:19}}>
+    <View  style={{marginTop:150,padding:19,height:windowWidth>400? 0:0,}}>
          <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Receive BTC</Text>
             </TouchableOpacity>
-          <Text style={{color:"#000000",fontSize:16,fontWeight:"700",lineHeight:21.6}}>Scan QR Code</Text>
+            <View style={{
+ alignItems: 'center',
+ justifyContent:"center",marginTop:190}}>
+            <Text style={{color:"#000000",fontSize:16,fontWeight:"700",lineHeight:21.6}}>Scan QR Code</Text>
          <View style={{backgroundColor:colors.white,height:310,width:350,borderRadius:8,marginLeft:13,marginTop:90,alignItems: 'center', justifyContent:"center",}}>
          <Image source={require("../image1/download.png")} style={styles.userimage} />
          </View>
@@ -23,6 +26,8 @@ export default function Recieve({navigation}) {
       <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 30, height: 56, width: 350, alignItems: "center", padding: 10,marginLeft:13 }} onPress={()=>navigation.navigate("btc")} >
               <Text style={styles.buttonText}>Done</Text>
             </TouchableOpacity>
+            </View>
+        
              </View>
   )
 }

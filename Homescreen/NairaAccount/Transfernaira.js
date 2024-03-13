@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 import Tabbar from './Tabbar';
 
-export default function Transfernaira({navigation}) {
+export default function Transfernaira({navigation,windowWidth, windowheight}) {
   
   const [clickcolor, setclickcolor] = useState(true);
   
@@ -12,7 +12,7 @@ export default function Transfernaira({navigation}) {
   console.log(clickcolor)
 
   return (
-    <View style={{ backgroundColor:colors.background,padding:29,marginTop:150,flex:1}}>
+    <View style={{ padding:windowWidth>400? 0:16,marginTop:150,flex:1,alignItems: 'center',justifyContent:"center",}}>
       <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Transfer</Text>
@@ -22,7 +22,7 @@ export default function Transfernaira({navigation}) {
        <Image source={require("../image1/ICONS/Group (1).png")} style={styles.image} />
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:"#000000",fontSize:16,height:22,gap:10}}>Bitcoin</Text>
-                      <Text style={{ color:"#000000",marginLeft:119,fontSize:16,fontWeight:"700"}}>Available Balance</Text>
+                      <Text style={{ color:"#000000",marginLeft:109,fontSize:16,fontWeight:"700"}}>Available Balance</Text>
                         </View>
                   <View style={styles.subcontainer}>
                       <Text style={{fontFamily:"lato-black",fontSize:14,color:colors.neural800,fontWeight:"700",marginTop:26,marginLeft:-318}}>NGN</Text>
@@ -30,7 +30,7 @@ export default function Transfernaira({navigation}) {
                      </View>
              </View>
             
-             <Tabbar/>
+             <Tabbar windowWidth={windowWidth} windowheight={windowheight} />
     </View>
   )
 }
@@ -40,12 +40,13 @@ const styles = StyleSheet.create({
   
   backbtncontainer:{
    
-    position:"absolute",
+    //position:"absolute",
     display:"flex",
     flexDirection:"row",
-    zIndex:10,
-    padding:20,
-    marginTop:-90
+    //zIndex:10,
+    padding:26,
+    marginLeft:-180,
+    marginTop:-80
   
  
 }
@@ -56,8 +57,9 @@ const styles = StyleSheet.create({
   width:360,
   height:81,
    borderRadius:8,
-   padding:6,
-   paddingTop:9
+   padding:13,
+   paddingTop:16,
+   gap:3
 },
 
 image:{width:38,

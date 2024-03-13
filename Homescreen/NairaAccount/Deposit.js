@@ -1,17 +1,21 @@
-import { View, Text,TouchableOpacity,StyleSheet,TextInput } from 'react-native'
+import { View, Text,TouchableOpacity,StyleSheet,TextInput, } from 'react-native'
 import React from 'react'
 import colors from '../JSON AND COLOR/colors'
 import { Ionicons } from '@expo/vector-icons';
 
-export default function Deposit({navigation}) {
+export default function Deposit({navigation,windowWidth, windowheight}) {
+  
   return (
-    <View style={{flex:1,backgroundColor:colors.background,padding:29,}}>
+
+    <View style={{}}>
       <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Deposit</Text>
             </TouchableOpacity>
-      
-            <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 18, width: 350, height: 178,marginTop:190, }}>
+      <View  style={{
+ alignItems: 'center',
+ justifyContent:"center",padding:9}}>
+            <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 18, width: 350, height: 178,marginTop:190,padding:5 }}>
                 <Text style={{ fontWeight: "700", color: colors.Textcolor, lineHeight: 21.6, fontSize: 16 }}>Amount</Text>
               <TextInput
               style={styles.input}
@@ -20,8 +24,8 @@ export default function Deposit({navigation}) {
               placeholderTextColor={colors.neural300}
               />
              
-             <View style={{gap:10}}>
-              <View style={{flexDirection:"row",gap:10}}>
+             <View style={{gap:10,flexDirection:"column"}}>
+              <View style={{flexDirection:"row",gap:8,width:350}}>
               <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}}>
                 <Text style={{fontSize:12,fontWeight:"700",lineHeight:16.2,color:colors.Orange}}>#1000</Text>
                 </TouchableOpacity>
@@ -38,7 +42,7 @@ export default function Deposit({navigation}) {
              
                 </View>
 
-                <View style={{flexDirection:"row",gap:10}}>
+                <View style={{flexDirection:"row",gap:8,width:350}}>
               <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}}>
                 <Text style={{fontSize:12,fontWeight:"700",lineHeight:16.2,color:colors.Orange}}>#15000</Text>
                 </TouchableOpacity>
@@ -59,10 +63,10 @@ export default function Deposit({navigation}) {
              </View>
           </View>
 
-          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 150, height: 56, width: 350, alignItems: "center", padding: 10,marginLeft:10}} onPress={()=>navigation.navigate("home")} >
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 150, height: 56, width: 350, alignItems: "center", padding: 7,marginLeft:7}} onPress={()=>navigation.navigate("home")} >
               <Text style={styles.buttonText}>Deposit</Text>
             </TouchableOpacity>
-  
+  </View>
     </View>
   )
 }

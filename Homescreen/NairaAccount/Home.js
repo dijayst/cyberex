@@ -1,13 +1,20 @@
-import {  View,Image,  Text, SafeAreaView, ScrollView,FlatList,StyleSheet,  TouchableOpacity,} from 'react-native';
+import {  View,Image,  Text, SafeAreaView, ScrollView,FlatList,StyleSheet,  TouchableOpacity,useWindowDimensions} from 'react-native';
 import Quickactions from './Quickactions';
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react';
 import Heading from './Heading';
 import { Ionicons,Entypo } from '@expo/vector-icons';
 import { print } from '../JSON AND COLOR/Data';
 import colors from '../JSON AND COLOR/colors';
 
+import Spinner from 'react-native-loading-spinner-overlay';
+import { AuthContext } from '../../Auth/AuthContext';
 
 export default function Home({navigation}) {
+  
+  const {userInfo, isLoading, logout} = useContext(AuthContext);
+
+  const windowWidth=useWindowDimensions().width
+  const windowheight=useWindowDimensions().height
     const [gamesTab, setGamesTab] = useState(1);
    
   const Colors = ['#1F2223','#009400']; // Define your colors here
@@ -24,8 +31,10 @@ export default function Home({navigation}) {
    
     
   return (
+    
+    <SafeAreaView style={styles.Safecontainer}>
       <View style={{ backgroundColor:colors.background, flex: 1, padding: 19 }}>
-        
+      <Spinner visible={isLoading} />
               <ScrollView   showsVerticalScrollIndicator={false}>
           <View style={styles.ProfileMainContainer}>
               <View style={styles.ProfileContainer}>
@@ -39,7 +48,7 @@ export default function Home({navigation}) {
 
               </View>
           </View>
-          <Heading />
+          <Heading windowWidth={windowWidth} windowheight={windowheight} />
 
           <Quickactions text="Quick Actions"  style={{fontSize:16,color:colors.Textcolor}} />
               
@@ -48,7 +57,7 @@ export default function Home({navigation}) {
 
 
 
-               <View  style={{backgroundColor:colors.white,borderRadius:8,height:101,width:375,marginTop:35,display:"flex",flexDirection:"row"}}>
+               <View  style={{backgroundColor:colors.white,borderRadius:8,height:windowheight>800? 101:101,width:windowWidth>400? 375:350,marginTop:35,display:"flex",flexDirection:"row"}}>
                <TouchableOpacity style={styles.container} onPress={()=>navigation.push("paybills")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
@@ -128,7 +137,7 @@ export default function Home({navigation}) {
 
 
                      
-             <TouchableOpacity style={{backgroundColor:colors.white,width:375.5,height:96,borderRadius:8,marginTop:29,}} onPress={()=>navigation.push("link")} >
+             <TouchableOpacity style={{backgroundColor:colors.white,width:windowWidth>400? 375.5:350,height:windowheight>800? 96:96,borderRadius:8,marginTop:29,}} onPress={()=>navigation.push("link")} >
              <View style={styles.ProfileContainer}> 
                 <Image source={require("../image1/img2.png")} style={styles.userimage2}/>
                 <View style={{gap:9,marginTop:12}}>
@@ -144,15 +153,15 @@ export default function Home({navigation}) {
 
              {print.data?.length>0?  <FlatList
                 data={print.data}
-                style={{marginTop:35,backgroundColor:colors.white,height:320,width:375.5,gap:28,padding:16,borderRadius:8}}
+                style={{marginTop:35,backgroundColor:colors.white,height:windowheight>800? 320:320,width:windowWidth>400? 375.5:350,gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
-                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("nairatrans",{item:item})}>
+                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.navigate("nairatrans",{item:item,windowWidth:{windowWidth} ,windowheight:{windowheight}})}>
                   <Image source={item.image1} alt="img" style={styles.image}/>
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.title}</Text>
                       <Text style={{fontFamily:"outfit-bold",fontSize:13,color:colors.neuralblack}}>{item.time}</Text>
                   </View>
-                     <Text style={{ color: Colors[index % Colors.length],marginTop:15,marginLeft:119,fontWeight:"700",fontSize:16}}>{item.price}</Text>
+                     <Text style={{ color: Colors[index % Colors.length],marginTop:windowWidth>400? 15:10,marginLeft:windowWidth>400? 119:94,fontWeight:"700",fontSize:16}}>{item.price}</Text>
                      
              </TouchableOpacity>
           
@@ -172,6 +181,7 @@ export default function Home({navigation}) {
               </ScrollView>
           
       </View>
+      </SafeAreaView>
   )
 }
 
@@ -182,6 +192,11 @@ export default function Home({navigation}) {
 
 
 const styles = StyleSheet.create({
+  
+  Safecontainer:{
+    flex:1,
+    backgroundColor:colors.background
+  },
     subcontainer:{
       display:"flex",
       flexDirection:"column",

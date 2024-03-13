@@ -25,7 +25,7 @@ const handleSignup = async () => {
 
 
   return (
-    <View style={{ backgroundColor:colors.background, flex: 1, padding: 13 }}>
+    <View style={{ backgroundColor:colors.background, flex: 1, padding: 5 }}>
       <TouchableOpacity style={styles.backbtncontainer} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={30} color="black" />
       </TouchableOpacity>
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
    justifyContent:"center"
   },
     input: {
-     padding: 10,
+     padding: 16,
       borderWidth: 1,
       borderRightWidth:0,
       width:310,
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     },
     
     password: {
-      // padding: 5,
+       padding: 16,
        borderWidth: 1,
        borderRightWidth:0,
        width:310,

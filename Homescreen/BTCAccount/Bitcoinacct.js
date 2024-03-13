@@ -1,4 +1,4 @@
-import {  View,Image,  Text, SafeAreaView, ScrollView,FlatList,StyleSheet,  TouchableOpacity,} from 'react-native';
+import {  View,Image,  Text, SafeAreaView, ScrollView,FlatList,StyleSheet,  TouchableOpacity,useWindowDimensions} from 'react-native';
 import Quickactions from '../NairaAccount/Quickactions';
 import React,{useEffect, useState} from 'react'
 import Heading2 from './Heading2';
@@ -7,7 +7,9 @@ import colors from '../JSON AND COLOR/colors';
 import { print } from '../JSON AND COLOR/Data';
 
 
-export default function Bitcoinacct ({navigation}) {
+export default function Bitcoinacct ({navigation,windowWidth, windowheight}) {
+  
+ 
     const [gamesTab, setGamesTab] = useState(1);
    
   const Colors = ['#009400','#1F2223',]; // Define your colors here
@@ -39,7 +41,7 @@ export default function Bitcoinacct ({navigation}) {
 
               </View>
           </View>
-          <Heading2 />
+          <Heading2 windowWidth={windowWidth} windowheight={windowheight} />
 
           <Quickactions text="Quick Actions"  style={{fontSize:16,color:colors.Textcolor}} />
                 
@@ -62,7 +64,7 @@ export default function Bitcoinacct ({navigation}) {
                
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("recieve")}>
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("recieve",{windowWidth:{windowWidth} ,windowheight:{windowheight}})}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
                  <Image source={require("../image1/ICONS/qr_code.png")} style={styles.userimage} />
@@ -79,7 +81,7 @@ export default function Bitcoinacct ({navigation}) {
              
                
                     </TouchableOpacity>   
-                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("sell")}>
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("sell",{windowWidth:{windowWidth} ,windowheight:{windowheight}})}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
                  <Image source={require("../image1/ICONS/sell.png")} style={styles.userimage} />
@@ -96,7 +98,7 @@ export default function Bitcoinacct ({navigation}) {
              
                
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("convert")}>
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("convert",{windowWidth:{windowWidth} ,windowheight:{windowheight}})}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
                  <Image source={require("../image1/ICONS/bitcoin-convert.png")} style={styles.userimage} />
@@ -125,7 +127,7 @@ export default function Bitcoinacct ({navigation}) {
                 data={print.data}
                 style={{marginTop:35,backgroundColor:colors.white,height:320,width:375.5,gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
-                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("btctrans",{item:item})}>
+                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("btctrans",{item:item,windowWidth:{windowWidth} ,windowheight:{windowheight}})}>
                   <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
                   <Image source={item.image3} alt="img" style={styles.image}/>
                 </View>

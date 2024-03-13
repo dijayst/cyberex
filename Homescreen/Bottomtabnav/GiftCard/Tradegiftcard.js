@@ -9,7 +9,7 @@ export default function Tradegiftcard() {
     const Colors = ['#1F2223','#009400']; // Define your colors here
 
   return (
-    <View style={{ backgroundColor:colors.background,padding:19,flex:1}}>
+    <View style={{ backgroundColor:colors.background,padding:11}}>
           <View style={{justifyContent:"center",alignItems:"center",marginTop:60,}}>
       <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Trade Giftcard</Text>
       </View>
@@ -24,14 +24,14 @@ export default function Tradegiftcard() {
         </TouchableOpacity>
       </View>
       
-<TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 21, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 9,marginLeft:-10}}  >
+<TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 21, height: 56, width: 350, alignItems: "center", paddingTop: 9,marginLeft:9}}  >
 <Text style={styles.buttonText}>Trade New Giftcard</Text>
 </TouchableOpacity>
       <Quickactions text="Transactions"  isViewAll={true}/>
 
-      <FlatList
+              <FlatList
                 data={print.data}
-                style={{marginTop:45,backgroundColor:colors.white,height:320,width:375.5,gap:28,padding:16,borderRadius:8,gap:28,}}
+                style={{marginTop:45,backgroundColor:colors.white,height:420,width:350.5,borderRadius:8,gap:28,marginLeft:9,padding:10}}
                 renderItem={({ item, index }) =>(
                   <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("nairatrans",{item:item})}>
                    <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center",}}>

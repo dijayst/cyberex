@@ -6,9 +6,9 @@ import {useNavigation} from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 
-export default function Password() {
+export default function Password({navigation}) {
 
-    const navigation=useNavigation();
+    //const navigation=useNavigation();
 
     const [userInfo, setUserInfo] = useState({
         password:"",
@@ -20,13 +20,13 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
 const handleSignup = async () => {
    
-    navigation.navigate("home")
+    navigation.navigate("home",{screen:'homestack'})
  
  };
 
 
   return (
-    <View style={{ backgroundColor:colors.background, flex: 1, padding: 13 }}>
+    <View style={{ backgroundColor:colors.background, padding: 5 }}>
       <TouchableOpacity style={styles.backbtncontainer} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={30} color="black" />
       </TouchableOpacity>
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
    justifyContent:"center"
   },
     input: {
-     padding: 10,
+     padding: 16,
       borderWidth: 1,
       borderRightWidth:0, 
       width:310,
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     },
     
     password: {
-       padding: 10,
+       padding: 16,
        borderWidth: 1,
        width:310,
        height:56,

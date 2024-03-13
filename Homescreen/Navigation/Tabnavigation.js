@@ -8,6 +8,8 @@ import Profile from '../Bottomtabnav/Profile';
 import { FontAwesome,MaterialCommunityIcons,MaterialIcons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 import Giftcardstack from './Giftcardstack';
+import Homestack from './Homestack';
+import Home from '../NairaAccount/Home';
 
 
     const Tab = createBottomTabNavigator();
@@ -26,7 +28,7 @@ import Giftcardstack from './Giftcardstack';
   
 }}>
     
- <Tab.Screen name="stack" component={Stacknav} options={{headerShown:false,
+ <Tab.Screen name="home" component={Home} options={{headerShown:false,
     tabBarLabel:({focused})=>(<Text style={{color:focused?colors.Orange:colors.neural400,fontSize:10,marginTop:-7}}>Home</Text>),
     tabBarIcon:({focused})=>(<FontAwesome name="home"  color={focused?colors.Orange:colors.neural400} size={25}/>)}}
   />

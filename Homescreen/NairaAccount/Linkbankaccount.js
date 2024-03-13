@@ -7,7 +7,7 @@ import colors from '../JSON AND COLOR/colors';
 
 
 
-export default function Linkbankaccount({navigation}) {
+export default function Linkbankaccount({navigation, windowWidth,windowheight}) {
 
     
   const [userInfo, setUserInfo] = useState({
@@ -17,15 +17,15 @@ export default function Linkbankaccount({navigation}) {
   });
 
   return (
-    <View style={{ backgroundColor:colors.background,padding:9,marginTop:150,flex:1}}>
+    <View style={{ padding:19,marginTop:150,flex:1}}>
       <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Link BanK</Text>
             </TouchableOpacity>
         
-    <View style={{gap: 20,backgroundColor:colors.background,padding:29}}>
+    <View style={{gap: 20,width:350,height:260,marginLeft:windowWidth>400? 29:15,alignContent:"center",justifyContent:"center",marginTop:60}}>
      
-     <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
+     <View style={{ display: "flex", flexDirection: "column", gap: 8, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
               <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Bank Name</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
@@ -103,7 +103,7 @@ export default function Linkbankaccount({navigation}) {
 },
 
 input: {
-    // padding: 5,
+     padding: 16,
      borderWidth: 1,
      width:350,
      height:56,
@@ -121,7 +121,7 @@ input: {
     },
     
    input1: {
-    // padding: 5,
+     padding: 16,
      borderWidth: 1,
      borderRightWidth:0,
      width:310,
