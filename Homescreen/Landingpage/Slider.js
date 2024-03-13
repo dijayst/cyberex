@@ -32,21 +32,11 @@ const [slideindex, setslideindex] = useState(0)
   if (slideindex===Slid.length )return;
   if(carouselRef.current){carouselRef.current.scrollToIndex({index:slideindex+1})}
   console.log(slideindex)
-//setslideindex(index + 1);
-// const nextquestion=slideindex+1;
-//(nextquestion===Slid.length?setslideindex(nextquestion):setslideindex(slideindex))
-//setslideindex(slideindex+1);
-  //  console.log("Moving to the next slide");
  
 
     };
     console.log(slideindex)
   }
-    /*
-     const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1));
-  };*/
-  //console.log(handleclick(index))
   return (
     <SafeAreaView style={styles.Safecontainer}>
     <View style={styles.container}>

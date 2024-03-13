@@ -18,7 +18,7 @@ import axios from "react-native-axios";
 
     //const ltu=useContext(AuthContext);console.log(ltu)
     const navigation=useNavigation();
-    const [userInfo, setuserInfo] = useState({
+    const [userInfor, setuserInfor] = useState({
       name: "",
       email: "",
       referancecode:""
