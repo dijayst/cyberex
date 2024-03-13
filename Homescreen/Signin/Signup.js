@@ -1,5 +1,3 @@
-//import { View, Text ,StyleSheet,TextInput,TouchableOpacity,useWindowDimensions} from 'react-native'
-  //import React,{useState,useContext} from 'react'
   import { View, Text, StyleSheet, TextInput, TouchableOpacity, useWindowDimensions, ScrollView } from 'react-native'
 import React, { useState, useContext, useEffect } from 'react'
   import {useNavigation} from "@react-navigation/native";
