@@ -24,7 +24,6 @@ import Linkbankaccount from '../NairaAccount/Linkbankaccount';
 import {NavigationContainer} from "@react-navigation/native"
 import {createStackNavigator} from "@react-navigation/stack";
 import Splashscreen from '../Loadingscreen/Splashscreen';
-import { AuthContext } from '../../Auth/AuthContext';
 
 const Stack = createStackNavigator();
 

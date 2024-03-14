@@ -7,7 +7,7 @@ import { print } from '../JSON AND COLOR/Data';
 import colors from '../JSON AND COLOR/colors';
 
 import Spinner from 'react-native-loading-spinner-overlay';
-import { AuthContext } from '../../Auth/AuthContext';
+//import { AuthContext } from '../../Auth/AuthContext';
 
 export default function Home({navigation}) {
   

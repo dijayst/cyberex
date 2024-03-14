@@ -1,5 +1,5 @@
   import { View, Text, StyleSheet, TextInput, TouchableOpacity, useWindowDimensions, ScrollView } from 'react-native'
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
   import {useNavigation} from "@react-navigation/native";
 import PhoneInput  from 'react-native-phone-input'; 
 import CountryPicker  from 'react-native-country-picker-modal'; 
@@ -57,11 +57,11 @@ import axios from "react-native-axios";
     useEffect(() => {
     Validateform();
     }, [userInfo.name])
-    /*
+  
 const Validateform=()=>{
   let Error={}
   (!userInfo.name?Error.userInfo.name="name is required":"")
-}*/
+}
   
     return (
       

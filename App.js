@@ -3,8 +3,7 @@ import { useFonts } from 'expo-font';
 import {NavigationContainer} from "@react-navigation/native"
 
 //import Tabnavigation from './Homescreen/Navigation/Tabnavigation';
-import AppNav from './Auth/AppNav';
-import AuthProvider from './Auth/AuthContext';
+
 import Homestack from './Homescreen/Navigation/Homestack';
 import Stacknav from './Homescreen/Navigation/Stacknav';
 
