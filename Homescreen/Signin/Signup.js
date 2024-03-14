@@ -54,9 +54,7 @@ import axios from "react-native-axios";
    
     console.log(userInfor)
     console.log(handleSignup)
-    useEffect(() => {
-    Validateform();
-    }, [userInfo.name])
+    //useEffect(() => {Validateform(); }, [userInfo.name])
   
 const Validateform=()=>{
   let Error={}

@@ -7,34 +7,35 @@ import { print } from '../JSON AND COLOR/Data';
 import colors from '../JSON AND COLOR/colors';
 
 import Spinner from 'react-native-loading-spinner-overlay';
-//import { AuthContext } from '../../Auth/AuthContext';
 
 export default function Home({navigation}) {
   
-  const {userInfo, isLoading, logout} = useContext(AuthContext);
+  //const {userInfo, isLoading, logout} = useContext(AuthContext);
 
   const windowWidth=useWindowDimensions().width
   const windowheight=useWindowDimensions().height
     const [gamesTab, setGamesTab] = useState(1);
    
-  const Colors = ['#1F2223','#009400']; // Define your colors here
- 
-    //const renderBanner = ({item, index}) => {return <BannerSlider data={item} />;};
-  
+  const Colors = ['#1F2223','#009400']; 
     const onSelectSwitch = value => {
       setGamesTab(value);
     };
 
 
     //const [print, setprint] = useState([]);
-   
+    const [isLoading, setisLoading] = useState(false);
+    const updateloading=()=>{
+      setisLoading(true);
+     // <Spinner visible={isLoading} />
+   }
+  
    
     
   return (
     
     <SafeAreaView style={styles.Safecontainer}>
       <View style={{ backgroundColor:colors.background, flex: 1, padding: 19 }}>
-      <Spinner visible={isLoading} />
+     
               <ScrollView   showsVerticalScrollIndicator={false}>
           <View style={styles.ProfileMainContainer}>
               <View style={styles.ProfileContainer}>

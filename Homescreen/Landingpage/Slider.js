@@ -12,24 +12,19 @@ export default function Slider() {
   const windowWidth=useWindowDimensions().width
   const windowheight=useWindowDimensions().height
   
- // const {styles}=useStyle();
-const [slideindex, setslideindex] = useState(0)
+ const [slideindex, setslideindex] = useState(0)
     const navigation=useNavigation();
 
     const handleclick = (index) => {
       setslideindex(index);
 
       if (index === Slid.length-1 ) {
-        // Perform your action when the last index is clicked
-       navigation.navigate("signup")
+          navigation.navigate("signup")
        console.log("yeppp")
-    //(nextquestion<Slid.length?setslideindex(nextquestion):setslideindex(slideindex))
-
+   
       } 
       else{
-       
- //if (slideindex < Slid.length - 1){setslideindex(slideindex + 1 )}
-  if (slideindex===Slid.length )return;
+    if (slideindex===Slid.length )return;
   if(carouselRef.current){carouselRef.current.scrollToIndex({index:slideindex+1})}
   console.log(slideindex)
  
@@ -48,9 +43,9 @@ const [slideindex, setslideindex] = useState(0)
        style={{ width:windowWidth>400? 350:"95%", height:windowheight>800? 238:0, marginTop:windowheight>800?580:473, marginLeft: windowheight>800?4:6, gap: 32,alignItems:"center",justifyContent:"center" }} 
        showsControls={false}
        //onSnapToItem={(index) => slideindex(index)}
-      // loop={true}
-        //autoplay={true}
-        //autoplayInterval={5000}
+       loop={true}
+        autoplay={true}
+        autoplayInterval={5000}
       >
         {Slid.map((item) => (
             <View key={item.id} >
@@ -77,8 +72,6 @@ const [slideindex, setslideindex] = useState(0)
 }
 
 
- // const {width,height}=useWindowDimensions();
- 
 const styles = StyleSheet.create({
   Safecontainer:{
     flex:1,
@@ -90,9 +83,6 @@ const styles = StyleSheet.create({
       backgroundColor:colors.background,
       alignItems: 'center',
       justifyContent: 'center',
-   //width:(width > 500)?200:100,
-  // width:dimensions.width,
-   //height:dimensions.height
     },
     dotStyle:{
       marginBottom:300,
