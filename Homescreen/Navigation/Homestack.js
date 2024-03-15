@@ -7,8 +7,8 @@ import Bitcointransactiondetails from '../BTCAccount/Bitcointransactiondetails';
 import Nairatransactiondetails from '../NairaAccount/Nairatransactiondetails';
 import Notificationscreen from '../Notification/Notificationscreen';
 import Paybills from '../NairaAccount/Paybills';
-import Buyairtime from '../NairaAccount/Buyairtime';
-import Buycrpto from '../NairaAccount/Buycrpto';
+import Buyairtime from '../NairaAccount/BuyAirtime';
+import Buycrpto from '../NairaAccount/BuyCrpto';
 import Save from '../NairaAccount/Save';
 import Send from '../BTCAccount/Send';
 import Recieve from '../BTCAccount/Recieve';
@@ -19,7 +19,7 @@ import Transactionpin from '../BTCAccount/Transactionpin';
 import Sellsuccessfull from '../BTCAccount/Sellsuccessfull';
 import Deposit from '../NairaAccount/Deposit';
 import Transfernaira from '../NairaAccount/Transfernaira';
-import Linkbankaccount from '../NairaAccount/Linkbankaccount';
+import Linkbankaccount from '../NairaAccount/LinkBankAccount';
 
 import {NavigationContainer} from "@react-navigation/native"
 import {createStackNavigator} from "@react-navigation/stack";

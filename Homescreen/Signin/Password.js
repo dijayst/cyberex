@@ -6,15 +6,16 @@ import { Ionicons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 
 export default function Password() {
-
+  
     const navigation=useNavigation();
 
     const [userInfo, setUserInfo] = useState({
         password:"",
-        reenterpassword:""
+        reenterpassword:"",
+        isPasswordSecure:true
       });
       
-const [isPasswordSecure, setIsPasswordSecure] = useState(true);
+//const [i, setIsPasswordSecure] = useState(true);
 
 
 const handleSignup = async () => {
@@ -58,10 +59,10 @@ const handleSignup = async () => {
               
               placeholderTextColor={colors.neural300}
               onChangeText={(password) => setUserInfo({ ...userInfo, password })}
-              secureTextEntry
+              secureTextEntry={userInfo.isPasswordSecure}
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>
-              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
+              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => {  userInfo.isPasswordSecure ? setUserInfo({...userInfo,isPasswordSecure:false}) : setUserInfo({...userInfo,isPasswordSecure:true}) }} />
 
             </View>
 
@@ -85,7 +86,7 @@ const handleSignup = async () => {
               onChangeText={(reenterpassword) => setUserInfo({ ...userInfo, reenterpassword })}
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, }}>
-              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
+              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { userInfo.isPasswordSecure ? setUserInfo({...userInfo,isPasswordSecure:false}) : setUserInfo({...userInfo,isPasswordSecure:true}) }} />
 
             </View>
           </View>
@@ -207,5 +208,56 @@ const styles = StyleSheet.create({
   });
   
   
+  /*
   
+const handleemail=(emailvar)=>{
+ //const emailvar=e.nativeEvent.text;
+ const updatedUserInfo = { ...userInfor };
+
+ setuserInfor.email(emailvar);
+ setuserInfor.emailverify(false);
+ if(/[a-zA-Z]+@[a-z]+\.[a-z]{2,3}/.test(emailvar)){
+   setuserInfor.email(emailvar);
+   setuserInfor.emailverify(true)
+ }
+}
+const [phoneNumberverify, setphoneNumberverify] = useState(false)
+
+
+
+const handlephonenumber=(e)=>{
+ const phonevar=e.nativeEvent.text;
+ setPhoneNumber(phonevar);
+ setphoneNumberverify(false);
+ if(/[6-9]{1}[0-9]{9}/.test(phonevar)){
+   setPhoneNumber(phonevar);
+   setphoneNumberverify(true)
+ }
+}
+
+
+
+const handlename = (namevar) => {
+ const updatedUserInfo = { ...userInfor };
+ updatedUserInfo.name = namevar;
+ updatedUserInfo.nameverify = namevar.length > 1;
+ setuserInfor(updatedUserInfo);
+};
+
+
+
+const handlereferencecode=(e)=>{
+ const referancecodevar=e.nativeEvent.text;
+ setuserInfor.referancecode(referancecodevar);
+ setuserInfor.referancecodeverify(false);
+ if(referancecodevar.length>1){
+   setuserInfor.referancecode(referancecodevar);
+   setuserInfor.referancecodeverify(true)
+ }
+
+}
+
+onPress={() => { userInfor.CheckBox ? setUserInfor({...userInfor,isChecked:false}) : setUserInfor({...userInfor,isChecked:true}) }}
+
+*/
   

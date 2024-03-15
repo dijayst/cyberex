@@ -11,11 +11,16 @@ export default  function Login() {
   
   //const {isLoading, login} = useContext(AuthContext);
  
-const [isPasswordSecure, setIsPasswordSecure] = useState(true);
+//const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
   const [userInfor, setuserInfor] = useState({
     email: "",
+    emailverify:true,
     password:"",
+    passwordverify:true,
+    isChecked:false,
+    isPasswordSecure:true
+
   });
 
   
@@ -28,7 +33,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
   
 
 
-const [isChecked, setisChecked] = useState(false); 
+//const [isChecked, setisChecked] = useState(false); 
  
   console.log(userInfor)
   console.log(handleSignup)
@@ -85,10 +90,10 @@ const [isChecked, setisChecked] = useState(false);
               value={userInfor.password}
               placeholderTextColor={colors.neural300}
               onChangeText={(password) => setuserInfor({ ...userInfor, password })}
-              secureTextEntry
+             
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, }}>
-              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
+              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={userInfor.isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() =>setuserInfor({...userInfor,isPasswordSecure:!userInfor.isPasswordSecure}) } />
 
             </View>
 

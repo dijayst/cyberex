@@ -1,11 +1,11 @@
-  import { View, Text, StyleSheet, TextInput, TouchableOpacity, useWindowDimensions, ScrollView } from 'react-native'
+  import { View, Text, StyleSheet, TextInput, TouchableOpacity, useWindowDimensions, ScrollView, Alert } from 'react-native'
 import React, { useState, useEffect } from 'react'
   import {useNavigation} from "@react-navigation/native";
 import PhoneInput  from 'react-native-phone-input'; 
 import CountryPicker  from 'react-native-country-picker-modal'; 
-import CheckBox from 'expo-checkbox'
+import CheckBox from 'expo-checkbox';
 import colors from '../JSON AND COLOR/colors';
-//import Spinner from 'react-native-loading-spinner-overlay';
+import Spinner from 'react-native-loading-spinner-overlay';
 import axios from "react-native-axios";
 
 
@@ -20,51 +20,135 @@ import axios from "react-native-axios";
     const navigation=useNavigation();
     const [userInfor, setuserInfor] = useState({
       name: "",
+      nameverify:true,
       email: "",
-      referancecode:""
+      emailverify:true,
+      referancecode:"",
+      referancecodeverify:true,
+      errormessage:"",
+      phoneNumber:"",
+      phoneNumberverify:true,
+      check_textinputchange:false,
+      isChecked:false,
+      countryPickerVisible:false,
+      selectedCountry:null,
+      countryCode:"",
     });
-  
     
-    const handleSignup = async () => {
-      navigation.navigate("verify")
+  const handleSignup =() => {
+    if(userInfor.nameverify&&userInfor.emailverify&&userInfor.referancecodeverify&&userInfor.phoneNumberverify&&userInfor.isChecked){
+   //axios.post("http://localhost:5051/Signup",{name:userInfor.name,    email:userInfor.email,referancecode:userInfor.referancecode,phoneNumber:userInfor.phoneNumber})
+   //.then(Response=>{
+  //setwhatido(Response.data)
+  //setwhatido(Response.data.whatido)
+  //   console.log(Response.data)
+   //  console.log(Response.data.result)
+     console.log("i gotten it")
+     console.log(userInfor)
+     navigation.navigate("verify")
+    //})
+   //.catch(error=>{     console.log(error)     console.log("i deny")})
+  }
+   else{
+     Alert.alert("fill in mandatory details")
+   }
+
+
 };
-    
+
+
+
+
+
+const handleemail=(val)=>{
+  if(/[a-zA-Z]+@[a-z]+\.[a-z]{2,3}/.test(val)){
+    setuserInfor({...userInfor,email:val,emailverify:true})
+}else{setuserInfor({...userInfor,email:val,emailverify:false})
+}
+
+}
+
+
+
+
+const handlephonenumber=(val)=>{
+  //const phonevar=e.nativeEvent.text;
+  //setPhoneNumber(phonevar);
+  //setuserInfor.phoneNumberverify(false);
+  if(/[6-9]{1}[0-9]{9}/.test(val)){
+    setuserInfor({...userInfor,phoneNumber:val,phoneNumberverify:true})
+  }else{setuserInfor({...userInfor,phoneNumber:val,phoneNumberverify:false})
+}
+
+}
+
+
+const handlename=(val)=>{
+  //const namevar=e.nativeEvent.text;
+  //setuserInfor.name(namevar);
+  //setuserInfor.nameverify(false);
+  //if(namevar.length>1){
+    //setuserInfor.name(namevar);
+    //setuserInfor.nameverify(true)
+if (/[a-zA-Z]{2,40} [a-zA-Z]{2,4}/.test(val)){
+setuserInfor({...userInfor,name:val,nameverify:true,check_textinputchange:true})
+}else{
+  setuserInfor({
+    ...userInfor,name:val,nameverify:false,check_textinputchange:false
+  })
+}
+
+  }
+
+  const handlevalidname=(val)=>{
+if(userInfor.name.length>4){
+  setuserInfor({...userInfor,nameverify:true})
+}else{
+  setuserInfor({...userInfor,nameverify:false})
+}
+  }
+
+
+
+const handlereferencecode=(val)=>{
+  //const referancecodevar=e.nativeEvent.text;
+  //setuserInfor.referancecode(referancecodevar);
+  //setuserInfor.referancecodeverify(false);
+  if(userInfor.referancecode.length<4){
+    setuserInfor({...userInfor,referancecode:val,referancecodeverify:true});
+  }else{
+    setuserInfor({...userInfor,referancecode:val,referancecodeverify:false});
+  }
+
+}
+console.log({userInfor})
   
-    const [phoneNumber, setPhoneNumber] = useState(''); 
-    const [countryCode, setCountryCode] = useState(''); 
-    const [selectedCountry, setSelectedCountry] = 
-        useState(null); 
-    const [countryPickerVisible, setCountryPickerVisible] =  
-        useState(false); 
-  
+   
+    //const [countryCode, setCountryCode] = useState(''); 
+    //const [selectedCountry, setSelectedCountry] =  useState(null); 
+   
     const onSelectCountry = (country) => { 
-        setCountryCode(country.cca2); 
-        setSelectedCountry(country); 
-        setCountryPickerVisible(false); 
+      setuserInfor({...userInfor,countryCode:country.cca2})
+        //setCountryCode(country.cca2); 
+         setuserInfor({...userInfor,selectedCountry:country})
+        setuserInfor({...userInfor,countryPickerVisible:false}); 
     }; 
   
     
 
   const toggleCountryPicker = () => { 
-      setCountryPickerVisible(!countryPickerVisible); 
+     // setCountryPickerVisible(!countryPickerVisible); 
+      setuserInfor({...userInfor,countryPickerVisible:!countryPickerVisible})
   }; 
 
-
-  const [isChecked, setisChecked] = useState(false); 
-   
+  
     console.log(userInfor)
     console.log(handleSignup)
-    //useEffect(() => {Validateform(); }, [userInfo.name])
-  
-const Validateform=()=>{
-  let Error={}
-  (!userInfo.name?Error.userInfo.name="name is required":"")
-}
   
     return (
-      
+      <ScrollView contentContainerStyle={{flexGrow:1}} showsVerticalScrollIndicator={false} keyboardShouldPersistTaps={true}>
       <View style={{ backgroundColor:colors.background,padding:11,}}>
-    
+    <Spinner/>
                 <View style={{ height: 60, width: 240, marginTop: 68, gap: 6,padding:11 }}>
           <Text style={{ fontSize: 24, fontWeight: "700", color: colors.Textcolor, lineHeight: 28.8 }}>Create your account</Text>
 
@@ -87,11 +171,11 @@ const Validateform=()=>{
               style={styles.input}
               placeholder="E.g john doe"
               value={userInfor.name}
-              
-              secureTextEntry
               placeholderTextColor={colors.Textcolor}
-              onChangeText={(name) => setuserInfor({ ...userInfor, name })}
-            />
+              onChangeText={(val)=>handlename(val)}
+                         />
+            {userInfor.nameverify?null:<Text style={{color:colors.Orange,}}>Full4name is required</Text>}
+        
           </View>
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
@@ -104,8 +188,10 @@ const Validateform=()=>{
               style={styles.input}
               placeholder="Example@gmail.com"
               value={userInfor.email}
-              onChangeText={(email) => setuserInfor({ ...userInfor, email })}
+              onChangeText={(val) => handleemail(val)}
             />
+             {userInfor.emailverify?null:<Text style={{color:colors.Orange,}}>email is required</Text>}
+        
           </View>
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
@@ -117,25 +203,26 @@ const Validateform=()=>{
             <PhoneInput
               style={styles.input}
               defaultCountry="US"
-              value={phoneNumber}
-              onChangePhoneNumber={(number) => setPhoneNumber(number)}
+              value={userInfor.phoneNumber}
+              onChangePhoneNumber={(val) => handlephonenumber(val)}
               onPressFlag={toggleCountryPicker}
-
             />
 
 
-            {countryPickerVisible && (
+            {userInfor.countryPickerVisible && (
               <CountryPicker
                 withFilter={true}
                 withFlagButton={false}
                 withCountryNameButton={false}
-                onSelect={onSelectCountry}
-                onClose={() => setCountryPickerVisible(false)}
-                visible={countryPickerVisible}
+                onSelect={userInfor.onSelectCountry}
+                onClose={() => setuserInfor({...userInfor,CountryPickerVisible:false})}
+                visible={userInfor.countryPickerVisible}
                 containerButtonStyle={styles.countryPickerButton}
                 closeButtonImageStyle={styles.countryPickerCloseButton}
               />
             )}
+               {userInfor.phoneNumberverify?null:<Text style={{color:colors.Orange,}}>phone number must be 10 digit</Text>}
+        
           </View>
 
 
@@ -148,9 +235,12 @@ const Validateform=()=>{
               style={styles.input}
               placeholder="Example@gmail.com"
               value={userInfor.referancecode}
-              onChangeText={(referancecode) => setuserInfor({ ...userInfor, referancecode })}
-              secureTextEntry
+               maxLength={4}
+              onChangeText={(val) =>handlereferencecode(val)}
+              
             />
+             {userInfor.referancecodeverify?null:<Text style={{color:colors.Orange,}}>enter a valid referancecode</Text>}
+        
           </View>
 
 
@@ -165,10 +255,8 @@ const Validateform=()=>{
 
               <CheckBox
                 style={{ height: 12, weight: 12, marginTop: 6, borderRadius: 2, borderWidth: 1, }}
-                value={isChecked}
-                onPress={() => {
-                  setisChecked(!isChecked)
-                }}
+                value={userInfor.isChecked}
+                onValueChange={() => {setuserInfor({...userInfor,isChecked:true})}}
 
               />
               <View style={{ width: 330, height: 48, }}>
@@ -182,9 +270,10 @@ const Validateform=()=>{
 
               </View>
 
-
+              
             </View>
-
+            {!userInfor.isChecked?<Text style={{color:colors.Orange,}}>box has not been checked</Text>:null}
+        
           </View>
 
 
@@ -193,7 +282,7 @@ const Validateform=()=>{
         
       </View>
     
- 
+    </ScrollView>
     )
   }
   

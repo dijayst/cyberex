@@ -5,7 +5,7 @@ import {
   ScrollView,StyleSheet,
 } from 'react-native';
 import CustomSwitch from './CustomSwitch';
-import Cyberexuser from './Cyberexuser';
+import Cyberexuser from './CyberExUser';
 import BankAccount from './BankAccount';
 
 
