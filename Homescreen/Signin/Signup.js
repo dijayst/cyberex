@@ -1,5 +1,5 @@
   import { View, Text, StyleSheet, TextInput, TouchableOpacity, useWindowDimensions, ScrollView, Alert } from 'react-native'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,useContext } from 'react'
   import {useNavigation} from "@react-navigation/native";
 import PhoneInput  from 'react-native-phone-input'; 
 import CountryPicker  from 'react-native-country-picker-modal'; 
@@ -12,7 +12,6 @@ import axios from "react-native-axios";
   
   export default  function Signup() {
   
-   // const {isLoading, register,updateauthstate,userInfo} = useContext(AuthContext);
     const windowWidth=useWindowDimensions().width
     const windowheight=useWindowDimensions().height
 
@@ -36,6 +35,7 @@ import axios from "react-native-axios";
     });
     
   const handleSignup =() => {
+   
     if(userInfor.nameverify&&userInfor.emailverify&&userInfor.referancecodeverify&&userInfor.phoneNumberverify&&userInfor.isChecked){
    //axios.post("http://localhost:5051/Signup",{name:userInfor.name,    email:userInfor.email,referancecode:userInfor.referancecode,phoneNumber:userInfor.phoneNumber})
    //.then(Response=>{
@@ -247,7 +247,7 @@ console.log({userInfor})
 
           <View style={{ width: 350, height: 120, gap: 16 }}>
 
-            <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup}>
+            <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup()}>
               <Text style={styles.buttonText}>Sign Up</Text>
             </TouchableOpacity>
 

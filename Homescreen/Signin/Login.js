@@ -4,9 +4,11 @@ import axios from "react-native-axios";
 import {useNavigation} from "@react-navigation/native";
 import { AntDesign } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
-
+import { AuthContext } from '../Auth/AuthContext';
 
 export default  function Login() {
+  
+  const {signin} = useContext(AuthContext);
   const navigation=useNavigation();
   
   //const {isLoading, login} = useContext(AuthContext);
@@ -24,8 +26,8 @@ export default  function Login() {
   });
 
   
-  const handleSignup = async () => {
-   
+  const handleSignup =  (email,password) => {
+    signin(email,password);
      navigation.navigate("welcome")
   
   };
@@ -107,7 +109,7 @@ export default  function Login() {
 
         <View style={{ width: 350, height: 120, gap: 16 }}>
 
-          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup}>
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup(userInfor.email,userInfor.password)}>
             <Text style={styles.buttonText}>Log In</Text>
           </TouchableOpacity>
 

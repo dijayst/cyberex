@@ -1,13 +1,42 @@
 import { StatusBar } from 'expo-status-bar';
-import { useFonts } from 'expo-font';
+import { isLoading, useFonts } from 'expo-font';
 import {NavigationContainer} from "@react-navigation/native"
-
+import React, { useState, useEffect ,useMemo,useReducer} from 'react'
 //import Tabnavigation from './Homescreen/Navigation/Tabnavigation';
-
+import { AuthContext } from './Homescreen/Auth/AuthContext';
+import { ActivityIndicator, View } from 'react-native';
+import Adminnav from './Homescreen/Navigation/Adminnav';
 import Homestack from './Homescreen/Navigation/Homestack';
 import Stacknav from './Homescreen/Navigation/Stacknav';
 
 export default function App() {
+ // const [isLoading, setisLoading] = useState(true);
+  //const [userAuth, setuserAuth] = useState(null)
+
+ const initialloginstate={
+    isLoading:true,
+    userToken:null,
+    email:null
+  }
+ const loginReducer=(prevstate,action)=>{
+    switch(action.type){
+      case"Retrieve_token":
+      return{...prevstate,userToken:action.token,isLoading:false};
+      case"Login":
+      return{...prevstate,email:action.id,userToken:action.token,isLoading:false}; 
+      case"Logout":
+      return{...prevstate,
+        email:null,
+        userToken:null,
+        isLoading:false};
+      case"Register":
+      return{...prevstate,email:action.id,
+        userToken:action.token,
+        isLoading:false};
+    }
+
+  }
+  const [loginstate, dispatch] = useReducer(loginReducer, initialloginstate)
 
   const[LatoLoaded]= useFonts({
     'lato-black':require('./assets/Lato/Lato-Black.ttf'),
@@ -20,12 +49,72 @@ export default function App() {
     'lato-thinitalic':require('./assets/Lato/Lato-ThinItalic.ttf'),
  
   });
-  return (
+
+  const authContext=useMemo(() => ({
+    signin:async(email,password)=>{
+     // setuserToken("admin");
+      //setisLoading(false)
+      let userToken;
+      email=null;
+     if (email==="user"&& password==="pass"){
+     
+      try{
+        userToken="dfgdgf";
+        await AsyncStorage.setItem('userToken',userToken)}
+        catch(e){
+          console.log(e);
+        }
+    }
+      console.log("userToken:",userToken);
+      dispatch({type:"Login",id:email,token:userToken});
+    },
+    signout:async()=>{
+      //setuserToken(null);
+      //setisLoading(false)
+      try{
+       
+        await AsyncStorage.removeItem('userToken')}
+        catch(e){
+          console.log(e);
+        }
+      dispatch({type:"Logout"})
    
-   <NavigationContainer>
-    <Stacknav/>
+    },
+    signup:()=>{
+     // setuserToken("admin");
+      //setisLoading(false)
+    }
+  }),[]);
+
+
+
+  useEffect(() => {
+    setTimeout(async()=>{
+      //setisLoading(false)
+      let userToken;
+      userToken=null
+      try{
+        userToken=await AsyncStorage.getItem('userToken')}
+        catch(e){
+          console.log(e);
+        }
+      console.log("userToken:",userToken);
+      dispatch({type:"Register",token:userToken})
+    },1000);
+  },[]);
+  
+  if(loginstate.isLoading){
+    <View style={{flex:1,justifyContent:"center",alignItems:"center"}}>
+      <ActivityIndicator size="large"/>
+    </View>
+  }
+  return (
+  
+      <NavigationContainer>
+        <Stacknav/>
    </NavigationContainer>
   
+ 
   );
 }
 /*

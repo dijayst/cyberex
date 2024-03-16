@@ -1,13 +1,15 @@
 import { View, Text,StyleSheet,Image,FlatList,TouchableOpacity, ScrollView,SafeAreaView } from 'react-native'
-import React ,{useState}from 'react'
+import React ,{useState,useContext}from 'react'
 
 import { Ionicons,Entypo,MaterialCommunityIcons,MaterialIcons,FontAwesome6,FontAwesome } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 import Quickactions from '../NairaAccount/Quickactions';
 import { print } from '../JSON AND COLOR/Data';
+import { AuthContext } from '../Auth/AuthContext';
 
 export default function Profile() {
 
+  const {signout} = useContext(AuthContext);
   
 const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
@@ -244,7 +246,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
         
         
          
-          <TouchableOpacity style={{ backgroundColor:colors.Imagecolor, borderRadius: 8, height: 56, width: 350, alignItems: "center",justifyContent:"center", padding: 10,paddingTop:-190,marginTop:100,marginBottom:50,display:"flex",flexDirection:"row",gap:100}} onPress={()=>navigation.navigate("giftcard")} >
+          <TouchableOpacity style={{ backgroundColor:colors.Imagecolor, borderRadius: 8, height: 56, width: 350, alignItems: "center",justifyContent:"center", padding: 10,paddingTop:-190,marginTop:100,marginBottom:50,display:"flex",flexDirection:"row",gap:100}} onPress={()=>signout()} >
           <Image source={require("../image1/ICONS/chip_extraction.png")} style={{marginLeft:-100, width:24,
   height:24,}} />
           <Text style={styles.buttonText}>Sign Out</Text>
@@ -254,7 +256,6 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
     </View>
   )
 }
-
 const styles = StyleSheet.create({
   
 userimage2:{
