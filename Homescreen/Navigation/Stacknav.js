@@ -13,10 +13,6 @@ import Forgotpassword from '../Signin/Forgotpassword';
 import Entercode from '../Signin/Entercode';
 import Changepassword from '../Signin/Changepassword';
 import Home from '../NairaAccount/Home';
-
-
-
-
 import Bitcoinacct from '../BTCAccount/Bitcoinacct';
 import Bitcointransactiondetails from '../BTCAccount/Bitcointransactiondetails';
 import Nairatransactiondetails from '../NairaAccount/Nairatransactiondetails';
@@ -68,11 +64,8 @@ import Tabnavigation from './Tabnavigation';
 <Stack.Screen name="enter" component={Entercode} />
 <Stack.Screen name="change" component={Changepassword} />
 
-      <Stack.Screen name="home" component={Tabnavigation} />
 
-
-
-
+<Stack.Screen name="home" component={Tabnavigation} />
 
       <Stack.Screen name="btc" component={Bitcoinacct} />
     
@@ -124,6 +117,9 @@ import Tabnavigation from './Tabnavigation';
 
 
 /*
+
+
+
 
  <Tab.Screen name="stack" component={Homestack} options={{headerShown:false,
     tabBarLabel:({focused})=>(<Text style={{color:focused?colors.Orange:colors.neural400,fontSize:10,marginTop:-7}}>Home</Text>),

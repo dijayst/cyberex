@@ -36,23 +36,32 @@ import axios from "react-native-axios";
     
   const handleSignup =() => {
    
-    if(userInfor.nameverify&&userInfor.emailverify&&userInfor.referancecodeverify&&userInfor.phoneNumberverify&&userInfor.isChecked){
-   //axios.post("http://localhost:5051/Signup",{name:userInfor.name,    email:userInfor.email,referancecode:userInfor.referancecode,phoneNumber:userInfor.phoneNumber})
-   //.then(Response=>{
-  //setwhatido(Response.data)
-  //setwhatido(Response.data.whatido)
-  //   console.log(Response.data)
-   //  console.log(Response.data.result)
-     console.log("i gotten it")
-     console.log(userInfor)
-     navigation.navigate("verify")
-    //})
-   //.catch(error=>{     console.log(error)     console.log("i deny")})
-  }
-   else{
-     Alert.alert("fill in mandatory details")
-   }
 
+   if( userInfor.name === "" ||
+   userInfor.email === "" ||
+   userInfor.referencecode === "" ||
+   userInfor.phoneNumber === ""||!userInfor.isChecked)
+   {
+    Alert.alert("fill in mandatory details")
+   }else{
+
+    if(userInfor.nameverify&&userInfor.emailverify&&userInfor.referancecodeverify&&userInfor.phoneNumberverify){
+      //axios.post("http://localhost:5051/Signup",{name:userInfor.name,    email:userInfor.email,referancecode:userInfor.referancecode,phoneNumber:userInfor.phoneNumber})
+      //.then(Response=>{
+     //setwhatido(Response.data)
+     //setwhatido(Response.data.whatido)
+     //   console.log(Response.data)
+      //  console.log(Response.data.result)
+        console.log("i gotten it")
+        console.log(userInfor)
+        navigation.navigate("verify")
+       //})
+      //.catch(error=>{     console.log(error)     console.log("i deny")})
+     }
+      else{
+        Alert.alert("fill in mandatory details")
+      }
+   }
 
 };
 
@@ -146,9 +155,9 @@ console.log({userInfor})
     console.log(handleSignup)
   
     return (
-      <ScrollView contentContainerStyle={{flexGrow:1}} showsVerticalScrollIndicator={false} keyboardShouldPersistTaps={true}>
+      <ScrollView contentContainerStyle={{flexGrow:1}} showsVerticalScrollIndicator={true}>
       <View style={{ backgroundColor:colors.background,padding:11,}}>
-    <Spinner/>
+
                 <View style={{ height: 60, width: 240, marginTop: 68, gap: 6,padding:11 }}>
           <Text style={{ fontSize: 24, fontWeight: "700", color: colors.Textcolor, lineHeight: 28.8 }}>Create your account</Text>
 
@@ -173,9 +182,16 @@ console.log({userInfor})
               value={userInfor.name}
               placeholderTextColor={colors.Textcolor}
               onChangeText={(val)=>handlename(val)}
+              onEndEditing={(val)=>handlevalidname(val)}
                          />
-            {userInfor.nameverify?null:<Text style={{color:colors.Orange,}}>Full4name is required</Text>}
+          {/* {userInfor.nameverify?null:<Text style={{color:colors.Orange,}}>Fullname is required</Text>}
+          {userInfor.emailverify?null:<Text style={{color:colors.Orange,}}>email is required</Text>}
+         {userInfor.phoneNumberverify?null:<Text style={{color:colors.Orange,}}>phone number must be 10 digit</Text>}
+         {userInfor.referancecodeverify?null:<Text style={{color:colors.Orange,}}>enter a valid referancecode</Text>}
+         {!userInfor.isChecked?<Text style={{color:colors.Orange,}}>box has not been checked</Text>:null}
         
+        */} 
+          
           </View>
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
@@ -190,8 +206,7 @@ console.log({userInfor})
               value={userInfor.email}
               onChangeText={(val) => handleemail(val)}
             />
-             {userInfor.emailverify?null:<Text style={{color:colors.Orange,}}>email is required</Text>}
-        
+           
           </View>
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
@@ -221,8 +236,7 @@ console.log({userInfor})
                 closeButtonImageStyle={styles.countryPickerCloseButton}
               />
             )}
-               {userInfor.phoneNumberverify?null:<Text style={{color:colors.Orange,}}>phone number must be 10 digit</Text>}
-        
+              
           </View>
 
 
@@ -239,15 +253,14 @@ console.log({userInfor})
               onChangeText={(val) =>handlereferencecode(val)}
               
             />
-             {userInfor.referancecodeverify?null:<Text style={{color:colors.Orange,}}>enter a valid referancecode</Text>}
-        
+            
           </View>
 
 
 
           <View style={{ width: 350, height: 120, gap: 16 }}>
 
-            <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup()}>
+            <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup}>
               <Text style={styles.buttonText}>Sign Up</Text>
             </TouchableOpacity>
 
@@ -272,8 +285,7 @@ console.log({userInfor})
 
               
             </View>
-            {!userInfor.isChecked?<Text style={{color:colors.Orange,}}>box has not been checked</Text>:null}
-        
+           
           </View>
 
 

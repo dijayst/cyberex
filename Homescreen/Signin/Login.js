@@ -1,5 +1,5 @@
 import { View, Text,Image ,StyleSheet,TextInput,TouchableOpacity,} from 'react-native'
-import React,{useState,} from 'react'
+import React,{useState,useContext} from 'react'
 import axios from "react-native-axios";
 import {useNavigation} from "@react-navigation/native";
 import { AntDesign } from '@expo/vector-icons';
@@ -8,7 +8,7 @@ import { AuthContext } from '../Auth/AuthContext';
 
 export default  function Login() {
   
-  const {signin} = useContext(AuthContext);
+ // const {signin} = useContext(AuthContext);
   const navigation=useNavigation();
   
   //const {isLoading, login} = useContext(AuthContext);
@@ -26,9 +26,9 @@ export default  function Login() {
   });
 
   
-  const handleSignup =  (email,password) => {
-    signin(email,password);
-     navigation.navigate("welcome")
+  const handleSignin =  (email,password) => {
+   // signin(email,password);
+   navigation.navigate("welcome")
   
   };
 
@@ -38,7 +38,7 @@ export default  function Login() {
 //const [isChecked, setisChecked] = useState(false); 
  
   console.log(userInfor)
-  console.log(handleSignup)
+  console.log(handleSignin)
 
 
   return (
@@ -109,7 +109,7 @@ export default  function Login() {
 
         <View style={{ width: 350, height: 120, gap: 16 }}>
 
-          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup(userInfor.email,userInfor.password)}>
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignin}>
             <Text style={styles.buttonText}>Log In</Text>
           </TouchableOpacity>
 

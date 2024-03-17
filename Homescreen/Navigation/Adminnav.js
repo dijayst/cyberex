@@ -1,14 +1,24 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text,TouchableOpacity } from 'react-native'
+import React, { useContext } from 'react'
+import 'react-native-gesture-handler';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { AuthContext } from '../Auth/AuthContext';
 
 
 const Drawer=createDrawerNavigator()
 
 export  function Post() {
+  
+  const {signout} = useContext(AuthContext);
+  
   return (
     <View>
       <Text>Adminnav</Text>
+      <TouchableOpacity  onPress={()=>signout()} >
+          
+          <Text >Sign Out</Text>
+</TouchableOpacity>
+     
     </View>
   )
 }

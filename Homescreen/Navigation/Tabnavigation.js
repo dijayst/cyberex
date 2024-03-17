@@ -8,7 +8,7 @@ import Profile from '../Bottomtabnav/Profile';
 import { FontAwesome,MaterialCommunityIcons,MaterialIcons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 import Giftcardstack from './Giftcardstack';
-import Homestack from './Homestack';
+//import Homestack from '../../../Auth/Homestack';
 import Home from '../NairaAccount/Home';
 
 
