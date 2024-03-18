@@ -1,5 +1,5 @@
 import { View, Text,TouchableOpacity,StyleSheet,TextInput } from 'react-native'
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import {useNavigation} from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
@@ -19,13 +19,45 @@ export default function Verifyemail() {
      navigation.navigate("password")
   
   };
+    const [seconds, setSeconds] = useState(60);
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setSeconds((prevSeconds) => {
+          if (prevSeconds === 0) {
+            clearInterval(timer);
+            // Perform any action when the timer reaches zero
+          }
+          return prevSeconds - 1;
+        });
+      }, 1000);
+  
+      return () => clearInterval(timer);
+    }, []);
+    
 
+    useEffect(() => {
+      // Exit if countdown reaches 0
+      if (seconds === 0) return;
+  
+      const interval = setInterval(() => {
+        setSeconds((prevSeconds) => prevSeconds - 1);
+      }, 1000);
+  
+      // Clean up interval on component unmount
+      return () => clearInterval(interval);
+    }, [seconds]);
+
+    const displayTime = () => {
+      const minutes = Math.floor(seconds / 60);
+      const remainingSeconds = seconds % 60;
+      return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+    };
   return (
     <View style={{backgroundColor:colors.background,flex:1,padding:13}}>
          <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={30} color="black" />
             </TouchableOpacity>
-
+        
             <View style={{marginTop:0,marginLeft:20,gap:6,height:60,width:308}}>
             <Text style={{fontSize:24,fontWeight:"700",lineHeight:32.4,fontFamily:"lato-bold",color:colors.Textcolor}}> Verify Email Address </Text>
       <Text style={{fontWeight:"500",fontSize:16,lineHeight:21.6,color:colors.neuralblack}}>Enter the four digit code sent to your email</Text>
@@ -62,10 +94,11 @@ export default function Verifyemail() {
     secureTextEntry
   />
   </View>
-  
-  <Text style={{width:140,height:22,fontSize:16,fontWeight:"700",lineHeight:21.6,marginLeft:120,marginTop:15,marginBottom:20,color:colors.neuralblack}}>Resend mail ? <Text style={{color:colors.Orange,fontWeight:"700",lineHeight:21.6}}>8:04</Text></Text>
-
-  <TouchableOpacity style={{backgroundColor:colors.Orange,borderRadius:8,marginTop:44,marginLeft:20, height:56,width:350,alignItems: "center",padding:10}} onPress={handleSignup}>
+  <View style={{display:"flex",flexDirection:"row"}}>
+  <Text style={{width:140,height:22,fontSize:16,fontWeight:"700",lineHeight:21.6,marginLeft:120,marginTop:15,marginBottom:20,color:colors.neuralblack}}>Resend mail ? </Text>
+  <Text style={{color:colors.Orange,fontWeight:"700",lineHeight:21.6,marginTop:15,marginLeft:-29}}>{displayTime()}{seconds}</Text>
+  </View>
+   <TouchableOpacity style={{backgroundColor:colors.Orange,borderRadius:8,marginTop:44,marginLeft:20, height:56,width:350,alignItems: "center",padding:10}} onPress={handleSignup}>
     <Text style={styles.buttonText}>Continue</Text>
     </TouchableOpacity> 
 

@@ -5,6 +5,7 @@ import React, { useEffect ,useMemo,useReducer} from 'react'
 import { ActivityIndicator, View } from 'react-native';
 import Stacknav from './Homescreen/Navigation/Stacknav';
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { AuthContext } from './Homescreen/Auth/AuthContext';
 
 export default function App() {
  
@@ -20,9 +21,14 @@ const initialloginstate={
 const loginReducer=(prevstate,action)=>{
   switch(action.type){
     case"Retrieve_token":
-    return{...prevstate,userToken:action.token,isLoading:false};
+    return{...prevstate,
+      userToken:action.token,
+      isLoading:false};
     case"Login":
-    return{...prevstate,email:action.id,userToken:action.token,isLoading:false}; 
+    return{...prevstate,
+      email:action.id,
+      userToken:action.token,
+      isLoading:false}; 
     case"Logout":
     return{...prevstate,
       email:null,
@@ -30,7 +36,7 @@ const loginReducer=(prevstate,action)=>{
       isLoading:false};
     case"Register":
     return{...prevstate,
-      email:action.id,
+     // email:action.token,
       userToken:action.token,
       isLoading:false};
   }
@@ -41,10 +47,8 @@ const loginReducer=(prevstate,action)=>{
 
 const authContext=useMemo(() => ({
   signin:async(email,password)=>{
-    // setuserToken("admin");
-     //setisLoading(false)
-     let userToken;
-     email=null;
+      let userToken=null;
+     //email=null;
     if (email==="user"&& password==="pass"){
     
      try{
@@ -58,9 +62,7 @@ const authContext=useMemo(() => ({
      dispatch({type:"Login",id:email,token:userToken});
    },
   signout:async()=>{
-    //setuserToken(null);
-    //setisLoading(false)
-    try{
+     try{
      
       await AsyncStorage.removeItem('userToken')}
       catch(e){
@@ -117,12 +119,15 @@ const authContext=useMemo(() => ({
   });
 
   return (
+    <AuthContext.Provider  value={authContext}>
          <NavigationContainer>
-         <Stacknav/>
+         {loginstate.userToken !== null?<Adminnav/>:
+         <Stacknav/>}
    </NavigationContainer>
+   </AuthContext.Provider>
   );
 }
 
 
 //{loginstate.userToken !== null?<Adminnav/>:
-//<AuthContext.Provider value={authContext}>
+//<AuthContext.Provider>

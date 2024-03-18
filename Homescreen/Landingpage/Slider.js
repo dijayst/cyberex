@@ -36,11 +36,11 @@ export default function Slider() {
   return (
     <SafeAreaView style={styles.Safecontainer}>
       
-       <View >
+       <View style={styles.container}>
         
       <FlatList
        ref={carouselRef}
-       
+       style={{  height:windowheight>800? 238:0, marginTop:windowheight>800?580:473, marginLeft: windowheight>800?4:6, gap: 32 }} 
                 pagingEnabled
                 horizontal
                 snapToInterval={SCEEN_wIDTH}
@@ -63,24 +63,29 @@ export default function Slider() {
               }}
               scrollEventThrottle={0}
                 renderItem={({ item, index }) => (
-                  <View key={item.id}  style={{marginLeft:21,padding:-2}}>
-                  <View style={{ marginBottom: 10, height: 40, width: 320, }}>
-                    <Text style={{ fontSize: 28, fontWeight: 700, color: colors.Textcolor, lineHeight: 40, fontFamily: "lato-bold" }}>{item.title}</Text>
+                  <View key={item.id} style={{ width: SCEEN_wIDTH }}>
+                  <View style={{ marginLeft: 21, padding: -2 }}>
+                    <View style={{ marginBottom: 10, height: 40, width: 320 }}>
+                      <Text style={{ fontSize: 28, fontWeight: 700, color: colors.Textcolor, lineHeight: 40, fontFamily: "lato-bold" }}>{item.title}</Text>
+                    </View>
+            
+                    <View style={{ width: 349, height: 52 }}>
+                      <Text style={{ lineHeight: 26, fontSize: 16, fontWeight: 600, color: colors.neuralblack }}>{item.description}</Text>
+                    </View>
+                    <TouchableOpacity style={{ backgroundColor: colors.Orange, height: 56, width: 350, borderRadius: 8, padding: 10, alignItems: "center", marginTop: 40, gap: 10 }} onPress={() => handleclick(index)}>
+                      <Text style={{ fontSize: 16, fontWeight: 700, lineHeight: 26, color: colors.white }}>{item.click}</Text>
+                    </TouchableOpacity>
                   </View>
-                  
-                  <View style={{ width: 349, height: 52 }}>
-                    
-                    <Text style={{ lineHeight: 26, fontSize: 16, fontWeight: 600, color: colors.neuralblack }}>{item.description}</Text>
-                  </View>
-                  <TouchableOpacity style={{ backgroundColor: colors.Orange, height: 56, width: 350, borderRadius: 8, padding: 10, alignItems: "center", marginTop: 40, gap: 10 }} onPress={()=>handleclick(index)}>
-                    <Text style={{ fontSize: 16, fontWeight: 700, lineHeight: 26, color: colors.white, }}>{item.click}</Text>
-                  </TouchableOpacity>
                 </View>
                    )} />
       </View>
-
-      
-       <View style={styles.container}>
+      <View style={styles.dotContainer}>
+        {Slid.map((_, index) => (
+          <TouchableOpacity key={index} style={[styles.dot, slideindex === index && styles.activeDot]} onPress={() => handleclick(index)} />
+        ))}
+      </View>
+{/*
+ <View style={styles.container}>
       <Carousel 
       ref={carouselRef}
       activeDotStyle={[styles.dotStyle, 
@@ -111,6 +116,9 @@ export default function Slider() {
         }
       </Carousel>
     </View>
+ */}
+      
+      
    
     </SafeAreaView>
   )
