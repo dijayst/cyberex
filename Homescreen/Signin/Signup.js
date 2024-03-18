@@ -33,39 +33,116 @@ import axios from "react-native-axios";
       selectedCountry:null,
       countryCode:"",
     });
-    
-  const handleSignup =() => {
+
+
+  const handleSignup =async () => {
+  if (    userInfor.name === "" || 
+     userInfor.email === "" ||   
+      userInfor.referencecode === "" || 
+         userInfor.phoneNumber === "" ||
+         !userInfor.isChecked) {
+  Alert.alert("Fill ");
+ } else {
+    if (
+      userInfor.nameverify &&
+      userInfor.emailverify &&
+      userInfor.referencecodeverify &&
+      userInfor.phoneNumberverify
+    ) {console.log("correct")}else
+    {
+      Alert.alert("Fill in mandatory details");
+    }
+  }
+
+  try{
+    axios .post("http://172.20.10.2:6051/Signup", {
+      name: userInfor.name,  
+        email: userInfor.email,   
+         referencecode: userInfor.referencecode,
+           phoneNumber: userInfor.phoneNumber, })
+    .then((response) => {       
+        // setwhatido(response.data);       
+          //  setwhatido(response.data.whatido);
+             console.log(response.data);      
+                 console.log(response.data.result);   
+                        console.log("Success");
+     console.log(userInfor);    
+            navigation.navigate("verify");    
+            })
+  }
+
+ 
+    catch(error) {      
+          console.log(error);      
+              Alert.alert("Error occurred during signup")};
+              
+}
+
+
+
+
+
+const fetch=async()=>{
+ try{ axios .get("http://172.20.10.2:6051/");
+console.log("yes")
+console.log(res)
+}
+ catch(error){
+  console.log(error)
+ }  
+}
+useEffect(() => {fetch()
+}, [])
+
+
+
+
+const handleSig =() => {
    
 
-   if( userInfor.name === "" ||
-   userInfor.email === "" ||
-   userInfor.referencecode === "" ||
-   userInfor.phoneNumber === ""||!userInfor.isChecked)
-   {
-    Alert.alert("fill in mandatory details")
-   }else{
+  if( userInfor.name === "" ||
+  userInfor.email === "" ||
+  userInfor.referencecode === "" ||
+  userInfor.phoneNumber === ""||!userInfor.isChecked)
+  {
+   Alert.alert("fill in mandatory details")
+  }else{
 
-    if(userInfor.nameverify&&userInfor.emailverify&&userInfor.referancecodeverify&&userInfor.phoneNumberverify){
-      //axios.post("http://localhost:5051/Signup",{name:userInfor.name,    email:userInfor.email,referancecode:userInfor.referancecode,phoneNumber:userInfor.phoneNumber})
-      //.then(Response=>{
-     //setwhatido(Response.data)
-     //setwhatido(Response.data.whatido)
-     //   console.log(Response.data)
-      //  console.log(Response.data.result)
-        console.log("i gotten it")
-        console.log(userInfor)
-        navigation.navigate("verify")
-       //})
-      //.catch(error=>{     console.log(error)     console.log("i deny")})
-     }
-      else{
-        Alert.alert("fill in mandatory details")
-      }
-   }
+    if (
+      userInfor.nameverify &&
+      userInfor.emailverify &&
+      userInfor.referencecodeverify &&
+      userInfor.phoneNumberverify
+    ){
+    }
+    else {
+      Alert.alert("Fill in mandatory details");
+      console.log("hello")
+    }
+  }
+
+  
+  axios .post("http://172.20.10.2:6051/Signup", {
+    name: userInfor.name,  
+      email: userInfor.email,   
+       referencecode: userInfor.referencecode,
+         phoneNumber: userInfor.phoneNumber, })
+  .then((response) => {       
+     //  setwhatido(response.data);       
+       //   setwhatido(response.data.whatido);
+           console.log(response.data);      
+               console.log(response.data.result);   
+                      console.log("Success");
+   console.log(userInfor);    
+          navigation.navigate("verify");    
+          })
+  .catch((error) => {      
+        console.log(error); 
+        console.log("hello")     
+            Alert.alert("Error occurred during signup");});
+            
 
 };
-
-
 
 
 

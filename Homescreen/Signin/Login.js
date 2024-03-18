@@ -28,6 +28,14 @@ export default  function Login() {
   
   const handleSignin =  (email,password) => {
    // signin(email,password);
+   
+   axios.post("http://172.20.10.2:6051/Login",{
+    email:userInfor.email,
+   password:userInfor.password,
+   })
+   //  authenticate();
+    //navigation.push("/login")
+ 
    navigation.navigate("welcome")
   
   };
