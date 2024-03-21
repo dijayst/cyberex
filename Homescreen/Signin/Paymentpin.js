@@ -1,4 +1,4 @@
-import { View, Text,TouchableOpacity,StyleSheet,TextInput } from 'react-native'
+import { View, Text,TouchableOpacity,StyleSheet,TextInput, Alert } from 'react-native'
 import React ,{useState}from 'react'
 import { Ionicons } from '@expo/vector-icons';
 import {useNavigation} from "@react-navigation/native";
@@ -7,19 +7,91 @@ import colors from '../JSON AND COLOR/colors';
 export default function Paymentpin() {
   
   const navigation=useNavigation();
-  const [emailverify, setemailverify] = useState({
+  const [Paymentpin, setPaymentpin] = useState({
    input1: "",
+   inputverify1:true,
    input2: "",
+   inputverify2:true,
    input3:"",
-   input4:""
+   inputverify3:true,
+   input4:"",
+   inputverify1:true,
  });
 
+
+
+ 
+const handleinput1=(val)=>{
+  
+  if (/[0-9a-zA-Z]{1}/.test(val)){
+ setPaymentpin({...Paymentpin,input1:val,inputverify1:true,})
+  }else{
+    setuserInfor({
+     ...Paymentpin,input1:val,inputverify1:false,})
+  }
+  
+    }
+  
+  
+    
+  const handleinput2=(val)=>{
+    
+    if (/[0-9a-zA-Z]{1}/.test(val)){
+   setPaymentpin({...Paymentpin,input2:val,inputverify2:true,})
+    }else{
+      setuserInfor({
+       ...Paymentpin,input2:val,inputverify2:false,})
+    }
+    
+      }
+  
+      
+  const handleinput3=(val)=>{
+    
+    if (/[0-9a-zA-Z]{1}/.test(val)){
+   setPaymentpin({...Paymentpin,input3:val,inputverify3:true,})
+    }else{
+      setuserInfor({
+       ...Paymentpin,input3:val,inputverify3:false,})
+    }
+    
+      }
+  
+      
+  const handleinput4=(val)=>{
+    
+    if (/[0-9a-zA-Z]{1}/.test(val)){
+   setPaymentpin({...Paymentpin,input4:val,inputverify4:true,})
+    }else{
+      setuserInfor({
+       ...Paymentpin,input4:val,inputverify4:false,})
+    }
+    
+      }
+  
  const handleSignup = async () => {
    
-  
-    navigation.navigate("login")
+  if(Paymentpin.input1===""||Paymentpin.input2===""||Paymentpin.input3===""||Paymentpin.input4===""){
+      
+    Alert.alert("Fill in mandatory details ");
+      }
+      else{
+if(Paymentpin.inputverify1&&Paymentpin.inputverify2&&Paymentpin.inputverify3&&Paymentpin.inputverify4){
+Alert.alert("successfull")
+navigation.navigate("login")
+}
+else
+  {
+    Alert.alert("Fill in mandatory details");
+  }
+      }
  
  };
+
+
+
+ 
+
   return (
     <View style={{ backgroundColor:colors.background,flex:1,padding:13 }}>
       <TouchableOpacity style={styles.backbtncontainer} onPress={() => navigation.goBack()}>
@@ -37,35 +109,38 @@ export default function Paymentpin() {
           style={styles.input}
 
           placeholderTextColor={colors.neural300}
-          value={emailverify.input1}
-          onChangeText={(input1) => setemailverify({ ...emailverify, input1 })}
-          secureTextEntry
+          value={Paymentpin.input1}
+          onChangeText={(val) => handleinput1(val)}
+          maxLength={1}
+         
         />
 
         <TextInput
           style={styles.input}
-          value={emailverify.input2}
-          onChangeText={(input2) => setemailverify({ ...emailverify, input2 })}
-          secureTextEntry
+          value={Paymentpin.input2}
+          onChangeText={(val) => handleinput2(val)}
+          maxLength={1}
+         
+          placeholderTextColor={colors.neural300}
+        />
+
+        <TextInput
+          style={styles.input}
+
+          placeholderTextColor={colors.neural300}
+          value={Paymentpin.input3}
+          onChangeText={(val) => handleinput3(val)}
+          maxLength={1}
+        
+         />
+        <TextInput
+          style={styles.input}
+          value={Paymentpin.input4}
           
           placeholderTextColor={colors.neural300}
-        />
-
-        <TextInput
-          style={styles.input}
-
-          placeholderTextColor={colors.neural300}
-          value={emailverify.input3}
-          onChangeText={(input3) => setemailverify({ ...emailverify, input3 })}
-          secureTextEntry
-        />
-        <TextInput
-          style={styles.input}
-          value={emailverify.input4}
-          
-          placeholderTextColor={colors.neural300}
-          onChangeText={(input4) => setemailverify({ ...emailverify, input4 })}
-          secureTextEntry
+         
+          onChangeText={(val) => handleinput4(val)}
+          maxLength={1}
         />
       </View>
 

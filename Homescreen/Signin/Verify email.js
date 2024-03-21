@@ -1,24 +1,25 @@
-import { View, Text,TouchableOpacity,StyleSheet,TextInput } from 'react-native'
+import { View, Text,TouchableOpacity,StyleSheet,TextInput, Alert } from 'react-native'
 import React,{useState,useEffect} from 'react'
 import {useNavigation} from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
+import axios from "react-native-axios";
 
 export default function Verifyemail() {
    const navigation=useNavigation();
    const [emailverify, setemailverify] = useState({
     input1: "",
+    inputverify1:true,
     input2: "",
+    inputverify2:true,
     input3:"",
-    input4:""
+    inputverify3:true,
+    input4:"",
+    inputverify4:true,
   });
-
-  const handleSignup = async () => {
-    
-   
-     navigation.navigate("password")
   
-  };
+  //const [verificationToken, setVerificationToken] = useState('');
+
     const [seconds, setSeconds] = useState(60);
     useEffect(() => {
       const timer = setInterval(() => {
@@ -52,6 +53,77 @@ export default function Verifyemail() {
       const remainingSeconds = seconds % 60;
       return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
     };
+
+
+    
+  const verifyCode = async () => {
+    if(emailverify.input1===""||emailverify.input2===""||emailverify.input3===""||emailverify.input4===""){
+      
+      Alert.alert("Fill in mandatory details ");
+        }
+        else{
+if(emailverify.inputverify1&&emailverify.inputverify2&&emailverify.inputverify3&&emailverify.inputverify4){
+  Alert.alert("successfull")
+  
+  navigation.navigate("password")
+}
+else
+    {
+      Alert.alert("Fill in mandatory details");
+    }
+        }
+
+        
+  };
+
+const handleinput1=(val)=>{
+  
+if (/[0-9a-zA-Z]{1}/.test(val)){
+setemailverify({...emailverify,input1:val,inputverify1:true,})
+}else{
+  setuserInfor({
+    ...emailverify,input1:val,inputverify1:false,})
+}
+
+  }
+
+
+  
+const handleinput2=(val)=>{
+  
+  if (/[0-9a-zA-Z]{1}/.test(val)){
+  setemailverify({...emailverify,input2:val,inputverify2:true,})
+  }else{
+    setuserInfor({
+      ...emailverify,input2:val,inputverify2:false,})
+  }
+  
+    }
+
+    
+const handleinput3=(val)=>{
+  
+  if (/[0-9a-zA-Z]{1}/.test(val)){
+  setemailverify({...emailverify,input3:val,inputverify3:true,})
+  }else{
+    setuserInfor({
+      ...emailverify,input3:val,inputverify3:false,})
+  }
+  
+    }
+
+    
+const handleinput4=(val)=>{
+  
+  if (/[0-9a-zA-Z]{1}/.test(val)){
+  setemailverify({...emailverify,input4:val,inputverify4:true,})
+  }else{
+    setuserInfor({
+      ...emailverify,input4:val,inputverify4:false,})
+  }
+  
+    }
+
   return (
     <View style={{backgroundColor:colors.background,flex:1,padding:13}}>
          <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
@@ -69,36 +141,35 @@ export default function Verifyemail() {
           style={styles.input}
         
           value={emailverify.input1}
-          onChangeText={(input1) => setemailverify({ ...emailverify, input1 })}
-          secureTextEntry
+          onChangeText={(val) => handleinput1(val)}
+          maxLength={1}
         />
 
          <TextInput
         style={styles.input}
         value={emailverify.input2}
-        onChangeText={(input2) => setemailverify({ ...emailverify, input2 })}
-        secureTextEntry
+        onChangeText={(val) => handleinput2(val)}
+        maxLength={1}
       />
 
        <TextInput
       style={styles.input}
-    
       value={emailverify.input3}
-      onChangeText={(input3) => setemailverify({ ...emailverify, input3 })}
-      secureTextEntry
+      onChangeText={(val) => handleinput3(val)}
+      maxLength={1}
     /> 
     <TextInput
     style={styles.input}
     value={emailverify.input4}
-    onChangeText={(input4) => setemailverify({ ...emailverify, input4 })}
-    secureTextEntry
+    onChangeText={(val) => handleinput4(val)}
+   maxLength={1}
   />
   </View>
   <View style={{display:"flex",flexDirection:"row"}}>
   <Text style={{width:140,height:22,fontSize:16,fontWeight:"700",lineHeight:21.6,marginLeft:120,marginTop:15,marginBottom:20,color:colors.neuralblack}}>Resend mail ? </Text>
   <Text style={{color:colors.Orange,fontWeight:"700",lineHeight:21.6,marginTop:15,marginLeft:-29}}>{seconds}</Text>
   </View>
-   <TouchableOpacity style={{backgroundColor:colors.Orange,borderRadius:8,marginTop:44,marginLeft:20, height:56,width:350,alignItems: "center",padding:10}} onPress={handleSignup}>
+   <TouchableOpacity style={{backgroundColor:colors.Orange,borderRadius:8,marginTop:44,marginLeft:20, height:56,width:350,alignItems: "center",padding:10}} onPress={verifyCode}>
     <Text style={styles.buttonText}>Continue</Text>
     </TouchableOpacity> 
 

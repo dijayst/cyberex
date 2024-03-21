@@ -1,4 +1,4 @@
-import { View, Text,StyleSheet,Image,TouchableOpacity,TextInput} from 'react-native'
+import { View, Text,StyleSheet,Image,TouchableOpacity,TextInput, Alert} from 'react-native'
 import React,{useState} from 'react'
 import { AntDesign } from '@expo/vector-icons';
 import {useNavigation} from "@react-navigation/native";
@@ -12,17 +12,46 @@ export default function Password() {
     const [userInfo, setUserInfo] = useState({
         password:"",
         reenterpassword:"",
-        isPasswordSecure:true
+        isPasswordSecure:true,
+        passwordverify:true,
       });
       
 //const [i, setIsPasswordSecure] = useState(true);
 
 
-const handleSignup = async () => {
-   
-    navigation.navigate("paymentpin")
+
+const handlepass=(val)=>{
+  if(userInfo.password.length<8){
+   setUserInfo({...userInfo,password:val,passwordverify:true});
+ }else{
+   setuserInfo({...userInfo,password:val,passwordverify:false});
+ }
+
+}
+
+const handlepass2=(val)=>{
+  if(userInfo.reenterpassword.length<8){
+   setUserInfo({...userInfo,password:val,passwordverify:true});
+ }else{
+   setuserInfo({...userInfo,password:val,passwordverify:false});
+ }
+
+}
+
  
- };
+ const handlepassword =  () => {
+  if(userInfo.password===""||userInfo.reenterpassword===""){
+    Alert.alert("Fill in mandatory details");}
+    else{
+      if(userInfo.passwordverify){
+      if(userInfo.password===userInfo.reenterpassword){navigation.navigate("paymentpin")}
+  
+    }else{ Alert.alert("Fill in mandatory details");}
+  }
+  }
+  
+
+
 
 
   return (
@@ -56,13 +85,13 @@ const handleSignup = async () => {
               style={styles.password}
               placeholder="Create A Password"
               value={userInfo.password}
-              
+              maxLength={8}
               placeholderTextColor={colors.neural300}
-              onChangeText={(password) => setUserInfo({ ...userInfo, password })}
+              onChangeText={(val) =>handlepass(val)}
               secureTextEntry={userInfo.isPasswordSecure}
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>
-              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => {  userInfo.isPasswordSecure ? setUserInfo({...userInfo,isPasswordSecure:false}) : setUserInfo({...userInfo,isPasswordSecure:true}) }} />
+              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={userInfo.isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => {  userInfo.isPasswordSecure ? setUserInfo({...userInfo,isPasswordSecure:false}) : setUserInfo({...userInfo,isPasswordSecure:true}) }} />
 
             </View>
 
@@ -84,9 +113,11 @@ const handleSignup = async () => {
               value={userInfo.reenterpassword}
               placeholderTextColor={colors.neural300}
               onChangeText={(reenterpassword) => setUserInfo({ ...userInfo, reenterpassword })}
+              secureTextEntry={userInfo.isPasswordSecure}
+            maxLength={8}
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, }}>
-              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { userInfo.isPasswordSecure ? setUserInfo({...userInfo,isPasswordSecure:false}) : setUserInfo({...userInfo,isPasswordSecure:true}) }} />
+              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={userInfo.isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { userInfo.isPasswordSecure ? setUserInfo({...userInfo,isPasswordSecure:false}) : setUserInfo({...userInfo,isPasswordSecure:true}) }} />
 
             </View>
           </View>
@@ -97,7 +128,7 @@ const handleSignup = async () => {
 
         <View style={{ width: 350, height: 120, gap: 16 }}>
 
-          <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup}>
+          <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handlepassword}>
             <Text style={styles.buttonText}>Continue</Text>
           </TouchableOpacity>
 

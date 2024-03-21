@@ -1,4 +1,4 @@
-import { View, Text,Image ,StyleSheet,TextInput,TouchableOpacity,} from 'react-native'
+import { View, Text,Image ,StyleSheet,TextInput,TouchableOpacity, Alert,} from 'react-native'
 import React,{useState} from 'react'
 import axios from "react-native-axios";
 import {useNavigation} from "@react-navigation/native";
@@ -10,25 +10,39 @@ import colors from '../JSON AND COLOR/colors';
 export default  function Welcomebackscreen () {
   const navigation=useNavigation();
  
-const [isPasswordSecure, setIsPasswordSecure] = useState(true);
-
   const [userInfo, setUserInfo] = useState({
-    email: "",
     password:"",
+    passwordverify:true,
+    isPasswordSecure:true
   });
 
   
-  const handleSignup = async () => {
-   
-     navigation.navigate("home")
+  const handlepassword=(val)=>{
+    if(/^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[^0-9A-Za-z]).{8,32}$/.test(val)){
+      setuserInfor({...userInfor,password:val,passwordverify:true})
+  }else{setuserInfor({...userInfor,password:val,passwordverify:false})
+  }
   
+  }
+  const handleSignup = async () => {
+   if(userInfo.password===""){
+    Alert.alert("Fill in mandatory details");
+   }else{
+    if(userInfo.passwordverify){
+      Alert.alert("Successful");
+      navigation.navigate("home")
+  
+    }else{
+      Alert.alert("Fill in mandatory details");
+  
+    }
+   }
+    
   };
 
   
 
 
-const [isChecked, setisChecked] = useState(false); 
- 
   console.log(userInfo)
   console.log(handleSignup)
 
@@ -63,11 +77,11 @@ const [isChecked, setisChecked] = useState(false);
               style={styles.password}
               placeholder="Password"
               value={userInfo.password}
-              onChangeText={(password) => setUserInfo({ ...userInfo, password })}
-              secureTextEntry
+              onChangeText={(val) => handlepassword(val)}
+              secureTextEntry={userInfo.isPasswordSecure}
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>
-              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
+            <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={userInfo.isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() =>setuserInfo({...userInfo,isPasswordSecure:!userInfo.isPasswordSecure}) } />
 
             </View>
 

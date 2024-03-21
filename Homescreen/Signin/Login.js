@@ -1,4 +1,4 @@
-import { View, Text,Image ,StyleSheet,TextInput,TouchableOpacity,} from 'react-native'
+import { View, Text,Image ,StyleSheet,TextInput,TouchableOpacity, Alert,} from 'react-native'
 import React,{useState,useContext} from 'react'
 import axios from "react-native-axios";
 import {useNavigation} from "@react-navigation/native";
@@ -8,37 +8,57 @@ import { AuthContext } from '../Auth/AuthContext';
 
 export default  function Login() {
   
- // const {signin} = useContext(AuthContext);
   const navigation=useNavigation();
   
-  //const {isLoading, login} = useContext(AuthContext);
- 
-//const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
   const [userInfor, setuserInfor] = useState({
     email: "",
     emailverify:true,
     password:"",
     passwordverify:true,
-    isChecked:false,
     isPasswordSecure:true
 
   });
 
+  const handleemail=(val)=>{
+    if(/[a-zA-Z]+@[a-z]+\.[a-z]{2,3}/.test(val)){
+      setuserInfor({...userInfor,email:val,emailverify:true})
+  }else{setuserInfor({...userInfor,email:val,emailverify:false})
+  }
   
-  const handleSignin =  (email,password) => {
+  }
+
+
+
+  
+  const handlepassword=(val)=>{
+    if(/^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[^0-9A-Za-z]).{8,32}$/.test(val)){
+      setuserInfor({...userInfor,password:val,passwordverify:true})
+  }else{setuserInfor({...userInfor,password:val,passwordverify:false})
+  }
+  
+  }
+
+  
+  
+  const handleSignin =  () => {
    // signin(email,password);
    
-   axios.post("http://172.20.10.2:6051/Login",{
-    email:userInfor.email,
-   password:userInfor.password,
-   })
-   //  authenticate();
-    //navigation.push("/login")
- 
-   navigation.navigate("welcome")
-  
-  };
+  if (userInfor.email === "" ||  userInfor.password === "" ) {
+Alert.alert("Fill in mandatory details");
+} else {
+ if (
+   userInfor.emailverify &&
+   userInfor.passwordverify 
+ ) {console.log("correct")
+ Alert.alert("Successful");
+ navigation.navigate("welcome")
+
+}else
+ {
+   Alert.alert("Fill in mandatory details");
+ }
+  }};
 
   
 
@@ -50,7 +70,7 @@ export default  function Login() {
 
 
   return (
-    <View style={{ backgroundColor:colors.background, flex: 1, padding: 5 }}>
+    <View style={{ backgroundColor:colors.background, flex: 1, padding: 5 }} >
 
       <View style={{ height: 60, width: 237, marginTop: 68, marginLeft: 20, gap: 6 }}>
         <Text style={{ fontSize: 24, fontWeight: "700", color: colors.Textcolor, lineHeight: 28.8, width: 250, height: 32, gap: 10 }}>Log in to your account</Text>
@@ -79,9 +99,8 @@ export default  function Login() {
             style={styles.input}
             placeholder="Example@gmail.com"
             value={userInfor.email}
-            
             placeholderTextColor={colors.neural300}
-            onChangeText={(email) => setuserInfor({ ...userInfor, email })}
+            onChangeText={(val) => handleemail(val)}
           />
         </View>
 
@@ -99,8 +118,8 @@ export default  function Login() {
               placeholder="Password"
               value={userInfor.password}
               placeholderTextColor={colors.neural300}
-              onChangeText={(password) => setuserInfor({ ...userInfor, password })}
-             
+              onChangeText={(val) =>handlepassword(val)}
+              secureTextEntry={userInfor.isPasswordSecure}
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, }}>
               <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={userInfor.isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() =>setuserInfor({...userInfor,isPasswordSecure:!userInfor.isPasswordSecure}) } />

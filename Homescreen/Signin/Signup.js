@@ -5,8 +5,7 @@ import PhoneInput  from 'react-native-phone-input';
 import CountryPicker  from 'react-native-country-picker-modal'; 
 import CheckBox from 'expo-checkbox';
 import colors from '../JSON AND COLOR/colors';
-import Spinner from 'react-native-loading-spinner-overlay';
-import axios from "react-native-axios";
+//import axios from "react-native-axios";
 
 
   
@@ -15,7 +14,6 @@ import axios from "react-native-axios";
     const windowWidth=useWindowDimensions().width
     const windowheight=useWindowDimensions().height
 
-    //const ltu=useContext(AuthContext);console.log(ltu)
     const navigation=useNavigation();
     const [userInfor, setuserInfor] = useState({
       name: "",
@@ -35,7 +33,7 @@ import axios from "react-native-axios";
     });
 
 
-  const handleSignup =async () => {
+  const handleSignup = () => {
   if (    userInfor.name === "" || 
      userInfor.email === "" ||   
       userInfor.referencecode === "" || 
@@ -48,101 +46,15 @@ import axios from "react-native-axios";
       userInfor.emailverify &&
       userInfor.referencecodeverify &&
       userInfor.phoneNumberverify
-    ) {console.log("correct")}else
-    {
-      Alert.alert("Fill in mandatory details");
+    ) {console.log("correct")
+    
+    navigation.navigate("verify"); }else
+    {  Alert.alert("Fill in mandatory details");
     }
   }
 
-  try{
-    axios .post("http://172.20.10.2:6051/Signup", {
-      name: userInfor.name,  
-        email: userInfor.email,   
-         referencecode: userInfor.referencecode,
-           phoneNumber: userInfor.phoneNumber, })
-    .then((response) => {       
-        // setwhatido(response.data);       
-          //  setwhatido(response.data.whatido);
-             console.log(response.data);      
-                 console.log(response.data.result);   
-                        console.log("Success");
-     console.log(userInfor);    
-            navigation.navigate("verify");    
-            })
-  }
-
- 
-    catch(error) {      
-          console.log(error);      
-              Alert.alert("Error occurred during signup")};
               
 }
-
-
-
-
-
-const fetch=async()=>{
- try{ axios .get("http://172.20.10.2:6051/");
-console.log("yes")
-console.log(res)
-}
- catch(error){
-  console.log(error)
- }  
-}
-useEffect(() => {fetch()
-}, [])
-
-
-
-
-const handleSig =() => {
-   
-
-  if( userInfor.name === "" ||
-  userInfor.email === "" ||
-  userInfor.referencecode === "" ||
-  userInfor.phoneNumber === ""||!userInfor.isChecked)
-  {
-   Alert.alert("fill in mandatory details")
-  }else{
-
-    if (
-      userInfor.nameverify &&
-      userInfor.emailverify &&
-      userInfor.referencecodeverify &&
-      userInfor.phoneNumberverify
-    ){
-    }
-    else {
-      Alert.alert("Fill in mandatory details");
-      console.log("hello")
-    }
-  }
-
-  
-  axios .post("http://172.20.10.2:6051/Signup", {
-    name: userInfor.name,  
-      email: userInfor.email,   
-       referencecode: userInfor.referencecode,
-         phoneNumber: userInfor.phoneNumber, })
-  .then((response) => {       
-     //  setwhatido(response.data);       
-       //   setwhatido(response.data.whatido);
-           console.log(response.data);      
-               console.log(response.data.result);   
-                      console.log("Success");
-   console.log(userInfor);    
-          navigation.navigate("verify");    
-          })
-  .catch((error) => {      
-        console.log(error); 
-        console.log("hello")     
-            Alert.alert("Error occurred during signup");});
-            
-
-};
 
 
 
@@ -158,10 +70,7 @@ const handleemail=(val)=>{
 
 
 const handlephonenumber=(val)=>{
-  //const phonevar=e.nativeEvent.text;
-  //setPhoneNumber(phonevar);
-  //setuserInfor.phoneNumberverify(false);
-  if(/[6-9]{1}[0-9]{9}/.test(val)){
+    if(/[6-9]{1}[0-9]{9}/.test(val)){
     setuserInfor({...userInfor,phoneNumber:val,phoneNumberverify:true})
   }else{setuserInfor({...userInfor,phoneNumber:val,phoneNumberverify:false})
 }
@@ -170,13 +79,7 @@ const handlephonenumber=(val)=>{
 
 
 const handlename=(val)=>{
-  //const namevar=e.nativeEvent.text;
-  //setuserInfor.name(namevar);
-  //setuserInfor.nameverify(false);
-  //if(namevar.length>1){
-    //setuserInfor.name(namevar);
-    //setuserInfor.nameverify(true)
-if (/[a-zA-Z]{2,40} [a-zA-Z]{2,4}/.test(val)){
+ if (/[a-zA-Z]{2,40} [a-zA-Z]{2,4}/.test(val)){
 setuserInfor({...userInfor,name:val,nameverify:true,check_textinputchange:true})
 }else{
   setuserInfor({
@@ -197,10 +100,7 @@ if(userInfor.name.length>4){
 
 
 const handlereferencecode=(val)=>{
-  //const referancecodevar=e.nativeEvent.text;
-  //setuserInfor.referancecode(referancecodevar);
-  //setuserInfor.referancecodeverify(false);
-  if(userInfor.referancecode.length<4){
+   if(userInfor.referancecode.length<4){
     setuserInfor({...userInfor,referancecode:val,referancecodeverify:true});
   }else{
     setuserInfor({...userInfor,referancecode:val,referancecodeverify:false});
@@ -210,21 +110,16 @@ const handlereferencecode=(val)=>{
 console.log({userInfor})
   
    
-    //const [countryCode, setCountryCode] = useState(''); 
-    //const [selectedCountry, setSelectedCountry] =  useState(null); 
-   
     const onSelectCountry = (country) => { 
       setuserInfor({...userInfor,countryCode:country.cca2})
-        //setCountryCode(country.cca2); 
-         setuserInfor({...userInfor,selectedCountry:country})
+          setuserInfor({...userInfor,selectedCountry:country})
         setuserInfor({...userInfor,countryPickerVisible:false}); 
     }; 
   
     
 
   const toggleCountryPicker = () => { 
-     // setCountryPickerVisible(!countryPickerVisible); 
-      setuserInfor({...userInfor,countryPickerVisible:!countryPickerVisible})
+         setuserInfor({...userInfor,countryPickerVisible:!countryPickerVisible})
   }; 
 
   
@@ -261,14 +156,12 @@ console.log({userInfor})
               onChangeText={(val)=>handlename(val)}
               onEndEditing={(val)=>handlevalidname(val)}
                          />
-          {/* {userInfor.nameverify?null:<Text style={{color:colors.Orange,}}>Fullname is required</Text>}
+         {userInfor.nameverify?null:<Text style={{color:colors.Orange,}}>Fullname is required</Text>}
           {userInfor.emailverify?null:<Text style={{color:colors.Orange,}}>email is required</Text>}
          {userInfor.phoneNumberverify?null:<Text style={{color:colors.Orange,}}>phone number must be 10 digit</Text>}
          {userInfor.referancecodeverify?null:<Text style={{color:colors.Orange,}}>enter a valid referancecode</Text>}
          {!userInfor.isChecked?<Text style={{color:colors.Orange,}}>box has not been checked</Text>:null}
         
-        */} 
-          
           </View>
 
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
@@ -306,7 +199,7 @@ console.log({userInfor})
                 withFilter={true}
                 withFlagButton={false}
                 withCountryNameButton={false}
-                onSelect={userInfor.onSelectCountry}
+                onSelect={onSelectCountry}
                 onClose={() => setuserInfor({...userInfor,CountryPickerVisible:false})}
                 visible={userInfor.countryPickerVisible}
                 containerButtonStyle={styles.countryPickerButton}
