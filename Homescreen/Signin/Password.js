@@ -13,45 +13,34 @@ export default function Password() {
         password:"",
         reenterpassword:"",
         isPasswordSecure:true,
-        passwordverify:true,
+        error:""
       });
       
 //const [i, setIsPasswordSecure] = useState(true);
 
 
 
-const handlepass=(val)=>{
-  if(userInfo.password.length<8){
-   setUserInfo({...userInfo,password:val,passwordverify:true});
- }else{
-   setuserInfo({...userInfo,password:val,passwordverify:false});
- }
-
-}
-
-const handlepass2=(val)=>{
-  if(userInfo.reenterpassword.length<8){
-   setUserInfo({...userInfo,password:val,passwordverify:true});
- }else{
-   setuserInfo({...userInfo,password:val,passwordverify:false});
- }
-
-}
 
  
  const handlepassword =  () => {
-  if(userInfo.password===""||userInfo.reenterpassword===""){
-    Alert.alert("Fill in mandatory details");}
-    else{
-      if(userInfo.passwordverify){
-      if(userInfo.password===userInfo.reenterpassword){navigation.navigate("paymentpin")}
+  if (userInfo.password !== userInfo.reenteredPassword) {
+    setUserInfo({...userInfo,error:'Passwords do not match'})
+    //setError('Passwords do not match');
+  }  if (userInfo.password.length < 8) {
+   // setError('Password must be at least 8 characters long');
+   setUserInfo({...userInfo,error:'Password must be at least 8 characters long'})
   
-    }else{ Alert.alert("Fill in mandatory details");}
+  } else {
+    //setError('');
+    // Password is valid, you can proceed with your logic here
+    setUserInfo({...userInfo,error:'successful'})
+    navigation.navigate("paymentpin")
   }
+
   }
   
 
-
+console.log(userInfo)
 
 
   return (
@@ -87,7 +76,7 @@ const handlepass2=(val)=>{
               value={userInfo.password}
               maxLength={8}
               placeholderTextColor={colors.neural300}
-              onChangeText={(val) =>handlepass(val)}
+              onChangeText={(password) => setUserInfo({ ...userInfo,password })}
               secureTextEntry={userInfo.isPasswordSecure}
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>

@@ -7,7 +7,22 @@ import colors from '../JSON AND COLOR/colors';
 
 export default function Sell({navigation,windowWidth, windowheight}) {
   
+  const [userInfo, setuserInfo] = useState({
+    amount: "",
+    price:"",
+  });
 
+  
+ const handleaccount=()=>{
+  
+  if (userInfo.amount === "" ||  userInfo.price==="" ) {
+    Alert.alert("Fill in mandatory details");
+    } else {
+    Alert.alert("Successful");
+     navigation.navigate("transpin")
+    
+          }
+ }
   return (
     <View  style={{ padding:28,marginTop:150,flex:1}}>
         <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
@@ -33,9 +48,11 @@ export default function Sell({navigation,windowWidth, windowheight}) {
                 <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Enter Amount (BTC)</Text>
               <TextInput
               style={styles.input}
-              maxLength={2}
+              
               placeholder="Enter Amount"
               placeholderTextColor={colors.neural300}
+              value={userInfo.amount}
+              onChangeText={(amount)=>setuserInfo({...userInfo,amount})}
               /> 
               <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, marginTop: 34,marginLeft:-8  }}>
               <Text style={{ justifyContent: "center",color:colors.Orange,fontSize:14,fontWeight:"700",lineHeight:18.9,paddingTop:15}}>max</Text>
@@ -46,6 +63,9 @@ export default function Sell({navigation,windowWidth, windowheight}) {
               style={styles.input2}
               placeholder="Price"
               placeholderTextColor={colors.neural300}
+              value={userInfo.price}
+              onChangeText={(price)=>setuserInfo({...userInfo,price})}
+             
               />
           </View>
          

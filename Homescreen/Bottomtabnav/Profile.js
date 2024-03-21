@@ -6,11 +6,14 @@ import colors from '../JSON AND COLOR/colors';
 import Quickactions from '../NairaAccount/Quickactions';
 import { print } from '../JSON AND COLOR/Data';
 import { AuthContext } from '../Auth/AuthContext';
+import { useTheme } from '../Navigation/ThemeContext';
 
 export default function Profile() {
 
-  const {signout} = useContext(AuthContext);
+  //const {signout} = useContext(AuthContext);
   
+  const { theme, toggleDarkMode } = useTheme();
+
 const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
   return (

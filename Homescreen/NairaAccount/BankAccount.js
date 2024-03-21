@@ -1,8 +1,9 @@
-import { View, Text,Image,TouchableOpacity,StyleSheet,TextInput } from 'react-native'
+import { View, Text,Image,TouchableOpacity,StyleSheet,TextInput} from 'react-native'
 import React,{useState} from 'react'
 import {useNavigation} from "@react-navigation/native";
 import colors from '../JSON AND COLOR/colors'
 import { print } from '../JSON AND COLOR/Data';
+import {Picker} from '@react-native-picker/picker';
 
 import { Ionicons,AntDesign,Entypo } from '@expo/vector-icons';
 
@@ -10,11 +11,49 @@ export default function BankAccount({ windowWidth,windowheight}) {
   const navigation=useNavigation();
 
   const [userInfo, setUserInfo] = useState({
-    name: "",
-    email: "",
-    referancecode:""
+    Amount: "",
+    description: "",
+    Amountverify:"",
+    descriptionverify:""
   });
-  const [emptyinput, setemptyinput] = useState([]);
+ const handleaccount=()=>{
+  
+  if (userInfo.Amount === "" ||  userInfo.description === ""||selectedValue==="" ) {
+    Alert.alert("Fill in mandatory details");
+    } else {
+     if (
+       userInfo.Amountverify &&
+       userInfo.descriptionverify 
+     ) {console.log("correct")
+     Alert.alert("Successful");
+     navigation.navigate("transpin")
+    
+    }
+      }
+ }
+  
+  const handledescription=(val)=>{
+    if(userInfo.description.length<400){
+      setuserInfo({...userInfo,description:val,descriptionverify:true})
+    }else{
+      setuserInfo({...userInfo,description:val,descriptionverify:false})
+    }
+      }
+    
+    const handleamount=(val)=>{
+       if(userInfo.amount.length>4){
+        setuserInfo({...userInfo,referancecode:val,amountverify:true});
+      }else{
+        setuserInfo({...userInfo,referancecode:val,amountverify:false});
+      }
+    
+    }
+
+  const [emptyinput, setemptyinput] = useState(["hjgh"]);
+  
+  const [selectedValue, setSelectedValue] = useState("");
+
+  console.log(selectedValue)
   return (
     <View  style={{padding:windowWidth>400?16:2}}>
       {emptyinput.length>0 ?
@@ -24,18 +63,20 @@ export default function BankAccount({ windowWidth,windowheight}) {
               <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16,marginLeft:-10 }}>Select Account</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
             </View>
-            <View style={{flexDirection:"row",marginTop:20,marginLeft:-10}}>
-            <TextInput
-              style={styles.input1}
-              placeholder="Select Bank Name"
-              
-              placeholderTextColor={colors.neural300}
-              value={userInfo.name}
-              onChangeText={(name) => setUserInfo({ ...userInfo, name })}
-            />
-              <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, marginTop:-21 }}>
-                 <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name="down" size={14} color="black" />
-            </View>
+              <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 350, marginTop:-5,marginLeft:-10,borderRadius:8  }}>
+             
+             <Picker
+        selectedValue={selectedValue}
+        style={{color:colors.neural300}}
+        onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+      >
+        <Picker.Item  label="Select Bank Name" value="Select Bank Name" />
+        <Picker.Item label="First bank" value="First bank" />
+        <Picker.Item label="GTB" value="GTB" />
+        <Picker.Item label="UBA" value="UBA" />
+        <Picker.Item label="Diamond" value="Diamond" />
+      </Picker>
+            
           
             </View>
           </View>
@@ -50,8 +91,8 @@ export default function BankAccount({ windowWidth,windowheight}) {
               placeholder="Amount to deposit"
               
               placeholderTextColor={colors.neural300}
-              value={userInfo.name}
-              onChangeText={(name) => setUserInfo({ ...userInfo, name })}
+              value={userInfo.Amount}
+              onChangeText={(val=>handleamount(val))}
             />
           </View>
 
@@ -63,16 +104,14 @@ export default function BankAccount({ windowWidth,windowheight}) {
             <TextInput
               style={styles.input}
               placeholder="Desc"
-              value={userInfo.name}
+              value={userInfo.description}
               
               placeholderTextColor={colors.neural300}
-              onChangeText={(name) => setUserInfo({ ...userInfo, name })}
+              onChangeText={(val) => handledescription(val)}
             />
-               
-           
-          </View>
+           </View>
 
-          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 70, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 10,marginLeft:-10}} onPress={()=>navigation.navigate("transpin")} >
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 70, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 10,marginLeft:-10}} onPress={handleaccount} >
               <Text style={styles.buttonText}>Send</Text>
             </TouchableOpacity>
           </View>
@@ -116,7 +155,18 @@ const styles = StyleSheet.create({
      borderRadius:8,
      borderColor:colors.neural200,
    },
-   input1: {
+input1:{
+  padding: 16,
+  borderWidth: 2,
+  width:350,
+  height:56,
+  marginLeft:-10,
+  
+ // marginVertical: 20,
+  borderRadius:8,
+  borderColor:colors.neural200,
+},
+   input2: {
       padding: 16,
       borderWidth: 1,
       borderRightWidth:0,

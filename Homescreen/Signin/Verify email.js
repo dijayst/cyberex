@@ -18,44 +18,33 @@ export default function Verifyemail() {
     inputverify4:true,
   });
   
+
+
+  const [seconds, setSeconds] = useState(60);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (seconds > 0) {
+        // Decrease the seconds by 1 every second if not zero
+        setSeconds((prevSeconds) => prevSeconds - 1);
+      } else {
+        // Clear the interval if the timer reaches zero
+        clearInterval(interval);
+      }
+    }, 1000);
+  
+    // Clear interval when component unmounts to prevent memory leaks
+    return () => clearInterval(interval);
+  }, [seconds]);
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+  };
+
+
+  
   //const [verificationToken, setVerificationToken] = useState('');
 
-    const [seconds, setSeconds] = useState(60);
-    useEffect(() => {
-      const timer = setInterval(() => {
-        setSeconds((prevSeconds) => {
-          if (prevSeconds === 0) {
-            clearInterval(timer);
-            // Perform any action when the timer reaches zero
-          }
-          return prevSeconds - 1;
-        });
-      }, 1000);
-  
-      return () => clearInterval(timer);
-    }, []);
-    
-
-    useEffect(() => {
-      // Exit if countdown reaches 0
-      if (seconds === 0) return;
-  
-      const interval = setInterval(() => {
-        setSeconds((prevSeconds) => prevSeconds - 1);
-      }, 1000);
-  
-      // Clean up interval on component unmount
-      return () => clearInterval(interval);
-    }, [seconds]);
-
-    const displayTime = () => {
-      const minutes = Math.floor(seconds / 60);
-      const remainingSeconds = seconds % 60;
-      return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
-    };
-
-
-    
   const verifyCode = async () => {
     if(emailverify.input1===""||emailverify.input2===""||emailverify.input3===""||emailverify.input4===""){
       
@@ -67,14 +56,12 @@ if(emailverify.inputverify1&&emailverify.inputverify2&&emailverify.inputverify3&
   
   navigation.navigate("password")
 }
-else
-    {
-      Alert.alert("Fill in mandatory details");
-    }
         }
 
         
   };
+
+
 
 const handleinput1=(val)=>{
   
@@ -167,7 +154,7 @@ const handleinput4=(val)=>{
   </View>
   <View style={{display:"flex",flexDirection:"row"}}>
   <Text style={{width:140,height:22,fontSize:16,fontWeight:"700",lineHeight:21.6,marginLeft:120,marginTop:15,marginBottom:20,color:colors.neuralblack}}>Resend mail ? </Text>
-  <Text style={{color:colors.Orange,fontWeight:"700",lineHeight:21.6,marginTop:15,marginLeft:-29}}>{seconds}</Text>
+  <Text style={{color:colors.Orange,fontWeight:"700",lineHeight:21.6,marginTop:15,marginLeft:-29}}>{formatTime(seconds)}</Text>
   </View>
    <TouchableOpacity style={{backgroundColor:colors.Orange,borderRadius:8,marginTop:44,marginLeft:20, height:56,width:350,alignItems: "center",padding:10}} onPress={verifyCode}>
     <Text style={styles.buttonText}>Continue</Text>

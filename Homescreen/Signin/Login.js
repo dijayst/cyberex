@@ -32,7 +32,7 @@ export default  function Login() {
 
   
   const handlepassword=(val)=>{
-    if(/^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[^0-9A-Za-z]).{8,32}$/.test(val)){
+    if(/^(?=.*?[0-9])(?=.*?[A-Za-z]).{8,32}$/.test(val)){
       setuserInfor({...userInfor,password:val,passwordverify:true})
   }else{setuserInfor({...userInfor,password:val,passwordverify:false})
   }
@@ -54,10 +54,7 @@ Alert.alert("Fill in mandatory details");
  Alert.alert("Successful");
  navigation.navigate("welcome")
 
-}else
- {
-   Alert.alert("Fill in mandatory details");
- }
+}
   }};
 
   
@@ -120,6 +117,7 @@ Alert.alert("Fill in mandatory details");
               placeholderTextColor={colors.neural300}
               onChangeText={(val) =>handlepassword(val)}
               secureTextEntry={userInfor.isPasswordSecure}
+              maxLength={8}
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, }}>
               <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={userInfor.isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() =>setuserInfor({...userInfor,isPasswordSecure:!userInfor.isPasswordSecure}) } />

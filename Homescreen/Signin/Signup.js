@@ -5,7 +5,7 @@ import PhoneInput  from 'react-native-phone-input';
 import CountryPicker  from 'react-native-country-picker-modal'; 
 import CheckBox from 'expo-checkbox';
 import colors from '../JSON AND COLOR/colors';
-//import axios from "react-native-axios";
+import axios from "react-native-axios";
 
 
   
@@ -32,34 +32,51 @@ import colors from '../JSON AND COLOR/colors';
       countryCode:"",
     });
 
-
-  const handleSignup = () => {
-  if (    userInfor.name === "" || 
-     userInfor.email === "" ||   
-      userInfor.referencecode === "" || 
-         userInfor.phoneNumber === "" ||
-         !userInfor.isChecked) {
-  Alert.alert("Fill ");
- } else {
-    if (
-      userInfor.nameverify &&
-      userInfor.emailverify &&
-      userInfor.referencecodeverify &&
-      userInfor.phoneNumberverify
-    ) {console.log("correct")
+    const handleSignup =async () => {
+      if (    userInfor.name === "" || 
+         userInfor.email === "" ||   
+          userInfor.referencecode === "" || 
+             userInfor.phoneNumber === "" 
+             ) {
+      Alert.alert("Fill in mandatory details");
+     } else {
+        if (
+          userInfor.nameverify &&
+          userInfor.emailverify &&
+          userInfor.referencecodeverify &&
+          userInfor.phoneNumberverify&&!userInfor.isChecked
+        ) {console.log("correct")}
+      }
     
-    navigation.navigate("verify"); }else
-    {  Alert.alert("Fill in mandatory details");
+      try{
+        axios .post("http://172.20.10.2:6051/Signup", {
+          name: userInfor.name,  
+            email: userInfor.email,   
+             referencecode: userInfor.referencecode,
+               phoneNumber: userInfor.phoneNumber, })
+        .then((response) => {       
+                 console.log(response.data);      
+                     console.log(response.data.result);   
+                            console.log("Success");
+         console.log(userInfor);    
+                navigation.navigate("verify");    
+                })
+      }
+    
+     
+        catch(error) {      
+              console.log(error);      
+                  Alert.alert("Error occurred during signup")};
+                  
+                  
     }
-  }
 
-              
-}
 
 
 
 const handleemail=(val)=>{
-  if(/[a-zA-Z]+@[a-z]+\.[a-z]{2,3}/.test(val)){
+     
+  if(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/.test(val)){
     setuserInfor({...userInfor,email:val,emailverify:true})
 }else{setuserInfor({...userInfor,email:val,emailverify:false})
 }
@@ -156,11 +173,6 @@ console.log({userInfor})
               onChangeText={(val)=>handlename(val)}
               onEndEditing={(val)=>handlevalidname(val)}
                          />
-         {userInfor.nameverify?null:<Text style={{color:colors.Orange,}}>Fullname is required</Text>}
-          {userInfor.emailverify?null:<Text style={{color:colors.Orange,}}>email is required</Text>}
-         {userInfor.phoneNumberverify?null:<Text style={{color:colors.Orange,}}>phone number must be 10 digit</Text>}
-         {userInfor.referancecodeverify?null:<Text style={{color:colors.Orange,}}>enter a valid referancecode</Text>}
-         {!userInfor.isChecked?<Text style={{color:colors.Orange,}}>box has not been checked</Text>:null}
         
           </View>
 
@@ -335,4 +347,9 @@ submitButton: {
 
 
 //<Spinner visible={isLoading} />
-   
+   /* {userInfor.nameverify?null:<Text style={{color:colors.Orange,}}>Fullname is required</Text>}
+          {userInfor.emailverify?null:<Text style={{color:colors.Orange,}}>email is required</Text>}
+         {userInfor.phoneNumberverify?null:<Text style={{color:colors.Orange,}}>phone number must be 10 digit</Text>}
+         {userInfor.referancecodeverify?null:<Text style={{color:colors.Orange,}}>enter a valid referancecode</Text>}
+         {!userInfor.isChecked?<Text style={{color:colors.Orange,}}>box has not been checked</Text>:null}
+        */

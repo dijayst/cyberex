@@ -18,9 +18,9 @@ export default  function Welcomebackscreen () {
 
   
   const handlepassword=(val)=>{
-    if(/^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[^0-9A-Za-z]).{8,32}$/.test(val)){
-      setuserInfor({...userInfor,password:val,passwordverify:true})
-  }else{setuserInfor({...userInfor,password:val,passwordverify:false})
+    if(/^(?=.*?[0-9])(?=.*?[A-Za-z]).{8,32}$/.test(val)){
+      setUserInfo({...userInfo,password:val,passwordverify:true})
+  }else{setUserInfo({...userInfo,password:val,passwordverify:false})
   }
   
   }
@@ -79,9 +79,10 @@ export default  function Welcomebackscreen () {
               value={userInfo.password}
               onChangeText={(val) => handlepassword(val)}
               secureTextEntry={userInfo.isPasswordSecure}
+              maxLength={8}
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>
-            <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={userInfo.isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() =>setuserInfo({...userInfo,isPasswordSecure:!userInfo.isPasswordSecure}) } />
+            <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={userInfo.isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() =>setUserInfo({...userInfo,isPasswordSecure:!userInfo.isPasswordSecure}) } />
 
             </View>
 

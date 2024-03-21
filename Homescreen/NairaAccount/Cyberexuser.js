@@ -1,15 +1,64 @@
 import { View, Text,TextInput,StyleSheet,TouchableOpacity } from 'react-native'
 import React,{useState} from 'react'
 import colors from '../JSON AND COLOR/colors'
-
+import {Picker} from '@react-native-picker/picker'
 export default function Cyberexuser({ windowWidth,windowheight}) {
   
-  const [userInfo, setUserInfo] = useState({
-    name: "",
+  const [userInfo, setuserInfo] = useState({
+    
     email: "",
-    referancecode:""
+    emailverify:true,
+    amount: "",
+    amountverify:true,
+    description:"",
+    descriptionverify:true
   });
 
+  const handletransfer =  () => {
+    // signin(email,password);
+    
+   if (userInfo.email === "" ||  userInfo.amount === ""||userInfo.description==="" ) {
+ Alert.alert("Fill in mandatory details");
+ } else {
+  if (
+    userInfo.emailverify &&
+    userInfo.amountverify&&userInfo.descriptionverify 
+  ) {console.log("correct")
+  Alert.alert("Successful");
+  navigation.navigate("welcome")
+ 
+ }
+   }
+  };
+ 
+
+  const handleemail=(val)=>{
+     
+    if(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/.test(val)){
+      setuserInfo({...userInfo,email:val,emailverify:true})
+  }else{setuserInfo({...userInfo,email:val,emailverify:false})
+  }
+  }
+
+  const handledescription=(val)=>{
+    if(userInfo.description.length<400){
+      setuserInfo({...userInfo,description:val,descriptionverify:true})
+    }else{
+      setuserInfo({...userInfo,description:val,descriptionverify:false})
+    }
+      }
+    
+    const handleamount=(val)=>{
+       if(userInfo.amount.length>4){
+        setuserInfo({...userInfo,referancecode:val,amountverify:true});
+      }else{
+        setuserInfo({...userInfo,referancecode:val,amountverify:false});
+      }
+    
+    }
+
+
+    console.log(userInfo)
   return (
     <View style={{gap: 20,width:windowWidth>400? 29:360}}>
      
@@ -22,7 +71,7 @@ export default function Cyberexuser({ windowWidth,windowheight}) {
               style={styles.input}
               placeholder="Example@gmail.com"
               value={userInfo.name}
-              onChangeText={(name) => setUserInfo({ ...userInfo, name })}
+              onChangeText={(val) => handleemail(val)}
             />
           </View>
 
@@ -36,7 +85,7 @@ export default function Cyberexuser({ windowWidth,windowheight}) {
               style={styles.input}
               placeholder="Amount(#)"
               value={userInfo.email}
-              onChangeText={(email) => setUserInfo({ ...userInfo, email })}
+              onChangeText={(val) => handleamount(val)}
             />
           </View>
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
@@ -49,14 +98,13 @@ export default function Cyberexuser({ windowWidth,windowheight}) {
               style={styles.input}
               placeholder="Desc"
               value={userInfo.email}
-              onChangeText={(email) => setUserInfo({ ...userInfo, email })}
-              
+              onChangeText={(val) => handledescription(val)}
               placeholderTextColor={colors.neural300}
             />
           </View>
 
 
-          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 30, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 12,marginLeft:-10}} >
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 30, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 12,marginLeft:-10}} onPress={handletransfer}>
               <Text style={styles.buttonText}>Send</Text>
             </TouchableOpacity>
   

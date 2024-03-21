@@ -1,7 +1,8 @@
-import { View, Text,StyleSheet,TouchableOpacity,TextInput } from 'react-native'
+import { View, Text,StyleSheet,TouchableOpacity,TextInput, } from 'react-native'
 import React,{useState} from 'react'
 import { Ionicons ,AntDesign} from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
+import {Picker} from '@react-native-picker/picker'
 
 
 
@@ -11,10 +12,45 @@ export default function Linkbankaccount({navigation, windowWidth,windowheight}) 
 
     
   const [userInfo, setUserInfo] = useState({
-    name: "",
-    email: "",
-    referancecode:""
+    Accountnum: "",
+    Accountname:"",
+    Acctverify:"",
+    Accountnameverify:""
   });
+
+  
+ const handleaccount=()=>{
+  
+  if (userInfo.Amount === "" ||  userInfo.description === ""||selectedValue==="" ) {
+    Alert.alert("Fill in mandatory details");
+    } else {
+     if (
+       userInfo.Amountverify &&
+       userInfo.descriptionverify 
+     ) {console.log("correct")
+     Alert.alert("Successful");
+     navigation.navigate("transpin")
+    
+    }
+      }
+ }
+  const handledeacctnum=(val)=>{
+    if(userInfo.Accountnum.length<4){
+      setuserInfo({...userInfo,Accountnum:val,Acctverify:true})
+    }else{
+      setuserInfo({...userInfo,Accountnum:val,Acctverify:false})
+    }
+      }
+    
+    const handledeacctname=(val)=>{
+       if(userInfo.Accountname.length>4){
+        setuserInfo({...userInfo,Accountname:val,Accountnameverify:true});
+      }else{
+        setuserInfo({...userInfo,Accountname:val,Accountnameverify:false});
+      }
+    
+    }
+  const [selectedValue, setSelectedValue] = useState("");
 
   return (
     <View style={{ padding:19,marginTop:150,flex:1}}>
@@ -30,18 +66,21 @@ export default function Linkbankaccount({navigation, windowWidth,windowheight}) 
               <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Bank Name</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
             </View>
-
-<View style={{flexDirection:"row",marginTop:20,marginLeft:-10}}>
-            <TextInput
-              style={styles.input1}
-              placeholder="Select Bank Name"
-              value={userInfo.name}
-              placeholderTextColor={colors.neural300}
-              onChangeText={(name) => setUserInfo({ ...userInfo, name })}
-            />
-              <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0, marginTop:-21 }}>
-                 <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name="down" size={14} color="black" />
-            </View>
+            <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 350, marginTop:-5,marginLeft:-10,borderRadius:8  }}>
+               
+<Picker
+        selectedValue={selectedValue}
+        onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+      >
+      
+      <Picker.Item  label="Select Bank Name" value="Select Bank Name" />
+        <Picker.Item label="First bank" value="First bank" />
+        <Picker.Item label="GTB" value="GTB" />
+        <Picker.Item label="UBA" value="UBA" />
+        <Picker.Item label="Diamond" value="Diamond" />
+     
+          </Picker>
+             
           
             </View>
           </View>
@@ -57,8 +96,8 @@ export default function Linkbankaccount({navigation, windowWidth,windowheight}) 
               placeholder="Enter Account Number"
               
               placeholderTextColor={colors.neural300}
-              value={userInfo.email}
-              onChangeText={(email) => setUserInfo({ ...userInfo, email })}
+              value={userInfo.Accountnum}
+              onChangeText={(val) =>handledeacctnum(val)}
             />
           </View>
           <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
@@ -71,13 +110,13 @@ export default function Linkbankaccount({navigation, windowWidth,windowheight}) 
               style={styles.input}
               placeholder="Customer Account Name"
               placeholderTextColor={colors.neural300}
-              value={userInfo.email}
-              onChangeText={(email) => setUserInfo({ ...userInfo, email })}
+              value={userInfo.Accountname}
+              onChangeText={(val) => handledeacctname(val)}
             />
           </View>
 
 
-          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 70, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 12,marginLeft:-10}} onPress={()=>navigation.navigate("transpin")} >
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 70, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 12,marginLeft:-10}} onPress={handleaccount} >
               <Text style={styles.buttonText}>Save Account</Text>
             </TouchableOpacity>
   
@@ -134,3 +173,14 @@ input: {
      borderColor:colors.neural200,
    },
  })
+
+ /*
+ <TextInput
+              style={styles.input1}
+              placeholder="Select Bank Name"
+              value={userInfo.name}
+              placeholderTextColor={colors.neural300}
+              onChangeText={(name) => setUserInfo({ ...userInfo, name })}
+            />
+
+ */

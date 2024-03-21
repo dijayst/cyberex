@@ -12,17 +12,31 @@ export default function Password({navigation}) {
 
     const [userInfo, setUserInfo] = useState({
         password:"",
-        reenterpassword:""
+        reenterpassword:"",
+        isPasswordSecure:true,
+        error:""
       });
       
-const [isPasswordSecure, setIsPasswordSecure] = useState(true);
-
 
 const handleSignup = async () => {
    
+  if (userInfo.password !== userInfo.reenteredPassword) {
+    setUserInfo({...userInfo,error:'Passwords do not match'})
+    //setError('Passwords do not match');
+  }  if (userInfo.password.length < 8) {
+   // setError('Password must be at least 8 characters long');
+   setUserInfo({...userInfo,error:'Password must be at least 8 characters long'})
+  
+  } else {
+    //setError('');
+    // Password is valid, you can proceed with your logic here
+    setUserInfo({...userInfo,error:'successful'})
+    
+
     navigation.navigate("home",{screen:'homestack'})
- 
+  }
  };
+ console.log(userInfo)
 
 
   return (
@@ -55,14 +69,15 @@ const handleSignup = async () => {
             <TextInput
               style={styles.password}
               placeholder="Enter new password"
-              
+              maxLength={8}
               placeholderTextColor={colors.neural300}
               value={userInfo.password}
               onChangeText={(password) => setUserInfo({ ...userInfo, password })}
-              secureTextEntry
+              secureTextEntry={userInfo.isPasswordSecure}
+          
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>
-              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
+            <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={userInfo.isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => {  userInfo.isPasswordSecure ? setUserInfo({...userInfo,isPasswordSecure:false}) : setUserInfo({...userInfo,isPasswordSecure:true}) }} />
 
             </View>
 
@@ -82,12 +97,13 @@ const handleSignup = async () => {
               style={styles.input}
               placeholder="Confirm new password"
               value={userInfo.reenterpassword}
-              
+              secureTextEntry={userInfo.isPasswordSecure}
               placeholderTextColor={colors.neural300}
+              maxLength={8}
               onChangeText={(reenterpassword) => setUserInfo({ ...userInfo, reenterpassword })}
             />
             <View style={{ borderWidth: 1, borderColor: colors.neural200, height: 56, width: 40, borderTopRightRadius: 8, borderBottomRightRadius: 8,borderLeftWidth:0,  }}>
-              <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
+            <AntDesign style={{ justifyContent: "center", marginTop: 16, }} name={userInfo.isPasswordSecure ? "eye" : "eyeo"} size={24} color="black" onPress={() => {  userInfo.isPasswordSecure ? setUserInfo({...userInfo,isPasswordSecure:false}) : setUserInfo({...userInfo,isPasswordSecure:true}) }} />
 
             </View>
           </View>

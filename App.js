@@ -7,6 +7,7 @@ import Stacknav from './Homescreen/Navigation/Stacknav';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { AuthContext } from './Homescreen/Auth/AuthContext';
 import Adminnav from './Homescreen/Navigation/Adminnav';
+import { ThemeProvider } from './Homescreen/Navigation/ThemeContext';
 
 export default function App() {
  
@@ -121,12 +122,12 @@ const authContext=useMemo(() => ({
 
   return (
     
-    <AuthContext.Provider  value={authContext}>
+   <ThemeProvider>
     <NavigationContainer>
     {loginstate.userToken !== null?<Adminnav/>:
     <Stacknav/>}
 </NavigationContainer>
-</AuthContext.Provider>
+</ThemeProvider>
   
   );
 }

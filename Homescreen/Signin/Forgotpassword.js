@@ -1,4 +1,4 @@
-import { View, Text,Image ,StyleSheet,TextInput,TouchableOpacity,} from 'react-native'
+import { View, Text,Image ,StyleSheet,TextInput,TouchableOpacity, Alert,} from 'react-native'
 import React,{useState} from 'react'
 import axios from "react-native-axios";
 import {useNavigation} from "@react-navigation/native";
@@ -14,20 +14,32 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
   const [userInfo, setUserInfo] = useState({
     email: "",
-    password:"",
+    emailverify:true
   });
 
   
-  const handleSignup = async () => {
-   
-     navigation.navigate("enter")
+  const handleemail=(val)=>{
+    if(/[a-zA-Z]+@[a-z]+\.[a-z]{2,3}/.test(val)){
+      setUserInfo({...userInfo,email:val,emailverify:true})
+  }else{setUserInfo({...userInfo,email:val,emailverify:false})
+  }
   
+  }
+
+  const handleSignup = async () => {
+   if(userInfo.name===""){
+   // Alert.alert("Fill in mandatory details");
+      Alert.alert("must be 8 chatracter with atleast a number");
+
+   }else{if(
+    userInfo.emailverify){
+      navigation.navigate("enter")
+    }
+   }
+    
   };
 
   
-
-
-const [isChecked, setisChecked] = useState(false); 
  
   console.log(userInfo)
   console.log(handleSignup)
@@ -64,9 +76,8 @@ const [isChecked, setisChecked] = useState(false);
             style={styles.input}
             placeholder="Example@gmail.com"
             value={userInfo.email}
-            
             placeholderTextColor={colors.neural300}
-            onChangeText={(email) => setUserInfo({ ...userInfo, email })}
+            onChangeText={(val) => handleemail(val)}
           />
         </View>
 

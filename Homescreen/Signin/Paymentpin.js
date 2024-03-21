@@ -80,10 +80,7 @@ if(Paymentpin.inputverify1&&Paymentpin.inputverify2&&Paymentpin.inputverify3&&Pa
 Alert.alert("successfull")
 navigation.navigate("login")
 }
-else
-  {
-    Alert.alert("Fill in mandatory details");
-  }
+
       }
  
  };
