@@ -33,11 +33,9 @@ export default  function Welcomebackscreen () {
       navigation.navigate("home")
   
     }else{
-      Alert.alert("Fill in mandatory details");
-  
-    }
+      Alert.alert("passwor should contain atleast7 character and a digit ");    
    }
-    
+  }
   };
 
   

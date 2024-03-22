@@ -27,13 +27,15 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
   }
 
   const handleSignup = async () => {
-   if(userInfo.name===""){
+   if(userInfo.email===""){
    // Alert.alert("Fill in mandatory details");
-      Alert.alert("must be 8 chatracter with atleast a number");
-
+   Alert.alert("Fill in mandatory details");
    }else{if(
     userInfo.emailverify){
+      console.log("Successful")
       navigation.navigate("enter")
+    }else{
+      Alert.alert("Fill in mandatory details");
     }
    }
     

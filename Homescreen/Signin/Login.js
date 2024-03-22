@@ -54,6 +54,8 @@ Alert.alert("Fill in mandatory details");
  Alert.alert("Successful");
  navigation.navigate("welcome")
 
+}else{console.log("ffhfhjgjh")
+Alert.alert("passwor should contain atleast7 character and a digit ");
 }
   }};
 

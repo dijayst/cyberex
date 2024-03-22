@@ -1,10 +1,15 @@
 import { View, Text,TouchableOpacity,StyleSheet,TextInput, } from 'react-native'
-import React from 'react'
+import React,{useState} from 'react'
 import colors from '../JSON AND COLOR/colors'
 import { Ionicons } from '@expo/vector-icons';
 
 export default function Deposit({navigation,windowWidth, windowheight}) {
   
+  const [amount, setAmount] = useState('');
+
+  const handleAmountSelection = (selectedAmount) => {
+    setAmount(selectedAmount);
+  };
   return (
 
     <View style={{}}>
@@ -20,40 +25,41 @@ export default function Deposit({navigation,windowWidth, windowheight}) {
               <TextInput
               style={styles.input}
               placeholder="Amount(#)"
-              
+              value={amount}
               placeholderTextColor={colors.neural300}
+              onChangeText={(text) => setAmount(text)}
               />
              
              <View style={{gap:10,flexDirection:"column"}}>
               <View style={{flexDirection:"row",gap:8,width:350}}>
-              <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}}>
+              <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}} onPress={()=>handleAmountSelection("#1000")}>
                 <Text style={{fontSize:12,fontWeight:"700",lineHeight:16.2,color:colors.Orange}}>#1000</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}}>
+                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}} onPress={()=>handleAmountSelection("#2000")}>
                 <Text style={{fontSize:12,fontWeight:"700",lineHeight:16.2,color:colors.Orange}}>#2000</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}}>
+                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}} onPress={()=>handleAmountSelection("#5000")}>
                 <Text style={{fontSize:12,fontWeight:"700",lineHeight:16.2,color:colors.Orange}}>#5000</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}}>
+                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}} onPress={()=>handleAmountSelection("#10000")}>
                 <Text style={{fontSize:12,fontWeight:"700",lineHeight:16.2,color:colors.Orange}}>#10000</Text>
                 </TouchableOpacity>
              
                 </View>
 
                 <View style={{flexDirection:"row",gap:8,width:350}}>
-              <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}}>
+              <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}}onPress={()=>handleAmountSelection("#15000")}>
                 <Text style={{fontSize:12,fontWeight:"700",lineHeight:16.2,color:colors.Orange}}>#15000</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}}>
+                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}} onPress={()=>handleAmountSelection("#20000")}>
                 <Text style={{fontSize:12,fontWeight:"700",lineHeight:16.2,color:colors.Orange}}>#20000</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}}>
+                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}} onPress={()=>handleAmountSelection("#50000")}>
                 <Text style={{fontSize:12,fontWeight:"700",lineHeight:16.2,color:colors.Orange}}>#50000</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}}>
+                <TouchableOpacity style={{backgroundColor:colors.Imagecolor,height:32,width:82,borderRadius:8,padding:8,paddingLeft:19}} onPress={()=>handleAmountSelection("#100000")}>
                 <Text style={{fontSize:12,fontWeight:"700",lineHeight:16.2,color:colors.Orange}}>#100000</Text>
                 </TouchableOpacity>
              
@@ -86,7 +92,7 @@ const styles = StyleSheet.create({
 },
 
 input: {
-  // padding: 5,
+   padding: 16,
    borderWidth: 1,
    width:350,
    height:56,

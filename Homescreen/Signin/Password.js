@@ -20,24 +20,29 @@ export default function Password() {
 
 
 
-
- 
- const handlepassword =  () => {
-  if (userInfo.password !== userInfo.reenteredPassword) {
+const handleSignup = () => {
+   
+  if (userInfo.password === userInfo.reenteredPassword) {
     setUserInfo({...userInfo,error:'Passwords do not match'})
     //setError('Passwords do not match');
-  }  if (userInfo.password.length < 8) {
-   // setError('Password must be at least 8 characters long');
-   setUserInfo({...userInfo,error:'Password must be at least 8 characters long'})
+    Alert.alert("Passwords do not match")
+  }else{
+    if (userInfo.password.length < 8) {
+      // setError('Password must be at least 8 characters long');
+      setUserInfo({...userInfo,error:'Password must be at least 8 characters long'})
+      Alert.alert("Password must be at least 8 characters long")
+     } else {
+       //setError('');
+       // Password is valid, you can proceed with your logic here
+       setUserInfo({...userInfo,error:'successful'})
+       Alert.alert("successful")
   
-  } else {
-    //setError('');
-    // Password is valid, you can proceed with your logic here
-    setUserInfo({...userInfo,error:'successful'})
-    navigation.navigate("paymentpin")
-  }
+       navigation.navigate("paymentpin")
+     }
+  }  
+ };
 
-  }
+ 
   
 
 console.log(userInfo)
@@ -117,7 +122,7 @@ console.log(userInfo)
 
         <View style={{ width: 350, height: 120, gap: 16 }}>
 
-          <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handlepassword}>
+          <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 10, height: 56, width: 350, alignItems: "center", padding: 10 }} onPress={handleSignup}>
             <Text style={styles.buttonText}>Continue</Text>
           </TouchableOpacity>
 

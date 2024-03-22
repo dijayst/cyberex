@@ -1,8 +1,7 @@
 
-import { View, Text,StyleSheet,Image,TouchableOpacity,TextInput} from 'react-native'
+import { View, Text,StyleSheet,Image,TouchableOpacity,TextInput, Alert} from 'react-native'
 import React,{useState} from 'react'
 import { AntDesign } from '@expo/vector-icons';
-import {useNavigation} from "@react-navigation/native";
 import { Ionicons } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 
@@ -20,24 +19,34 @@ export default function Password({navigation}) {
 
 const handleSignup = async () => {
    
-  if (userInfo.password !== userInfo.reenteredPassword) {
+  if (userInfo.password === userInfo.reenteredPassword) {
     setUserInfo({...userInfo,error:'Passwords do not match'})
     //setError('Passwords do not match');
-  }  if (userInfo.password.length < 8) {
-   // setError('Password must be at least 8 characters long');
-   setUserInfo({...userInfo,error:'Password must be at least 8 characters long'})
+    Alert.alert("Passwords do not match")
+  }else{
+    if (userInfo.password.length < 8) {
+      // setError('Password must be at least 8 characters long');
+      setUserInfo({...userInfo,error:'Password must be at least 8 characters long'})
+      Alert.alert("Password must be at least 8 characters long")
+     } else {
+       //setError('');
+       // Password is valid, you can proceed with your logic here
+       setUserInfo({...userInfo,error:'successful'})
+       Alert.alert("successful")
   
-  } else {
-    //setError('');
-    // Password is valid, you can proceed with your logic here
-    setUserInfo({...userInfo,error:'successful'})
-    
-
-    navigation.navigate("home",{screen:'homestack'})
-  }
+       navigation.navigate("home")
+     }
+  }  
  };
  console.log(userInfo)
 
+ const handlepassword=(val)=>{
+  if(/^(?=.*?[0-9])(?=.*?[A-Za-z]).{8,32}$/.test(val)){
+    setuserInfo({...userInfo,password:val,passwordverify:true})
+}else{setuserInfo({...userInfo,password:val,passwordverify:false})
+}
+
+}
 
   return (
     <View style={{ backgroundColor:colors.background, padding: 5 }}>

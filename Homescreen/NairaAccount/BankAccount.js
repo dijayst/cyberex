@@ -41,10 +41,10 @@ export default function BankAccount({ windowWidth,windowheight}) {
       }
     
     const handleamount=(val)=>{
-       if(userInfo.amount.length>4){
-        setuserInfo({...userInfo,referancecode:val,amountverify:true});
+       if(userInfo.amount.length<4){
+        setuserInfo({...userInfo,Amount:val,Amountverify:true});
       }else{
-        setuserInfo({...userInfo,referancecode:val,amountverify:false});
+        setuserInfo({...userInfo,Amount:val,Amountverify:false});
       }
     
     }

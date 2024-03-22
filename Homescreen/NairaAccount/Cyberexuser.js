@@ -1,4 +1,4 @@
-import { View, Text,TextInput,StyleSheet,TouchableOpacity } from 'react-native'
+import { View, Text,TextInput,StyleSheet,TouchableOpacity, Alert } from 'react-native'
 import React,{useState} from 'react'
 import colors from '../JSON AND COLOR/colors'
 import {Picker} from '@react-native-picker/picker'
@@ -41,7 +41,7 @@ export default function Cyberexuser({ windowWidth,windowheight}) {
   }
 
   const handledescription=(val)=>{
-    if(userInfo.description.length<400){
+    if(userInfo.description.length<4){
       setuserInfo({...userInfo,description:val,descriptionverify:true})
     }else{
       setuserInfo({...userInfo,description:val,descriptionverify:false})
@@ -50,9 +50,9 @@ export default function Cyberexuser({ windowWidth,windowheight}) {
     
     const handleamount=(val)=>{
        if(userInfo.amount.length>4){
-        setuserInfo({...userInfo,referancecode:val,amountverify:true});
+        setuserInfo({...userInfo,amount:val,amountverify:true});
       }else{
-        setuserInfo({...userInfo,referancecode:val,amountverify:false});
+        setuserInfo({...userInfo,amount:val,amountverify:false});
       }
     
     }
