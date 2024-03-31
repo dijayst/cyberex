@@ -22,7 +22,7 @@ export default function Notificationscreen() {
                 data={Notify}
                 style={{marginTop:95,backgroundColor:colors.background,height:700,width:315.5,gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
-                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("nairatrans",{item:item})}>
+                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.navigate("nairatrans",{item:item})}>
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.pin}</Text>
                       <Text style={{fontSize:12,fontWeight:"500",color:colors.neuralblack,width:295}}>{item.message}</Text>
@@ -89,7 +89,7 @@ fontSize: 16,
                 data={Notify}
                 style={{marginTop:95,backgroundColor:colors.background,height:700,width:315.5,gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
-                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.push("nairatrans",{item:item})}>
+                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.navigate("nairatrans",{item:item})}>
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.pin}</Text>
                       <Text style={{fontSize:12,fontWeight:"500",color:colors.neuralblack,width:295}}>{item.message}</Text>

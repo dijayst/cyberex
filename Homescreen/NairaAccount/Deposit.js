@@ -1,4 +1,4 @@
-import { View, Text,TouchableOpacity,StyleSheet,TextInput, } from 'react-native'
+import { View, Text,TouchableOpacity,StyleSheet,TextInput, Alert, } from 'react-native'
 import React,{useState} from 'react'
 import colors from '../JSON AND COLOR/colors'
 import { Ionicons } from '@expo/vector-icons';
@@ -7,6 +7,15 @@ export default function Deposit({navigation,windowWidth, windowheight}) {
   
   const [amount, setAmount] = useState('');
 
+  const handledeposit=()=>{
+    if (amount===""){
+      Alert.alert('fill in mandatory space')
+    }else{
+      Alert.alert('Successful')
+      navigation.navigate('home')
+    }
+    
+  }
   const handleAmountSelection = (selectedAmount) => {
     setAmount(selectedAmount);
   };
@@ -69,7 +78,7 @@ export default function Deposit({navigation,windowWidth, windowheight}) {
              </View>
           </View>
 
-          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 150, height: 56, width: 350, alignItems: "center", padding: 7,marginLeft:7}} onPress={()=>navigation.navigate("home")} >
+          <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 150, height: 56, width: 350, alignItems: "center", padding: 7,marginLeft:7}} onPress={handledeposit} >
               <Text style={styles.buttonText}>Deposit</Text>
             </TouchableOpacity>
   </View>

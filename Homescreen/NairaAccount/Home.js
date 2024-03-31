@@ -5,13 +5,13 @@ import Heading from './Heading';
 import { Ionicons,Entypo } from '@expo/vector-icons';
 import { print } from '../JSON AND COLOR/Data';
 import colors from '../JSON AND COLOR/colors';
-
 import Spinner from 'react-native-loading-spinner-overlay';
+import { ThemeContext } from '../Theme/ThemeContext';
 
 export default function Home({navigation}) {
   
-  //const {userInfo, isLoading, logout} = useContext(AuthContext);
-
+const theme=useContext(ThemeContext)
+  
   const windowWidth=useWindowDimensions().width
   const windowheight=useWindowDimensions().height
     const [gamesTab, setGamesTab] = useState(1);
@@ -33,8 +33,8 @@ export default function Home({navigation}) {
     
   return (
     
-    <SafeAreaView style={styles.Safecontainer}>
-      <View style={{ backgroundColor:colors.background, flex: 1, padding: 19 }}>
+    
+      <View style={{ flex: 1,padding: 29,backgroundColor:theme.backgroundColor}}>
      
               <ScrollView   showsVerticalScrollIndicator={false}>
           <View style={styles.ProfileMainContainer}>
@@ -44,7 +44,7 @@ export default function Home({navigation}) {
                       <Text style={{ width: 109, height: 18, color: colors.neural400,fontSize: 16, }}>Welcome Back,</Text>
                       <Text style={{ fontSize: 16, fontFamily: 'oufit', color: "#000000" ,fontWeight:"700"}}>Leonard Victor</Text>
                   </View>
-                  <Ionicons style={styles.notification} name="notifications" size={24} color="black" onPress={()=>navigation.push("notify")} />
+                  <Ionicons style={styles.notification} name="notifications" size={24} color="black"  onPress={() => navigation.navigate('notify')} />
 
 
               </View>
@@ -59,7 +59,7 @@ export default function Home({navigation}) {
 
 
                <View  style={{backgroundColor:colors.white,borderRadius:8,height:windowheight>800? 101:101,width:windowWidth>400? 375:350,marginTop:35,display:"flex",flexDirection:"row"}}>
-               <TouchableOpacity style={styles.container} onPress={()=>navigation.push("paybills")}>
+               <TouchableOpacity style={styles.container} onPress={()=>navigation.navigate("paybills")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
                  <Image source={require("../image1/ICONS/bill.png")} style={styles.userimage} />
@@ -77,7 +77,7 @@ export default function Home({navigation}) {
                
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("buyairtime")}>
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.navigate("buyairtime")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
                  <Image source={require("../image1/ICONS/mobile.png")} style={styles.userimage} />
@@ -94,7 +94,7 @@ export default function Home({navigation}) {
              
                
                     </TouchableOpacity>   
-                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("buycrpto")}>
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.navigate("buycrpto")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
                  <Image source={require("../image1/ICONS/bitcoin-convert.png")} style={styles.userimage} />
@@ -111,7 +111,7 @@ export default function Home({navigation}) {
              
                
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.container} onPress={()=>navigation.push("save")}>
+                    <TouchableOpacity style={styles.container} onPress={()=>navigation.navigate("save")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
                  <Image source={require("../image1/ICONS/wallet.png")} style={styles.userimage} />
@@ -138,7 +138,7 @@ export default function Home({navigation}) {
 
 
                      
-             <TouchableOpacity style={{backgroundColor:colors.white,width:windowWidth>400? 375.5:350,height:windowheight>800? 96:96,borderRadius:8,marginTop:29,}} onPress={()=>navigation.push("link")} >
+             <TouchableOpacity style={{backgroundColor:colors.white,width:windowWidth>400? 375.5:350,height:windowheight>800? 96:96,borderRadius:8,marginTop:29,}} onPress={()=>navigation.navigate("link")} >
              <View style={styles.ProfileContainer}> 
                 <Image source={require("../image1/img2.png")} style={styles.userimage2}/>
                 <View style={{gap:9,marginTop:12}}>
@@ -182,7 +182,7 @@ export default function Home({navigation}) {
               </ScrollView>
           
       </View>
-      </SafeAreaView>
+      
   )
 }
 
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
   
   Safecontainer:{
     flex:1,
-    backgroundColor:colors.background
+    //backgroundColor:colors.background
   },
     subcontainer:{
       display:"flex",

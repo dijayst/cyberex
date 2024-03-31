@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet,Text } from 'react-native'
+import { View, StyleSheet,Text } from 'react-native'
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import Stacknav from './Stacknav';
 //import Giftcard from '../Bottomtabnav/GiftCard/Giftcard';
@@ -11,23 +11,25 @@ import Giftcardstack from './Giftcardstack';
 //import Homestack from '../../../Auth/Homestack';
 import Home from '../NairaAccount/Home';
 
-
     const Tab = createBottomTabNavigator();
 
   export default function  Tabnavigation() {
     
 
   return (
-  
- <Tab.Navigator
+     <Tab.Navigator
  screenOptions={{
  tabBarStyle:{height:60,backgroundColor:colors.background},
   headerShown:false,
   tabBarInactiveTintColor:"blue",
   tabBarActiveTintColor:"red",
-  
-}}>
-    
+
+}} >
+    {/*
+     <Tab.Screen name="stack" component={Stacknav} options={{headerShown:false,
+    tabBarLabel:({color})=>(<Text style={{color:color,fontSize:10,marginTop:-7}}>Home</Text>),
+    tabBarIcon:()=>(<FontAwesome name="home"  color={colors.Orange} size={25}/>)}}
+  /> */}
  <Tab.Screen name="home" component={Home} options={{headerShown:false,
     tabBarLabel:({focused})=>(<Text style={{color:focused?colors.Orange:colors.neural400,fontSize:10,marginTop:-7}}>Home</Text>),
     tabBarIcon:({focused})=>(<FontAwesome name="home"  color={focused?colors.Orange:colors.neural400} size={25}/>)}}
@@ -48,8 +50,6 @@ import Home from '../NairaAccount/Home';
 
 </Tab.Navigator>
 
-
-    
    
   )
 }

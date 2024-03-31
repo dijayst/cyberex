@@ -1,14 +1,16 @@
 import { View, Text,TouchableOpacity,Image,StyleSheet,useWindowDimensions } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
 import colors from '../../JSON AND COLOR/colors'
+import { ThemeContext } from '../../Theme/ThemeContext'
 
 export default function Giftcard({navigation}) {
   
+const theme=useContext(ThemeContext)
   const windowWidth=useWindowDimensions().width
   const windowheight=useWindowDimensions().height
   return (
     
-<View style={{ padding:39,}}>
+<View style={{ padding:39,backgroundColor:theme.backgroundColor}}>
       <View style={{justifyContent:"center",alignItems:"center",marginTop:60}}>
       <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Trade Giftcard</Text>
       </View>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet } from 'react-native'
-//import {createStackNavigator} from "@react-navigation/stack";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from '../Signin/Login';
 import Signup from '../Signin/Signup';
@@ -12,7 +11,7 @@ import Welcomebackscreen from '../Signin/Welcomebackscreen';
 import Forgotpassword from '../Signin/Forgotpassword';
 import Entercode from '../Signin/Entercode';
 import Changepassword from '../Signin/Changepassword';
-import Home from '../NairaAccount/Home';
+//import Home from '../NairaAccount/Home';
 import Bitcoinacct from '../BTCAccount/Bitcoinacct';
 import Bitcointransactiondetails from '../BTCAccount/Bitcointransactiondetails';
 import Nairatransactiondetails from '../NairaAccount/Nairatransactiondetails';
@@ -28,28 +27,29 @@ import Convert from '../BTCAccount/Convert';
 import Successful from '../BTCAccount/Successful';
 import Transactionpin from '../BTCAccount/Transactionpin';
 import Sellsuccessfull from '../BTCAccount/Sellsuccessfull';
+import Linkbankaccount from '../NairaAccount/LinkBankAccount';
+import Tabnavigation from './Tabnavigation';
+import Home from '../NairaAccount/Home';
 import Deposit from '../NairaAccount/Deposit';
 import Transfernaira from '../NairaAccount/Transfernaira';
-import Linkbankaccount from '../NairaAccount/LinkBankAccount';
 
-import Tabnavigation from './Tabnavigation';
     const Stack = createNativeStackNavigator();
-
-  export default function Stacknav() {
-  return (
-
-    <Stack.Navigator
-      screenOptions={{
-        tabBarActiveTintColor: "#8E3FFF",
-        headerShown: false,
-
-      }}>
+    
+    
+  export  function Stackna() {
+    
+    return (
+  
+      <Stack.Navigator
+        screenOptions={{
+          tabBarActiveTintColor: "#8E3FFF",
+          headerShown: false,
+  
+        }}>
 
 <Stack.Screen name="slider" component={Slider} />
 
 <Stack.Screen name="signup" component={Signup} />
-
-<Stack.Screen name="login" component={Login}  options={{ tabBarVisible: false }}/>
 
 <Stack.Screen name="verify" component={Verifyemail} />
 
@@ -63,8 +63,24 @@ import Tabnavigation from './Tabnavigation';
 
 <Stack.Screen name="enter" component={Entercode} />
 <Stack.Screen name="change" component={Changepassword} />
+<Stack.Screen name="login" component={Login}  options={{ tabBarVisible: false }}/>
 
+        </Stack.Navigator>)}
+  
 
+  export  function Stacknav() {
+    
+  return (
+
+    <Stack.Navigator
+      screenOptions={{
+        tabBarActiveTintColor: "#8E3FFF",
+        headerShown: false,
+
+      }}>
+        
+        
+ 
 <Stack.Screen name="home" component={Tabnavigation} />
 
       <Stack.Screen name="btc" component={Bitcoinacct} />
@@ -96,7 +112,7 @@ import Tabnavigation from './Tabnavigation';
       <Stack.Screen name="transpin" component={Transactionpin} />
       
       <Stack.Screen name="sellsuccess" component={Sellsuccessfull} />
-      
+    
       <Stack.Screen name="deposit" component={Deposit} />
       
       <Stack.Screen name="transfer" component={Transfernaira} />
@@ -107,7 +123,7 @@ import Tabnavigation from './Tabnavigation';
  
 
 
-         </Stack.Navigator>
+       </Stack.Navigator>
 
 
     

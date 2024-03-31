@@ -48,7 +48,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
 
   return (
-    <View style={{ backgroundColor:colors.background,padding:5 }}>
+    <View style={{ backgroundColor:colors.background,padding:10 }}>
       <TouchableOpacity style={styles.backbtncontainer} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={30} color={colors.Gobackicon} />
       </TouchableOpacity>

@@ -41,11 +41,11 @@ console.log(showModal)
 
       </View>
       <View style={{ display: "flex", flexDirection: "row",gap:19, }}>
-        <TouchableOpacity style={{backgroundColor:colors.Imagecolor,borderRadius:32,height:44,width:153,flexDirection:"row",alignItems: 'center',justifyContent:"center",}} onPress={()=>navigation.push("deposit",{windowWidth:{windowWidth} ,windowheight:{windowheight}})}>
+        <TouchableOpacity style={{backgroundColor:colors.Imagecolor,borderRadius:32,height:44,width:153,flexDirection:"row",alignItems: 'center',justifyContent:"center",}} onPress={()=>navigation.navigate("deposit",{windowWidth:{windowWidth} ,windowheight:{windowheight}})}>
           <Text style={{color:colors.Orange,textAlign:"center"}}>Add Money</Text>
           <AntDesign name="plus" size={18} color={colors.Orange} />
         </TouchableOpacity>
-        <TouchableOpacity style={{backgroundColor:colors.Imagecolor,borderRadius:32,height:44,width:153,flexDirection:"row",alignItems: 'center',justifyContent:"center",}} onPress={()=>navigation.push("transfer",{windowWidth:{windowWidth} ,windowheight:{windowheight}})} >
+        <TouchableOpacity style={{backgroundColor:colors.Imagecolor,borderRadius:32,height:44,width:153,flexDirection:"row",alignItems: 'center',justifyContent:"center",}} onPress={()=>navigation.navigate("transfer",{windowWidth:{windowWidth} ,windowheight:{windowheight}})} >
           <Text style={{color:colors.Orange ,textAlign:"center"}}>Transfer</Text>
           <Feather name="share" size={18} color={colors.Orange} />
         </TouchableOpacity>

@@ -145,7 +145,7 @@ console.log({userInfor})
   
     return (
       <ScrollView contentContainerStyle={{flexGrow:1}} showsVerticalScrollIndicator={true}>
-      <View style={{ backgroundColor:colors.background,padding:11,}}>
+      <View style={{ backgroundColor:colors.background,padding:18,}}>
 
                 <View style={{ height: 60, width: 240, marginTop: 68, gap: 6,padding:11 }}>
           <Text style={{ fontSize: 24, fontWeight: "700", color: colors.Textcolor, lineHeight: 28.8 }}>Create your account</Text>

@@ -39,7 +39,7 @@ export const Notify=[{
 
 export const Slid = [
     {id:1,
-        title:"Welcome to CyberX",
+        title:"Welcome to CyberEX",
       description: "Your gateway to seamless bitcoin and git card trading.Where transactions are swift and secure",
       click :"Get Started"
     },

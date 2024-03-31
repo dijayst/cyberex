@@ -15,7 +15,6 @@ export default function Giftcardstack() {
       screenOptions={{
         tabBarActiveTintColor: "#8E3FFF",
         headerShown: false,
-
       }}>
 
       <Stack.Screen name="slider" component={Giftcard} />

@@ -1,17 +1,100 @@
 import { StatusBar } from 'expo-status-bar';
 import {  useFonts } from 'expo-font';
-import {NavigationContainer} from "@react-navigation/native"
-import React, { useEffect ,useMemo,useReducer} from 'react'
-import { ActivityIndicator, View } from 'react-native';
-import Stacknav from './Homescreen/Navigation/Stacknav';
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { AuthContext } from './Homescreen/Auth/AuthContext';
-import Adminnav from './Homescreen/Navigation/Adminnav';
-import { ThemeProvider } from './Homescreen/Navigation/ThemeContext';
+import { useState } from 'react';
+import {  AuthProvider } from './Homescreen/AuthScreen/AuthContext';
+import Index from './Homescreen/AuthScreen/Index';
 
 export default function App() {
  
 
+
+  
+  const[LatoLoaded]= useFonts({
+    'lato-black':require('./assets/Lato/Lato-Black.ttf'),
+    'lato-blackitalic':require('./assets/Lato/Lato-BlackItalic.ttf'),
+    'lato-bold':require('./assets/Lato/Lato-Bold.ttf'),
+    'lato-italic':require('./assets/Lato/Lato-Italic.ttf'),
+    'lato-light':require('./assets/Lato/Lato-Light.ttf'),
+    'lato-lightitalic':require('./assets/Lato/Lato-LightItalic.ttf'),
+    'lato-thin':require('./assets/Lato/Lato-Thin.ttf'),
+    'lato-thinitalic':require('./assets/Lato/Lato-ThinItalic.ttf'),
+ 
+  });
+
+ // const{test,isLoading,userToken}=useContext(AuthContext);
+ 
+ //const {  userToken } = useContext(AuthContext);
+
+ 
+    
+ //const [isLoading, setIsLoading] = useState(true);
+//setTimeout(() => {        setIsLoading(false);}, 2000);
+    
+    return (
+    
+    <AuthProvider>
+      <Index/>
+</AuthProvider>
+
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//{loginstate.userToken !== null?<Adminnav/>:
+//<AuthContext.Provider>
+/*
+
+
+
+
+if(isLoading)
+{   <View style={{flex:1,justifyContent:"center",alignItems:"center"}}>
+  <ActivityIndicator size="large"/>
+  <Spinner/>
+  </View>}
+
+
+ {isLoading? <View style={{flex:1,justifyContent:"center",alignItems:"center"}}>
+      <ActivityIndicator size="large"/>
+    </View>:
+    <Stacknav/>}
+ {loginstate.userToken !== null?<Adminnav/>:
+    <Stacknav/>}
+ <AuthContext.Provider  value={authContext}>
+         <NavigationContainer>
+         {loginstate.userToken !== null?<Adminnav/>:
+         <Stacknav/>}
+   </NavigationContainer>
+   </AuthContext.Provider>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 const initialloginstate={
   isLoading:true,
   userToken:null,
@@ -106,40 +189,4 @@ const authContext=useMemo(() => ({
     </View>
   //  );
   }
-
-  
-  const[LatoLoaded]= useFonts({
-    'lato-black':require('./assets/Lato/Lato-Black.ttf'),
-    'lato-blackitalic':require('./assets/Lato/Lato-BlackItalic.ttf'),
-    'lato-bold':require('./assets/Lato/Lato-Bold.ttf'),
-    'lato-italic':require('./assets/Lato/Lato-Italic.ttf'),
-    'lato-light':require('./assets/Lato/Lato-Light.ttf'),
-    'lato-lightitalic':require('./assets/Lato/Lato-LightItalic.ttf'),
-    'lato-thin':require('./assets/Lato/Lato-Thin.ttf'),
-    'lato-thinitalic':require('./assets/Lato/Lato-ThinItalic.ttf'),
- 
-  });
-
-  return (
-    
-   <ThemeProvider>
-    <NavigationContainer>
-    {loginstate.userToken !== null?<Adminnav/>:
-    <Stacknav/>}
-</NavigationContainer>
-</ThemeProvider>
-  
-  );
-}
-
-
-//{loginstate.userToken !== null?<Adminnav/>:
-//<AuthContext.Provider>
-/*
- <AuthContext.Provider  value={authContext}>
-         <NavigationContainer>
-         {loginstate.userToken !== null?<Adminnav/>:
-         <Stacknav/>}
-   </NavigationContainer>
-   </AuthContext.Provider>
 */

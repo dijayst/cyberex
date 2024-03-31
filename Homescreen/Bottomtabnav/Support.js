@@ -1,10 +1,13 @@
 import { View, Text,StyleSheet,TouchableOpacity,Image } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
 import colors from '../JSON AND COLOR/colors'
+import { ThemeContext } from '../Theme/ThemeContext'
 
 export default function Support() {
+  
+const theme=useContext(ThemeContext)
   return (
-    <View style={{ backgroundColor:colors.background,padding:19,flex:1}}>
+    <View style={{ backgroundColor:theme.backgroundColor,padding:19,flex:1}}>
       <View style={{justifyContent:"center",alignItems:"center",marginTop:60}}>
       <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Contact & Support</Text>
       </View>

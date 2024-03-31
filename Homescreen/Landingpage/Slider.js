@@ -17,7 +17,7 @@ export default function Slider() {
     const navigation=useNavigation();
 
     const handleclick = (index) => {
-      setslideindex(index);
+   //   setslideindex(index);
 
       if (index === Slid.length-1 )
         {navigation.navigate("signup") 
@@ -26,7 +26,10 @@ export default function Slider() {
 
     //if (slideindex===Slid.length )return;
   if(carouselRef.current)
-  {carouselRef.current.scrollToIndex({index:index+1})}
+  {carouselRef.current.scrollToIndex({index:index+1})
+  setslideindex(index+1);
+
+}
   console.log(slideindex)
  
 
@@ -37,10 +40,16 @@ export default function Slider() {
     <SafeAreaView style={styles.Safecontainer}>
       
        <View style={styles.container}>
-        
+       <View style={styles.dotContainer}>
+        {Slid.map((_,index) => (
+          <TouchableOpacity
+            key={index}
+            style={[styles.dot, index === slideindex?styles.activeDot:{}]}  />
+        ))}
+      </View>
       <FlatList
        ref={carouselRef}
-       style={{  height:windowheight>800? 238:0, marginTop:windowheight>800?580:473, marginLeft: windowheight>800?4:6, gap: 32 }} 
+       style={{  height:windowheight>800? 238:0, marginTop:windowheight>800?50:473, marginLeft: windowheight>800?4:6, gap: 32 }} 
                 pagingEnabled
                 horizontal
                 snapToInterval={SCEEN_wIDTH}
@@ -60,7 +69,8 @@ export default function Slider() {
                   
                   }
                   console.log("offset",offset);
-              }}
+              }
+            }
               scrollEventThrottle={0}
                 renderItem={({ item, index }) => (
                   <View key={item.id} style={{ width: SCEEN_wIDTH }}>
@@ -79,11 +89,7 @@ export default function Slider() {
                 </View>
                    )} />
       </View>
-      <View style={styles.dotContainer}>
-        {Slid.map((_, index) => (
-          <TouchableOpacity key={index} style={[styles.dot, slideindex === index && styles.activeDot]} onPress={() => handleclick(index)} />
-        ))}
-      </View>
+     
 {/*
  <View style={styles.container}>
       <Carousel 
@@ -126,6 +132,26 @@ export default function Slider() {
 
 
 const styles = StyleSheet.create({
+  dotContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop:510,
+   
+  },
+  dot: {
+    width:10,
+    height:10,
+    borderRadius: 8,
+    backgroundColor:colors.GREen,
+    marginHorizontal: 5,
+  },
+  activeDot: {
+    backgroundColor: colors.Orange,
+    width:32, 
+    height:10, 
+    borderRadius: 8,
+  },
   Safecontainer:{
     flex:1,
     backgroundColor:colors.background

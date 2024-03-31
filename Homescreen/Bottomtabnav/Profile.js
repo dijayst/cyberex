@@ -1,25 +1,26 @@
-import { View, Text,StyleSheet,Image,FlatList,TouchableOpacity, ScrollView,SafeAreaView } from 'react-native'
-import React ,{useState,useContext}from 'react'
-
+import { View, Text,StyleSheet,Image,FlatList,TouchableOpacity, ScrollView,SafeAreaView ,Switch} from 'react-native'
+import React ,{useState,useContext,useEffect}from 'react'
 import { Ionicons,Entypo,MaterialCommunityIcons,MaterialIcons,FontAwesome6,FontAwesome } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 import Quickactions from '../NairaAccount/Quickactions';
 import { print } from '../JSON AND COLOR/Data';
-import { AuthContext } from '../Auth/AuthContext';
-import { useTheme } from '../Navigation/ThemeContext';
+import { AuthContext } from '../AuthScreen/AuthContext';
+import { ThemeContext } from '../Theme/ThemeContext';
+import {EventRegister}from 'react-native-event-listeners';
 
 export default function Profile() {
-
-  //const {signout} = useContext(AuthContext);
   
-  const { theme, toggleDarkMode } = useTheme();
+  const{logout}=useContext(AuthContext);
+const theme=useContext(ThemeContext)
+  
+  const [isDarkMode, setisDarkMode] = useState(false);
 
-const [isPasswordSecure, setIsPasswordSecure] = useState(true);
 
   return (
-    <View style={{ backgroundColor:colors.background, flex: 1, padding: 29 }}>
+
+    <View style={[styles.container,{backgroundColor:theme.backgroundColor}]}>
       <ScrollView >
-      <View style={styles.ProfileMainContainer}>
+       <View style={styles.ProfileMainContainer}>
               <View style={styles.ProfileContainer}>
                   <Image source={require("../image1/img.png")} style={styles.userimage} />
                   <View style={{marginTop:15,  gap:4,}}>
@@ -28,6 +29,7 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
                   </View>
                    </View>
           </View>
+          
         
 
             <View style={{marginTop:50,height:223,width:350,gap:5}}>
@@ -215,15 +217,16 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
               <Image source={require("../image1/ICONS/contrast.png")} style={styles.userimage2} />
    
              </View>   
+             
               <View style={styles.subcontainer}>
               <Text style={{fontWeight:"500",color:colors.neuralblack,fontSize:12,height:22,lineHeight:16.2}}>Theme</Text>
                       <Text style={{fontSize:14,color:"#000000",lineHeight:18.9,fontWeight:"700",width:118}}>Dark Mode</Text>
                       <View style={{height:96,width:35,gap:10,marginLeft:258,marginTop:-33}}>
-                      <MaterialCommunityIcons name={isPasswordSecure ? "toggle-switch-off" : "toggle-switch-outline"} size={24} color="black"   onPress={() => { isPasswordSecure ? setIsPasswordSecure(false) : setIsPasswordSecure(true) }} />
- 
+                        <Switch value={isDarkMode} onValueChange={(value)=>{setisDarkMode(value);EventRegister.emit('ChangeTheme',value)}}/>
                  </View>
              
                      </View>
+
                         </View>
 
                         <View style={styles.container2} onPress={()=>navigation.push("nairatrans")}>
@@ -249,18 +252,23 @@ const [isPasswordSecure, setIsPasswordSecure] = useState(true);
         
         
          
-          <TouchableOpacity style={{ backgroundColor:colors.Imagecolor, borderRadius: 8, height: 56, width: 350, alignItems: "center",justifyContent:"center", padding: 10,paddingTop:-190,marginTop:100,marginBottom:50,display:"flex",flexDirection:"row",gap:100}} onPress={()=>signout()} >
+          <TouchableOpacity style={{ backgroundColor:colors.Imagecolor, borderRadius: 8, height: 56, width: 350, alignItems: "center",justifyContent:"center", padding: 10,paddingTop:-190,marginTop:100,marginBottom:50,display:"flex",flexDirection:"row",gap:100}} onPress={()=>logout()} >
           <Image source={require("../image1/ICONS/chip_extraction.png")} style={{marginLeft:-100, width:24,
   height:24,}} />
           <Text style={styles.buttonText}>Sign Out</Text>
 </TouchableOpacity>
+
           </ScrollView>
 
     </View>
   )
 }
 const styles = StyleSheet.create({
-  
+  container: {
+    //backgroundColor:colors.background,
+     flex: 1,
+      padding: 29
+  },
 userimage2:{
   width:24,
   height:24,

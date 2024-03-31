@@ -2,7 +2,7 @@ import { View, Text,TouchableOpacity } from 'react-native'
 import React, { useContext } from 'react'
 import 'react-native-gesture-handler';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { AuthContext } from '../Auth/AuthContext';
+import { AuthContext } from '../AuthScreen/AuthContext';
 
 
 const Drawer=createDrawerNavigator()
