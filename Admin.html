@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <script src="https://kit.fontawesome.com/9f0b575e47.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   
+   
+</head>
+<body>
+  
+    <nav class="tab" id="myTab">
+       
+           <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars">juttttttttttttttttt</i>
+            </label>
+            <div class="flexcontainer">
+                <img src="./images/Frame 117.png" width="56px" height="56px"/>
+           
+       <div id="admin">
+        <h3 style="font-size: 24px;font-weight: 500px;">
+            Admin1
+        </h3>
+        <p>Administrator</p>
+        
+       </div>
+       
+       
+      
+        </div>
+       
+      
+<div style="gap: 15px;margin: 40px 0px 0px 0px;">
+    <p style="color: #414141;font-size: 20px;font-weight: 500;" >General</p>
+</div>
+<div class="div">
+    
+    <button class="tablinks"  onclick="openCity(event, 'dashboard')" id="defaultOpen"> <img src="./images/dashboard_customize.png" width="22px" height="22px" />Dashboard</button>
+    <button class="tablinks" onclick="openCity(event, 'account')"><img src="./images/account_circle.png" width="22px" height="22px" />Users</button>
+        <button class="tablinks" onclick="openCity(event, 'payments')"><img src="./images/payments.png" width="22px" height="22px" />Deposit 2 User</button>
+        <button class="tablinks" onclick="openCity(event, 'debit')"><img src="./images/payments.png" width="22px" height="22px" />Debit Order</button>
+        <button class="tablinks" onclick="openCity(event, 'history')"><img src="./images/deployed_code_history.png" width="22px" height="22px" />Pending Transfers</button>
+    </div>
+    
+<div style="gap: 15px;margin: 40px 0px 0px 0px;">
+    <p style="color: #414141;font-size: 20px;font-weight: 500;" >Giftcard</p>
+</div>
+<div class="div">
+     <button class="tablinks" onclick="openCity(event, 'bookmark')"><img src="./images/bookmark_manager.png" width="22px" height="22px" />Giftcard Manager</button>
+     <button class="tablinks" onclick="openCity(event, 'contract')"><img src="./images/contract.png" width="22px" height="22px" />Giftcard Transaction</button>
+         </div>
+
+         
+<div style="gap: 15px;margin: 40px 0px 0px 0px;">
+    <p style="color: #414141;font-size: 20px;font-weight: 500;">Admin & Others</p>
+</div>
+<div class="div">
+    <button class="tablinks" onclick="openCity(event, 'featured')" ><img src="./images/featured_seasonal_and_gifts.png" width="22px" height="22px" />Promotional Offers</button>
+    <button class="tablinks" onclick="openCity(event, 'currency')"><img src="./images/currency_exchange.png" width="22px" height="22px" />Exchange Rate</button>
+    <button class="tablinks" onclick="openCity(event, 'finance')"><img src="./images/finance.png" width="22px" height="22px" />Revenue</button>
+    <button class="tablinks" onclick="openCity(event, 'notification')"><img src="./images/notifications.png" width="22px" height="22px" />Push Notification</button>
+    <button class="tablinks" onclick="openCity(event, 'person')"><img src="./images/person_apron.png" width="22px" height="22px" />Staff Management</button>
+      
+</div>
+   <button style="background-color:   #FEE0D6;border-radius: 8px;width: 287px;">  
+    <img src="./images/chip_extraction.png" width="22px" height="22px" />
+Log Out</button>
+
+</nav>
+  
+
+  <section id="dashboard" class="tabcontent">
+    <div class="flexcontainer1" >
+        <div class="container"><p>dashboard</p>
+            <p class="dashtext">wed 7th march, 2024</p>
+           </div>
+          <div class="searchdiv">
+           
+           <input class="search" placeholder="search" />
+        
+          </div>
+         
+         
+    </div>
+
+    <div class="AccountOverview" >
+            <div class="maindiv">
+    <div class="minidiv1">
+        <p >Account Overview</p>
+        <div class="insidediv">
+            <div class="insided">
+                <div class="insidedivs">
+                     <img src="./images/Frame 1000003447.png" class="imgcenter"/>
+               <div  class="divinside">
+                <p class="divp">Overall Wallet Sum</p>
+               <p>₦157,108.79</p>
+               </div>
+                           </div>
+                <div class="insidedivs">      
+                    <img src="./images/Frame 10000034479.png" class="imgcenter"/>
+                    <div  class="divinside">
+                        <p class="divp">User Statistics (Total Users)</p>
+                    <p>100</p>
+                    </div>
+                    
+                </div>    
+            </div>
+            <div class="insided">
+                <div class="insidedivs"> 
+                        <img src="./images/Frame 1000003447 (1).png" class="imgcenter"/>
+                        <div  class="divinside">
+                            <p class="divp">All Time Transaction Volume</p>
+                        <p>114</p>
+                        </div>
+                        
+                </div>
+                <div class="insidedivs">    
+                      <img src="./images/Frame 1000003447 (2).png" class="imgcenter"/>
+                      <div  class="divinside">
+                        <p class="divp">All Time Processed Transaction (Inflow)</p>
+                      <p>₦190,496.79</p>
+                      </div>
+                </div>    
+            </div>
+            <div class="insided">
+                <div class="insidedivs">      
+                    <img src="./images/Frame 1000003447 (3).png" class="imgcenter"/>
+                    <div class="divinside">
+                        <p class="divp">All Time Processed Transaction (Intra)</p>
+                    <p>₦157,108.79</p>
+                    </div>
+                </div>
+                <div class="insidedivs">
+                    <img src="./images/Frame 1000003447 (4).png" class="imgcenter"/>
+                   <div class="divinside"> 
+                    <p class="divp">All Time Processed Transaction (Outflow)</p>
+                    <p >₦157,108.79</p></div>
+             
+            </div>    
+            </div>
+              </div>
+    </div>
+    <div class="minidiv1">
+        <div style="display: flex;flex-direction: row; 
+        padding: 10px;">
+            <div style="display: flex;flex-direction: column;" >
+                <p>Bitcoin Chart</p>
+                <div class="imgdiv">
+                    <img src="./images/Group.png" class="img"/> <p class="pimg">1 BTC= $64,000.00</p>
+                        
+                </div>
+                
+                
+            </div>
+            
+                <div style="color: #FA6230;background-color: #FFFFFF;width: 50px;height: 20px;margin-left: 180px;border-radius: 4px;">1 Hour  <div class="icon">
+                    <i class="fa-solid fa-angle-down"></i>
+                   </div>
+                </div>
+            
+        </div>
+        
+       <div style="width: 5=300px;height: 215px;background-color: #FFFFFF;border-radius: 8px;padding: 10px;"></div>
+        
+
+    </div>
+    </div>
+  <div class="maindiv">
+    <div class="div2">
+        <div style="display: flex;flex-direction: row;justify-content: space-between;" >
+            <p>Staff Management </p> <p style="color: #FA6230;">See all</p>
+        </div>
+            <div style="display: flex;flex-direction:row;gap: 10px;height: 210px;">
+                <div style="height: 210px;width: 50%;background-color: #FFFFFF;border-radius: 4px;text-align: center;">
+                    <img src="./images/33fe647a46f9bf668322f8c1d94ed937.png"  style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/>
+                    <p>Admin1</p>
+                    <div style="background-color: #F6F8FA;margin-top: 25px;margin: 15px;width: 244px;display: flex;flex-direction: column;justify-content: space-between;"> <i class="fa-solid fa-magnifying-glass"></i>
+                   <p>+2348078868319</p>
+                   <i class="fa-solid fa-magnifying-glass"></i>
+                      <p>User123@gmail.com</p></div>
+                  
+            </div>
+            <div style="height: 210px;width: 50%;background-color: #FFFFFF;border-radius: 4px;text-align: center;">
+                <img src="./images/Frame 1000003225.png" style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/> 
+              <p>Admin2</p>
+              <div style="background-color: #F6F8FA;margin-top: 25px;margin: 15px;width: 244px;display: flex;flex-direction: column;justify-content: space-between;"> <i class="fa-solid fa-magnifying-glass"></i>
+             <p>+2348078868319</p>
+                 <i class="fa-solid fa-magnifying-glass"></i>
+                <p>User123@gmail.com</p></div>
+
+            </div>
+   
+    </div>
+    
+
+    
+  </div>
+  
+  <div style="width: 45%;background-color:#F6F8FA;border-radius: 8px;padding: 10px;">
+ 
+      <div style="display: flex;flex-direction: row;justify-content: space-between;">
+          <p>Users </p> <p style="color: #FA6230;">See all</p></div>
+      
+          <div id="test1" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;overflow:hidden;height: 210px;">
+           
+</div>
+  
+</div>
+
+  
+  
+  </div> 
+  <div class="maindiv">
+    <div style="height:120px;width: 45%;background-color:#F6F8FA;border-radius: 8px;
+    padding: 10px;">
+    <p>Giftcards</p>
+    
+    <div style="display: flex;flex-direction: row;height: 210px;">
+    <div class="insidedivs1">
+        <img src="./images/Frame 1000003447 (4).png" class="imgcenter"/>
+        <div class="divinside"> 
+         <p class="divp">Giftcard Trades (Transactions)</p>
+         <p >500</p></div>
+  </div>
+    <div class="insidedivs1">
+        <img src="./images/Frame 1000003447 (4).png" class="imgcenter"/>
+        <div class="divinside"> 
+         <p class="divp">Giftcard Volume</p>
+         <p >₦12,157,108.79</p></div>
+  </div>
+    </div>
+    
+  </div> 
+  
+    <div style="
+    width: 65%;
+    background-color:#F6F8FA;
+    border-radius: 8px;
+    padding: 10px;
+    overflow: scroll;
+    height: 120px;">
+        <div style="display: flex;flex-direction: row;justify-content: space-between;">
+            <p>Top Users </p> <p style="color: #FA6230;">see all</p></div>
+            <table id="data-table" style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 10px;text-align: center;height: 50px;">
+                <thead >
+                    <tr style="margin-left: 50px;">
+                        <th>no</th>
+                        <th>Email</th>
+                        <th>transaction</th>
+                        <th>transaction volume</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body" >
+                    <!-- Table body will be generated dynamically -->
+                </tbody>
+            </table>
+            
+    </div>
+
+  </div>
+  </div>
+  </section>
+
+
+
+  <section id="account" class="tabcontent">
+    <div class="flexcontainer1" >
+        <div class="container"><p>Users</p>
+            <p class="dashtext">wed 7th march, 2024</p>
+           </div>
+          <div class="searchdiv">
+           <input class="search" placeholder="search" />
+          </div>
+         
+         
+    </div>
+        <!-- Other content -->
+        <div id="test2" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;height: 210px;margin-top:15px;width:100%;">
+           
+        </div>
+
+    </section>
+  
+
+
+    <section id="payments" class="tabcontent">
+        <div class="flexcontainer1" >
+            <div class="container"><p>deposit</p>
+                <p class="dashtext">wed 7th march, 2024</p>
+               </div>
+              <div class="searchdiv">
+               <input class="search" placeholder="search" />
+            
+              </div>
+             
+             
+        </div>
+        
+        <form id="myForm" onsubmit="return false;" style=" border: solid #DEDEDE 1px;height: 90%;width: 50%;margin-top: 20px;">
+            <label >bank name</label>
+            <input type="text" id="title" name="title" required placeholder="name of the bank" class="input">
+            <label>amount</label>
+            <input type="text" id="title" name="title" required placeholder="name of the bank" class="input">
+            <label >bank ref</label>
+            <input type="text" id="title" name="title" required placeholder="name of the bank" class="input">
+            <label >user ref</label>
+            <input type="text" id="title" name="title" required placeholder="name of the bank" class="input">
+            <label >admin otp</label>
+            <input type="text" id="title" name="title" required placeholder="name of the bank" class="input">
+            
+            <button onclick="submitForm()" style="background-color: #FA6230;color:#FFFFFF;border: 0px;height: 30px;width: 120px;margin-top: 130px;margin-left: 290px;border-radius: 4px;margin-left: 20px;">Effect Deposit</button>
+        </form>
+    </section>
+
+
+
+
+  <section id="debit" class="tabcontent">
+
+    <div class="flexcontainer1" >
+        <div class="staffcontainer"><p>Debit Order</p>
+            <p class="dashtext">wed 7th march, 2024</p>
+           </div>
+          <div class="searchdiv">
+           
+           <input class="search1" placeholder="search" />
+        
+          </div>
+         
+         
+    </div>
+    <div style="background-color: #FA6230;color: #FFFFFF;margin-top: 25px;height: 40px;text-align: center;width: 200px;padding-top: 10px;border-radius: 4px;">initiate debit order</div>
+  
+  <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
+    text-align: center;">
+    <thead style="gap: 5px;height: 50px;">
+        <tr style="height: 50px;">
+            <th>no</th>
+            <th>customer</th>
+            <th>amount</th>
+            <th>Date/Time</th>
+        </tr>
+    </thead>
+    <tbody id="table-body2" style="gap: 5px;">
+        <!-- Table body will be generated dynamically -->
+    </tbody>
+</table>
+
+  </section>
+
+  
+  <section id="history" class="tabcontent"> 
+    <div class="flexcontainer1" >
+        <div class="staffcontainer"><p>All Transfers</p>
+            <p class="dashtext">wed 7th march, 2024</p>
+           </div>
+          <div class="searchdiv">
+           <input class="search1" placeholder="search" />
+          </div>
+         
+         
+    </div>
+    <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
+    text-align: center;font-size: 12px;">
+    <thead style="height: 50px;">
+        <tr >
+            <th>no</th>
+            <th>user</th>
+            <th>amount</th>
+            <th>date created</th>
+            <th>bank details</th>
+            <th>account name</th>
+            <th>fulfiled</th>
+            <th>fulfiled by</th>
+            <th>time fulfiled</th>
+        </tr>
+    </thead>
+    <tbody id="table-body3" >
+        <!-- Table body will be generated dynamically -->
+    </tbody>
+</table>
+</section>
+
+
+  
+  <section id="bookmark" class="tabcontent">
+     <div class="flexcontainer1" >
+        <div class="staffcontainer"><p>giftcard manager</p>
+            <p class="dashtext">wed 7th march, 2024</p>
+           </div>
+          <div class="searchdiv">
+          
+           <input class="search1" placeholder="search" />
+        
+          </div>
+         
+         
+    </div>
+    <div style="background-color: #FA6230;margin-top: 35px;width: 150px;height: 30px;border-radius: 4px;padding-top: 10px;" onclick="openDialog()"><p style="font-size: 10px;text-align: center;color: #FFFFFF;">support new company</p></div>
+  <div style="display: flex;flex-direction: row;margin-top: 15px;" ><h4>supported giftcard companies</h4><p style="color: #FA6230;">5 companies</p></div>
+  
+  <div id="test5" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;height: 210px;margin-top:15px;width:100%;">
+           
+
+  </div> 
+  
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDialog()">&times;</span>
+            
+            <h2>support new giftcard</h2>
+            <hr style="width: 100%;"/>
+            <form id="myForm" onsubmit="return false;" style=" padding: 20px;">
+                <label >Title</label>
+                <input type="text" id="title" name="title" required placeholder="name of the company e.g google, steam">
+                <label>image/logo</label>
+                <input type="file" id="image" name="image" accept="image/*" required onchange="previewImage()" placeholder="select image or drag and drop">
+    
+                <button onclick="submitForm()" style="background-color: #FA6230;color:#FFFFFF;border: 0px;height: 30px;width: 70px;margin-top: 130px;margin-left: 290px;">proceed</button>
+            </form>
+            <div id="imagePreview"></div>
+        
+    </div></div>
+ 
+</section>
+
+
+
+  <section id="contract" class="tabcontent">
+    <div class="flexcontainer1" >
+        <div class="staffcontainer"><p>giftcard transaction</p>
+            <p class="dashtext">wed 7th march, 2024</p>
+           </div>
+          <div class="searchdiv">
+            
+           <input class="search1" placeholder="search" />
+        
+          </div>
+         
+         
+    </div>
+    
+    
+    <div> 
+        <div class="tab2">
+            <div class="tablinks2" onclick="openminitab(event, 'pending')" id="defaultOpen2">pending</div>
+            <div class="tablinks2" onclick="openminitab(event, 'assigned')">assigned</div>
+            <div class="tablinks2" onclick="openminitab(event, 'resolved')">resolved/approved</div>
+            <div class="tablinks2" onclick="openminitab(event, 'rejected')">rejected</div>
+        </div>
+     
+    <div id="pending" class="tabcontent2" >
+        <div id="test4" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;height: 210px;margin-top:15px;width:100%;">
+           
+        </div>
+    </div>
+    <div id="assigned" class="tabcontent2">assigned
+        <div id="test6" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;height: 210px;margin-top:15px;width:100%;">
+           
+        </div>
+    </div>
+    <div id="resolved" class="tabcontent2"> <div style="display: flex;flex-direction: row;justify-content: space-between;"><p>analytics</p> <p>12th march, 2024</p></div>
+    <p style="margin-top: 20px;">1 transactions rejected / 50 transactions assigned</p>
+    <div style="display: flex;flex-direction: row;border: solid #F6F8FA 1px;margin-top: 20px;">
+        <div style="background-color: #EA0000;width: 20px;height: 15px;"></div><div style="background-color: #0A7C00;width: 500px;height: 15px;"></div><div style="background-color: #FA6230;width: 50px;height: 15px;"></div><div style="background-color: #F6F8FA;width: 500px;height: 15px;"></div>
+    </div>
+    
+    <div style="display: flex;flex-direction: row;margin-top: 20px;">
+        <div style="display: flex;flex-direction: row;"><div style="background-color:#FA6230;width: 13px;height: 13px;"></div><p>transaction failed</p></div>
+        <div style="display: flex;flex-direction: row;"><div style="background-color:#0A7C00;width: 13px;height: 13px;"></div><p>transaction failed</p></div>
+        <div style="display: flex;flex-direction: row;"><div style="background-color:#EA0000;width: 13px;height: 13px;"></div><p>transaction failed</p></div>
+    </div>
+    <p style="margin-top: 10px;">transaction details</p>
+    <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
+    text-align: center;font-size: 12px;">
+    <thead style="height: 50px;">
+        <tr >
+            <th>no</th>
+            <th>user</th>
+            <th>amount</th>
+            <th>date created</th>
+            <th>bank details</th>
+            <th>account name</th>
+            <th>fulfiled</th>
+            <th>fulfiled by</th>
+            <th>time fulfiled</th>
+        </tr>
+    </thead>
+    <tbody id="table-body6" >
+        <!-- Table body will be generated dynamically -->
+    </tbody>
+</table>
+</div>
+    <div id="rejected" class="tabcontent2">
+        <div style="display: flex;flex-direction: row;justify-content: space-between;"><p>analytics</p> <p>12th march, 2024</p></div>
+        <p style="margin-top: 20px;">1 transactions rejected / 50 transactions assigned</p>
+        <div style="display: flex;flex-direction: row;border: solid #F6F8FA 1px;margin-top: 20px;">
+            <div style="background-color: #EA0000;width: 20px;height: 15px;"></div><div style="background-color: #0A7C00;width: 500px;height: 15px;"></div><div style="background-color: #FA6230;width: 50px;height: 15px;"></div><div style="background-color: #F6F8FA;width: 500px;height: 15px;"></div>
+        </div>
+        
+        <div style="display: flex;flex-direction: row;margin-top: 20px;">
+            <div style="display: flex;flex-direction: row;"><div style="background-color:#FA6230;width: 13px;height: 13px;"></div><p>transaction failed</p></div>
+            <div style="display: flex;flex-direction: row;"><div style="background-color:#0A7C00;width: 13px;height: 13px;"></div><p>transaction failed</p></div>
+            <div style="display: flex;flex-direction: row;"><div style="background-color:#EA0000;width: 13px;height: 13px;"></div><p>transaction failed</p></div>
+        </div>
+        <p style="margin-top: 10px;">transaction details</p>
+        <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
+        text-align: center;font-size: 12px;">
+        <thead style="height: 50px;">
+            <tr >
+                <th>no</th>
+                <th>user</th>
+                <th>amount</th>
+                <th>date created</th>
+                <th>bank details</th>
+                <th>account name</th>
+                <th>fulfiled</th>
+                <th>fulfiled by</th>
+                <th>time fulfiled</th>
+            </tr>
+        </thead>
+        <tbody id="table-body5" >
+            <!-- Table body will be generated dynamically -->
+        </tbody>
+    </table>
+
+    </div>
+
+        </div>
+
+
+  </section>
+
+
+
+
+  <section id="featured" class="tabcontent">
+    
+    <div class="flexcontainer1" >
+        <div class="staffcontainer"><p>promotional offers</p>
+            <p class="dashtext">wed 7th march, 2024</p>
+           </div>
+          <div class="searchdiv">
+           
+           <input class="search1" placeholder="search" />
+        
+          </div>
+         
+         
+    </div>
+    <div style="background-color: #FA6230;margin-top: 35px;width: 150px;height: 30px;border-radius: 4px;"><p style="font-size: 10px;text-align: center;color: #FFFFFF;padding: 10px;">create giveaway</p></div>
+  
+    <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
+    text-align: center;font-size: 12px;">
+    <thead style="gap: 5px;">
+        <tr>
+            <th>no</th>
+            <th>promo title</th>
+            <th>beneficiary</th>
+            <th>amount disbursed</th>
+            <th>admin approved</th>
+            <th>user type</th>
+            <th>date created </th>
+            <th>date disbursed</th>
+            <th>time fulfiled</th>
+        </tr>
+    </thead>
+    <tbody id="table-body4" style="gap: 5px;">
+        <!-- Table body will be generated dynamically -->
+    </tbody>
+</table>
+
+  </section>
+
+
+
+  <section id="currency" class="tabcontent">
+     <div class="flexcontainer1" >
+    <div class="staffcontainer"><p>exchange rates</p>
+        <p class="dashtext">wed 7th march, 2024</p>
+       </div>
+      <div class="searchdiv">
+       
+       <input class="search" placeholder="search" />
+    
+      </div>
+     
+     
+</div>
+<P style="margin-top: 20px;">initiate new debit order</P>
+
+       <form id="myForm" onsubmit="return false;" style=" padding: 20px; border: solid #DEDEDE 1px;height: 90%;width: 50%;">
+        <label >sell rate/ naira to USD rate</label>
+        <input type="text" id="title" name="title" required placeholder="name of the bank" class="input">
+        <label>buy rate/ USD to naira rate</label>
+        <input type="text" id="image" multiple name="message" placeholder="0.00" class="input">
+        <label >fall back ngn deposit bank</label>
+        <input type="text" id="title" name="title" required placeholder="0.00" class="input">
+        <label >ngn deposit account number</label>
+        <input type="text" id="title" name="title" required placeholder="0.00" class="input">
+        <label >ngn deposit account name</label>
+        <input type="text" id="title" name="title" required placeholder="0.00" class="input">
+        <label >admin otp code</label>
+        <input type="text" id="title" name="title" required placeholder="otp code" class="input">
+        
+        <button onclick="submitForm()" style="background-color: #FA6230;color:#FFFFFF;border: 0px;height: 30px;width: 100px;margin-top: 130px;margin-left: 10px;border-radius: 4px;">Effect Changes</button>
+    </form>
+</section>
+  
+
+
+  <section id="finance" class="tabcontent"><div class="flexcontainer1" >
+    <div class="staffcontainer"><p>Platform Revenue</p>
+        <p class="dashtext">wed 7th march, 2024</p>
+       </div>
+      <div class="searchdiv">
+        
+       <input class="search1" placeholder="search" />
+    
+      </div>
+     
+     
+</div>
+<div style="justify-content: center;text-align: center;">
+    <p>₦0.00</p>
+    <p>0.000000000</p>
+    <p>Record Above shows revenue between 2004-03-03 and 2024-05 earned from *All Users*</p>    
+</div>
+<div style="background-color: yellow;width: 150px;height: 34px;padding-top: 5px;padding-left: 25px;border-radius: 4px;">Show Filter</div>
+<table id="data-table" style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 10px;text-align: center;height: 50px;">
+    <thead >
+        <tr style="margin-left: 50px;">
+            <th>no</th>
+            <th>customer</th>
+            <th>Transaction type</th>
+            <th>Currency</th>
+            <th>Amount</th>
+            <th>DateTime</th>
+        </tr>
+    </thead>
+    <tbody >
+        <!-- Table body will be generated dynamically -->
+    </tbody>
+</table>
+</section>
+
+
+  <section id="notification" class="tabcontent">
+    <div class="flexcontainer1" >
+        <div class="staffcontainer"><p>general notification to customers</p>
+            <p class="dashtext">wed 7th march, 2024</p>
+           </div>
+          <div class="searchdiv">
+            
+           <input class="search" placeholder="search" />
+        
+          </div>
+         
+         
+    </div>
+       <P  style="margin-top: 20px;">push notification</P>
+
+       <form id="myForm" onsubmit="return false;" style=" padding: 20px; border: solid #DEDEDE 1px;height: 90%;width: 50%;">
+        <label >Title</label>
+        <input type="text" id="title" name="title" required placeholder="title of notification" class="input">
+        <label>message</label>
+        <input type="text" id="image" multiple name="message" placeholder="type message" class="input">
+
+        <button onclick="submitForm()" style="background-color: #FA6230;color:#FFFFFF;border: 0px;height: 30px;width: 100px;margin-top: 130px;margin-left: 10px;border-radius: 4;">send notification</button>
+    </form>
+  </section>
+
+
+
+  <section id="person" class="tabcontent">
+    <div class="flexcontainer1" >
+        <div class="staffcontainer"><p>staff management</p>
+            <p class="dashtext">wed 7th march, 2024</p>
+           </div>
+          <div class="searchdiv">
+           
+           <input class="search" placeholder="search" />
+        
+          </div>
+         
+         
+    </div>
+    <div style="background-color: #FA6230;margin-top: 35px;width: 150px;height: 30px;border-radius: 4px;padding-top: 7px;"><p style="font-size: 10px;text-align: center;color: #FFFFFF;">support new company</p></div>
+    <div id="test3" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;height: 210px;margin-top:15px;width:100%;">
+           
+    </div>
+
+  </section>
+
+
+
+
+  <script src="./Script.js"></script>  
+
+</body>
+</html>
+
+
+<!--
+    This is a comment. Comments are not displayed in the browser
+  <div id="maindiv">
+    <div>
+        <h1>Admin Log In</h1>
+
+    </div>
+        <div>
+            <p>Already have an account? <a href="url" id="signup">Sign up</a></p>
+        </div>
+        <div>
+            <p>Email</p>
+            <input/>
+        </div>
+        <div>
+            <p>Password</p>
+            <input/>
+        </div>
+    </div>
+-->

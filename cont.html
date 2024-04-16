@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Responsive Navbar | CodingNepal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>*{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+      body{
+        font-family: montserrat;
+      }
+      nav{
+        background: #098b09;
+        height: 80px;
+        width: 100%;
+      }
+      label.logo{
+        color: rgb(148, 14, 48);
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+      }
+      nav ul{
+        float: right;
+        margin-right: 20px;
+      }
+      nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+      }
+      nav ul li a{
+        color: white;
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+      }
+      a.active,a:hover{
+        background: #1b9bff;
+        transition: .5s;
+      }
+      .checkbtn{
+        font-size: 30px;
+        color: white;
+        float: left;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+        background-color: #090b8b;
+      }
+      #check{
+        display: none;
+      }
+      @media (max-width: 952px){
+        label.logo{
+          font-size: 30px;
+          padding-left: 50px;
+        }
+        nav ul li a{
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 858px){
+        .checkbtn{
+          display: block;
+        }
+        ul{
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: #2c3e50;
+          top: 80px;
+          left: -100%;
+          text-align: center;
+          transition: all .5s;
+        }
+        nav ul li{
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+        }
+        nav ul li a{
+          font-size: 20px;
+        }
+        a:hover,a.active{
+          background: none;
+          color: #0082e6;
+        }
+        #check:checked ~ ul{
+          left: 0;
+        }
+      }
+      section{
+        background: url(bg1.jpg) no-repeat;
+        background-size: cover;
+        height: calc(100vh - 80px);
+      }</style>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars">juuuuuuu</i>
+      </label>
+      <label class="logo">DesignX</label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <button class="tablinks" onclick="openCity(event, 'account')"><img src="./images/account_circle.png" width="22px" height="22px" />Users</button>
+    
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        
+<div style="gap: 15px;margin: 40px 0px 0px 0px;">
+    <p style="color: #414141;font-size: 20px;font-weight: 500;" >General</p>
+</div>
+<div class="div">
+    
+    <button class="tablinks"  onclick="openCity(event, 'dashboard')" id="defaultOpen"> <img src="./images/dashboard_customize.png" width="22px" height="22px" />Dashboard</button>
+    <button class="tablinks" onclick="openCity(event, 'account')"><img src="./images/account_circle.png" width="22px" height="22px" />Users</button>
+        <button class="tablinks" onclick="openCity(event, 'payments')"><img src="./images/payments.png" width="22px" height="22px" />Deposit 2 User</button>
+        <button class="tablinks" onclick="openCity(event, 'debit')"><img src="./images/payments.png" width="22px" height="22px" />Debit Order</button>
+        <button class="tablinks" onclick="openCity(event, 'history')"><img src="./images/deployed_code_history.png" width="22px" height="22px" />Pending Transfers</button>
+    </div>
+    
+<div style="gap: 15px;margin: 40px 0px 0px 0px;">
+    <p style="color: #414141;font-size: 20px;font-weight: 500;" >Giftcard</p>
+</div>
+<div class="div">
+     <button class="tablinks" onclick="openCity(event, 'bookmark')"><img src="./images/bookmark_manager.png" width="22px" height="22px" />Giftcard Manager</button>
+     <button class="tablinks" onclick="openCity(event, 'contract')"><img src="./images/contract.png" width="22px" height="22px" />Giftcard Transaction</button>
+         </div>
+
+         
+<div style="gap: 15px;margin: 40px 0px 0px 0px;">
+    <p style="color: #414141;font-size: 20px;font-weight: 500;">Admin & Others</p>
+</div>
+<div class="div">
+    <button class="tablinks" onclick="openCity(event, 'featured')" ><img src="./images/featured_seasonal_and_gifts.png" width="22px" height="22px" />Promotional Offers</button>
+    <button class="tablinks" onclick="openCity(event, 'currency')"><img src="./images/currency_exchange.png" width="22px" height="22px" />Exchange Rate</button>
+    <button class="tablinks" onclick="openCity(event, 'finance')"><img src="./images/finance.png" width="22px" height="22px" />Revenue</button>
+    <button class="tablinks" onclick="openCity(event, 'notification')"><img src="./images/notifications.png" width="22px" height="22px" />Push Notification</button>
+    <button class="tablinks" onclick="openCity(event, 'person')"><img src="./images/person_apron.png" width="22px" height="22px" />Staff Management</button>
+      
+</div>
+   <button style="background-color:   #FEE0D6;border-radius: 8px;width: 287px;">  
+    <img src="./images/chip_extraction.png" width="22px" height="22px" />
+Log Out</button>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <section><p>dstrddyyyyyyyyyyyyyyyyyyyyy</p></section>
+  </body>
+</html>
