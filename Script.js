@@ -1,4 +1,11 @@
-
+function showsidebar(){
+  const hyi=document.querySelector('.hyi')
+  hyi.style.display='flex'
+}
+function hidesidebar(){
+  const hyi=document.querySelector('.hyi')
+  hyi.style.display='none'
+}
 function openSidebar() {
   document.getElementById("sidebar").style.width = "250px";
   document.querySelector(".content").style.marginLeft = "250px";
@@ -463,17 +470,18 @@ amount:"₦100,000"
 
   
 document.getElementById("test1").innerHTML = users.map(user => { 
-  return `<div style="background-color: #FFFFFF;width:48%;height: 150px; text-align: center;margin: 3px; border-radius: 8px;">
-    <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;"><p>${user.name}<p style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;">${user.verified}</p></p></div>
-    <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 145px;height:59px;">
-        <div style="display: flex;flex-direction: row;justify-content: center;"> <i class="fa-solid fa-magnifying-glass"></i>
-            <p >${user.contact}</p></div>
+  return `<div class="test1div">
+    <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;"><p>${user.name}<p style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:9px;">${user.verified}</p></p></div>
+    <div class="test1hash">
+        <div style="display: flex;flex-direction: row;justify-content: center;"> 
+        <img src="./images/call.png"  class="test1img" />  
+            <p class="test1p">${user.contact}</p></div>
             <div style="display: flex;flex-direction: row;justify-content: center;">
-                <i class="fa-solid fa-magnifying-glass"></i>
-               <p>${user.email}</p></div>
+            <img src="./images/mail.png"  class="test1img"/>  
+               <p class="test1p">${user.email}</p></div>
 
     </div>
-    <div style="background-color: #FA6230;height: 20px;width:145px;color:black;margin: 10px;border-radius: 4px;">${user.prof}</div>
+    <div class="test1prof">${user.prof}</div>
 
   </div>`;
 }).join('');
@@ -509,7 +517,6 @@ const productsContainer = document.getElementById("test2");
 users.forEach(user => {
   const productDiv = document.createElement("div");
   productDiv.style.backgroundColor = "#FFFFFF";
-  productDiv.style.width = "19.3%";
   productDiv.style.height = "150px";
   productDiv.style.textAlign = "center";
   productDiv.style.borderRadius = "8px";
@@ -518,20 +525,20 @@ users.forEach(user => {
 
   productDiv.innerHTML = `
     <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;">
-      <p>${user.name}</p>
-      <p style="color: #FA6230;font-size: 8px;">${user.verified}</p>
+      <p>${user.name}</pstyle=>
+      <p style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:9px;">${user.verified}</p>
     </div>
-    <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 159px;height:60px;">
-      <div style="display: flex;flex-direction: row;justify-content: center;">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <p>${user.contact}</p>
+    <div class="test2div">
+      <div style="display: flex;flex-direction: row;justify-content: center;padding-top:18px;">
+      <img src="./images/call.png"  width="15px" height="15px" />
+        <p style="font-size: 12px;">${user.contact}</p>
       </div>
       <div style="display: flex;flex-direction: row;justify-content: center;">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <p>${user.email}</p>
+      <img src="./images/mail.png"  width="15px" height="15px" />
+        <p style="font-size: 12px;">${user.email}</p>
       </div>
     </div>
-    <div style="background-color: #FA6230;height: 20px;width:159px;color:black;margin: 10px;border-radius: 4px; cursor: pointer;" onclick="redirectToProductDetail(${user.id})">${user.prof}</div>
+    <div class="test2prof" onclick="redirectToProductDetail(${user.id})">${user.prof}</div>
   `;
 
   productsContainer.appendChild(productDiv);
@@ -543,7 +550,7 @@ renderProductItems();
 
 
 document.getElementById("test5").innerHTML = users.map(user => { 
-  return `<div style="background-color: #FFFFFF;width:19.3%;height: 250px; text-align: center; border-radius: 8px;border:1px solid #DEDEDE;margin:3px;">
+  return `<div class="div0">
   <img src=${user.image1}  style="border-radius: 90%;width: 58px;height: 58px;margin-top: 25px;"/> 
  
     
@@ -555,8 +562,8 @@ document.getElementById("test5").innerHTML = users.map(user => {
                <p>${user.link}</p></div>
 
     </div>
-    <div style="background-color: #FA6230;height: 25px;width:160px;color:#FFFFFF;margin: 10px;">edit company</div>
-    <div style="background-color: #FDE6E6;height: 25px;width:160px;color:#EA0000;margin: 10px;">deactivate</div>
+    <div class="test5div2">edit company</div>
+    <div class="test5div">deactivate</div>
 
   </div>`;
 }).join('');
@@ -587,7 +594,7 @@ document.getElementById("table-body2").innerHTML =users.map(item => `
 
 
 document.getElementById("table-body3").innerHTML =users.map(item => `
-        <tr style="margin-left: 50px;height: 50px;">
+        <tr class="table-body3">
             <td>${item.id}</td>
             <td>${item.useremail}</td>
             <td>${item.amount}</td>
@@ -654,12 +661,16 @@ document.getElementById("table-body6").innerHTML =users.map(item => `
   
       
   document.getElementById("test3").innerHTML = users.map(user => { 
-    return `<div style="width:18%;height: 215px;background-color: #FFFFFF;border-radius: 4px;text-align: center;margin:3px;border:1px solid #DEDEDE;">
+    return `<div class="div0">
     <img src=${user.image}  style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/>
     <p>${user.user}</p>
-    <div style="background-color: #F6F8FA;margin-top: 25px;margin: 13px;width: 150px;display: flex;flex-direction: column;justify-content: space-between;"> 
-   <p>${user.contact}</p>
-      <p>${user.email}</p></div
+    <div class="test3div"> 
+    <div style="display: flex;flex-direction: row;justify-content: center;">
+    <img src="./images/call.png"  width="15px" height="15px" />
+    <p class="test1p">${user.contact}</p></div>
+    <div style="display: flex;flex-direction: row;justify-content: center;">
+    <img src="./images/mail.png"  width="15px" height="15px" />
+      <p class="test1p">${user.email}</p></div></div>
       <div style="width: 25px;background-color:red;">
       </div>
   
@@ -669,18 +680,18 @@ document.getElementById("table-body6").innerHTML =users.map(item => `
 
   
 document.getElementById("test4").innerHTML = users.map(user => { 
-  return `<div style="background-color: #FFFFFF;width:19.3%;height: 200px; text-align: center; border-radius: 8px;border:1px solid #DEDEDE;margin:3px;">
+  return `<div class="div0">
     <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;"><p>${user.name}</p><p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
-    <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 159px;height:60px;">
+    <div class="test4div">
 
-        <div style="display: flex;flex-direction:row;"> <img src="./images/call.png"  width="15px" height="15px"/> <p>${user.contact}</p> </div>
-        <div style="display: flex;flex-direction:row;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p>${user.email}</p> </div>
+        <div style="display: flex;flex-direction:row;"> <img src="./images/call.png"   class="test1img"/> <p class="test1p">${user.contact}</p> </div>
+        <div style="display: flex;flex-direction:row;"> <img src="./images/mail.png"   class="test1img"/> <p class="test1p">${user.email}</p> </div>
             
 
 
     </div>
-    <div style="background-color: #FA6230;height: 20px;width:159px;color:#FFFFFF;margin: 10px;border-radius: 4px;">Assign To Self</div>
-    <div style="background-color: #F6F8FA;height: 25px;width:160px;color:#FA6230;margin: 10px;">Assign To Self</div>
+    <div class="test4div2">Assign To Self</div>
+    <div class="test4div3">Assign To Self</div>
   </div>`;
 }).join('');
 
@@ -689,17 +700,14 @@ document.getElementById("test4").innerHTML = users.map(user => {
 
 
 document.getElementById("test6").innerHTML = users.map(user => { 
-  return `<div style="background-color: #FFFFFF;width:19.3%;height: 150px; text-align: center; border-radius: 8px;border:1px solid #DEDEDE;margin:3px;">
+  return `<div class="div0">
     <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;"><p>${user.name}</p><p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
-    <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 159px;height:60px;">
-
-        <div style="display: flex;flex-direction:row;"> <img src="./images/call.png"  width="15px" height="15px"/> <p>${user.contact}</p> </div>
-        <div style="display: flex;flex-direction:row;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p>${user.email}</p> </div>
+    <div class="test4div">
+        <div style="display: flex;flex-direction:row;"> <img src="./images/call.png"  width="15px" height="15px"/> <p class="test1p">${user.contact}</p> </div>
+        <div style="display: flex;flex-direction:row;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p class="test1p">${user.email}</p> </div>
             
-
-
     </div>
-    <div style="background-color: #FA6230;height: 20px;width:159px;color:#FFFFFF;margin: 10px;border-radius: 4px;">Enter Chat</div>
+    <div class="test4div2">Enter Chat</div>
   </div>`;
 }).join('');
 

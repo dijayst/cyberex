@@ -7,67 +7,73 @@
     <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
+
+    
     <nav class="tab" id="myTab">
-        <input type="checkbox" id="check"/>
-        <label for="check"class="checkbtn" onclick="toggleMenu()">
-            <i class="fa fa-bars"></i>
-        </label>
-        <div>
-            <div class="navbar-toggler"><button class="menu-bars" style="background-color: #0A7C00;">Menu</button></div></div>
-        
-       <div class="flexcontainer">
-            <img src="./images/Frame 117.png" width="56px" height="56px"/>
        
-   <div id="admin">
-    <h3 style="font-size: 24px;font-weight: 500px;">
-        Admin1
-    </h3>
-    <p>Administrator</p>
-    
-   </div>
-   
-   <div class="icon">
-    <i class="fa-solid fa-angle-down"></i>
-   </div>
-  
-    </div>
-<div style="gap: 15px;margin: 40px 0px 0px 0px;">
-    <p style="color: #414141;font-size: 20px;font-weight: 500;" >General</p>
-</div>
-<div style="margin:  20px 0px 0px 0px;">
-    <button class="tablinks"  onclick="openCity(event, 'dashboard')" > <img src="./images/dashboard_customize.png" width="22px" height="22px" />Dashboard</button>
-    <button class="tablinks" onclick="openCity(event, 'account')"id="defaultOpen"><img src="./images/account_circle.png" width="22px" height="22px" />Users</button>
-        <button class="tablinks" onclick="openCity(event, 'payments')"><img src="./images/payments.png" width="22px" height="22px" />Deposit 2 User</button>
-        <button class="tablinks" onclick="openCity(event, 'debit')"><img src="./images/payments.png" width="22px" height="22px" />Debit Order</button>
-        <button class="tablinks" onclick="openCity(event, 'history')"><img src="./images/deployed_code_history.png" width="22px" height="22px" />Pending Transfers</button>
-    </div>
-    
-<div style="gap: 15px;margin: 40px 0px 0px 0px;">
-    <p style="color: #414141;font-size: 20px;font-weight: 500;" >Giftcard</p>
-</div>
-<div style="margin:  20px 0px 0px 0px;">
-     <button class="tablinks" onclick="openCity(event, 'bookmark')"><img src="./images/bookmark_manager.png" width="22px" height="22px" />Giftcard Manager</button>
-     <button class="tablinks" onclick="openCity(event, 'contract')"><img src="./images/contract.png" width="22px" height="22px" />Giftcard Transaction</button>
-         </div>
-
-         
-<div style="gap: 15px;margin: 40px 0px 0px 0px;">
-    <p style="color: #414141;font-size: 20px;font-weight: 500;">Admin & Others</p>
-</div>
-<div style="margin:  20px 0px 0px 0px;">
-    <button class="tablinks" onclick="openCity(event, 'featured')" ><img src="./images/featured_seasonal_and_gifts.png" width="22px" height="22px" />Promotional Offers</button>
-    <button class="tablinks" onclick="openCity(event, 'currency')"><img src="./images/currency_exchange.png" width="22px" height="22px" />Exchange Rate</button>
-    <button class="tablinks" onclick="openCity(event, 'finance')"><img src="./images/finance.png" width="22px" height="22px" />Revenue</button>
-    <button class="tablinks" onclick="openCity(event, 'notification')"><img src="./images/notifications.png" width="22px" height="22px" />Push Notification</button>
-    <button class="tablinks" onclick="openCity(event, 'person')"><img src="./images/person_apron.png" width="22px" height="22px" />Staff Management</button>
+        <div class="flexcontainer">
+               <img src="./images/Frame 117.png" width="56px" height="56px"/>
+          
+      <div id="admin">
+       <h3 style="font-size: 24px;font-weight: 500px;">
+           Admin1
+       </h3>
+       <p>Administrator</p>
+       
+      </div>
       
-</div>
-   <button style="background-color:   #FEE0D6;border-radius: 8px;width: 287px;">  
-    <img src="./images/chip_extraction.png" width="22px" height="22px" />
-Log Out</button>
+      
+     
+       </div>
+       <div class="menu" onclick="showsidebar()"><i class="fa-solid fa-bars">jk</i>
+       </div>
+       
+          
+      
+     <div class="hyi">
+       <span class="close" onclick="hidesidebar()">&times;</span>
+           
+       <div style="gap: 15px;margin: 40px 0px 0px 0px;">
+           <p style="color: #414141;font-size: 20px;font-weight: 500;" >General</p>
+       </div>
+       <div class="div">
+           
+           <button class="tablinks"  onclick="openCity(event, 'dashboard')" > <img src="./images/dashboard_customize.png" width="22px" height="22px" />Dashboard</button>
+           <button class="tablinks" onclick="openCity(event, 'account')" id="defaultOpen"><img src="./images/account_circle.png" width="22px" height="22px" />Users</button>
+               <button class="tablinks" onclick="openCity(event, 'payments')"><img src="./images/payments.png" width="22px" height="22px" />Deposit 2 User</button>
+               <button class="tablinks" onclick="openCity(event, 'debit')"><img src="./images/payments.png" width="22px" height="22px" />Debit Order</button>
+               <button class="tablinks" onclick="openCity(event, 'history')"><img src="./images/deployed_code_history.png" width="22px" height="22px" />Pending Transfers</button>
+           </div>
+           
+       <div style="gap: 15px;margin: 40px 0px 0px 0px;">
+           <p style="color: #414141;font-size: 20px;font-weight: 500;" >Giftcard</p>
+       </div>
+       <div class="div">
+            <button class="tablinks" onclick="openCity(event, 'bookmark')"><img src="./images/bookmark_manager.png" width="22px" height="22px" />Giftcard Manager</button>
+            <button class="tablinks" onclick="openCity(event, 'contract')"><img src="./images/contract.png" width="22px" height="22px" />Giftcard Transaction</button>
+                </div>
+       
+                
+       <div style="gap: 15px;margin: 40px 0px 0px 0px;">
+           <p style="color: #414141;font-size: 20px;font-weight: 500;">Admin & Others</p>
+       </div>
+       <div class="div">
+           <button class="tablinks" onclick="openCity(event, 'featured')" ><img src="./images/featured_seasonal_and_gifts.png" width="22px" height="22px" />Promotional Offers</button>
+           <button class="tablinks" onclick="openCity(event, 'currency')"><img src="./images/currency_exchange.png" width="22px" height="22px" />Exchange Rate</button>
+           <button class="tablinks" onclick="openCity(event, 'finance')"><img src="./images/finance.png" width="22px" height="22px" />Revenue</button>
+           <button class="tablinks" onclick="openCity(event, 'notification')"><img src="./images/notifications.png" width="22px" height="22px" />Push Notification</button>
+           <button class="tablinks" onclick="openCity(event, 'person')"><img src="./images/person_apron.png" width="22px" height="22px" />Staff Management</button>
+             
+       </div>
+          <button style="background-color:   #FEE0D6;border-radius: 8px;width: 287px;">  
+           <img src="./images/chip_extraction.png" width="22px" height="22px" />
+       Log Out</button>
+       
+       
+     </div>
 
-
-</nav>
+     </nav>
+ 
 
 
 <section id="account" class="tabcontent">
@@ -450,7 +456,7 @@ Log Out</button>
            </div>
           <div class="searchdiv">
             
-           <input class="search1" placeholder="search" />
+           <input class="search" placeholder="search" />
         
           </div>
          
@@ -559,7 +565,7 @@ Log Out</button>
            </div>
           <div class="searchdiv">
            
-           <input class="search1" placeholder="search" />
+           <input class="search" placeholder="search" />
         
           </div>
          
@@ -606,7 +612,7 @@ Log Out</button>
 </div>
 <P style="margin-top: 20px;">initiate new debit order</P>
 
-       <form id="myForm" onsubmit="return false;" style=" padding: 20px; border: solid #DEDEDE 1px;height: 90%;width: 50%;">
+       <form id="myForm" onsubmit="return false;" style=" padding: 20px;height: 90%;width: 50%;">
         <label >sell rate/ naira to USD rate</label>
         <input type="text" id="title" name="title" required placeholder="name of the bank" class="input">
         <label>buy rate/ USD to naira rate</label>
@@ -632,7 +638,7 @@ Log Out</button>
        </div>
       <div class="searchdiv">
         
-       <input class="search1" placeholder="search" />
+       <input class="search" placeholder="search" />
     
       </div>
      
@@ -656,7 +662,7 @@ Log Out</button>
     </div>
        <P  style="margin-top: 20px;">push notification</P>
 
-       <form id="myForm" onsubmit="return false;" style=" padding: 20px; border: solid #DEDEDE 1px;height: 90%;width: 50%;">
+       <form id="myForm" onsubmit="return false;" style=" padding: 20px; height: 90%;width: 50%;">
         <label >Title</label>
         <input type="text" id="title" name="title" required placeholder="title of notification" class="input">
         <label>message</label>
@@ -673,20 +679,22 @@ Log Out</button>
         <div class="staffcontainer"><p>staff management</p>
             <p class="dashtext">wed 7th march, 2024</p>
            </div>
-          <div class="searchdiv">
+           <div class="searchdiv">
            
-           <input class="search" placeholder="search" />
-        
-          </div>
+            <input class="search1" placeholder="search" />
+         
+           </div>
          
          
     </div>
-    <div style="background-color: #FA6230;margin-top: 35px;width: 150px;height: 30px;border-radius: 4px;"><p style="font-size: 10px;text-align: center;color: #FFFFFF;padding-top: 7px;">support new company</p></div>
+    <div style="background-color: #FA6230;margin-top: 35px;width: 150px;height: 30px;border-radius: 4px;padding-top: 7px;"><p style="font-size: 10px;text-align: center;color: #FFFFFF;">support new company</p></div>
     <div id="test3" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;height: 210px;margin-top:15px;width:100%;">
            
     </div>
 
   </section>
+
+
 
 
     <script src="./product-details.js"></script>  

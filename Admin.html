@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="mystyle.css">
     <script src="https://kit.fontawesome.com/9f0b575e47.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
    
    
 </head>
@@ -15,11 +14,7 @@
   
     <nav class="tab" id="myTab">
        
-           <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-              <i class="fas fa-bars">juttttttttttttttttt</i>
-            </label>
-            <div class="flexcontainer">
+         <div class="flexcontainer">
                 <img src="./images/Frame 117.png" width="56px" height="56px"/>
            
        <div id="admin">
@@ -33,45 +28,54 @@
        
       
         </div>
+        <div class="menu" onclick="showsidebar()"><i class="fa-solid fa-bars">jk</i>
+        </div>
+        
+           
        
-      
-<div style="gap: 15px;margin: 40px 0px 0px 0px;">
-    <p style="color: #414141;font-size: 20px;font-weight: 500;" >General</p>
-</div>
-<div class="div">
-    
-    <button class="tablinks"  onclick="openCity(event, 'dashboard')" id="defaultOpen"> <img src="./images/dashboard_customize.png" width="22px" height="22px" />Dashboard</button>
-    <button class="tablinks" onclick="openCity(event, 'account')"><img src="./images/account_circle.png" width="22px" height="22px" />Users</button>
-        <button class="tablinks" onclick="openCity(event, 'payments')"><img src="./images/payments.png" width="22px" height="22px" />Deposit 2 User</button>
-        <button class="tablinks" onclick="openCity(event, 'debit')"><img src="./images/payments.png" width="22px" height="22px" />Debit Order</button>
-        <button class="tablinks" onclick="openCity(event, 'history')"><img src="./images/deployed_code_history.png" width="22px" height="22px" />Pending Transfers</button>
-    </div>
-    
-<div style="gap: 15px;margin: 40px 0px 0px 0px;">
-    <p style="color: #414141;font-size: 20px;font-weight: 500;" >Giftcard</p>
-</div>
-<div class="div">
-     <button class="tablinks" onclick="openCity(event, 'bookmark')"><img src="./images/bookmark_manager.png" width="22px" height="22px" />Giftcard Manager</button>
-     <button class="tablinks" onclick="openCity(event, 'contract')"><img src="./images/contract.png" width="22px" height="22px" />Giftcard Transaction</button>
-         </div>
+      <div class="hyi">
+        <span class="close" onclick="hidesidebar()">&times;</span>
+            
+        <div style="gap: 15px;margin: 40px 0px 0px 0px;">
+            <p style="color: #414141;font-size: 20px;font-weight: 500;" >General</p>
+        </div>
+        <div class="div">
+            
+            <button class="tablinks"  onclick="openCity(event, 'dashboard')" id="defaultOpen"> <img src="./images/dashboard_customize.png" width="22px" height="22px" />Dashboard</button>
+            <button class="tablinks" onclick="openCity(event, 'account')"><img src="./images/account_circle.png" width="22px" height="22px" />Users</button>
+                <button class="tablinks" onclick="openCity(event, 'payments')"><img src="./images/payments.png" width="22px" height="22px" />Deposit 2 User</button>
+                <button class="tablinks" onclick="openCity(event, 'debit')"><img src="./images/payments.png" width="22px" height="22px" />Debit Order</button>
+                <button class="tablinks" onclick="openCity(event, 'history')"><img src="./images/deployed_code_history.png" width="22px" height="22px" />Pending Transfers</button>
+            </div>
+            
+        <div style="gap: 15px;margin: 40px 0px 0px 0px;">
+            <p style="color: #414141;font-size: 20px;font-weight: 500;" >Giftcard</p>
+        </div>
+        <div class="div">
+             <button class="tablinks" onclick="openCity(event, 'bookmark')"><img src="./images/bookmark_manager.png" width="22px" height="22px" />Giftcard Manager</button>
+             <button class="tablinks" onclick="openCity(event, 'contract')"><img src="./images/contract.png" width="22px" height="22px" />Giftcard Transaction</button>
+                 </div>
+        
+                 
+        <div style="gap: 15px;margin: 40px 0px 0px 0px;">
+            <p style="color: #414141;font-size: 20px;font-weight: 500;">Admin & Others</p>
+        </div>
+        <div class="div">
+            <button class="tablinks" onclick="openCity(event, 'featured')" ><img src="./images/featured_seasonal_and_gifts.png" width="22px" height="22px" />Promotional Offers</button>
+            <button class="tablinks" onclick="openCity(event, 'currency')"><img src="./images/currency_exchange.png" width="22px" height="22px" />Exchange Rate</button>
+            <button class="tablinks" onclick="openCity(event, 'finance')"><img src="./images/finance.png" width="22px" height="22px" />Revenue</button>
+            <button class="tablinks" onclick="openCity(event, 'notification')"><img src="./images/notifications.png" width="22px" height="22px" />Push Notification</button>
+            <button class="tablinks" onclick="openCity(event, 'person')"><img src="./images/person_apron.png" width="22px" height="22px" />Staff Management</button>
+              
+        </div>
+           <button style="background-color:   #FEE0D6;border-radius: 8px;width: 287px;">  
+            <img src="./images/chip_extraction.png" width="22px" height="22px" />
+        Log Out</button>
+        
+        
+      </div>
 
-         
-<div style="gap: 15px;margin: 40px 0px 0px 0px;">
-    <p style="color: #414141;font-size: 20px;font-weight: 500;">Admin & Others</p>
-</div>
-<div class="div">
-    <button class="tablinks" onclick="openCity(event, 'featured')" ><img src="./images/featured_seasonal_and_gifts.png" width="22px" height="22px" />Promotional Offers</button>
-    <button class="tablinks" onclick="openCity(event, 'currency')"><img src="./images/currency_exchange.png" width="22px" height="22px" />Exchange Rate</button>
-    <button class="tablinks" onclick="openCity(event, 'finance')"><img src="./images/finance.png" width="22px" height="22px" />Revenue</button>
-    <button class="tablinks" onclick="openCity(event, 'notification')"><img src="./images/notifications.png" width="22px" height="22px" />Push Notification</button>
-    <button class="tablinks" onclick="openCity(event, 'person')"><img src="./images/person_apron.png" width="22px" height="22px" />Staff Management</button>
-      
-</div>
-   <button style="background-color:   #FEE0D6;border-radius: 8px;width: 287px;">  
-    <img src="./images/chip_extraction.png" width="22px" height="22px" />
-Log Out</button>
-
-</nav>
+      </nav>
   
 
   <section id="dashboard" class="tabcontent">
@@ -179,20 +183,32 @@ Log Out</button>
                 <div style="height: 210px;width: 50%;background-color: #FFFFFF;border-radius: 4px;text-align: center;">
                     <img src="./images/33fe647a46f9bf668322f8c1d94ed937.png"  style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/>
                     <p>Admin1</p>
-                    <div style="background-color: #F6F8FA;margin-top: 25px;margin: 15px;width: 244px;display: flex;flex-direction: column;justify-content: space-between;"> <i class="fa-solid fa-magnifying-glass"></i>
-                   <p>+2348078868319</p>
-                   <i class="fa-solid fa-magnifying-glass"></i>
-                      <p>User123@gmail.com</p></div>
+                    <div style="background-color: #F6F8FA;margin-top: 25px;margin: 15px;width: 244px;display: flex;flex-direction: column;justify-content: space-between;"> 
+                        <div style="display: flex;flex-direction: row;margin-left: 15px;margin-top: 10px;">
+                            <img src="./images/call.png"  width="15px" height="15px" />
+                            <p>+2348078868319</p>
+         </div>
+                        <div style="display: flex;flex-direction: row;margin-left: 15px;margin-top: 10px;">
+                             <img src="./images/mail.png"  width="15px" height="15px"/>
+                            <p>User123@gmail.com</p>
+                        </div>
+                    
+                    </div>
                   
             </div>
             <div style="height: 210px;width: 50%;background-color: #FFFFFF;border-radius: 4px;text-align: center;">
                 <img src="./images/Frame 1000003225.png" style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/> 
               <p>Admin2</p>
-              <div style="background-color: #F6F8FA;margin-top: 25px;margin: 15px;width: 244px;display: flex;flex-direction: column;justify-content: space-between;"> <i class="fa-solid fa-magnifying-glass"></i>
-             <p>+2348078868319</p>
-                 <i class="fa-solid fa-magnifying-glass"></i>
+              <div style="background-color: #F6F8FA;margin-top: 25px;margin: 15px;width: 244px;display: flex;flex-direction: column;justify-content: space-between;"> 
+               <div style="display: flex;flex-direction: row;margin-left: 15px;margin-top: 10px;">
+                <img src="./images/call.png"  width="15px" height="15px" />
+                <p>+2348078868319</p></div> 
+               <div style="display: flex;flex-direction: row;margin-left: 15px;margin-top: 10px;">
+                <img src="./images/mail.png"  width="15px" height="15px" />   
                 <p>User123@gmail.com</p></div>
-
+   
+               </div>
+            
             </div>
    
     </div>
@@ -201,7 +217,7 @@ Log Out</button>
     
   </div>
   
-  <div style="width: 45%;background-color:#F6F8FA;border-radius: 8px;padding: 10px;">
+  <div class="div3">
  
       <div style="display: flex;flex-direction: row;justify-content: space-between;">
           <p>Users </p> <p style="color: #FA6230;">See all</p></div>
@@ -216,8 +232,7 @@ Log Out</button>
   
   </div> 
   <div class="maindiv">
-    <div style="height:120px;width: 45%;background-color:#F6F8FA;border-radius: 8px;
-    padding: 10px;">
+    <div class="minigiftcard">
     <p>Giftcards</p>
     
     <div style="display: flex;flex-direction: row;height: 210px;">
@@ -237,13 +252,7 @@ Log Out</button>
     
   </div> 
   
-    <div style="
-    width: 65%;
-    background-color:#F6F8FA;
-    border-radius: 8px;
-    padding: 10px;
-    overflow: scroll;
-    height: 120px;">
+    <div class="user">
         <div style="display: flex;flex-direction: row;justify-content: space-between;">
             <p>Top Users </p> <p style="color: #FA6230;">see all</p></div>
             <table id="data-table" style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 10px;text-align: center;height: 50px;">
@@ -273,14 +282,17 @@ Log Out</button>
         <div class="container"><p>Users</p>
             <p class="dashtext">wed 7th march, 2024</p>
            </div>
-          <div class="searchdiv">
-           <input class="search" placeholder="search" />
-          </div>
+          
+           <div class="searchdiv">
+           
+            <input class="search" placeholder="search" />
+         
+           </div>
          
          
     </div>
         <!-- Other content -->
-        <div id="test2" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;height: 210px;margin-top:15px;width:100%;">
+        <div id="test2" class="test2main">
            
         </div>
 
@@ -293,15 +305,16 @@ Log Out</button>
             <div class="container"><p>deposit</p>
                 <p class="dashtext">wed 7th march, 2024</p>
                </div>
-              <div class="searchdiv">
-               <input class="search" placeholder="search" />
-            
-              </div>
+               <div class="searchdiv">
+           
+                <input class="search" placeholder="search" />
+             
+               </div>
              
              
         </div>
         
-        <form id="myForm" onsubmit="return false;" style=" border: solid #DEDEDE 1px;height: 90%;width: 50%;margin-top: 20px;">
+        <form id="myForm" onsubmit="return false;" style=" height: 90%;width: 50%;margin-top: 20px;">
             <label >bank name</label>
             <input type="text" id="title" name="title" required placeholder="name of the bank" class="input">
             <label>amount</label>
@@ -326,11 +339,11 @@ Log Out</button>
         <div class="staffcontainer"><p>Debit Order</p>
             <p class="dashtext">wed 7th march, 2024</p>
            </div>
-          <div class="searchdiv">
+           <div class="searchdiv">
            
-           <input class="search1" placeholder="search" />
-        
-          </div>
+            <input class="search" placeholder="search" />
+         
+           </div>
          
          
     </div>
@@ -359,16 +372,18 @@ Log Out</button>
         <div class="staffcontainer"><p>All Transfers</p>
             <p class="dashtext">wed 7th march, 2024</p>
            </div>
+          
           <div class="searchdiv">
-           <input class="search1" placeholder="search" />
-          </div>
+           
+            <input class="search1" placeholder="search" />
+         
+           </div>
          
          
     </div>
-    <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
-    text-align: center;font-size: 12px;">
+    <table class="table">
     <thead style="height: 50px;">
-        <tr >
+        <tr  >
             <th>no</th>
             <th>user</th>
             <th>amount</th>
@@ -393,11 +408,11 @@ Log Out</button>
         <div class="staffcontainer"><p>giftcard manager</p>
             <p class="dashtext">wed 7th march, 2024</p>
            </div>
-          <div class="searchdiv">
-          
-           <input class="search1" placeholder="search" />
-        
-          </div>
+           <div class="searchdiv">
+           
+            <input class="search1" placeholder="search" />
+         
+           </div>
          
          
     </div>
@@ -413,12 +428,12 @@ Log Out</button>
         <div class="modal-content">
             <span class="close" onclick="closeDialog()">&times;</span>
             
-            <h2>support new giftcard</h2>
+            <h2 style="color: #000000;">support new giftcard</h2>
             <hr style="width: 100%;"/>
             <form id="myForm" onsubmit="return false;" style=" padding: 20px;">
-                <label >Title</label>
+                <label style="color: #000000;">Title</label>
                 <input type="text" id="title" name="title" required placeholder="name of the company e.g google, steam">
-                <label>image/logo</label>
+                <label style="color: #000000;">image/logo</label>
                 <input type="file" id="image" name="image" accept="image/*" required onchange="previewImage()" placeholder="select image or drag and drop">
     
                 <button onclick="submitForm()" style="background-color: #FA6230;color:#FFFFFF;border: 0px;height: 30px;width: 70px;margin-top: 130px;margin-left: 290px;">proceed</button>
@@ -426,6 +441,8 @@ Log Out</button>
             <div id="imagePreview"></div>
         
     </div></div>
+ 
+   
  
 </section>
 
@@ -436,11 +453,11 @@ Log Out</button>
         <div class="staffcontainer"><p>giftcard transaction</p>
             <p class="dashtext">wed 7th march, 2024</p>
            </div>
-          <div class="searchdiv">
-            
-           <input class="search1" placeholder="search" />
-        
-          </div>
+           <div class="searchdiv">
+           
+            <input class="search1" placeholder="search" />
+         
+           </div>
          
          
     </div>
@@ -545,11 +562,11 @@ Log Out</button>
         <div class="staffcontainer"><p>promotional offers</p>
             <p class="dashtext">wed 7th march, 2024</p>
            </div>
-          <div class="searchdiv">
+           <div class="searchdiv">
            
-           <input class="search1" placeholder="search" />
-        
-          </div>
+            <input class="search1" placeholder="search" />
+         
+           </div>
          
          
     </div>
@@ -584,17 +601,17 @@ Log Out</button>
     <div class="staffcontainer"><p>exchange rates</p>
         <p class="dashtext">wed 7th march, 2024</p>
        </div>
-      <div class="searchdiv">
-       
-       <input class="search" placeholder="search" />
-    
-      </div>
+       <div class="searchdiv">
+           
+        <input class="search1" placeholder="search" />
+     
+       </div>
      
      
 </div>
 <P style="margin-top: 20px;">initiate new debit order</P>
 
-       <form id="myForm" onsubmit="return false;" style=" padding: 20px; border: solid #DEDEDE 1px;height: 90%;width: 50%;">
+       <form id="myForm" onsubmit="return false;" style=" padding: 20px; height: 90%;width: 50%;">
         <label >sell rate/ naira to USD rate</label>
         <input type="text" id="title" name="title" required placeholder="name of the bank" class="input">
         <label>buy rate/ USD to naira rate</label>
@@ -614,15 +631,16 @@ Log Out</button>
   
 
 
-  <section id="finance" class="tabcontent"><div class="flexcontainer1" >
+  <section id="finance" class="tabcontent">
+    <div class="flexcontainer1" >
     <div class="staffcontainer"><p>Platform Revenue</p>
         <p class="dashtext">wed 7th march, 2024</p>
        </div>
-      <div class="searchdiv">
-        
-       <input class="search1" placeholder="search" />
-    
-      </div>
+       <div class="searchdiv">
+           
+        <input class="search1" placeholder="search" />
+     
+       </div>
      
      
 </div>
@@ -650,22 +668,33 @@ Log Out</button>
 </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
   <section id="notification" class="tabcontent">
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>general notification to customers</p>
             <p class="dashtext">wed 7th march, 2024</p>
            </div>
-          <div class="searchdiv">
-            
-           <input class="search" placeholder="search" />
-        
-          </div>
+           <div class="searchdiv">
+           
+            <input class="searc" placeholder="search" />
+         
+           </div>
          
          
     </div>
        <P  style="margin-top: 20px;">push notification</P>
 
-       <form id="myForm" onsubmit="return false;" style=" padding: 20px; border: solid #DEDEDE 1px;height: 90%;width: 50%;">
+       <form id="myForm" onsubmit="return false;" style=" padding: 20px; height: 90%;width: 50%;">
         <label >Title</label>
         <input type="text" id="title" name="title" required placeholder="title of notification" class="input">
         <label>message</label>
@@ -682,11 +711,11 @@ Log Out</button>
         <div class="staffcontainer"><p>staff management</p>
             <p class="dashtext">wed 7th march, 2024</p>
            </div>
-          <div class="searchdiv">
+           <div class="searchdiv">
            
-           <input class="search" placeholder="search" />
-        
-          </div>
+            <input class="search1" placeholder="search" />
+         
+           </div>
          
          
     </div>
@@ -701,7 +730,7 @@ Log Out</button>
 
 
   <script src="./Script.js"></script>  
-
+  
 </body>
 </html>
 

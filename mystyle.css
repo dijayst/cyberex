@@ -22,7 +22,7 @@ body {
         height:0%;}
 /* Style the tab */
 .tab {
-  overflow: hidden;
+  overflow: scroll;
   float: left;
   border-width: 1px;
   border-left-width: 0px;
@@ -80,8 +80,8 @@ body {
   padding:  15px;
   border: 1px solid #FFFFFF;
   width: 75%;
-  border-left: none;
   height: 100%;
+  border-left: none;
   background-color: #FFFFFF;
   
 }
@@ -186,6 +186,7 @@ background-color:#F6F8FA;
 display: flex;
 flex-direction: column;
 width: 50px;
+
 height: 20px;
 
 }
@@ -200,9 +201,6 @@ height: 20px;
     display: flex;
     flex-direction: row;
     margin: 5px;
-    
-
- 
 }
 .divinside{
     display: flex;
@@ -355,7 +353,13 @@ flex-direction: row;
 
 
 }
- 
+ .test2divs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top:10px;width: 18%;
+  text-align: center;
+   }
 .input {
   width: 100%;
   height: 40px;
@@ -390,13 +394,34 @@ margin-left: 515px;
 
 }
 
+.searc {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 2px solid #EEF0F5;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #F6F8FA;
+  background-image: url('./images/Search_Icons_UIA.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+margin-left: 515px;
+
+
+}
 .div{
   margin:  20px 0px 0px 0px;
 }
 .AccountOverview{
-  display: flex;flex-direction: column;gap: 10px;margin-top: 15px;
-}
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  width: 100%;
+  height: 10px;
 
+}
 
   .modal {
     display: none; /* Initially hide the modal */
@@ -406,8 +431,9 @@ margin-left: 515px;
     width: 100%;
     height: 100%;
     margin-left: 0%;
-    opacity: 0.5;color: #000000;
-    background-color: #000000;
+    color: #000000;
+    background: rgba(14, 15, 14, 0.3)
+    
 }
 
 .modal-content {
@@ -448,134 +474,624 @@ margin-left: 515px;
   display: none;
  
 }
+.test1div{
+  background-color: #FFFFFF;
+  width:48%;
+  height: 150px; 
+  text-align: center;
+  margin: 3px; 
+  border-radius: 8px;
+}
+.test1prof{
+  background-color: #FA6230;
+  height: 20px;
+  width:145px;
+  color:black;
+  margin: 10px;
+  border-radius: 4px;
+}
+.test1hash{
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F8FA; 
+  margin: 10px;
+  border-radius: 4px;
+  width: 145px;
+  height:59px;
+}
+.test1p{
+  font-size: 12px;
+}
+.test1img{
+  width: 15px;
+  height: 15px;
+}
+.test2main{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 8px;
+  height: 210px;
+  margin-top:15px;
+  width:100%;
+}
+.test2div{
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F8FA;
+   margin: 10px;
+   border-radius: 4px;
+  width: 159px;
+  height:60px;
+}
+.test2prof{
+  background-color: #FA6230;
+  height: 20px;
+  width:159px;
+  color:black;
+  margin: 10px;
+  border-radius: 4px;
+   cursor: pointer;}
+   
+   .table-body3{
+    margin-left: 50px;height: 50px;
+   }
+   .test5div{
+    background-color: #FDE6E6;
+    height: 25px;
+    width:160px;
+    color:#EA0000;
+    margin: 10px;
+   }
+   .test5div2{
+    background-color: #FA6230;
+    height: 25px;
+    width:160px;
+    color:#FFFFFF;
+    margin: 10px;
+   }
+   .test4div{
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F8FA;
+     margin: 10px;border-radius: 4px;
+     width: 160px;
+     height:60px;
+   }
+   .test4div3{
+    background-color: #F6F8FA;
+    height: 25px;
+    width:160px;
+    color:#FA6230;margin: 10px;
+   }
+   .test4div2{
+    background-color: #FA6230;
+    height: 20px;width:159px;color:#FFFFFF;
+    margin: 10px;border-radius: 4px;
+   }
+   .test3div{
+    background-color: #F6F8FA;
+    margin-top: 25px;
+    margin: 13px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+.div3{
+  width: 45%;
+  background-color:#F6F8FA;
+  border-radius: 8px;
+  padding: 10px;
+}
+.minigiftcard{
+  height:120px;
+  width: 45%;
+  background-color:#F6F8FA;
+  border-radius: 8px;
+    padding: 10px;
+}
+.user{
+  
+  width: 65%;
+  background-color:#F6F8FA;
+  border-radius: 8px;
+  padding: 10px;
+  overflow: scroll;
+  height: 120px;
+}
+.div0{
+  background-color: #FFFFFF;
+  width:19.3%;height: 250px; text-align: center; border-radius: 8px;
+  border:1px solid #DEDEDE;margin:3px;
+}
+.menu {
+ display:block;
+
+}
+.close{display: none;}
+@media (max-width: 800px){
+  
+   .test3div{
+    background-color: #F6F8FA;
+    margin-top: 25px;
+    margin: 13px;
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+  .test4div3{
+    background-color: #F6F8FA;
+    height: 25px;
+    width: 119px;
+    color:#FA6230;margin: 10px;
+   }
+   .test4div2{
+    background-color: #FA6230;
+    height: 20px;width:119px;color:#FFFFFF;
+    margin: 10px;border-radius: 4px;
+   }
+  .test4div{
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F8FA;
+     margin: 10px;border-radius: 4px;
+     width: 119px;
+     height:60px;
+   }
+  .test5div{
+    background-color: #FDE6E6;
+    height: 25px;
+    width:120px;
+    color:#EA0000;
+    margin: 10px;
+   }
+   .test5div2{
+    background-color: #FA6230;
+    height: 25px;
+    width:120px;
+    color:#FFFFFF;
+    margin: 10px;
+   }
+.dashtext{
+  font-size: 13px;
+  color:#444748;
+  margin-top: 0px;
+  white-space: nowrap;
+}
+.test2prof{
+  background-color: #FA6230;
+  height: 20px;
+  width:125px;
+  color:black;
+  margin: 10px;
+  border-radius: 4px;
+   cursor: pointer;}
+ .test2div{
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F8FA;
+   margin: 10px;
+   border-radius: 4px;
+  width: 125px;
+  height:60px;
+ }
+.test1img{
+  width: 10px;
+  height: 10px;
+}
+  .test1p{
+    font-size: 10px;
+  }
+  .test1hash{
+  width: 105px;
+  height:50px;
+  background-color: #F6F8FA; 
+
+  }
+  .test1div{width: 47%;background-color: #FFFFFF;}
+  .test1prof{
+    background-color: #FA6230;
+    height: 18px;
+    width:110px;}
+  .tab{
+  background-color: #E0E0E0;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+ width: 100%;
+ height: 69px;
+  
+
+  }
+  .tab .flexcontainer {
+width: 90px;
+color: #000000;
+list-style: none;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+margin-top: -20px;
+
+  }
+  .tab .menu {
+    
+    margin-left: 700px;
+margin-top: -30px;
+cursor: pointer;
 
 
 
-@media (max-width: 858px){
+  }
   .flexcontainer1{
-    background-color: red;
+    margin-top: 60px;
+   
     width: 100%;
     height: 69px;
   }
-  .checkbtn{
-    display: block;
+  .search{
+    margin-left: 380px;
   }
-  nav button{
+  .searc{
+    margin-left:90px;
+  }
+  .search1{
+    margin-left: 290px;
+  }
+  .hyi{
     position: fixed;
-    width: 100%;
+     width: 50%;
     height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
-    text-align: center;
+    background-color: #E0E0E0;
+    top: 0;
+    right:0;
+    display: none;
     transition: all .5s;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: scroll;
+   
   }
-  nav button{
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
+  .tab .div{
+    width: 500px;
+    height: 100%;
+    color: #000000;
+    
   }
   nav button{
     font-size: 20px;
   }
-  button:hover,button.active{
-    background: none;
-    color: #0082e6;
+  .tabcontent{
+    width: 100%;
+    height: 100%;
+
   }
-  #check:checked ~nav.tablinks{
-    left: 0;
-    background-color: #000000;
+  
+  .AccountOverview{
+    width: 100%;
+    height: 100px;
+
   }
+  .insidediv{
+    width: 50;
+  }
+  .insidedivs{
+    width: 165px;
+   
+  }
+  .imgcenter{
+    width: 25px;
+    height: 25px;
+  }
+  
+.divp{
+  font-size: 6px;
+
 }
+}
+
+
+
+
+
+
+
+
+
+
+
 /* For screens smaller than 768px */
-@media (max-width: 952px) {
+
+@media (max-width: 400px){
+  
+  .modal {
+    display: none; /* Initially hide the modal */
+    position: fixed;
+    margin-top: -600px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    color: #000000;
+    background: rgba(14, 15, 14, 0.3)
+    
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    width: 80%;
+    height: 60%;border-radius: 8px;
+    margin-left: 20px;
+    margin-top: 100px;
+    color: #000000;
+}
+
+.staffcontainer{
+  display: flex;
+  width: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 15px;
+  }
+  label{
+    white-space: nowrap;
+  }
+.div0{
+  background-color: #FFFFFF;
+  width:48%;
+  height: 250px;
+   text-align: center;
+   border-radius: 8px;
+  border:1px solid #DEDEDE;
+  margin:3px;
+}
+.input {
+  width: 200%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 2px solid #EEF0F5;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #F6F8FA;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px 12px 40px;
  
 
 
-  .tab {
-    
-      height: 80px;
-      width: 100%;
-    
-  }
-.flexcontainer{
-  margin-top: -5px;
 }
-  .closebtn {
-    position: absolute;
-    top: 0;
-    font-size: 36px;
-    margin-left: 90px;
-  }
+ .test2divs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top:10px;
+  text-align: center;
+  width: 48%;
+ }
+.user{
   
-  /* Style the button that is used to open the sidebar */
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
+  width: 100%;
+  background-color:#F6F8FA;
+  border-radius: 8px;
+  padding: 10px;
+  overflow: scroll;
+  height: 120px;
+}
+.minigiftcard{
+  height:120px;
+  width: 100%;
+  background-color:#F6F8FA;
+  border-radius: 8px;
+    padding: 10px;
+}
+.div3{
+  width: 100%;
+  background-color:#F6F8FA;
+  border-radius: 8px;
+  padding: 10px;
+}
+  .div2{
+    width: 100%;
+    background-color:#F6F8FA;
+    border-radius: 8px;
+    padding: 10px;
+    overflow: scroll;
+}
+.maindiv{
+  display: flex;
+  flex-direction:column;
+  gap: 10px;
+ 
+  
   }
-  .tab button{
+  .minidiv1{
+    width: 100%;
+    background-color:  #F6F8FA;
+    height: 300px;
+    border-radius: 8px;
+    padding: 10px;
+
+  }
+  .test3div{
+   background-color: #F6F8FA;
+   margin-top: 25px;
+   margin: 13px;
+   width: 110px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+  }
+ .test4div3{
+   background-color: #F6F8FA;
+   height: 25px;
+   width: 119px;
+   color:#FA6230;margin: 10px;
+  }
+  .test4div2{
+   background-color: #FA6230;
+   height: 20px;width:119px;color:#FFFFFF;
+   margin: 10px;border-radius: 4px;
+  }
+ .test4div{
+   display: flex;
+   flex-direction: column;
+   background-color: #F6F8FA;
+    margin: 10px;border-radius: 4px;
+    width: 119px;
+    height:60px;
+  }
+ .test5div{
+   background-color: #FDE6E6;
+   height: 25px;
+   width:140px;
+   color:#EA0000;
+   margin: 10px;
+  }
+  .test5div2{
+   background-color: #FA6230;
+   height: 25px;
+   width:140px;
+   color:#FFFFFF;
+   margin: 10px;
+  }
+.dashtext{
+ font-size: 13px;
+ color:#444748;
+ margin-top: 0px;
+ white-space: nowrap;
+}
+.test2prof{
+ background-color: #FA6230;
+ height: 20px;
+ width:125px;
+ color:black;
+ margin: 10px;
+ border-radius: 4px;
+  cursor: pointer;}
+.test2div{
+ display: flex;
+ flex-direction: column;
+ background-color: #F6F8FA;
+  margin: 10px;
+  border-radius: 4px;
+ width: 125px;
+ height:60px;
+}
+.test1img{
+ width: 10px;
+ height: 10px;
+}
+ .test1p{
+   font-size: 10px;
+ }
+ .test1hash{
+ width: 105px;
+ height:50px;
+ background-color: #F6F8FA; 
+
+ }
+ .test1div{width: 47%;background-color: #FFFFFF;}
+ .test1prof{
+   background-color: #FA6230;
+   height: 18px;
+   width:110px;}
+ .tab{
+ background-color: #E0E0E0;
+ box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+width: 100%;
+height: 69px;
+ 
+
+ }
+ .tab .flexcontainer {
+width: 90px;
+color: #000000;
+list-style: none;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+margin-top: -20px;
+
+ }
+ .tab .menu {
+ 
+   margin-left: 300px;
+margin-top: -30px;
+cursor: pointer;
+
+
+ }
+ .flexcontainer1{
+   margin-top: 60px;
+  
+   width: 100%;
+   height: 69px;
+ }
+ .search{
+   margin-left: 50px;
+ }
+ .searc{
+   margin-left:90px;
+ }
+ .search1{
+   margin-left: 290px;
+ }
+ .hyi{
+   position: fixed;
+    width: 100%;
+   height: 100vh;
+   background-color: #E0E0E0;
+   top: 0;
+  
+   display: none;
+   transition: all .5s;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+ 
+  
+ }
+ .tab .div{
+   width: 500px;
+   height: 100%;
+   color: #000000;
    
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-  }
-  .tab button:hover {
-    color: #f1f1f1;
-  }
-  .tab button.active, .icon {
-   display: block;
-  }
-  .icon{position: absolute;
-  top: 15px;
-right: 20px;}
+ }
+ nav button{
+   font-size: 20px;
+ }
+ .tabcontent{
+   width: 100%;
+   height: 100%;
 
+ }
+ .AccountOverview{
+   width: 100%;
+   height: 100px;
 
-.tabcontent {
-  transition: margin-left .5s;
-  padding: 16px 16px 16px 16px;
+ }
+ .insidediv{
+   width: 50;
+ }
+ .insidedivs{
+   width: 165px;
+  
+ }
+ .imgcenter{
+   width: 25px;
+   height: 25px;
+ }
+ 
+.divp{
+ font-size: 6px;
+
 }
-/* Make tab buttons full width 
-
-
-  .tab {
-    flex-direction: column;
-    background-color: red;
-    width: 150%;
-    margin-right: 4px;
-  }
-  .tab button {
-    width: 100%; 
-    padding: 15px 10px; 
-    text-align: center;
-    display: block;
-  }
-
-  .tab .icon {
-    display: block; 
-  }
-
-  .tabcontent {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #FFFFFF; 
-    border-left: none; 
-    height: auto; 
-  }
-
-  .tab button.active {
-    width: 100%; 
-    height: auto; 
-    border-radius: 0; 
-  }
-*/
 }
+
 
 
 
