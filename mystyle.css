@@ -40,7 +40,7 @@ body {
 .tab button {
   display: block;
   background-color: inherit;
-  color:#414141  ;
+  color: #741717;
   padding: 22px 16px;
   width: 100%;
   border: none;
@@ -80,9 +80,10 @@ body {
   padding:  15px;
   border: 1px solid #FFFFFF;
   width: 75%;
-  height: 100%;
+ 
   border-left: none;
   background-color: #FFFFFF;
+ 
   
 }
 .flexcontainer{
@@ -111,6 +112,7 @@ flex-direction: column;
 justify-content: space-between;
 color: #000000;
 font-size: 32px;
+font-weight: 700;
 margin-top: 15px;
 }
 
@@ -242,7 +244,7 @@ height: 25px;}
     background-color:#F6F8FA;
     border-radius: 8px;
     padding: 10px;
-    overflow: scroll;
+    
 }
 .imgdiv{
 display: flex;
@@ -252,6 +254,8 @@ flex-direction: row;
     margin-top: 3px;
     margin-left: 10px;
     width: 190px;
+    color: #000000;
+    font-weight: 700;
 }
 
 .imgcenter{height: 30px;
@@ -333,8 +337,11 @@ flex-direction: row;
         tr:nth-child(even) { 
             background-color: #DEDEDE; 
         } 
+      .color:nth-child(even) { 
+          background-color: #880a0a; 
+      } 
 
-
+    
         
         
 .search {
@@ -359,6 +366,7 @@ flex-direction: row;
   justify-content: center;
   margin-top:10px;width: 18%;
   text-align: center;
+  
    }
 .input {
   width: 100%;
@@ -412,6 +420,7 @@ margin-left: 515px;
 }
 .div{
   margin:  20px 0px 0px 0px;
+  
 }
 .AccountOverview{
   display: flex;
@@ -419,7 +428,7 @@ margin-left: 515px;
   gap: 10px;
   margin-top: 15px;
   width: 100%;
-  height: 10px;
+
 
 }
 
@@ -486,9 +495,10 @@ margin-left: 515px;
   background-color: #FA6230;
   height: 20px;
   width:145px;
-  color:black;
+  color:#FFFFFF;
   margin: 10px;
   border-radius: 4px;
+  font-weight: 700;
 }
 .test1hash{
   display: flex;
@@ -498,9 +508,10 @@ margin-left: 515px;
   border-radius: 4px;
   width: 145px;
   height:59px;
+  padding-top: 15px;
 }
 .test1p{
-  font-size: 12px;
+  font-size: 13px;
 }
 .test1img{
   width: 15px;
@@ -605,13 +616,57 @@ margin-left: 515px;
   width:19.3%;height: 250px; text-align: center; border-radius: 8px;
   border:1px solid #DEDEDE;margin:3px;
 }
-.menu {
- display:block;
-
+.label{
+font-size: 15px;
+font-weight: 700;
 }
-.close{display: none;}
+
+.label1{
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: -55px;
+  display: flex;
+  flex-direction: row;
+  }
+  .staffhash{
+    background-color: #F6F8FA;margin-top: 25px;margin: 15px;width: 244px;display: flex;flex-direction: column;justify-content: space-between;
+  }
+  .productdetailimg{
+    border-radius: 90%;width: 80px;height: 80px;margin-top: 15px;
+  }
+  .productdetailhash{
+    display: flex;flex-direction:column;background-color:#F6F8FA;margin-top:20px;  border-radius: 4px;width: 280px;height: 80px;
+  }
+  .deactive{background-color: #EA0000;margin-left: 505px;margin-top: 70px;width: 100px;height: 28px;border-radius: 4px;padding-top:15px;padding-left:19px;
+  }
 @media (max-width: 800px){
+ 
   
+  .productdetailimg{
+    border-radius: 90%;width: 80px;height: 80px;margin-top: 15px;
+  }
+  .productdetailhash{
+    display: flex;flex-direction:column;background-color:#F6F8FA;margin-top:20px;  border-radius: 4px;width: 180px;height: 80px;
+  }
+  .deactive{background-color: #EA0000;margin-left: 395px;margin-top: 70px;width: 60px;height: 23px;border-radius: 4px;padding-top:10px;padding-left:5px;
+  }
+  .deactive p{font-size: 12px;}
+  }
+
+ table { 
+  border-collapse: collapse; 
+  width: 100%; 
+} 
+
+th, td { 
+  text-align: left; 
+  padding: 8px; 
+} 
+
+tr:nth-child(even) { 
+  background-color: #DEDEDE; 
+} 
+ .staffhash{background-color: #F6F8FA;margin-top: 25px;margin: 15px;width: 200px;display: flex;flex-direction: column;justify-content: space-between;}
    .test3div{
     background-color: #F6F8FA;
     margin-top: 25px;
@@ -682,19 +737,23 @@ margin-left: 515px;
   height: 10px;
 }
   .test1p{
-    font-size: 10px;
+    font-size: 8px;
   }
   .test1hash{
-  width: 105px;
+  width: 90px;
   height:50px;
-  background-color: #F6F8FA; 
+  background-color: #F6F8FA;
+  padding-top: 15px; 
 
   }
   .test1div{width: 47%;background-color: #FFFFFF;}
   .test1prof{
     background-color: #FA6230;
     height: 18px;
-    width:110px;}
+    width:90px;
+    font-weight: 700;
+    font-size: 10px;
+  color: #FFFFFF;}
   .tab{
   background-color: #E0E0E0;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -740,7 +799,7 @@ cursor: pointer;
   .hyi{
     position: fixed;
      width: 50%;
-    height: 100vh;
+   
     background-color: #E0E0E0;
     top: 0;
     right:0;
@@ -749,7 +808,7 @@ cursor: pointer;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    overflow: scroll;
+   
    
   }
   .tab .div{
@@ -786,7 +845,8 @@ cursor: pointer;
   
 .divp{
   font-size: 6px;
-
+color: 
+#444748;
 }
 }
 
@@ -803,7 +863,33 @@ cursor: pointer;
 /* For screens smaller than 768px */
 
 @media (max-width: 400px){
+
   
+  .productdetailimg{
+    border-radius: 90%;width: 80px;height: 80px;margin-top: 15px;
+  }
+  .productdetailhash{
+    display: flex;flex-direction:column;background-color:#F6F8FA;margin-top:20px;  border-radius: 4px;width: 218px;height: 80px;
+  }
+  .deactive{background-color: #EA0000;margin-left: 5px;margin-top: 70px;width: 60px;height: 20px;border-radius: 4px;padding-top:10px;padding-left:5px;
+  }
+  .deactive p{font-size: 12px;}
+  
+ table { 
+  border-collapse: collapse; 
+  width: 100%; 
+} 
+
+th, td { 
+  text-align: left; 
+  padding: 8px; 
+} 
+
+tr:nth-child(even) { 
+  background-color: #DEDEDE; 
+} 
+  .staffhash{background-color: #F6F8FA;margin-top: 25px;margin: 15px;width: 150px;display: flex;flex-direction: column;justify-content: space-between;}
+
   .modal {
     display: none; /* Initially hide the modal */
     position: fixed;
@@ -899,7 +985,7 @@ cursor: pointer;
     background-color:#F6F8FA;
     border-radius: 8px;
     padding: 10px;
-    overflow: scroll;
+  
 }
 .maindiv{
   display: flex;
@@ -989,8 +1075,9 @@ cursor: pointer;
    font-size: 10px;
  }
  .test1hash{
- width: 105px;
+ width: 125px;
  height:50px;
+ padding-top: 10px;
  background-color: #F6F8FA; 
 
  }
@@ -998,7 +1085,9 @@ cursor: pointer;
  .test1prof{
    background-color: #FA6230;
    height: 18px;
-   width:110px;}
+   width: 125px;
+   font-weight: 700;
+  color: #FFFFFF;}
  .tab{
  background-color: #E0E0E0;
  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -1008,7 +1097,7 @@ height: 69px;
 
  }
  .tab .flexcontainer {
-width: 90px;
+width: 100%;
 color: #000000;
 list-style: none;
 display: flex;
@@ -1067,6 +1156,7 @@ cursor: pointer;
  .tabcontent{
    width: 100%;
    height: 100%;
+   
 
  }
  .AccountOverview{

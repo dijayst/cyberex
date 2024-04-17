@@ -471,7 +471,7 @@ amount:"₦100,000"
   
 document.getElementById("test1").innerHTML = users.map(user => { 
   return `<div class="test1div">
-    <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;"><p>${user.name}<p style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:9px;">${user.verified}</p></p></div>
+    <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;color:#000000;font-weight: 700;"><p>${user.name}<p style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:9px;">${user.verified}</p></p></div>
     <div class="test1hash">
         <div style="display: flex;flex-direction: row;justify-content: center;"> 
         <img src="./images/call.png"  class="test1img" />  
@@ -486,26 +486,7 @@ document.getElementById("test1").innerHTML = users.map(user => {
   </div>`;
 }).join('');
 
-/*
-document.getElementById("test2").innerHTML = users.map(user => { 
-  return `<div style="background-color: #FFFFFF;width:19.3%;height: 150px; text-align: center; border-radius: 8px;border:1px solid #DEDEDE;margin:3px;">
-    <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;"><p>${user.name}<p style="color: #FA6230;font-size: 8px;">${user.verified}</p></p></div>
-    <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 159px;height:60px;">
-        <div style="display: flex;flex-direction: row;justify-content: center;"> <i class="fa-solid fa-magnifying-glass"></i>
-            <p >${user.contact}</p></div>
-            <div style="display: flex;flex-direction: row;justify-content: center;">
-                <i class="fa-solid fa-magnifying-glass"></i>
-               <p>${user.email}</p></div>
-
-    </div>
-    <div style="background-color: #FA6230;height: 20px;width:159px;color:black;margin: 10px;border-radius: 4px;">${user.prof}</div>
-
-  </div>`;
-}).join('');*/
-
 function redirectToProductDetail(productId) {
-  //window.location.href = `product_${id}.html`;
-  //window.location.href = `product-detail.html?id=${id}`;
  // window.location.href = `product-detail.html?id=${productId}`;
 
 window.open(`product-detail.html?id=${productId}`, "_self");
@@ -524,18 +505,18 @@ users.forEach(user => {
   productDiv.style.margin = "3px";
 
   productDiv.innerHTML = `
-    <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;">
-      <p>${user.name}</pstyle=>
+    <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;color:#000000;font-weight: 700;">
+      <p >${user.name}</p>
       <p style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:9px;">${user.verified}</p>
     </div>
     <div class="test2div">
       <div style="display: flex;flex-direction: row;justify-content: center;padding-top:18px;">
       <img src="./images/call.png"  width="15px" height="15px" />
-        <p style="font-size: 12px;">${user.contact}</p>
+        <p class="test1p">${user.contact}</p>
       </div>
       <div style="display: flex;flex-direction: row;justify-content: center;">
       <img src="./images/mail.png"  width="15px" height="15px" />
-        <p style="font-size: 12px;">${user.email}</p>
+        <p class="test1p">${user.email}</p>
       </div>
     </div>
     <div class="test2prof" onclick="redirectToProductDetail(${user.id})">${user.prof}</div>

@@ -307,17 +307,18 @@ const users=[{
     if (product) {
         productDetail.innerHTML = `
             
-            <img  src=${product.image} style="border-radius: 90%;width: 980px;height: 80px;margin-top: 25px;" alt="profile"/>
+            <img  src=${product.image} class="productdetailimg" alt="profile"/>
             <div  style="display: flex;flex-direction:column;margin-left:10px;line-height:0px;">
             <h1>${product.user1}</h1>
             <div style="display: flex;flex-direction:row; ">
-            <div  style="display: flex;flex-direction:column;background-color:#F6F8FA;margin-top:20px;  border-radius: 4px;width: 340px;height: 80px;">
+            <div  class="productdetailhash">
             <div  style="display: flex;flex-direction:row;">
-            <div style="display: flex;flex-direction:row;"> <img src="./images/call.png"  width="15px" height="15px" style=" margin-top: 15px;"/> <p style=" margin-top: 20px;">${product.contact}</p> </div>
-            <div style="display: flex;flex-direction:row;"><img src="./images/mail.png"  width="15px" height="15px" style=" margin-top: 15px;"/><p style=" margin-top: 20px;">${product.email}</p></div></div>
-           <div style="display: flex;flex-direction:row;"><img src="./images/Group.png"  width="15px" height="15px" style=" margin-top: 15px;"/> <p style=" margin-top: 20px;">${product.btcaddress}</p> <img src="./images/file_copy.png"  width="15px" height="15px" style=" margin-top: 15px; margin-left: 5px;"/> </div> 
+            <div style="display: flex;flex-direction:row;"> <img src="./images/call.png"  width="15px" height="15px" style=" margin-top: 15px;"/> <p style=" margin-top: 20px;" class="test1p">${product.contact}</p> </div>
+            <div style="display: flex;flex-direction:row;"><img src="./images/mail.png"  width="15px" height="15px" style=" margin-top: 15px;"/><p style=" margin-top: 20px;"class="test1p">${product.email}</p></div></div>
+           <div style="display: flex;flex-direction:row;"><img src="./images/Group.png"  width="15px" height="15px" style=" margin-top: 15px;"/> <p style=" margin-top: 20px;" class="test1p">${product.btcaddress}</p> <img src="./images/file_copy.png"  width="15px" height="15px" style=" margin-top: 15px; margin-left: 5px;"/> </div> 
             </div>
-            <div style="background-color: #EA0000;margin-left: 800px;margin-top: 40px;width: 100px;height: 28px;border-radius: 4px; "><p style="text-align:center;">deactivate</p></div>
+            <div class="deactive ">
+            <p >deactivate</p></div>
             </div>
                 <!-- Add other detailed product information here -->
             </div>
@@ -332,16 +333,17 @@ const users=[{
   
   renderProductDetail();
   
-  
-document.getElementById("table-body3").innerHTML =users.map(item => `
+  document.getElementById("table-body13").innerHTML = users.map(item => {
+
+    return `
 <tr style="margin-left: 50px;height: 50px;">
-<td>${item.no}</td>
-<td>${item.timestamp}</td>
-<td>${item.type}</td>
-<td>${item.Bat}</td>
-</tr>
-`).join('');
- 
+    <td>${item.no}</td>
+    <td>${item.timestamp}</td>
+    <td class="color">${item.type}</td>
+    <td>${item.Bat}</td>
+</tr>`;
+}).join('');
+
   
   
 

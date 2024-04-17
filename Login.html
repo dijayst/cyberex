@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .error {
+            color: red;
+        }
+            body {
+                font-family: Arial, sans-serif;
+            }
+            .container {
+                width: 410px;
+                height: 342px;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            input[type="text"], input[type="password"], input[type="submit"] {
+               
+                padding: 10px;
+                margin: 5px 0;
+                box-sizing: border-box;
+            }
+            input[type="submit"] {
+                background-color: #FA6230;
+                width: 100%;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #ddd;
+                color: #414141;
+            }
+            .error {
+                color: red;
+                font-size: 0.8em;
+            }
+        </style>
+         <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    
+<div class="container">
+    <h5>Admin Log In</h5>
+    <div class="label1">
+    <P>Already have an account?</P><p style="color: #FA6230;"> Sign up</P>
+   </div>
+
+        <form id="loginForm" onsubmit="return validateForm(event)">
+        <div style="display: flex;flex-direction: column;">
+        <label class="label" for="username">Email</label>
+        <input type="text" id="username" name="username" required>
+        <span id="usernameError" class="error"></span>
+</div>
+
+        <div style="display: flex;flex-direction: column;">
+    <label class="label" for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    <span id="passwordError" class="error"></span>
+
+</div>
+<p style="margin-left: 240px;color: #FA6230;font-size: 15px;">Forgot Password?</p>
+        
+        <input style="font-size: 16px;font-weight:700;" type="submit" value="Login">
+    </form>
+</div>
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form submission if validation fails
+            
+            // Fetching input values
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Resetting previous errors
+            document.getElementById('usernameError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+
+            // Validation
+            let isValid = true;
+            if (username === '') {
+                document.getElementById('usernameError').textContent = 'Username is required';
+                isValid = false;
+            }
+            if (password === '') {
+                document.getElementById('passwordError').textContent = 'Password is required';
+                isValid = false;
+            }
+
+            // If all fields are valid, navigate to the new page
+            if (isValid) {
+                // Here you can redirect to a new page
+                //window.location.href = 'Admin.html'; // Change 'new_page.html' to your desired page
+                
+window.open(`Admin.html`, "_self");
+            }
+        }
+    </script>
+</body>
+</html>
