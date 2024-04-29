@@ -1,0 +1,267 @@
+
+@media (max-width: 800px){
+    table { 
+     border-collapse: collapse; 
+     width: 100%; 
+   } 
+   
+   th, td { 
+     text-align: left; 
+     padding: 8px; 
+   } 
+   
+   tr:nth-child(even) { 
+     background-color: #DEDEDE; 
+   } 
+    .staffhash{background-color: #F6F8FA;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 200px;
+        border-radius: 4px;
+        height: 50px;
+      
+        
+    }
+     
+    .test3div{
+       background-color: #F6F8FA;
+       margin-top: 25px;
+       margin: 13px;
+       width: 110px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+      }
+     .test4div3{
+       background-color: #F6F8FA;
+       height: 25px;
+       width: 119px;
+       color:#FA6230;margin: 10px;
+      }
+      .test4div2{
+       background-color: #FA6230;
+       height: 20px;width:119px;color:#FFFFFF;
+       margin: 10px;border-radius: 4px;
+      }
+     .test4div{
+       display: flex;
+       flex-direction: column;
+       background-color: #F6F8FA;
+        margin: 10px;border-radius: 4px;
+        width: 119px;
+        height:60px;
+      }
+     .test5div{
+       background-color: #FDE6E6;
+       height: 25px;
+       width:120px;
+       color:#EA0000;
+       margin: 10px;
+      }
+      .test5div2{
+       background-color: #FA6230;
+       height: 25px;
+       width:120px;
+       color:#FFFFFF;
+       margin: 10px;
+      }
+   .dashtext{
+     font-size: 13px;
+     color:#444748;
+     margin-top: 0px;
+     white-space: nowrap;
+   }
+   .test2prof{
+     background-color: #FA6230;
+     height: 20px;
+     width:125px;
+     color:#FFFFFF;
+     margin: 10px;
+     border-radius: 4px;
+      cursor: pointer;}
+    .test2div{
+     display: flex;
+     flex-direction: column;
+     background-color: #F6F8FA;
+      margin: 10px;
+      border-radius: 4px;
+     width: 125px;
+     height:60px;
+    }
+   .test1img{
+     width: 10px;
+     height: 10px;
+   }
+     .test1p{
+       font-size: 8px;
+     }
+     .test1hash{
+     width: 125px;
+     height:50px;
+     background-color: #F6F8FA;
+     
+   
+     }
+     .test1div{width: 47%;background-color: #FFFFFF;}
+     .test1prof{
+       background-color: #FA6230;
+       height: 18px;
+       width:90px;
+       font-weight: 700;
+       font-size: 10px;
+     color: #FFFFFF;}
+     .tab{
+     background-color: #E0E0E0;
+     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 69px;
+     
+   
+     }
+     .tab .flexcontainer {
+   width: 90px;
+   color: #000000;
+   list-style: none;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   margin-top: -20px;
+   
+     }
+     .tab .menu {
+      
+       margin-left: 700px;
+       margin-top: -30px;
+       display: flex;
+   cursor: pointer;
+   
+   
+   
+     }
+     .flexcontainer1{
+       margin-top: 60px;
+      display: flex;
+      flex-direction: row;
+       width: 100%;
+       height: 69px;
+       background-color: #FFFFFF;
+     }
+     .search{
+       margin-left: 302px;
+    
+     }
+     .searc{
+       margin-left:90px;
+     }
+     .search1{
+       margin-left: 335px;
+     }
+     .hyi{
+       position: fixed;
+        width: 50%;
+      height: 100%;
+       background-color: #E0E0E0;
+       top: 0;
+       right:0;
+       display: none;
+       transition: all .5s;
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: flex-start;
+      
+      
+     }
+     .tab .div{
+       width: 500px;
+       margin-left: 0px;
+       height: 100%;
+       color: #000000;
+      
+       
+     }
+     nav button{
+       font-size: 20px;
+     }
+     .tabcontent{
+       width: 100%;
+       height: 100%;
+   
+     }
+     
+     .AccountOverview{
+       width: 100%;
+       height: 100px;
+   
+     }
+     .insidediv{
+       width: 50;
+     }
+     .insidedivs{
+       width: 165px;
+      
+     }
+     .imgcenter{
+       width: 25px;
+       height: 25px;
+     }
+     
+   .divp{
+     font-size: 6px;
+   color: 
+   #444748;
+   }
+   .hourdiv{
+    background-color: #FFFFFF;
+    margin-left: 39px;
+   }
+   .divinside .no{
+      font-size: 12px;
+   }
+   .angle-down{
+    margin-left: 89px;
+   }
+
+
+   
+
+   .div .tablinks {
+    display: flex;
+  flex-direction: row;
+    color: #414141;
+    padding: 22px 16px;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  /* Change background color of buttons on hover */
+  .div .tablinks:hover {
+    background-color: #ddd;
+    width:280px;
+    height:64px ;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #414141;
+    font-size: 17px;
+  }
+  /* Create an active/current "tab button" class */
+  .div .tablinks.active {
+    background-color:#FA6230;
+    color:#FFFFFF;
+    width:280px;
+    height:64px ;
+    border-radius: 8px;
+    font-size: 17px;
+  }
+  
+.tab .close{
+    display: flex;
+  }
+   }
+   
