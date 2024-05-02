@@ -289,6 +289,7 @@ flex-direction: row;
     width:470px;
     height: 46px ;
     margin-top: 20px;
+    border-radius: 4px;
     border: 1px solid #D0D0D0;
   }
 /* Style the buttons inside the tab */
@@ -296,7 +297,7 @@ flex-direction: row;
     
     display: flex;flex-direction: row;
     background-color: #FFFFFF;
-  
+  border-radius: 4px;
     border: 1px solid #D0D0D0;
     color: #414141;
     height:46px ;
@@ -315,6 +316,7 @@ flex-direction: row;
     color: #414141;
     width:170px;
     height:46px ;
+    border-radius: 4px;
   
   }
   /* Create an active/current "tab button" class */
@@ -323,7 +325,7 @@ flex-direction: row;
     color:#FFFFFF;
     width:170px;
     height:46px ;
-   
+   border-radius: 4px;
   }
 
 /* Style the tab content */
@@ -340,6 +342,7 @@ flex-direction: row;
             width: 100%; 
         } 
           
+
         th, td { 
             text-align: left; 
             padding: 6px; 
@@ -450,9 +453,9 @@ flex-direction: row;
   box-sizing: border-box;
   border: 1px solid #B4B5B6;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 12px;
   background-color: #FFFFFF;
-  padding: 10px 0px 12px 14px;
+  padding: 20px;
 
  
 }
@@ -676,8 +679,11 @@ input[type='file'] {
   margin-top: 20px;
 }
 
-.imagepreview{margin-top: 80px;
-  z-index: 2;
+.imagepreview{width: 300px;
+  height: 300px;
+  border: 2px solid #ccc;
+  display: flex;
+  margin-left: 50px;
 }
 
  .test2divs{
@@ -694,7 +700,7 @@ input[type='file'] {
   box-sizing: border-box;
   border: 1px solid #B4B5B6;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 12px;
   color: #B4B5B6;
   background-color: #FFFFFF;
   background-position: 10px 10px; 
@@ -727,15 +733,15 @@ input[type='file'] {
   box-sizing: border-box;
   border: 1px solid #B4B5B6;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 12px;
   color: #B4B5B6;
   background-color: #FFFFFF;
-  background-position: 330px 10px; 
+  background-position: 330px 15px; 
   background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
+  padding: 20px ;
   line-height: 37px;
   background-image: url('./images/expand_more\ \(1\).png');
- 
+  background-size: 8px 8px;
 }
 
 
@@ -754,6 +760,23 @@ input[type='file'] {
  
 }
    
+
+.input5 {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #B4B5B6;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #B4B5B6;
+  background-color: #FFFFFF;
+  background-position: 450px 15px; 
+  background-repeat: no-repeat;
+  padding: 20px ;
+  line-height: 37px;
+  background-image: url('./images/expand_more\ \(1\).png');
+  background-size: 8px 8px;
+}
 search1 {
   width: 100%;
   height: 40px;
@@ -806,6 +829,19 @@ margin-left: 515px;
 }
 
 
+.modal7 {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -428px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -26.4%;
+  color: #000000;
+  background: rgba(14, 15, 14, 0.3)
+  
+}
+
 .modal6 {
   display: none; /* Initially hide the modal */
   position: fixed;
@@ -833,11 +869,11 @@ margin-left: 515px;
 .modal4 {
   display: none; /* Initially hide the modal */
   position: fixed;
-  margin-top: -415px;
+  margin-top: -429px;
   z-index: 1;
   width: 100%;
-  height: 115%;
-  margin-left: 0%;
+  height: 116%;
+  margin-left: -26.5%;
   color: #000000;
   background: rgba(14, 15, 14, 0.3)
   
@@ -849,7 +885,7 @@ margin-left: 515px;
   z-index: 1;
   width: 100%;
   height: 100%;
-  margin-left: 0%;
+  margin-left: -26.5%;
   color: #000000;
   background: rgba(14, 15, 14, 0.3)
   
@@ -881,6 +917,23 @@ margin-left: 515px;
     
 }
 
+.modal-content4 {
+  background-color: #FFFFFF;
+  width: 30%;
+  height: 75%;border-radius: 8px;
+  margin-left: 500px;
+  margin-top: 35px;
+  color: #000000;
+}
+
+.modal-content3 {
+  background-color: #FFFFFF;
+  width: 30%;
+  height: 75%;border-radius: 8px;
+  margin-left: 500px;
+  margin-top: 90px;
+  color: #000000;
+}
 .modal-content2 {
   background-color: #FFFFFF;
   width: 30%;
@@ -945,6 +998,40 @@ margin-left: 515px;
   border-radius: 4px;
   font-weight: 700;
 }
+
+
+.test1hash3{
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F8FA; 
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 4px;
+  width: 154px; 
+  justify-content: center;
+  text-align: center;
+  height:59px;
+  
+  
+
+}
+.test1hash2{
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F8FA; 
+  margin: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 4px;
+  width: 158px; 
+  justify-content: center;
+  text-align: center;
+  height:59px;
+  
+  
+
+}
 .test1hash{
   display: flex;
   flex-direction: column;
@@ -961,6 +1048,26 @@ margin-left: 515px;
   
 
 }
+
+
+.test2hash{
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F8FA; 
+  margin: 12px;
+  padding-top: 5px;
+  padding-left: 6px;
+  padding-bottom: 5px;
+  border-radius: 4px;
+  width: 158px; 
+  justify-content: center;
+  text-align: center;
+  height:59px;
+  
+  
+
+}
+
 .test1p{
   font-size: 11px;
   line-height: 20px;
@@ -1003,15 +1110,32 @@ margin-left: 515px;
   width: 159px;
   height:60px;
 }
+
+.testprof{
+  background-color: #F6F8FA;
+  height: 25px;
+  width:154px;
+  color:#FA6230;
+  margin-left: 5px;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding-top: 5px;
+   cursor: pointer;
+   font-size: 12px;
+}
+   
 .test2prof{
   background-color: #FA6230;
-  height: 20px;
-  width:159px;
+  height: 25px;
+  width: 154px;
   color:#FFFFFF;
-  margin: 10px;
+  margin-left: 5px;
+  margin-top: 10px;
+  padding-top: 5px;
+  font-size: 12px;
   border-radius: 4px;
    cursor: pointer;
-  justify-content: center;align-items: center;}
+  }
    
    .table-body3{
     margin-left: 50px;height: 50px;
@@ -1023,7 +1147,7 @@ margin-left: 515px;
     color:#EA0000;
     font-weight: 700;
     margin: 10px;
-    font-size: 15px;
+    font-size: 12px;
     border-radius: 4px;
     justify-content: center;
     padding-top: 4px;
@@ -1040,7 +1164,7 @@ margin-left: 515px;
     justify-content: center;
     padding-top: 4px;
     align-items: center;
-    font-size: 15px;
+    font-size: 12px;
    }
    .test4div{
     display: flex;
@@ -1104,12 +1228,15 @@ margin-left: 515px;
 }
 .div0{
   background-color: #FFFFFF;
+  justify-content: center;
+  align-items: center;
   width:19.3%;
   height: 250px; 
   text-align: center;
    border-radius: 8px;
   border:1px solid #DEDEDE;margin:3px;
 }
+
 
 .div1{
   background-color: #FFFFFF;
@@ -1122,6 +1249,19 @@ margin-left: 515px;
   
 }
 
+
+.div4{
+  background-color: #FFFFFF;
+  width:19.3%;
+  height: 190px; 
+  text-align: center;
+   border-radius: 8px;
+  border:1px solid #DEDEDE;
+  margin: 3px;
+  padding: 7px;
+
+  
+}
 .divd{
   background-color: #FFFFFF;
   width:19.3%;

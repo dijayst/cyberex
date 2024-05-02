@@ -1,4 +1,6 @@
 
+
+
 function validateForm(event) {
   event.preventDefault(); // Prevent form submission if validation fails
 
@@ -43,7 +45,7 @@ function validateForm(event) {
   if (isValid) {
       // Here you can redirect to a new page
       // window.location.href = 'new_page.html'; // Change 'new_page.html' to your desired page
-      window.open('Initiatenewdebitorder.html', '_self');
+      window.open('./Initiatenewdebitorder.html', '_self');
   }
 }
 
@@ -154,7 +156,7 @@ function submitForm2() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   //closeDialog();
-  window.open(`Editdeals.html`, "_self");
+  window.open(`./Editdeals.html`, "_self");
 }
 
 
@@ -163,7 +165,7 @@ function submitForm3() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   closeDialog4();
-  window.open(`Addnewdeal.html`, "_self");
+  window.open(`./Addnewdeal.html`, "_self");
 }
 
 
@@ -171,28 +173,53 @@ function submitForm4() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   //closeDialog();
-  window.open(`Editcountry.html`, "_self");
+ 
 }
 
 function submitForm5() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   //closeDialog();
-  window.open(`Addnewcountry.html`, "_self");
+  window.open(`./Addnewcountry.html`, "_self");
 }
+
 
 function submitForm6() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   //closeDialog();
-  window.open(`Editcountry.html`, "_self");
+  window.open(`./Editcountry.html`, "_self");
 }
 
 function submitForm7() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   //closeDialog();
-  window.open(`Addnewdeal.html`, "_self");
+  window.open(`./Addnewdeal.html`, "_self");
+}
+
+
+function submitForm8() {
+  // You can handle form submission here if needed
+  // For demonstration purposes, this function just closes the dialog
+  //closeDialog();
+  window.open(`./Assigntoothers.html`, "_self");
+}
+
+
+function submitForm9() {
+  // You can handle form submission here if needed
+  // For demonstration purposes, this function just closes the dialog
+  //closeDialog();
+  window.open(`./Chat.html`, "_self");
+}
+
+
+function submitForm10() {
+  // You can handle form submission here if needed
+  // For demonstration purposes, this function just closes the dialog
+  //closeDialog();
+  window.open(`./Transaction.html`, "_self");
 }
 function myFunction() {
   var x = document.getElementById("myTab");
@@ -248,6 +275,8 @@ const users=[{
     country:"USA",
     image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
     image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    
+  
     apple:"Apple Inc.",
     link:"Apple.com",
       user:"Admin1",
@@ -684,7 +713,8 @@ users.forEach(user => {
   productDiv.innerHTML = `
     
     <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;color:#000000;font-weight: 700;gap:5px;"><p>${user.name}</p>
-    <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;"><p>${user.verified}</p></div>
+    <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
+    <p>${user.verified}</p></div>
     </div>
     <div class="test1hash">
     <div style="display: flex;flex-direction: row;gap:5px;margin-left:8px;"> 
@@ -712,7 +742,7 @@ document.getElementById("test3").innerHTML = users.map(user => {
   <img src=${user.image}  style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/>
   <p style="
   font-weight: 700;">${user.user}</p>
-  <div class="test1hash"> 
+  <div class="test2hash"> 
   <div style="display: flex;flex-direction: row;gap:5px;margin-left:8px;"> 
     <img src="./images/call.png"  class="test1img" />  
         <p class="test1p">${user.contact}</p></div>
@@ -723,9 +753,9 @@ document.getElementById("test3").innerHTML = users.map(user => {
     </div>
     <div style="width: 25px;background-color:red;">
     </div>
-<div style="display: flex;flex-direction: row;padding :0px;gap:20px;justify-content: center;">
-<div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:25px;color:#FA6230;padding :3px; font-size: 14px;" >${user.users}</div>
-<div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:25px;color:#FA6230;padding :3px; font-size: 14px;" >${user.staff}</div>
+<div style="display: flex;flex-direction: row;padding :0px;gap:10px;justify-content: center;">
+<div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:20px;color:#FA6230;padding-top :4px; font-size: 11px;" >${user.users}</div>
+<div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:20px;color:#FA6230;padding-top :4px; font-size: 11px;" >${user.staff}</div>
 </div>
 </div>`;
 }).join('');
@@ -733,21 +763,25 @@ document.getElementById("test3").innerHTML = users.map(user => {
 
 
 document.getElementById("test4").innerHTML = users.map(user => { 
-  return `<div class="div1">
+  return `<div class="div4">
     <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;">
     <p style="font-weight: 700;color: #000000;">${user.name}</p>
-    <p style="color: #FA6230;font-size: 8px;">${user.verified}</p>
+    <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
+    <p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
     </div>
-    <div class="test1hash">
+    <div class="test1hash3">
 
-        <div style="display: flex;flex-direction:row;margin-left: 12px;"> <img src="./images/call.png"   class="test1img"/> <p class="test1p">${user.contact}</p> </div>
-        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;"> <img src="./images/mail.png"   class="test1img"/> <p class="test1p">${user.email}</p> </div>
+        <div style="display: flex;flex-direction:row;margin-left: 12px;gap:5px;"> <img src="./images/call.png"   class="test1img"/> <p class="test1p">${user.contact}</p> </div>
+        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"   class="test1img"/> <p class="test1p">${user.email}</p> </div>
             
 
 
     </div>
     <div class="test2prof">Assign To Self</div>
-  </div>`;
+
+    <div class="testprof" onclick="submitForm8()">Assign To Others</div>
+
+    </div>`;
 }).join('');
 
 
@@ -783,19 +817,13 @@ document.getElementById("test6").innerHTML = users.map(user => {
     <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;color:#000000;font-weight: 700;">
     <p>${user.name}</p><p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
     <div class="test1hash">
-        <div style="display: flex;flex-direction:row;margin-left: 12px;"> <img src="./images/call.png"  width="15px" height="15px"/> <p class="test1p">${user.contact}</p> </div>
-        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p class="test1p">${user.email}</p> </div>
+        <div style="display: flex;flex-direction:row;margin-left: 12px;gap:5px;"> <img src="./images/call.png"  width="15px" height="15px"/> <p class="test1p">${user.contact}</p> </div>
+        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p class="test1p">${user.email}</p> </div>
             
     </div>
-    <div class="test2prof">Enter Chat</div>
+    <div class="test2prof" onclick="submitForm9()">Enter Chat</div>
   </div>`;
 }).join('');
-
-
-
-
-
-
 
 
 
@@ -846,7 +874,7 @@ document.getElementById("table-body4").innerHTML =users.map(item => `
     <td>June 9th,2020. 9:46pm</td>
     <td>June 9th,2020. 9:46pm</td>
     <td >
-      <div style="background-color: #FA6230;color: #FFFFFF;margin-top: -5px;height: 25px;text-align: center;padding-top: 5px;border-radius: 4px;">View Beneficiaries</div>
+      <div style="background-color: #FA6230;color: #FFFFFF;margin-top: 3px;height: 25px;text-align: center;padding-top: 5px;border-radius: 4px;">View Beneficiaries</div>
 
     </td>
 </tr>

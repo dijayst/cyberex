@@ -45,7 +45,7 @@ function validateForm(event) {
   if (isValid) {
       // Here you can redirect to a new page
       // window.location.href = 'new_page.html'; // Change 'new_page.html' to your desired page
-      window.open('Initiatenewdebitorder.html', '_self');
+      window.open('./Initiatenewdebitorder.html', '_self');
   }
 }
 
@@ -72,13 +72,13 @@ document.getElementById("defaultOpen").click();
 
 const users=[{
     id:1,
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image:"images/33fe647a46f9bf668322f8c1d94ed937.png",
     user:"Admin1",
       user1:"User 1",
       btcaddress:"2nadyy3246essch567mr6yethdhfdsdfax3f",
       deactivate:"Deactivate",
       no:1, 
-      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"images/33fe647a46f9bf668322f8c1d94ed937.png",
       apple:"Apple Inc.",
       link:"Apple.com",
         user:"Admin1",
@@ -105,10 +105,10 @@ const users=[{
     
   },{
     id:2,
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
       user:"Admin1",
-     name:"Ayo", image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+     name:"Ayo", image1:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
     verified:"Unverified",
     contact:"+2348078868319",
@@ -140,8 +140,8 @@ const users=[{
   },{
     id:3,
    
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-   image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image:"images/33fe647a46f9bf668322f8c1d94ed937.png",
+   image1:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
        user:"Admin1",
      name:"Ayo",
@@ -175,7 +175,7 @@ const users=[{
   },{
     id:4,
    
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
     user:"Admin1",
     name:"Ayo",
@@ -190,7 +190,7 @@ const users=[{
     link:"Apple.com",
       user:"Admin1",
     user1:"User 4",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image1:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
     btcaddress:"2nadyy3246essch567mr6yethdhfdsdfax3f",
     deactivate:"Deactivate",
@@ -211,10 +211,10 @@ const users=[{
   },
   {
     id:5,
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image1:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
    
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
     user:"Admin1",
     users:"Admin",
@@ -246,10 +246,10 @@ const users=[{
   amount:"₦100,000"
   },{
     id:6,
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image1:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
    
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
     user:"Admin1",
     name:"Ayo",
@@ -284,10 +284,10 @@ const users=[{
   amount:"₦100,000"
   },{
     id:7,
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image1:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
    
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
     user:"Admin1",
     name:"Ayo",
@@ -322,10 +322,11 @@ const users=[{
   amount:"₦100,000"
   },{
     id:8,
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+    image1:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
    
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+   
+    image:"images/33fe647a46f9bf668322f8c1d94ed937.png",
    
     user:"Admin1",
     name:"Ayo",
@@ -415,9 +416,9 @@ const users=[{
             <div style="display: flex;flex-direction:row; ">
             <div  class="productdetailhash">
             <div  style="display: flex;flex-direction:row;">
-            <div style="display: flex;flex-direction:row;"> <img src="./images/call.png"  width="15px" height="15px" style=" margin-top: 22px;"/> <p class="test1pp">${product.contact}</p> </div>
-            <div style="display: flex;flex-direction:row;"><img src="./images/mail.png"  width="15px" height="15px" style=" margin-top: 22px;margin-left:10px;"/><p class="test1pp">${product.email}</p></div></div>
-           <div style="display: flex;flex-direction:row;margin-top:-5px"><img src="./images/Group.png"  width="15px" height="15px" style=" margin-top: 15px;"/> <p  class="test1pp1">${product.btcaddress}</p> <img src="./images/file_copy.png"  width="15px" height="15px" style=" margin-top: 15px; margin-left: 15px;"/> </div> 
+            <div style="display: flex;flex-direction:row;"> <img src="images/call.png"  width="15px" height="15px" style=" margin-top: 22px;"/> <p class="test1pp">${product.contact}</p> </div>
+            <div style="display: flex;flex-direction:row;"><img src="images/mail.png"  width="15px" height="15px" style=" margin-top: 22px;margin-left:10px;"/><p class="test1pp">${product.email}</p></div></div>
+           <div style="display: flex;flex-direction:row;margin-top:-5px"><img src="images/Group.png"  width="15px" height="15px" style=" margin-top: 15px;"/> <p  class="test1pp1">${product.btcaddress}</p> <img src="images/file_copy.png"  width="15px" height="15px" style=" margin-top: 15px; margin-left: 15px;"/> </div> 
             </div>
             <div class="deactive ">
             <p >Deactivate</p></div>
@@ -519,19 +520,20 @@ function previewImage() {
   }
 }
 
+
+
 function submitForm() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   closeDialog();
+  //window.open(`Addnewcountry.html`, "_self");
 }
-
-
 
 function submitForm2() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   //closeDialog();
-  window.open(`Editdeals.html`, "_self");
+  window.open(`./Editdeals.html`, "_self");
 }
 
 
@@ -540,7 +542,7 @@ function submitForm3() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   closeDialog4();
-  window.open(`Addnewdeal.html`, "_self");
+  window.open(`./Addnewdeal.html`, "_self");
 }
 
 
@@ -548,28 +550,53 @@ function submitForm4() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   //closeDialog();
-  window.open(`Editcountry.html`, "_self");
+ 
 }
 
 function submitForm5() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   //closeDialog();
-  window.open(`Addnewcountry.html`, "_self");
+  window.open(`./Addnewcountry.html`, "_self");
 }
+
 
 function submitForm6() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   //closeDialog();
-  window.open(`Editcountry.html`, "_self");
+  window.open(`./Editcountry.html`, "_self");
 }
 
 function submitForm7() {
   // You can handle form submission here if needed
   // For demonstration purposes, this function just closes the dialog
   //closeDialog();
-  window.open(`Addnewdeal.html`, "_self");
+  window.open(`./Addnewdeal.html`, "_self");
+}
+
+
+function submitForm8() {
+  // You can handle form submission here if needed
+  // For demonstration purposes, this function just closes the dialog
+  //closeDialog();
+  window.open(`./Assigntoothers.html`, "_self");
+}
+
+
+function submitForm9() {
+  // You can handle form submission here if needed
+  // For demonstration purposes, this function just closes the dialog
+  //closeDialog();
+  window.open(`./Chat.html`, "_self");
+}
+
+
+function submitForm10() {
+  // You can handle form submission here if needed
+  // For demonstration purposes, this function just closes the dialog
+  //closeDialog();
+  window.open(`./Transaction.html`, "_self");
 }
 
 
@@ -687,17 +714,20 @@ amount:"₦100,000"
 
   
 document.getElementById("test1").innerHTML = users.map(user => { 
-  return `<div style="background-color: #FFFFFF;width:48%;height: 150px; text-align: center;margin: 3px; border-radius: 8px;">
-    <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;"><p>${user.name}<p style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;">${user.verified}</p></p></div>
-    <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 145px;height:59px;">
-        <div style="display: flex;flex-direction: row;justify-content: center;"> <i class="fa-solid fa-magnifying-glass"></i>
-            <p >${user.contact}</p></div>
-            <div style="display: flex;flex-direction: row;justify-content: center;">
-                <i class="fa-solid fa-magnifying-glass"></i>
-               <p>${user.email}</p></div>
+  return `<div class="test1div">
+    <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;color:#000000;font-weight: 700;gap:5px;"><p>${user.name}</p>
+    <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;"><p>${user.verified}</p></div>
+    </div>
+    <div class="test1hash">
+        <div style="display: flex;flex-direction: row;gap:5px;margin-left:8px;"> 
+        <img src="./images/call.png"  class="test1img" />  
+            <p class="test1p">${user.contact}</p></div>
+            <div style="display: flex;flex-direction: row;margin-top:8px;gap:5px;margin-left: 8px;">
+            <img src="./images/mail.png"  class="test1img"/>  
+               <p class="test1p">${user.email}</p></div>
 
     </div>
-    <div style="background-color: #FA6230;height: 20px;width:145px;color:black;margin: 10px;border-radius: 4px;">${user.prof}</div>
+    <div class="test1prof">${user.prof}</div>
 
   </div>`;
 }).join('');
@@ -840,10 +870,10 @@ document.getElementById("test3").innerHTML = users.map(user => {
   font-weight: 700;">${user.user}</p>
   <div class="test1hash"> 
   <div style="display: flex;flex-direction: row;margin-left: 15px;">
-  <img src="./images/call.png"  width="15px" height="15px" />
+  <img src="images/call.png"  width="15px" height="15px" />
   <p class="test1p">${user.contact}</p></div>
   <div style="display: flex;flex-direction: row;margin-left: 12px;margin-top: 5px;">
-  <img src="./images/mail.png"  width="15px" height="15px" />
+  <img src="images/mail.png"  width="15px" height="15px" />
     <p class="test1p">${user.email}</p></div></div>
     <div style="width: 25px;background-color:red;">
     </div>
@@ -861,8 +891,8 @@ document.getElementById("test4").innerHTML = users.map(user => {
     <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;"><p>${user.name}</p><p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
     <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 159px;height:60px;">
 
-        <div style="display: flex;flex-direction:row;"> <img src="./images/call.png"  width="15px" height="15px"/> <p>${user.contact}</p> </div>
-        <div style="display: flex;flex-direction:row;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p>${user.email}</p> </div>
+        <div style="display: flex;flex-direction:row;"> <img src="images/call.png"  width="15px" height="15px"/> <p>${user.contact}</p> </div>
+        <div style="display: flex;flex-direction:row;"> <img src="images/mail.png"  width="15px" height="15px"/> <p>${user.email}</p> </div>
             
 
 
@@ -881,8 +911,8 @@ document.getElementById("test6").innerHTML = users.map(user => {
     <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;"><p>${user.name}</p><p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
     <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 159px;height:60px;">
 
-        <div style="display: flex;flex-direction:row;"> <img src="./images/call.png"  width="15px" height="15px"/> <p>${user.contact}</p> </div>
-        <div style="display: flex;flex-direction:row;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p>${user.email}</p> </div>
+        <div style="display: flex;flex-direction:row;"> <img src="images/call.png"  width="15px" height="15px"/> <p>${user.contact}</p> </div>
+        <div style="display: flex;flex-direction:row;"> <img src="images/mail.png"  width="15px" height="15px"/> <p>${user.email}</p> </div>
             
 
 
