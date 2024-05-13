@@ -51,7 +51,14 @@ function validateForm(event) {
 
 
 
-
+function openDrawer() {
+  document.getElementById("myTab").style.width = "350px";
+  document.getElementById("dashboard").style.marginLeft = "0px";
+}
+function closeDrawer() {
+  document.getElementById("myTab").style.width = "0";
+  document.getElementById("dashboard").style.marginLeft= "0";
+}
 function showsidebar(){
   const hyi=document.querySelector('.hyi')
   hyi.style.display='flex'
@@ -221,6 +228,18 @@ function submitForm10() {
   //closeDialog();
   window.open(`./Transaction.html`, "_self");
 }
+
+
+function submitForm11() {
+  const inputField=document.getElementById('myInput');
+
+inputField.addEventListener('click', function() {
+
+  window.open(`./search.html`, "_self");
+})
+}
+
+
 function myFunction() {
   var x = document.getElementById("myTab");
   if (x.className === "tab") {
@@ -679,10 +698,10 @@ document.getElementById("test1").innerHTML = users.map(user => {
     <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;"><p>${user.verified}</p></div>
     </div>
     <div class="test1hash">
-        <div style="display: flex;flex-direction: row;gap:5px;margin-left:8px;"> 
+        <div class="userdiv1"> 
         <img src="./images/call.png"  class="test1img" />  
             <p class="test1p">${user.contact}</p></div>
-            <div style="display: flex;flex-direction: row;margin-top:8px;gap:5px;margin-left: 8px;">
+            <div class="userdiv2">
             <img src="./images/mail.png"  class="test1img"/>  
                <p class="test1p">${user.email}</p></div>
 
@@ -717,10 +736,10 @@ users.forEach(user => {
     <p>${user.verified}</p></div>
     </div>
     <div class="test1hash">
-    <div style="display: flex;flex-direction: row;gap:5px;margin-left:8px;"> 
+    <div class="userdiv1"> 
     <img src="./images/call.png"  class="test1img" />  
         <p class="test1p">${user.contact}</p></div>
-        <div style="display: flex;flex-direction: row;margin-top:8px;gap:5px;margin-left: 8px;">
+        <div class="userdiv2">
         <img src="./images/mail.png"  class="test1img"/>  
            <p class="test1p">${user.email}</p></div>
 
@@ -746,7 +765,7 @@ document.getElementById("test3").innerHTML = users.map(user => {
   <div style="display: flex;flex-direction: row;gap:5px;margin-left:8px;"> 
     <img src="./images/call.png"  class="test1img" />  
         <p class="test1p">${user.contact}</p></div>
-        <div style="display: flex;flex-direction: row;margin-top:8px;gap:5px;margin-left: 8px;">
+        <div style="display: flex;flex-direction: row;gap:5px;margin-left: 8px;">
         <img src="./images/mail.png"  class="test1img"/>  
            <p class="test1p">${user.email}</p></div>
 
@@ -764,7 +783,7 @@ document.getElementById("test3").innerHTML = users.map(user => {
 
 document.getElementById("test4").innerHTML = users.map(user => { 
   return `<div class="div4">
-    <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;">
+    <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;gap:10px;">
     <p style="font-weight: 700;color: #000000;">${user.name}</p>
     <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
     <p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
@@ -772,10 +791,7 @@ document.getElementById("test4").innerHTML = users.map(user => {
     <div class="test1hash3">
 
         <div style="display: flex;flex-direction:row;margin-left: 12px;gap:5px;"> <img src="./images/call.png"   class="test1img"/> <p class="test1p">${user.contact}</p> </div>
-        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"   class="test1img"/> <p class="test1p">${user.email}</p> </div>
-            
-
-
+        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"   class="test1img"/> <p class="test1p">${user.email}</p> </div>  
     </div>
     <div class="test2prof">Assign To Self</div>
 
@@ -814,9 +830,14 @@ document.getElementById("test5").innerHTML = users.map(user => {
 
 document.getElementById("test6").innerHTML = users.map(user => { 
   return `<div class="div1">
-    <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;color:#000000;font-weight: 700;">
-    <p>${user.name}</p><p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
-    <div class="test1hash">
+  <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;gap:10px;">
+  <p style="font-weight: 700;color: #000000;">${user.name}</p>
+  <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
+  <p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
+  </div>
+
+   
+    <div class="test5hash">
         <div style="display: flex;flex-direction:row;margin-left: 12px;gap:5px;"> <img src="./images/call.png"  width="15px" height="15px"/> <p class="test1p">${user.contact}</p> </div>
         <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p class="test1p">${user.email}</p> </div>
             
@@ -874,7 +895,7 @@ document.getElementById("table-body4").innerHTML =users.map(item => `
     <td>June 9th,2020. 9:46pm</td>
     <td>June 9th,2020. 9:46pm</td>
     <td >
-      <div style="background-color: #FA6230;color: #FFFFFF;margin-top: 3px;height: 25px;text-align: center;padding-top: 5px;border-radius: 4px;">View Beneficiaries</div>
+      <div class="tablebtn">View Beneficiaries</div>
 
     </td>
 </tr>

@@ -1,361 +1,884 @@
 
-@media (max-width: 800px){
+/*@media (max-width: 400px)*/
+@media only screen and  (max-width: 400px) {
   
-.test2main{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  border-radius: 8px;
-  height: 210px;
-  margin-top:15px;
-  width:100%;
+.adminrow{
+  display: flex;flex-direction:column;gap: 10px;height: 210px;margin-top: 15px;flex-wrap: wrap;
 }
-  #table-body3{
-    border: 1px solid #DEDEDE;
-    border-radius: 4px;
-    width: 100%;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 10px;
-  }
-  #table-body4{
-    border: 1px solid #DEDEDE;
-    border-radius: 4px;
-    width: 100%;
-    margin-top: 20px;
-    text-align: center;
+  .divinside1 .no{
     font-size: 12px;
+    font-weight: 700;
+    color: #000000;
+ }
+.divd{
+  background-color: #FFFFFF;
+  width:23%;
+  height: 210px; 
+  text-align: center;
+   border-radius: 8px;
+  border:1px solid #DEDEDE;margin:3px;
+}
+
+  .logout{
+    background-color:   #FEE0D6;border-radius: 8px;width: 287px;height: 80px;font-weight: 700;color: #EA0000;margin-top: 20px; display: flex;flex-direction: row;padding-left: 15px;padding-top: 18px;
   }
-    table { 
-     border-collapse: collapse; 
-     width: 100%; 
-   } 
-   
-   th, td { 
-     text-align: left; 
-     padding: 8px; 
-   } 
-   
-   tr:nth-child(even) { 
-     background-color: #DEDEDE; 
-   } 
-   .container{
-font-size: 28px;
-   }
-   .staffcontainer{
-    font-size: 28px;
-   }
-    .staffhash{background-color: #F6F8FA;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        width: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 200px;
-        border-radius: 4px;
-        height: 50px;
-      
-        
-    }
-     
-    .test3div{
-       background-color: #F6F8FA;
-       margin-top: 25px;
-       margin: 13px;
-       width: 110px;
-       display: flex;
-       flex-direction: column;
-       justify-content: space-between;
-      }
-     .test4div3{
-       background-color: #F6F8FA;
-       height: 25px;
-       width: 119px;
-       color:#FA6230;margin: 10px;
-      }
-      .test4div2{
-       background-color: #FA6230;
-       height: 20px;width:119px;color:#FFFFFF;
-       margin: 10px;border-radius: 4px;
-      }
-     .test4div{
-       display: flex;
-       flex-direction: column;
-       background-color: #F6F8FA;
-        margin: 10px;border-radius: 4px;
-        width: 119px;
-        height:60px;
-      }
-     .test5div{
-       background-color: #FDE6E6;
-       height: 25px;
-       width:120px;
-       color:#EA0000;
-       margin: 10px;
-      }
-      .test5div2{
-       background-color: #FA6230;
-       height: 25px;
-       width:120px;
-       color:#FFFFFF;
-       margin: 10px;
-      }
-   .dashtext{
-     font-size: 13px;
-     color:#444748;
-     margin-top: 0px;
-     white-space: nowrap;
-   }
-   .test2prof{
-     background-color: #FA6230;
-     height: 20px;
-     width:125px;
-     color:#FFFFFF;
-     margin: 10px;
-     border-radius: 4px;
-      cursor: pointer;}
-    .test2div{
-     display: flex;
-     flex-direction: column;
-     background-color: #F6F8FA;
-      margin: 10px;
-      border-radius: 4px;
-     width: 125px;
-     height:60px;
-    }
-   .test1img{
-     width: 10px;
-     height: 10px;
-   }
-     .test1p{
-       font-size: 8px;
-     }
-     .test1hash{
-     width: 125px;
-     height:50px;
-     background-color: #F6F8FA;
-     
-   
-     }
-     .test1div{width: 47%;background-color: #FFFFFF;}
-     .test1prof{
-       background-color: #FA6230;
-       height: 18px;
-       width:125px;
-       font-weight: 700;
-       font-size: 10px;
-     color: #FFFFFF;}
-     .tab{
-     background-color: #E0E0E0;
-     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    height: 69px;
-     
-   
-     }
-     .tab .flexcontainer {
-   width: 90px;
-   color: #000000;
-   list-style: none;
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
-   margin-top: -20px;
-   
-     }
-     .tab .menu {
-      
-       margin-left: 700px;
-       margin-top: -30px;
-       display: flex;
-   cursor: pointer;
-   
-   
-   
-     }
-     .flexcontainer1{
-       margin-top: 60px;
-      display: flex;
-      flex-direction: row;
-       width: 100%;
-       height: 69px;
-       background-color: #FFFFFF;
-     }
-     .search{
-       margin-left: 322px;
-    
-     }
-     .searc{
-       margin-left:90px;
-     }
-     .search1{
-       margin-left: 338px;
-     }
-     .search3{
-    margin-left: 225px;    }
-     .search4{
-      margin-left: 298px;
-    }
-     .search5{
-      margin-left: 235px;
-    }
-     .search8{
-      margin-left: 335px;
-    }
-    
-    .search9{
-      margin-left: 310px;
-    }
-    
-    .search10{
-      margin-left: 195px;
-    }
-    
-    .search11{
-      margin-left: 209px;
-    }
-    
-    .search12{
-      margin-left: 250px;
-    }
-    
-    .search13{
-      margin-left: 225px;
-    }
-    
-    .search14{
-      margin-left: 5px;
-    }
-    .modal{
-      margin-top: -509px;
-      margin-left: -19px;
-     
-    }
-    .modal2{
-      margin-top: -929px;
-      margin-left: -19px;
-     
-    }
-
-    .modal3{
-      margin-top: -544px;
-      margin-left: -19px;
-     
-    }
-    .modal-content{
-      margin-left: 210px;
-      margin-top: 45px;
-      width: 50%;
-      height: 80%;
-    }
-    
-    .modal-content3{
-      margin-left: 210px;
-      width: 50%;
-      margin-top: 15px;
-      height: 90%;
-    }
-     .hyi{
-       position: fixed;
-        width: 50%;
-      height: 100%;
-       background-color: #E0E0E0;
-       top: 0;
-       right:0;
-       display: none;
-       transition: all .5s;
-       flex-direction: column;
-       overflow: scroll;
-       
-      
-     }
-     .tab .div{
-       width: 500px;
-       margin-left: 0px;
-       height: 100%;
-       color: #000000;
-      
-       
-     }
-     nav button{
-       font-size: 20px;
-     }
-     .tabcontent{
-       width: 100%;
-       height: 100%;
-   
-     }
-     
-     .AccountOverview{
-       width: 100%;
-       height: 100px;
-   
-     }
-     .insidediv{
-       width: 50;
-     }
-     .insidedivs{
-       width: 165px;
-      
-     }
-     .imgcenter{
-       width: 25px;
-       height: 25px;
-     }
-     
-   .divp{
-     font-size: 6px;
-   color: 
-   #444748;
-   }
-   .hourdiv{
-    background-color: #FFFFFF;
-    margin-left: 39px;
-   }
-   .divinside .no{
-      font-size: 12px;
-   }
-   .angle-down{
-    margin-left: 89px;
-   }
-
-
+.searchicon{
+  display: flex;
+  overflow:visible;
+  margin-top: 5px;
+  margin-left: -15px;
   
-   .div .tablinks {
-    display: flex;
-  flex-direction: row;
-    color: #414141;
-    padding: 22px 16px;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 17px;
+}
+.date{
+  background-color: #DEDEDE;height: 30px;width: 120px;padding-top: 10px; padding-left: 15px;border-radius: 5px;font-size: 12px;
+}
+.tab2 {
+  display: flex;flex-direction: row;
+  width:100%;
+  height: 36px ;
+  margin-top: 20px;
+  border-radius: 4px;
+  border: 1px solid #D0D0D0;
+}
+.tab2 div {
+    
+  display: flex;flex-direction: row;
+  background-color: #FFFFFF;
+border-radius: 4px;
+  border: 1px solid #D0D0D0;
+  color: #414141;
+  height:36px ;
+ padding-left: 12px;
+ padding-right: 12px;
+  width: 25%;
+  outline: none;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 9px;
+
+}
+/* Change background color of buttons on hover */
+.tab2 div:hover {
+  background-color: #ddd;
+  color: #414141;
+  width: 25%;
+  height:36px ;
+  border-radius: 4px;
+
+}
+/* Create an active/current "tab button" class */
+.tab2 div.active {
+  background-color:#FA6230;
+  color:#FFFFFF;
+  width: 25%;
+  height:36px ;
+ border-radius: 4px;
+}
+
+/* Style the tab content */
+.tabcontent2 {
+ margin-top: 50px;
+ margin-left: 0px;
+  padding:  12px;
+  width: 100%;
+  background-color: #FFFFFF;
+  
+}
+  .contentbtn{
+    background-color: #FA6230;
+    color: #FFFFFF;
+    margin-top: 25px;
+    height: 30px;
+    text-align: center;
+    width: 130px;
+    font-size: 12px;
+    padding-top: 10px;
+    border-radius: 4px;
   }
-  /* Change background color of buttons on hover */
-  .div .tablinks:hover {
-    background-color: #ddd;
-    width:50%;
-    height:64px ;
-    border-radius: 8px;
-    font-size: 16px;
-    color: #414141;
-    font-size: 17px;
-  }
-  /* Create an active/current "tab button" class */
-  .div .tablinks.active {
-    background-color:#FA6230;
+  
+.divinside{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 5px;
+  margin-top: 15px;
+  
+}
+
+
+.divinside1{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 5px;
+  margin-top: 15px;
+  
+}
+  .modal2btn{
+    background-color: #FA6230;
     color:#FFFFFF;
-    width:50%;
-    height:64px ;
-    border-radius: 8px;
+    border: 0px;height: 30px;
+    width: 90px;
+    margin-top: 20px;
+    margin-left: 160px;
+    border-radius: 4px;
+  }
+  .modal7btn{
+    background-color: #FA6230;
+    color:#FFFFFF;
+    border: 0px;height: 30px;
+    width: 90px;
+    margin-top: 50px;
+    margin-left: 115px;
+    border-radius: 4px;
+  }
+  .modal4btn{
+    background-color: #FA6230;
+    color:#FFFFFF;
+    border: 0px;
+    height: 30px;
+    width: 90px;
+    margin-top: 20px;
+
+    border-radius: 4px;
+  }
+  .modal3imginput  {
+    display: flex;flex-direction:column;
+    padding-left: 15px;
+    padding-top: 20px;gap: 10px;
+  }
+  .modalhd{
+    color: #000000;padding: 15px;
     font-size: 16px;
   }
-  
-.tab .close{
-    display: flex;
+  .modal3btn{
+    background-color: #FA6230;
+    color:#FFFFFF;
+    border: 0px;
+    height: 30px;
+    width: 90px;
+    margin-top: 20px;
+    margin-left: 110px;
+    border-radius: 4px;
   }
-   }
+  
+  .modal4btn{
+    background-color: #FA6230;
+    color:#FFFFFF;
+    border: 0px;
+    height: 30px;
+    width: 90px;
+    margin-top: 20px;
+    margin-left: 110px;
+    border-radius: 4px;
+  }
+  .test1pp{
+    font-size: 9px;
+  }
+  .test1pp1{
+font-size: 9px;
+  }
+  
+  .test5hash{
+    width: 120px;
+    margin-left: 8px;
+    height:40px;
+    background-color: #F6F8FA;
+    
+  
+    }
+.input5 {
+  width: 180%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #B4B5B6;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #B4B5B6;
+  background-color: #FFFFFF;
+  background-position: 290px 15px; 
+  background-repeat: no-repeat;
+  padding: 20px ;
+  line-height: 37px;
+  background-image: url('./images/expand_more\ \(1\).png');
+  background-size: 8px 8px;
+}
+
+insided{
+  display: flex;
+  flex-direction: column;
+}
+
+  .insidedivs1{
+    margin-top: -18px;
+    border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+    height: 55px;
+   width: 49%;
+  
+  }
+  .admins{
+    height: 210px;
+    width: 48.4%;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .staffdiv{
+    display: flex;flex-direction:row;gap: 10px;height: 210px;margin-top: 15px;
+  }
+  .hourdiv{
+    width: 200px;
+    height: 30px;
+    margin-left: 20px;
+  }
+.btcdiv{
+height: 175px;background-color: #FFFFFF;border-radius: 8px;padding: 10px;margin-top: 15px;margin-left: 5px;margin-right: 5px;
+       margin-bottom: 5px;
+}
+  
+  .productdetailimg{
+    border-radius: 90%;width: 80px;height: 80px;margin-top: 15px;
+  }
+  .productdetailhash{
+    display: flex;
+    flex-direction:column;
+    background-color:#F6F8FA;
+    margin-top:20px; 
+     border-radius: 4px;
+     width: 240px;
+    height: 80px;
+  }
+  .deactive{background-color: #EA0000;margin-left: -40px;margin-top: 110px;width: 60px;height: 20px;border-radius: 4px;padding-top:10px;padding-left:5px;
+  }
+  .deactive p{font-size: 10px;}
+  
+ table { 
+  border-collapse: collapse; 
+  width: 100%; 
+  
+} 
+
+th, td { 
+  text-align: left; 
+  padding: 5px; 
+  font-size: 10px;
+} 
+
+tr:nth-child(even) { 
+  background-color: #DEDEDE; 
+} 
+  .staffhash{background-color: #F6F8FA;
+    margin-top: 25px;
+    margin: 15px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    justify-content: space-between;}
+
+  .modal {
+    display: none; /* Initially hide the modal */
+    position: fixed;
+    margin-top: -600px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin-right: 0%;
+    margin-top: -500px;
+    color: #000000;
+    background: rgba(14, 15, 14, 0.3)
+    
+}
+
+.modal2 {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -870px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -10%;
+  color: #000000;
+  background: rgba(14, 15, 14, 0.3)
+  
+}
+.modal3 {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -494px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -5%;
+  color: #000000;
+  background: rgba(14, 15, 14, 0.3)
+  
+}
+
+
+.modal4 {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -490px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -5%;
+  color: #000000;
+  background: rgba(14, 15, 14, 0.3);
+ 
+  
+}
+.modal-content {
+    background-color: #FFFFFF;
+    width: 60%;
+    height: 80%;border-radius: 8px;
+    margin-left: 70px;
+    margin-top: 50px;
+    color: #000000;
+}
+
+.modal-content3 {
+  background-color: #FFFFFF;
+  width: 60%;
+  height: 80%;border-radius: 8px;
+  margin-left: 70px;
+  margin-top: 50px;
+  color: #000000;
+}
+
+.modal-content4 {
+  background-color: #FFFFFF;
+  width: 60%;
+  height: 80%;border-radius: 8px;
+  margin-left: 70px;
+  margin-top: 50px;
+  color: #000000;
+  overflow: scroll;
+  padding-bottom: 10px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 15px;
+  }
+.staffcontainer{
+  display: flex;
+  width: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 15px;
+  }
+  label{
+    white-space: nowrap;
+  }
+.div0{
+  background-color: #FFFFFF;
+  height: 250px;
+  max-width: 165px;
+   text-align: center;
+   border-radius: 8px;
+  border:1px solid #DEDEDE;
+  margin:3px;
+}
+
+.div1{
+  background-color: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  max-width: 195px;
+  height: 150px; 
+  text-align: center;
+   border-radius: 8px;
+  border:1px solid #DEDEDE;
+  margin:3px;
+  
+}
+.input {
+  width: 200%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 2px solid #EEF0F5;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #F6F8FA;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px 12px 40px;
+ 
+
+
+}
+
+.input2 {
+  width: 200%;
+  height: 150px;
+  box-sizing: border-box;
+  border: 2px solid #EEF0F5;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #B4B5B6;
+  background-color: #FFFFFF;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+ 
+
+
+}
+
+ .test2divs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top:10px;
+  text-align: center;
+  width: 48%;
+ }
+.user{
+  
+  width: 100%;
+  background-color:#F6F8FA;
+  border-radius: 8px;
+  padding: 10px;
+  overflow: scroll;
+  height: 120px;
+}
+
+.userdiv1{
+  display: flex;flex-direction: row;gap:5px;margin-left:8px;margin-top: 4px;
+}
+.userdiv2{
+  display: flex;flex-direction: row;margin-bottom:3px;gap:5px;margin-left: 8px;
+}
+.minigiftcard{
+  height:120px;
+  width: 100%;
+  background-color:#F6F8FA;
+  border-radius: 8px;
+    padding: 10px;
+}
+.div3{
+  width: 100%;
+  background-color:#F6F8FA;
+  border-radius: 8px;
+  padding: 10px;
+}
+  .div2{
+    width: 100%;
+    background-color:#F6F8FA;
+    border-radius: 8px;
+    padding: 10px;
+    height: auto;
+  
+}
+.maindiv{
+  display: flex;
+  flex-direction:column;
+  gap: 10px;
+ 
+  
+  }
+  .minidiv1{
+    width: 100%;
+    background-color:  #F6F8FA;
+    border-radius: 8px;
+    padding: 10px;
+    height: auto;
+
+  }
+  .test3div{
+   background-color: #F6F8FA;
+   margin-top: 25px;
+   margin: 13px;
+   width: 110px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+  }
+ .test4div3{
+   background-color: #F6F8FA;
+   height: 25px;
+   width: 119px;
+   color:#FA6230;margin: 10px;
+  }
+  .test4div2{
+   background-color: #FA6230;
+   height: 20px;width:119px;color:#FFFFFF;
+   margin: 10px;border-radius: 4px;
+  }
+ .test4div{
+   display: flex;
+   flex-direction: column;
+   background-color: #F6F8FA;
+    margin: 10px;border-radius: 4px;
+    width: 119px;
+    height:60px;
+  }
+ .test5div{
+   background-color: #FDE6E6;
+   height: 25px;
+   width:140px;
+   color:#EA0000;
+   margin: 10px;
+  }
+  .test5div2{
+   background-color: #FA6230;
+   height: 25px;
+   width:140px;
+   color:#FFFFFF;
+   margin: 10px;
+  }
+.dashtext{
+ font-size: 13px;
+ color:#444748;
+ margin-top: 0px;
+ white-space: nowrap;
+}
+.test2prof{
+ background-color: #FA6230;
+ height: 20px;
+ width:110px;
+ color:black;
+ margin: 10px;
+ border-radius: 4px;
+  cursor: pointer;}
+.test2div{
+ display: flex;
+ flex-direction: column;
+ background-color: #F6F8FA;
+  margin: 10px;
+  border-radius: 4px;
+ width: 125px;
+ height:60px;
+}
+
+.test1{
+  display: flex;flex-wrap: wrap;border-radius: 8px;overflow:hidden;height: 230px;margin-top: 15px;overflow: scroll;
+}
+.test1img{
+ width: 10px;
+ height: 10px;
+}
+ .test1p{
+   font-size: 8px;
+ }
+ 
+.test2hash{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #F6F8FA; 
+  margin: 12px;
+ 
+  padding-left: 6px;
+ 
+  border-radius: 4px;
+  width: 130px; 
+  justify-content: center;
+  text-align: center;
+  height:50px;
+  
+  
+
+}
+ .test1hash{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+ width: 125px;
+ height:50px;
+ padding-top: 10px;
+ margin-left: 15px;
+ background-color: #F6F8FA;
+
+ }
+ .test1div{width: 47%;background-color: #FFFFFF;
+height: 150px;}
+ .test1prof{
+   background-color: #FA6230;
+   height: 23px;
+   width: 125px;
+   font-weight: 700;
+   margin-left: 15px;
+  color: #FFFFFF;
+justify-content: center;
+align-items: center;}
+
+ .tab{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: -50px;
+  background-color: #E0E0E0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+ }
+ .flexcontainer {
+
+color: #000000;
+list-style: none;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+margin-top: -20px;
+
+ }
+ .menu {
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -20px;
+  margin-top: -20px;
+  padding: 10px;
+  height: 70px;
+  width: 111%;
+  background-color: #E0E0E0;   
+ }
+ .flexcontainer1{
+   margin-top: 60px;
+  
+   width: 100%;
+   height: 69px;
+ }
+ .search{
+   margin-left: 100px;
+   width: 90px;
+   font-size: 10px;
    
+   
+ }
+ .searc{
+   margin-left:90px;
+   font-size: 10px;
+  
+ }
+ .search1{
+   margin-left: 95px;
+   width: 90px;
+   font-size: 10px;
+  
+ }
+ 
+ .search3{
+  margin-left: 195px;
+  width: 90px;
+  font-size: 10px;
+ 
+}
+ .search4{
+  margin-left: 200px;
+  width: 90px;
+  font-size: 10px;
+ 
+}
+
+.search5{
+  margin-left: 195px;
+  width: 90px;
+  font-size: 10px;
+}
+ .search8{
+  margin-left: 95px;
+  width: 90px;
+  font-size: 10px;
+}
+
+.search9{
+  margin-left: 200px;
+  width: 90px;
+  font-size: 10px;
+}
+
+.search10{
+  margin-left: 195px;
+  width: 90px;
+  font-size: 10px;
+}
+.search11{
+  margin-left: 195px;
+  width: 90px;
+  font-size: 10px;
+}
+
+.search12{
+  margin-left: 195px;
+  width: 90px;
+  font-size: 10px;
+}
+
+.search13{
+  margin-left: 195px;
+  width: 90px;
+  font-size: 10px;
+}
+
+.search14{
+  margin-left: 195px;
+  width: 90px;
+  font-size: 10px;
+}
+.search16{
+  margin-left: 90px;
+  width: 90px;
+  font-size: 10px;
+}
+.search17{
+ margin-left: 118px;
+ width: 90px;
+}
+.search18{
+  margin-left: 115px;
+  width: 90px;
+  font-size: 10px;
+}
+.search19{
+  margin-left: 115px;
+  width: 170px;
+  font-size: 10px;
+}
+
+
+.input4 {
+  width: 200%;
+  height: 80px;
+  border: 2px solid #EEF0F5;
+
+  border-radius: 4px;
+  font-size: 16px;
+  color: #B4B5B6;
+  background-color: #FFFFFF;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 14px;
+ 
+}
+ .div .tablinks:hover {
+  background-color: #ddd;
+  width:100%;
+  height:64px ;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #414141;
+  font-size: 17px;
+}
+/* Create an active/current "tab button" class */
+.div .tablinks.active {
+  background-color:#FA6230;
+  color:#FFFFFF;
+  width:100%;
+  height:64px ;
+  border-radius: 8px;
+  font-size: 17px;
+}
+
+ .tab .div{
+  padding: 10px 56px;
+  margin-left: 0px;
+   height: auto;
+   color: #000000;
+   
+ }
+ nav button{
+   font-size: 20px;
+ }
+ .tabcontent{
+   width: 100%;
+   height: 100%;
+
+   padding-bottom: 5px;
+  
+
+ }
+ .AccountOverview{
+   width: 100%;
+   height: 100px;
+
+ }
+ insidediv{
+  grid-template-columns: repeat(1, 1fr); /* Two columns on smaller screens */
+
+   
+ }
+ .imgcenter{
+  margin-top: 15px;
+  margin-left: 5px;
+   width: 25px;
+   height: 25px;
+ }
+
+ 
+ .imgcenter1{
+   width: 25px;
+   height: 25px;
+ }
+ 
+.divp{
+ font-size: 6px;
+
+}
+
+.divp1{
+  font-size: 8px;
+  white-space: nowrap;
+ }
+ .table-container  {
+ 
+  width: 100%;
+  padding: 10px;
+  overflow: scroll;
+  height: auto;
+}
+
+
+
+.renvbtn{
+  background-color: yellow;color: #000000;height: 35px;text-align: center;width: 180px;padding-top: 10px;border-radius: 4px;margin-top: 15px;
+}
+     .renvp{
+      color: #000000;margin-top: 50px;font-size: 8px;
+     }
+     .renvdiv{
+      display: flex;flex-direction: row;margin-left: 140px;margin-top: 10px;gap: 5px;
+font-size: 8px;  }
+    
+     
+ .renvdiv2{
+  display: flex;flex-direction:row;margin-left: 0px;margin-top: 10px;font-size: 8px;
+ }
+
+ 
+.test1hash3{
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F8FA; 
+ 
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 4px;
+  width: 120px; 
+  justify-content: center;
+  text-align: center;
+  height:45px;
+  
+}
+
+}
+

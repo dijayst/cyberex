@@ -12,7 +12,7 @@ document.getElementById("test7").innerHTML = users.map(user => {
                <p style="color:#414141; font-size: 12px;white-space: nowrap;">exchange per unit (CAD/naira)</p></div>
 
     </div>
-    <div class="test5div2" onclick="submitForm6()">Edit Country</div>
+    <div class="test5div3" onclick="submitForm6()">Edit Country</div>
     
 
   </div>`;

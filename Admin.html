@@ -27,26 +27,20 @@
                 
                </div>
        <div class="angle-down">
-        <i class="fa-solid fa-angle-down">u</i>
+        <i class="fa-solid fa-angle-down fa-1x"></i>
     </div>
-      
            </div>
       
        
         </div>
 
 
-        <div class="menu" onclick="showsidebar()">
-            <i class="fa-solid fa-bars">m</i>
-        </div>
-        
+       
            
        
-      <div class="hyi">
-        
-        <div  class="close" onclick="hidesidebar()"><i class="fa-solid fa-xmark">x</i></div>
+        <div  class="close" onclick="closeDrawer()"><i class="fa-solid fa-xmark fa-1x"></i></div>
       
-        <div style="gap: 15px;margin: 40px 0px 0px 0px;">
+        <div class="header">
             <p style="color: #414141;font-size: 20px;font-weight: 500;" >General</p>
         </div>
 
@@ -80,9 +74,7 @@
             </div>
 
 
-         
-            
-        <div style="gap: 15px;margin: 40px 0px 0px 0px;">
+        <div class="header">
             <p style="color: #414141;font-size: 20px;font-weight: 500;" >Giftcard</p>
         </div>
         <div class="div">
@@ -99,7 +91,7 @@
                  </div>
         
                  
-        <div style="gap: 15px;margin: 40px 0px 0px 0px;">
+        <div class="header">
             <p style="color: #414141;font-size: 20px;font-weight: 500;">Admin & Others</p>
         </div>
 
@@ -126,17 +118,23 @@
             <div style="margin-left: 10px;margin-top: 2px;">Staff Management</div>
              </div> 
         </div>
-           <div style="background-color:   #FEE0D6;border-radius: 8px;width: 287px;height: 60px;font-weight: 700;color: #EA0000;margin-top: 20px; display: flex;flex-direction: row;padding-left: 15px;padding-top: 18px;">  
+           <div class="logout">  
             <img src="./images/chip_extraction.png" width="22px" height="22px" />
       <div style="margin-left: 10px;margin-top: 2px;">Log Out</div></div>
         
         
-      </div>
 
       </nav>
   
-
+    
   <section id="dashboard" class="tabcontent">
+    
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
+
     <div class="flexcontainer1" >
         <div class="container"><p>Dashboard</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -144,10 +142,7 @@
           
            
            <input class="search" placeholder="Search" />
-        
-         
-         
-    </div>
+     </div>
 
     <div class="AccountOverview" >
             <div class="maindiv">
@@ -206,6 +201,7 @@
             </div>
               </div>
     </div>
+
     <div class="minidiv1">
         <div style="display: flex;flex-direction: row; padding: 10px;margin-top: 15px;">
             <div style="display: flex;flex-direction: column;gap: 5px;" >
@@ -226,8 +222,7 @@
             
         </div>
         
-       <div style="width: 450px;height: 175px;background-color: #FFFFFF;border-radius: 8px;padding: 10px;margin-top: 15px;margin-left: 5px;margin-right: 5px;
-       margin-bottom: 5px;"></div>
+       <div class="btcdiv"></div>
         
 
     </div>
@@ -237,8 +232,8 @@
         <div style="display: flex;flex-direction: row;justify-content: space-between;margin-top: 15px;" >
             <p style="color: #414141;font-weight: 700;">Staff Management </p> <p style="color: #FA6230;">See all</p>
         </div>
-            <div style="display: flex;flex-direction:row;gap: 10px;height: 210px;margin-top: 15px;">
-                <div style="height: 230px;width: 50%;background-color: #FFFFFF;border-radius: 4px;text-align: center;">
+            <div class="adminrow">
+                <div class="admins">
                     <img src="./images/33fe647a46f9bf668322f8c1d94ed937.png"  style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/>
                     <p style="color: #000000;font-weight: 700;">Admin1</p>
                     <div class="staffhash"> 
@@ -254,7 +249,7 @@
                     </div>
                   
             </div>
-            <div style="height: 230px;width: 50%;background-color: #FFFFFF;border-radius: 4px;text-align: center;">
+            <div class="admins">
                 <img src="./images/Frame 1000003225.png" style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/> 
               <p style="color: #000000;font-weight: 700;">Admin2</p>
               <div class="staffhash"> 
@@ -283,7 +278,7 @@
       <div style="display: flex;flex-direction: row;justify-content: space-between;margin-top: 15px;">
           <p style="color: #414141;font-weight: 700;">Users </p> <p style="color: #FA6230;">See all</p></div>
       
-          <div id="test1" style="display: flex;flex-wrap: wrap;border-radius: 8px;overflow:hidden;height: 230px;margin-top: 15px;">
+          <div id="test1" class="test1">
            
 </div>
   
@@ -302,15 +297,15 @@
     
     <div style="display: flex;flex-direction: row;height: 210px;margin-top: 30px;">
     <div class="insidedivs1">
-        <img src="./images/Frame 1000003447 (4).png" class="imgcenter"/>
-        <div class="divinside"> 
-         <p class="divp">Giftcard Trades (Transactions)</p>
+        <img src="./images/Frame 1000003447 (4).png" class="imgcenter1"/>
+        <div class="divinside1"> 
+         <p class="divp1">Giftcard Trades (Transactions)</p>
          <p class="no" >500</p></div>
   </div>
     <div class="insidedivs1">
-        <img src="./images/Frame 1000003447 (4).png" class="imgcenter"/>
-        <div class="divinside"> 
-         <p class="divp">Giftcard Volume</p>
+        <img src="./images/Frame 1000003447 (4).png" class="imgcenter1"/>
+        <div class="divinside1"> 
+         <p class="divp1">Giftcard Volume</p>
          <p class="no">₦12,157,108.79</p></div>
   </div>
     </div>
@@ -352,6 +347,13 @@
 
   
   <section id="account" class="tabcontent">
+    
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
+
     <div class="flexcontainer1" >
         <div class="container"><p>Users</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -371,6 +373,14 @@
 
 
     <section id="payments" class="tabcontent">
+
+        
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
+
         <div class="flexcontainer1" >
             <div class="container"><p>Deposit</p>
                 <p class="dashtext">Wed 7th March, 2024</p>
@@ -381,7 +391,7 @@
         </div>
         <h4  style="margin-top: 50px;color: #000000;" >Record New Deposit</h4>
 
-        <form id="myForm" onsubmit="return validateForm(event)" style=" height: 90%;width: 50%;margin-top: 50px;">
+        <form id="myForm" onsubmit="return validateForm(event)" style=" height: 90%;width: 50%;margin-top: 50px;padding: 20px;">
             <div style="display: flex;flex-direction: column;margin-top: 22px;">
             <label style="color: #000000;line-height: 27px;font-size: 12px;font-weight: 700;">Bank Name</label>
             <input type="text" id="bankname" name="title" required placeholder="name of the bank" class="input5">
@@ -420,6 +430,11 @@
 
   <section id="debit" class="tabcontent">
 
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>Debit Order</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -428,7 +443,7 @@
          
          
     </div>
-    <div style="background-color: #FA6230;color: #FFFFFF;margin-top: 25px;height: 40px;text-align: center;width: 200px;padding-top: 10px;border-radius: 4px;">Initiate Debit Order</div>
+    <div class="contentbtn">Initiate Debit Order</div>
   
   <table style="border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;text-align: center;">
     <thead style="gap: 5px;height: 50px;">
@@ -448,6 +463,13 @@
 
   
   <section id="history" class="tabcontent"> 
+
+    
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>All Transfers</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -458,7 +480,8 @@
          
          
     </div>
-    
+
+    <div class="table-container">
     <table  style="border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 20px;text-align: center;font-size: 12px;">
     <thead style="height: 50px;">
         <tr  >
@@ -477,11 +500,23 @@
         <!-- Table body will be generated dynamically -->
     </tbody>
 </table>
+    </div>
+
+
 </section>
 
 
   
-  <section id="bookmark" class="tabcontent">
+  <section id="bookmark" class="tabcontent" >
+
+    
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
+
+
      <div class="flexcontainer1" >
         <div class="staffcontainer"><p>Giftcard Manager</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -492,7 +527,7 @@
          
     </div>
     
-    <div style="background-color: #FA6230;color: #FFFFFF;margin-top: 25px;height: 40px;text-align: center;width: 200px;padding-top: 10px;border-radius: 4px;" onclick="openDialog()">Support New Company</div>
+    <div class="contentbtn" onclick="openDialog()">Support New Company</div>
   
   <div style="display: flex;flex-direction: row;margin-top: 15px;" >
     <h4>Supported Giftcard Companies</h4>
@@ -501,14 +536,14 @@
     </div>
 </div>
   
-  <div id="test5" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;height: 210px;margin-top:15px;width:100%;">
+  <div id="test5" style="display: flex;flex-wrap: wrap;border-radius: 8px;height: 210px;margin-top:15px;">
   </div> 
   
     <div id="myModal" class="modal3">
         <div class="modal-content">
-            <span class="close" onclick="closeDialog()">&times;</span>
-            
-            <h2 style="color: #000000;padding: 15px;">Support New Giftcard</h2>
+            <div  class="close" onclick="closeDialog()"><i class="fa-solid fa-xmark fa-1x"></i></div>
+      
+            <h2 class="modalhd">Support New Giftcard</h2>
             <hr style="width: 100%;background-color: red;"/>
             <form id="myForm" onsubmit="return false;" style=" padding: 20px;">
                 <div style="display: flex;flex-direction: column;">
@@ -519,14 +554,14 @@
                     <label style="color: #000000;font-weight: 700;line-height: 27px;font-size: 12px;">Image/Logo</label>
                     <div  style="background-color: #FFFFFF;width: 100%;height: 120px;border: 1px solid #B4B5B6;border-radius: 4px;">
                     <input type="file" id="image" name="image" accept="image/*" required onchange="previewImage()" >    
-                   <div style="display: flex;flex-direction:column;padding-left: 85px;padding-top: 20px;gap: 10px;">
+                   <div class="modal3imginput">
                      <img src="./images/cloud_upload.png" width="20" height="18" style="margin-left: 55px;"/>
                     <p style="color: #414141;font-size: 12px;" >select image or drag and drop</p>
                 
                 </div>
                 </div>
                 </div>
-                <button onclick="submitForm()" style="background-color: #FA6230;color:#FFFFFF;border: 0px;height: 30px;width: 90px;margin-top: 50px;margin-left: 275px;border-radius: 4px;">Proceed</button>
+                <button onclick="submitForm()" class="modal3btn">Proceed</button>
                 <div id="imagePreview" class="imagePreview"></div>
           
             </form>
@@ -540,6 +575,13 @@
 
 
   <section id="contract" class="tabcontent">
+    
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
+
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>Giftcard Transaction</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -559,7 +601,7 @@
         </div>
      
     <div id="pending" class="tabcontent2" >
-        <div id="test4" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;height: 210px;margin-top:15px;width:100%;">
+        <div id="test4" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;height: 210px;margin-top:15px;">
            
         </div>
     </div>
@@ -569,7 +611,7 @@
         </div>
     </div>
     <div id="resolved" class="tabcontent2"> 
-        <div style="display: flex;flex-direction: row;justify-content: space-between;"><p>Analytics</p> <p>12th March, 2024<i class="fa-solid fa-angle-down"></i></p></div>
+        <div style="display: flex;flex-direction: row;justify-content: space-between;"><p>Analytics</p> <div class="date">12th March, 2024<i class="fa-solid fa-angle-down"></i></div></div>
      <div style="display: flex;flex-direction: row;margin-top: 10px;">
          <p style="margin-top: 20px;"><p style="font-weight: 700;">1</p> Transactions Rejected <p style="font-weight: 700;margin-left: 5px;"> / 50</p>
         Transactions Assigned</p>
@@ -584,7 +626,8 @@
         <div style="display: flex;flex-direction: row;"><div style="background-color:#EA0000;width: 13px;height: 13px;margin-left: 10px;"></div><p>Transaction Failed</p></div>
     </div>
     <h4 style="margin-top: 10px;">Transaction Details</h4>
-    <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
+    <div class="table-container">
+  <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
     text-align: center;font-size: 12px;">
     <thead style="height: 50px;">
         <tr >
@@ -604,8 +647,9 @@
     </tbody>
 </table>
 </div>
+</div>
     <div id="rejected" class="tabcontent2">
-        <div style="display: flex;flex-direction: row;justify-content: space-between;"><p>Analytics</p> <p>12th March, 2024<i class="fa-solid fa-angle-down"></i></p></div>
+        <div style="display: flex;flex-direction: row;justify-content: space-between;"><p>Analytics</p> <div class="date">12th March, 2024<i class="fa-solid fa-angle-down"></i></div></div>
         <div style="display: flex;flex-direction: row;margin-top: 10px;">
             <p style="margin-top: 20px;"><p style="font-weight: 700;">1</p> Transactions Rejected <p style="font-weight: 700;margin-left: 5px;"> / 50</p>
          Transactions Assigned</p></div>
@@ -620,7 +664,8 @@
             <div style="display: flex;flex-direction: row;margin-left: 10px;"><div style="background-color:#EA0000;width: 13px;height: 13px;"></div><p>Transaction Failed</p></div>
         </div>
         <h4 style="margin-top: 10px;">Transaction Details</h4>
-        <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
+        <div class="table-container">
+       <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
         text-align: center;font-size: 12px;">
         <thead style="height: 50px;">
             <tr >
@@ -639,7 +684,7 @@
             <!-- Table body will be generated dynamically -->
         </tbody>
     </table>
-
+</div>
     </div>
 
         </div>
@@ -652,6 +697,12 @@
 
   <section id="featured" class="tabcontent">
     
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
+
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>Promotional Offers</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -661,8 +712,8 @@
          
          
     </div>
-    <div style="background-color: #FA6230;color: #FFFFFF;margin-top: 25px;height: 40px;text-align: center;width: 200px;padding-top: 10px;border-radius: 4px;" onclick="openDialog3()">Create Giveaway</div>
-  
+    <div class="contentbtn" onclick="openDialog3()">Create Giveaway</div>
+    <div class="table-container">
     <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
     text-align: center;font-size: 12px;">
     <thead style="gap: 5px;">
@@ -682,6 +733,7 @@
         <!-- Table body will be generated dynamically -->
     </tbody>
 </table>
+</div>
         
 
 <div id="myModal3" class="modal2">
@@ -710,7 +762,7 @@
                 <input type="text" id="Admin" name="Admin" placeholder="All Users" class="input3">    
             </div>
             
-            <button onclick="submitForm()" style="background-color: #FA6230;color:#FFFFFF;border: 0px;height: 30px;width: 90px;margin-top: 20px;margin-left: 275px;border-radius: 4px;">Proceed</button>
+            <button onclick="submitForm()" class="modal2btn">Proceed</button>
            
         </form>
         </div>
@@ -721,6 +773,14 @@
 
 
   <section id="currency" class="tabcontent">
+
+    
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
+
      <div class="flexcontainer1" >
     <div class="staffcontainer"><p>Exchange Rates</p>
         <p class="dashtext">Wed 7th March, 2024</p>
@@ -764,6 +824,13 @@
 
 
   <section id="finance" class="tabcontent">
+    
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
+
     <div class="flexcontainer1" >
     <div class="staffcontainer"><p>Platform Revenue</p>
         <p class="dashtext">Wed 7th March, 2024</p>
@@ -775,12 +842,12 @@
      
 </div>
 <div style="justify-content: center;text-align: center;">
-    <p style="color: #000000;margin-top: 50px;">₦0.00</p>
-    <div style="display: flex;flex-direction: row;margin-left: 420px;margin-top: 10px;">
+    <p class="renvp">₦0.00</p>
+    <div class="renvdiv">
         <img src="./images/Group.png" width="20" height="20" style="margin-top: 5px;"/>
     <p style="color: #000000;margin-top: 10px;">0.000000000</p>
 </div>
-   <div style="display: flex;flex-direction:row;margin-left: 100px;margin-top: 10px;">
+   <div class="renvdiv2">
      <p style="color: #000000;margin-top: 10px;">Record Above shows revenue between </p> 
      <p style="color: blue; margin-top: 10px;margin-left: 5px;"> 2004-03-03 </p>
      <p style="margin-top: 10px;margin-left: 5px;">and</p>
@@ -790,7 +857,7 @@
     </div>
     </div>
 
-<div style="background-color: yellow;color: #000000;height: 40px;text-align: center;width: 200px;padding-top: 10px;border-radius: 4px;margin-top: 15px;">Show Filter</div>
+<div class="renvbtn">Show Filter</div>
   
 <table id="data-table" style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 25px;text-align: center;height: 50px;">
     <thead >
@@ -813,6 +880,12 @@
 
 
   <section id="notification" class="tabcontent">
+    
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>General Notification To Customers</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -849,6 +922,13 @@
 
 
   <section id="person" class="tabcontent">
+    
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
+
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>Staff Management</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -860,7 +940,7 @@
          
     </div>
      
-     <div style="background-color: #FA6230;color: #FFFFFF;margin-top: 25px;height: 40px;text-align: center;width: 200px;padding-top: 10px;border-radius: 4px;" onclick="openDialog2()">Support New Company</div>
+     <div class="contentbtn" onclick="openDialog2()">Support New Company</div>
   
     <div id="test3" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;height: 210px;margin-top:15px;width:100%;">
            

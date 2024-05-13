@@ -6,6 +6,8 @@
     
     <title>Document</title>
     <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="mobile.css">
+  
     <script src="https://kit.fontawesome.com/9f0b575e47.js" crossorigin="anonymous"></script>
    
    
@@ -14,128 +16,126 @@
   
     <nav class="tab" id="myTab">
        
-         <div class="flexcontainer">
-                <img src="images/Frame 117.png" width="56px" height="56px"/>
-           <div style="display: flex;flex-direction: row; ">
-            <div id="admin">
-                <h3 style="font-size: 24px;font-weight: 500px;color: #030E20;">
-                    Admin1
-                </h3>
-                <p style="color: #676A85;">Administrator</p>
+        <div class="flexcontainer">
+               <img src="./images/Frame 117.png" width="56px" height="56px"/>
+          <div style="display: flex;flex-direction: row; ">
+           <div id="admin">
+               <h3 style="font-size: 24px;font-weight: 500px;color: #030E20;">
+                   Admin1
+               </h3>
+               <p style="color: #676A85;">Administrator</p>
+               
+              </div>
+      <div class="angle-down">
+       <i class="fa-solid fa-angle-down fa-1x"></i>
+   </div>
+          </div>
+     
+      
+       </div>
+
+
+      
+          
+      
+       <div  class="close" onclick="closeDrawer()"><i class="fa-solid fa-xmark fa-1x"></i></div>
+     
+       <div class="header">
+           <p style="color: #414141;font-size: 20px;font-weight: 500;" >General</p>
+       </div>
+
+
+       <div class="div">
+             <div class="tablinks" onclick="openCity(event, 'dashboard')"  >
+               <img src="./images/dashboard_customize.png" width="22px" height="22px"  />
+           <div style="margin-left: 10px;margin-top: 2px;">
+               Dashboard</div>
+          </div>
+           <div class="tablinks" onclick="openCity(event, 'account')">
+               <img src="./images/account_circle.png" width="22px" height="22px" />
+           <div style="margin-left: 10px;margin-top: 1.5px;">
+               Users</div>
+       </div>
+
+
+       <div class="tablinks" onclick="openCity(event, 'payments')" >
+           <img src="./images/payments.png" width="22px" height="22px"  />
+           <div style="margin-left: 10px;margin-top: 2px;"  >
+               Deposit 2 User</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'debit')">
+           <img src="./images/payments.png" width="22px" height="22px" />
+           <div style="margin-left: 10px;margin-top: 2px;">Debit Order</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'history')">
+           <img src="./images/deployed_code_history.png" width="22px" height="22px"  />
+           <div style="margin-left: 10px;margin-top: 2px;">Pending Transfers</div>
+           </div>
+           </div>
+
+
+       <div class="header">
+           <p style="color: #414141;font-size: 20px;font-weight: 500;" >Giftcard</p>
+       </div>
+       <div class="div">
+           <div class="tablinks" onclick="openCity(event, 'bookmark')" id="defaultOpen" >
+               <img src="./images/bookmark_manager.png" width="22px" height="22px"  />
+               <div style="margin-left: 10px;margin-top: 2px;">
+               Giftcard Manager</div>
+           </div>
+           <div class="tablinks" onclick="openCity(event, 'contract')"  >
+               <img src="./images/contract.png" width="22px" height="22px" />
+               <div style="margin-left: 10px;margin-top: 2px;">
+                   Giftcard Transaction</div>
+                </div>
+                </div>
+       
                 
-               </div>
-       <div style="margin-left: 89px;">
-        <i class="fa-solid fa-angle-down"></i></div>
-      
-           </div>
-      
+       <div class="header">
+           <p style="color: #414141;font-size: 20px;font-weight: 500;">Admin & Others</p>
+       </div>
+
+       <div class="div">
+           <div class="tablinks" onclick="openCity(event, 'featured')"  >
+               <img src="./images/featured_seasonal_and_gifts.png" width="22px" height="22px" />
+               <div style="margin-left: 10px;margin-top: 2px;" >
+               Promotional Offers</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'currency')"  >
+           <img src="./images/currency_exchange.png" width="22px" height="22px" />
+           <div style="margin-left: 10px;margin-top: 2px;">Exchange Rate</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'finance')"  >
+           <img src="./images/finance.png" width="22px" height="22px" />
+           <div style="margin-left: 10px;margin-top: 2px;">Revenue</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'notification')"  >
+           <img src="./images/notifications.png" width="22px" height="22px" />
+           <div style="margin-left: 10px;margin-top: 2px;">Push Notification</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'person')" >
+           <img src="./images/person_apron.png" width="22px" height="22px" />
+           <div style="margin-left: 10px;margin-top: 2px;">Staff Management</div>
+            </div> 
+       </div>
+          <div class="logout">  
+           <img src="./images/chip_extraction.png" width="22px" height="22px" />
+     <div style="margin-left: 10px;margin-top: 2px;">Log Out</div></div>
        
-        </div>
-
-
-        <div class="menu" onclick="showsidebar()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        
-           
        
-      <div class="hyi">
-        <span class="close" onclick="hidesidebar()">&times;</span>
-            
-        <div style="gap: 15px;margin: 40px 0px 0px 0px;">
-            <p style="color: #414141;font-size: 20px;font-weight: 500;" >General</p>
-        </div>
 
-
-        <div class="div">
-              <div class="tablinks" onclick="openCity(event, 'dashboard')" >
-                <img src="images/dashboard_customize.png" width="22px" height="22px"  />
-            <div style="margin-left: 10px;">
-                Dashboard</div>
-           </div>
-            <div class="tablinks" onclick="openCity(event, 'account')">
-                <img src="images/account_circle.png" width="22px" height="22px" />
-            <div style="margin-left: 10px;">
-                Users</div>
-        </div>
-
-
-        <div class="tablinks" onclick="openCity(event, 'payments')">
-            <img src="images/payments.png" width="22px" height="22px"  />
-            <div style="margin-left: 10px;"  >
-                Deposit 2 User</div>
-        </div>
-        <div class="tablinks" onclick="openCity(event, 'debit')">
-            <img src="images/payments.png" width="22px" height="22px" />
-            <div style="margin-left: 10px;">Debit Order</div>
-        </div>
-        <div class="tablinks" onclick="openCity(event, 'history')">
-            <img src="images/deployed_code_history.png" width="22px" height="22px"  />
-            <div style="margin-left: 10px;">Pending Transfers</div>
-            </div>
-            </div>
-
-
-         
-            
-        <div style="gap: 15px;margin: 40px 0px 0px 0px;">
-            <p style="color: #414141;font-size: 20px;font-weight: 500;" >Giftcard</p>
-        </div>
-        <div class="div">
-            <div class="tablinks" onclick="openCity(event, 'bookmark')" id="defaultOpen" >
-                <img src="images/bookmark_manager.png" width="22px" height="22px"  />
-                <div style="margin-left: 10px;">
-                Giftcard Manager</div>
-            </div>
-            <div class="tablinks" onclick="openCity(event, 'contract')"  >
-                <img src="images/contract.png" width="22px" height="22px" />
-                <div style="margin-left: 10px;">
-                    Giftcard Transaction</div>
-                 </div>
-                 </div>
-        
-                 
-        <div style="gap: 15px;margin: 40px 0px 0px 0px;">
-            <p style="color: #414141;font-size: 20px;font-weight: 500;">Admin & Others</p>
-        </div>
-
-        <div class="div">
-            <div class="tablinks" onclick="openCity(event, 'featured')"  >
-                <img src="images/featured_seasonal_and_gifts.png" width="22px" height="22px" />
-                <div style="margin-left: 10px;" >
-                Promotional Offers</div>
-        </div>
-        <div class="tablinks" onclick="openCity(event, 'currency')"  >
-            <img src="images/currency_exchange.png" width="22px" height="22px" />
-            <div style="margin-left: 10px;">Exchange Rate</div>
-        </div>
-        <div class="tablinks" onclick="openCity(event, 'finance')"  >
-            <img src="images/finance.png" width="22px" height="22px" />
-            <div style="margin-left: 10px;">Revenue</div>
-        </div>
-        <div class="tablinks" onclick="openCity(event, 'notification')"  >
-            <img src="images/notifications.png" width="22px" height="22px" />
-            <div style="margin-left: 10px;">Push Notification</div>
-        </div>
-        <div class="tablinks" onclick="openCity(event, 'person')" >
-            <img src="images/person_apron.png" width="22px" height="22px" />
-            <div style="margin-left: 10px;">Staff Management</div>
-             </div> 
-        </div>
-           <div style="background-color:   #FEE0D6;border-radius: 8px;width: 287px;height: 60px;font-weight: 700;color: #EA0000;margin-top: 20px; display: flex;flex-direction: row;padding-left: 15px;padding-top: 18px;">  
-            <img src="images/chip_extraction.png" width="22px" height="22px" />
-      <div style="margin-left: 10px;">Log Out</div></div>
-        
-        
-      </div>
-
-      </nav>
-  
-
+     </nav>
+ 
 
 
   
       <section id="bookmark" class="tabcontent">
+         
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
         <div class="flexcontainer1" >
            <div class="staffcontainer"><p>Apple Inc Giftcard Manager</p>
                <p class="dashtext">Wed 7th March, 2024</p>
@@ -159,7 +159,7 @@
            <div class="modal-content4">
                <span class="close" onclick="closeDialog5()">&times;</span>
                
-               <h3 style="color: #000000;padding: 15px;">New Country</h3>
+               <h3 class="modalhd">New Country</h3>
                <hr style="width: 100%;background-color: red;"/>
                <form id="myForm"  style=" padding-left: 20px;padding-right: 20px;">
    
@@ -185,7 +185,7 @@
             
                </div>
    
-                   <button onclick="submitForm3()" style="background-color: #FA6230;color:#FFFFFF;border: 0px;height: 30px;width: 90px;margin-top: 20px;margin-left: 275px;border-radius: 4px;">Proceed</button>
+                   <button onclick="submitForm3()" class="modal4btn">Proceed</button>
                    
                </form>
                
@@ -197,6 +197,12 @@
    
    
   <section id="dashboard" class="tabcontent">
+     
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
     <div class="flexcontainer1" >
         <div class="container"><p>Dashboard</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -412,6 +418,12 @@
 
   
   <section id="account" class="tabcontent">
+     
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
     <div class="flexcontainer1" >
         <div class="container"><p>Users</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -431,6 +443,13 @@
 
 
     <section id="payments" class="tabcontent">
+
+         
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
         <div class="flexcontainer1" >
             <div class="container"><p>Deposit</p>
                 <p class="dashtext">Wed 7th March, 2024</p>
@@ -479,7 +498,12 @@
 
 
   <section id="debit" class="tabcontent">
-
+ 
+    <div class="menu">
+        <div   onclick="openDrawer()">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+        </div>
+        </div>
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>Debit Order</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -508,6 +532,12 @@
 
   
   <section id="history" class="tabcontent"> 
+     
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>All Transfers</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -542,6 +572,12 @@
 
 
   <section id="contract" class="tabcontent">
+     
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>Giftcard Transaction</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -653,7 +689,12 @@
 
 
   <section id="featured" class="tabcontent">
-    
+     
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>Promotional Offers</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -723,6 +764,12 @@
 
 
   <section id="currency" class="tabcontent">
+     
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
      <div class="flexcontainer1" >
     <div class="staffcontainer"><p>Exchange Rates</p>
         <p class="dashtext">Wed 7th March, 2024</p>
@@ -766,6 +813,12 @@
 
 
   <section id="finance" class="tabcontent">
+     
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
     <div class="flexcontainer1" >
     <div class="staffcontainer"><p>Platform Revenue</p>
         <p class="dashtext">Wed 7th March, 2024</p>
@@ -815,6 +868,12 @@
 
 
   <section id="notification" class="tabcontent">
+     
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>General Notification To Customers</p>
             <p class="dashtext">Wed 7th March, 2024</p>
@@ -851,6 +910,12 @@
 
 
   <section id="person" class="tabcontent">
+     
+<div class="menu">
+    <div   onclick="openDrawer()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+    </div>
+    </div>
     <div class="flexcontainer1" >
         <div class="staffcontainer"><p>Staff Management</p>
             <p class="dashtext">Wed 7th March, 2024</p>
