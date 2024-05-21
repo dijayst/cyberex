@@ -195,15 +195,18 @@ flex-direction: row;
  height: 100%;
   border-left: none;
   background-color: #FFFFFF;
- 
-  
+  transition: 0.5;
 }
+
+
+
 .flexcontainer{
  
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     margin-top: 30px;
+    
 }
 .flexcontainer1{
     display: flex;
@@ -1470,7 +1473,7 @@ font-weight: 700;
 .label1{
   font-size: 15px;
   font-weight: 700;
-  margin-top: -55px;
+  margin-top: -45px;
   display: flex;
   flex-direction: row;
   }
