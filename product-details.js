@@ -863,64 +863,77 @@ document.getElementById("table-body6").innerHTML =users.map(item => `
   
   
       
+
 document.getElementById("test3").innerHTML = users.map(user => { 
   return `<div class="div0">
   <img src=${user.image}  style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/>
   <p style="
   font-weight: 700;">${user.user}</p>
-  <div class="test1hash"> 
-  <div style="display: flex;flex-direction: row;margin-left: 15px;">
-  <img src="images/call.png"  width="15px" height="15px" />
-  <p class="test1p">${user.contact}</p></div>
-  <div style="display: flex;flex-direction: row;margin-left: 12px;margin-top: 5px;">
-  <img src="images/mail.png"  width="15px" height="15px" />
-    <p class="test1p">${user.email}</p></div></div>
+  <div class="test2hash"> 
+  <div style="display: flex;flex-direction: row;gap:5px;margin-left:8px;"> 
+    <img src="./images/call.png"  class="test1img" />  
+        <p class="test1p">${user.contact}</p></div>
+        <div style="display: flex;flex-direction: row;gap:5px;margin-left: 8px;">
+        <img src="./images/mail.png"  class="test1img"/>  
+           <p class="test1p">${user.email}</p></div>
+
+    </div>
     <div style="width: 25px;background-color:red;">
     </div>
-<div style="display: flex;flex-direction: row;justify-content: space-between;padding :10px;">
-<div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:25px;color:#FA6230;padding :3px; font-size: 14px;" >${user.users}</div>
-<div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:25px;color:#FA6230;padding :3px; font-size: 14px;" >${user.staff}</div>
+<div style="display: flex;flex-direction: row;padding :0px;gap:10px;justify-content: center;">
+<div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:20px;color:#FA6230;padding-top :4px; font-size: 11px;" >${user.users}</div>
+<div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:20px;color:#FA6230;padding-top :4px; font-size: 11px;" >${user.staff}</div>
 </div>
 </div>`;
 }).join('');
-  
 
-  
+
+
+
+
 document.getElementById("test4").innerHTML = users.map(user => { 
-  return `<div style="background-color: #FFFFFF;width:19.3%;height: 200px; text-align: center; border-radius: 8px;border:1px solid #DEDEDE;margin:3px;">
-    <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;"><p>${user.name}</p><p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
-    <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 159px;height:60px;">
-
-        <div style="display: flex;flex-direction:row;"> <img src="images/call.png"  width="15px" height="15px"/> <p>${user.contact}</p> </div>
-        <div style="display: flex;flex-direction:row;"> <img src="images/mail.png"  width="15px" height="15px"/> <p>${user.email}</p> </div>
-            
-
-
+  return `<div class="div4">
+    <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;gap:10px;">
+    <p style="font-weight: 700;color: #000000;">${user.name}</p>
+    <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
+    <p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
     </div>
-    <div style="background-color: #FA6230;height: 20px;width:159px;color:#FFFFFF;margin: 10px;border-radius: 4px;">Assign To Self</div>
-    <div style="background-color: #F6F8FA;height: 25px;width:160px;color:#FA6230;margin: 10px;">Assign To Self</div>
-  </div>`;
+    <div class="test1hash3">
+
+        <div style="display: flex;flex-direction:row;margin-left: 12px;gap:5px;"> <img src="./images/call.png"   class="test1img"/> <p class="test1p">${user.contact}</p> </div>
+        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"   class="test1img"/> <p class="test1p">${user.email}</p> </div>  
+    </div>
+    <div class="test2prof">Assign To Self</div>
+
+    <div class="testprof" onclick="submitForm8()">Assign To Others</div>
+
+    </div>`;
 }).join('');
+
+
+
 
 
 
 
 
 document.getElementById("test6").innerHTML = users.map(user => { 
-  return `<div style="background-color: #FFFFFF;width:19.3%;height: 150px; text-align: center; border-radius: 8px;border:1px solid #DEDEDE;margin:3px;">
-    <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;"><p>${user.name}</p><p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
-    <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 159px;height:60px;">
+  return `<div class="div1">
+  <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;gap:10px;">
+  <p style="font-weight: 700;color: #000000;">${user.name}</p>
+  <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
+  <p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
+  </div>
 
-        <div style="display: flex;flex-direction:row;"> <img src="images/call.png"  width="15px" height="15px"/> <p>${user.contact}</p> </div>
-        <div style="display: flex;flex-direction:row;"> <img src="images/mail.png"  width="15px" height="15px"/> <p>${user.email}</p> </div>
+   
+    <div class="test5hash">
+        <div style="display: flex;flex-direction:row;margin-left: 12px;gap:5px;"> <img src="./images/call.png"  width="15px" height="15px"/> <p class="test1p">${user.contact}</p> </div>
+        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p class="test1p">${user.email}</p> </div>
             
-
-
     </div>
-    <div style="background-color: #FA6230;height: 20px;width:159px;color:#FFFFFF;margin: 10px;border-radius: 4px;">Enter Chat</div>
+    <div class="test2prof" onclick="submitForm9()">Enter Chat</div>
   </div>`;
 }).join('');
-
      
 
 
