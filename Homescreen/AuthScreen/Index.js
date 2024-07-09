@@ -6,7 +6,7 @@ import {NavigationContainer,DarkTheme,DefaultTheme} from "@react-navigation/nati
 import { AuthContext } from './AuthContext';
 import Home from '../NairaAccount/Home';
 import Welcomebackscreen from '../Signin/Welcomebackscreen';
-import Adminnav from '../Navigation/Adminnav';
+//import Adminnav from '../Navigation/Adminnav';
 import { ThemeContext } from '../Theme/ThemeContext';
 import {EventRegister}from 'react-native-event-listeners';
 import { theme } from '../Theme/Theme';

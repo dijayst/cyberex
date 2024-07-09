@@ -1,4 +1,4 @@
-import { View, Text ,TouchableOpacity,StyleSheet,useWindowDimensions, SafeAreaView,Platform, FlatList,Image, Dimensions} from 'react-native'
+import { View, Text ,TouchableOpacity,StyleSheet, SafeAreaView,Platform, FlatList,Image, Dimensions} from 'react-native'
 import Carousel from "pinar";
 import React,{useState,useRef} from 'react'
 import {useNavigation} from "@react-navigation/native";
@@ -9,8 +9,6 @@ import colors from '../JSON AND COLOR/colors';
 const SCEEN_wIDTH=Dimensions.get('window').width
 export default function Slider() {
   const carouselRef = useRef(null);
-  const windowWidth=useWindowDimensions().width
-  const windowheight=useWindowDimensions().height
   
  const [slideindex, setslideindex] = useState(0)
  const [nextdisabled, setnextdisabled] = useState(false)
@@ -49,7 +47,7 @@ export default function Slider() {
       </View>
       <FlatList
        ref={carouselRef}
-       style={{  height:windowheight>800? 238:0, marginTop:windowheight>800?50:473, marginLeft: windowheight>800?4:6, gap: 32 }} 
+       style={{  height:238, marginTop:50, marginLeft:4, gap: 32 }} 
                 pagingEnabled
                 horizontal
                 snapToInterval={SCEEN_wIDTH}
@@ -154,7 +152,9 @@ const styles = StyleSheet.create({
   },
   Safecontainer:{
     flex:1,
-    backgroundColor:colors.background
+    backgroundColor:colors.background,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
     container: {
      flex: 1,
