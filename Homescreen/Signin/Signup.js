@@ -33,6 +33,12 @@ import axios from "react-native-axios";
     });
 
     const handleSignup =async () => {
+      
+ navigation.navigate("verify")
+    /*
+
+
+    
       if (    userInfor.name === "" || 
          userInfor.email === "" ||   
           userInfor.referencecode === "" || 
@@ -47,7 +53,6 @@ import axios from "react-native-axios";
           userInfor.phoneNumberverify&&!userInfor.isChecked
         ) {console.log("correct")}
       }
-    
       try{
         axios .post("http://172.20.10.2:6051/Signup", {
           name: userInfor.name,  
@@ -66,7 +71,7 @@ import axios from "react-native-axios";
      
         catch(error) {      
               console.log(error);      
-                  Alert.alert("Error occurred during signup")};
+                  Alert.alert("Error occurred during signup")};*/
                   
                   
     }

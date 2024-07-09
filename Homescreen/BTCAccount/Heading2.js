@@ -43,14 +43,14 @@ console.log(showModal)
     <TouchableOpacity onPress={()=>navigation.navigate("home")} style={{borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5,gap:6}}>
     <Image source={require("../image1/ICONS/Frame 258 (1).png")} style={styles.userimage} />
     <View style={{flexDirection:"row",alignItems: 'center',justifyContent:"center",}}>
-      <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,width:106,height:22}}>Naira Account</Text>
+      <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,width:90,height:22}}>Naira Account</Text>
       <Text style={styles.price1}>₦100,000</Text>
       </View>
     </TouchableOpacity>
     <TouchableOpacity onPress={()=>navigation.navigate("btc")} style={{borderColor:colors.Orange,borderWidth:1,borderRadius:8,display:"flex",flexDirection:"row",height:72,width:360,padding:5,gap:6}} >
     <Image source={require("../image1/ICONS/Frame 256.png")} style={styles.userimage} />
     <View style={{flexDirection:"row",alignItems: 'center',justifyContent:"center",}}>
-    <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,width:106,height:22}} >BTC Account</Text>
+    <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,width:90,height:22}} >BTC Account</Text>
       <Text style={styles.price2}>0.003245 <Text style={{color:colors.Orange,fontSize:18,fontWeight:"900"}}>BTC</Text></Text>
     </View>
        </TouchableOpacity>

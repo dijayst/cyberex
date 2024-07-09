@@ -1,4 +1,4 @@
-import { View, Text,Image,TouchableOpacity,StyleSheet,TextInput} from 'react-native'
+import { View, Text,Image,TouchableOpacity,StyleSheet,TextInput,Alert} from 'react-native'
 import React,{useState} from 'react'
 import {useNavigation} from "@react-navigation/native";
 import colors from '../JSON AND COLOR/colors'
@@ -10,7 +10,7 @@ import { Ionicons,AntDesign,Entypo } from '@expo/vector-icons';
 export default function BankAccount({ windowWidth,windowheight}) {
   const navigation=useNavigation();
 
-  const [userInfo, setUserInfo] = useState({
+  const [userInfo, setuserInfo] = useState({
     Amount: "",
     description: "",
     Amountverify:"",
@@ -41,7 +41,7 @@ export default function BankAccount({ windowWidth,windowheight}) {
       }
     
     const handleamount=(val)=>{
-       if(userInfo.amount.length<4){
+       if(userInfo.Amount ?.length <4){
         setuserInfo({...userInfo,Amount:val,Amountverify:true});
       }else{
         setuserInfo({...userInfo,Amount:val,Amountverify:false});
@@ -54,6 +54,7 @@ export default function BankAccount({ windowWidth,windowheight}) {
   const [selectedValue, setSelectedValue] = useState("");
 
   console.log(selectedValue)
+  console.log(userInfo)
   return (
     <View  style={{padding:windowWidth>400?16:2}}>
       {emptyinput.length>0 ?

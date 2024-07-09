@@ -9,7 +9,10 @@ import colors from '../JSON AND COLOR/colors';
 
 export default  function Welcomebackscreen () {
   const navigation=useNavigation();
+  const{login}=useContext(AuthContext);
  
+
+
   const [userInfo, setUserInfo] = useState({
     password:"",
     passwordverify:true,
@@ -30,10 +33,12 @@ export default  function Welcomebackscreen () {
    }else{
     if(userInfo.passwordverify){
       Alert.alert("Successful");
+      login();
       navigation.navigate("home")
+      
   
     }else{
-      Alert.alert("passwor should contain atleast7 character and a digit ");    
+      Alert.alert("password should contain atleast 6 character with a digit and symbol");    
    }
   }
   };

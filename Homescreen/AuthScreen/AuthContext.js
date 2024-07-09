@@ -11,7 +11,7 @@ export  function AuthProvider({children}) {
   const [isLoading, setIsLoading] = useState(false);
  const [userToken, setuserToken] = useState(null)
  //const login=()=>{setIsLoading(true)setuserToken('helloup');  AsyncStorage.setItem('userToken','helloup');setIsLoading(false) }
- const login = () => {
+ /*const login = () => {
   setIsLoading(true);
   setuserToken('helloup');
   AsyncStorage.setItem('userToken', 'helloup')
@@ -22,7 +22,53 @@ export  function AuthProvider({children}) {
     });
 };
 
+
+
+
+
+ const isloggedin=async()=>{
+  try{
+    setIsLoading(true);
+    let userToken=await AsyncStorage.getItem('userToken');
+    setuserToken(userToken);
+    setIsLoading(false)
+  }catch(e){
+console.log('isloggedin error $(e)');
+
+//setIsLoading(false);
+  }
  
+  }
+*/
+
+const login = () => {
+  setIsLoading(true);
+  setuserToken('helloup');
+  AsyncStorage.setItem('userToken', 'helloup')
+    .then(() => setIsLoading(false))
+    .catch(error => {
+      console.log('Error during login:', error);
+      setIsLoading(false);
+    });
+};
+
+
+
+const isloggedin=async()=>{
+  try{
+    setIsLoading(true);
+    let userToken=await AsyncStorage.getItem('userToken');
+    setuserToken(userToken);
+    setIsLoading(false)
+  }catch(e){
+console.log('isloggedin error $(e)');
+
+//setIsLoading(false);
+  }
+ 
+  }
+
+  
  const logout = () => {
   setIsLoading(true);
   setuserToken(null);
@@ -34,16 +80,6 @@ export  function AuthProvider({children}) {
     });
 };
 
- const isloggedin=async()=>{
-  try{
-    setIsLoading(true);
-    let userToken=await AsyncStorage.getItem('userToken');
-    setuserToken(userToken);
-    setIsLoading(false)
-  }catch(e){
-console.log('isloggedin error $(e)');
-  }
-  }
 
 
 /*

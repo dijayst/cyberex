@@ -14,6 +14,7 @@ const theme=useContext(ThemeContext)
   
   const windowWidth=useWindowDimensions().width
   const windowheight=useWindowDimensions().height
+  
     const [gamesTab, setGamesTab] = useState(1);
    
   const Colors = ['#1F2223','#009400']; 
@@ -142,8 +143,8 @@ const theme=useContext(ThemeContext)
              <View style={styles.ProfileContainer}> 
                 <Image source={require("../image1/img2.png")} style={styles.userimage2}/>
                 <View style={{gap:9,marginTop:12}}>
-                <Text style={{ width: 230, height: 21, color: colors.Textcolor,fontSize:14,fontWeight:"700" }}>link a bank account to your wallet</Text>
-                <Text style={{ width: 230, height: 36, color: colors.neural800,fontSize:12,fontWeight:"500" }}>finish your account setup to enjoy your banking experience</Text>
+                <Text style={{ width: 230, height: 21, color: colors.Textcolor,fontSize:14,fontWeight:"700" }}>Link a bank account to your wallet</Text>
+                <Text style={{ width: 230, height: 36, color: colors.neural800,fontSize:12,fontWeight:"500" }}>Finish your account setup to enjoy your banking experience</Text>
                 </View>
                 <View style={{height:96,width:35,gap:10,marginLeft:28}}>
                 <Entypo name="chevron-right" size={24} color={colors.Orange} style={{marginTop:32}}  />

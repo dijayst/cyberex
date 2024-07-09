@@ -1,4 +1,4 @@
-import { View, Text,StyleSheet,TouchableOpacity,TextInput, } from 'react-native'
+import { View, Text,StyleSheet,TouchableOpacity,TextInput,Alert } from 'react-native'
 import React,{useState} from 'react'
 import { Ionicons ,AntDesign} from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
@@ -11,7 +11,7 @@ import {Picker} from '@react-native-picker/picker'
 export default function Linkbankaccount({navigation, windowWidth,windowheight}) {
 
     
-  const [userInfo, setUserInfo] = useState({
+  const [userInfo, setuserInfo] = useState({
     Accountnum: "",
     Accountname:"",
     Acctverify:"",
@@ -21,12 +21,12 @@ export default function Linkbankaccount({navigation, windowWidth,windowheight}) 
   
  const handleaccount=()=>{
   
-  if (userInfo.Amount === "" ||  userInfo.description === ""||selectedValue==="" ) {
+  if (userInfo.Accountnum === "" ||  userInfo.Accountname === ""||selectedValue==="" ) {
     Alert.alert("Fill in mandatory details");
     } else {
      if (
-       userInfo.Amountverify &&
-       userInfo.descriptionverify 
+       userInfo.Accountnum &&
+       userInfo.Accountname
      ) {console.log("correct")
      Alert.alert("Successful");
      navigation.navigate("transpin")
@@ -35,7 +35,7 @@ export default function Linkbankaccount({navigation, windowWidth,windowheight}) 
       }
  }
   const handledeacctnum=(val)=>{
-    if(userInfo.Accountnum.length<4){
+    if(userInfo.Accountnum.length<10){
       setuserInfo({...userInfo,Accountnum:val,Acctverify:true})
     }else{
       setuserInfo({...userInfo,Accountnum:val,Acctverify:false})
@@ -50,8 +50,9 @@ export default function Linkbankaccount({navigation, windowWidth,windowheight}) 
       }
     
     }
+    console.log(userInfo)
   const [selectedValue, setSelectedValue] = useState("");
-
+console.log(selectedValue)
   return (
     <View style={{ padding:19,marginTop:150,flex:1}}>
       <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>

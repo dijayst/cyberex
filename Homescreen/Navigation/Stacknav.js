@@ -44,7 +44,6 @@ import Transfernaira from '../NairaAccount/Transfernaira';
         screenOptions={{
           tabBarActiveTintColor: "#8E3FFF",
           headerShown: false,
-  
         }}>
 
 <Stack.Screen name="slider" component={Slider} />

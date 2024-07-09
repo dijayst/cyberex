@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import {  useFonts } from 'expo-font';
 import { useState } from 'react';
 import {  AuthProvider } from './Homescreen/AuthScreen/AuthContext';
+import { Stackna} from './Homescreen/Navigation/Stacknav';
+import {NavigationContainer} from "@react-navigation/native"
 import Index from './Homescreen/AuthScreen/Index';
 
 export default function App() {
@@ -30,9 +32,17 @@ export default function App() {
  //const [isLoading, setIsLoading] = useState(true);
 //setTimeout(() => {        setIsLoading(false);}, 2000);
     
-    return (
-    
+    {/*
     <AuthProvider>
+       <NavigationContainer >
+     <Stackna/>
+</NavigationContainer>
+</AuthProvider>*/}
+
+    return (
+   
+
+<AuthProvider>
       <Index/>
 </AuthProvider>
 

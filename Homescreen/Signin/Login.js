@@ -53,10 +53,11 @@ Alert.alert("Fill in mandatory details");
  ) {console.log("correct")
  Alert.alert("Successful");
  login();
+ navigation.navigate("welcome")
  //navigation.navigate("welcome")
 
-}else{console.log("ffhfhjgjh")
-Alert.alert("passwor should contain atleast7 character and a digit ");
+}else{console.log("")
+Alert.alert("password should contain atleast 6 character with a digit and symbol");
 }
   }};
 
