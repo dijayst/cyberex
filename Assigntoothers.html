@@ -147,13 +147,12 @@
         </div>
 
 
-        <div id="test3" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;margin-top:15px;width:100%;">
-           
-        </div>
         <div id="test7" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;margin-top:15px;width:100%;">
               
    
         </div> 
+       
+    
         <div class="contentbtn" onclick="submitForm10()">Assign</div>
       
 
@@ -572,7 +571,7 @@
   
     <div id="myModal" class="modal3">
         <div class="modal-content">
-            <div  class="close2" onclick="closeDialog()"><i class="fa-solid fa-xmark fa-1x">x</i></div>
+            <div  class="close2" onclick="closeDialog()"><i class="fa-solid fa-xmark fa-1x"></i></div>
       
             <h2 class="modalhd">Support New Giftcard</h2>
             <hr style="width: 100%;background-color: red;"/>
@@ -651,7 +650,7 @@
 
 <div id="myModal3" class="modal2">
     <div class="modal-content3">
-        <div  class="close2" onclick="closeDialog3()"><i class="fa-solid fa-xmark fa-1x">x</i></div>
+        <div  class="close2" onclick="closeDialog3()"><i class="fa-solid fa-xmark fa-1x"></i></div>
       
         <h3 style="color: #000000;padding: 15px;">New Giveaway</h3>
         <hr style="width: 100%;"/>
@@ -836,64 +835,67 @@
 
   <section id="person" class="tabcontent">
     
-<div class="menu">
-    <div   onclick="openDrawer()">
-        <i class="fa-solid fa-bars fa-2xl"></i>
-    </div>
-    </div>
-
-    <div class="flexcontainer1" >
-        <div class="staffcontainer"><p>Staff Management</p>
-            <p class="dashtext">Wed 7th March, 2024</p>
-           </div>
-           
-            <input class="search3" placeholder="Search" />
-         
-          
-         
-    </div>
-     
-     <div class="contentbtn" onclick="openDialog2()">Support New Company</div>
-  
-    <div id="test3" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;margin-top:15px;width:100%;">
-           
-    </div>
-
+    <div class="menu">
+        <div   onclick="openDrawer()">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+        </div>
+        </div>
     
-    <div id="myModal2" class="modal">
-        <div class="modal-content">
-            <div  class="close2" onclick="closeDialog2()"><i class="fa-solid fa-xmark fa-1x">x</i></div>
+        <div class="flexcontainer1" >
+            <div class="staffcontainer"><p>Staff Management</p>
+                <p class="dashtext">Wed 7th March, 2024</p>
+               </div>
+               
+                <input class="search3" placeholder="Search" />
+             
+              
+             
+        </div>
+         
+         <div class="contentbtn" onclick="openDialog2()">Support New Company</div>
       
-            <h3 style="color: #000000;padding: 15px;">Enroll New Staff</h3>
-            <hr style="width: 100%;background-color: red;"/>
-            <form id="myForm" onsubmit="return false;" style=" padding: 20px;">
-                <div style="display: flex;flex-direction: column;">
-                <label style="color: #000000;font-weight: 700;line-height: 27px;font-size: 12px;">Phone Number/ Email Address</label>
-                <input type="text" id="title" name="title" required placeholder="New Staff Phone Number" class="search6">
-                <span  class="error">User account should be previously registered</span>
+        <div id="test3" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;margin-top:15px;width:100%;">
+               
+        </div>
+    
         
-            </div>
-                <div style="display: flex;flex-direction: column;margin-top: 15px;">
-                    <label style="color: #000000;font-weight: 700;line-height: 27px;font-size: 12px;">Administrative Access Level</label>
-                    <input type="text" id="Admin" name="Admin" placeholder="Staff" class="input3">    
-                    <span  class="error">Determines staff level access</span>
-      
-                </div>
-                <button onclick="submitForm()" style="background-color: #FA6230;color:#FFFFFF;border: 0px;height: 35px;width: 100px;margin-top: 30px;margin-left: 265px;border-radius: 4px;">Save Changes</button>
-                
-            </form>
+        <div id="myModal2" class="modal">
+            <div class="modal-content">
+                <div  class="close2" onclick="closeDialog2()"><i class="fa-solid fa-xmark fa-1x"></i></div>
+          
+                <h3 style="color: #000000;padding: 15px;">Enroll New Staff</h3>
+                <hr style="width: 100%;background-color: red;"/>
+                <form id="myForm" onsubmit="return false;" style=" padding: 20px;">
+                    <div style="display: flex;flex-direction: column;">
+                    <label style="color: #000000;font-weight: 700;line-height: 27px;font-size: 12px;">Phone Number/ Email Address</label>
+                    <input type="text" id="title" name="title" required placeholder="New Staff Phone Number" class="search6">
+                    <span  class="error">User account should be previously registered</span>
             
-    </div></div>
- 
+                </div>
+                    <div style="display: flex;flex-direction: column;margin-top: 15px;">
+                        <label style="color: #000000;font-weight: 700;line-height: 27px;font-size: 12px;">Administrative Access Level</label>
+                        <input type="text" id="Admin" name="Admin" placeholder="Staff" class="input3">    
+                        <span  class="error">Determines staff level access</span>
+          
+                    </div>
+                    <button onclick="submitForm()" style="background-color: #FA6230;color:#FFFFFF;border: 0px;height: 35px;width: 100px;margin-top: 30px;margin-left: 265px;border-radius: 4px;">Save Changes</button>
+                    
+                </form>
+                
+        </div></div>
+     
+      
+    
+      </section>
+    
+
+</div>
+</div>
+
+
+  <script src="./Script.js"></script>
   
-
-  </section>
-
-</div>
-</div>
-
-
-  <script src="./Script.js"></script>  
+  <script src="./Assigntoothers.js"></script>  
 
 
   

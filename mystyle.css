@@ -998,6 +998,31 @@ margin-left: 515px;
   margin-left: 280px;
   border-radius: 4px;
 }
+
+.modal9 {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -785px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -26.4%;
+  color: #000000;
+  background: rgba(14, 15, 14, 0.3)
+  
+}
+.modal8 {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -380px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -26.4%;
+  color: #000000;
+  background: rgba(14, 15, 14, 0.3)
+  
+}
 .modal7 {
   display: none; /* Initially hide the modal */
   position: fixed;
@@ -1035,13 +1060,14 @@ margin-left: 515px;
   background: rgba(14, 15, 14, 0.3)
   
 }
+
 .modal4 {
   display: none; /* Initially hide the modal */
   position: fixed;
-  margin-top: -429px;
+  margin-top: -1005px;
   z-index: 1;
   width: 100%;
-  height: 100%;
+  height: 116%;
   margin-left: -26.5%;
   color: #000000;
   background: rgba(14, 15, 14, 0.3)
@@ -1060,11 +1086,75 @@ margin-left: 515px;
   
 }
 
+.modal23 {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -413px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -26.5%;
+  color: #000000;
+  background: rgba(14, 15, 14, 0.3)
+  
+}
+
+.modal33 {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -715px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -26.5%;
+  color: #000000;
+  background: rgba(14, 15, 14, 0.3)
+  
+}
+
+.modal10 {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -380px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -26.4%;
+  color: #000000;
+  background: rgba(14, 15, 14, 0.3)
+  
+}
+.modal13 {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -702px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -26.4%;
+  color: #000000;
+  background: rgba(14, 15, 14, 0.3)
+  
+}
+
+
+.modal12 {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -632px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -26.4%;
+  color: #000000;
+  background: rgba(14, 15, 14, 0.3)
+  
+}
 
 .modal2 {
   display: none; /* Initially hide the modal */
   position: fixed;
-  margin-top: -230px;
+  margin-top: -784px;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -1089,7 +1179,8 @@ margin-left: 515px;
 .modal-content4 {
   background-color: #FFFFFF;
   width: 30%;
-  height: 90%;border-radius: 8px;
+  height: 78%;
+  border-radius: 8px;
   margin-left: 500px;
   margin-top: 35px;
   color: #000000;

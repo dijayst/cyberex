@@ -974,21 +974,24 @@ document.addEventListener("DOMContentLoaded", function() {
   
   if(test7Element){
     test7Element.innerHTML = users.map(user => { 
-      return `<div class="divd">
-      <img src=${user.image1}  style="border-radius: 90%;width: 58px;height: 58px;margin-top: 25px;"/> 
-     
-        
-      <div style="display: flex;flex-direction: column;margin: 10px;border-radius: 4px;width: 159px;height:60px;">
-            <div style="display: flex;flex-direction: row;justify-content: center;">
-                <p style="color:#000000;font-weight:600;font-size: 18px;">${user.country}</p></div>
-                <div style="display: flex;flex-direction: row;justify-content: center;">
-    
-                   <p style="color:#414141; font-size: 12px;white-space: nowrap;">exchange per unit (CAD/naira)</p></div>
-    
-        </div>
-        <div class="test5div3" onclick="submitForm6()">Edit Country</div>
-        
-    
+     return `<div class="div0">
+          <img src="${user.image}" style="border-radius: 90%; width: 80px; height: 80px; margin-top: 25px;" />
+          <p style="font-weight: 700;">${user.user}</p>
+          <div class="test2hash"> 
+              <div style="display: flex; flex-direction: row; gap: 5px; margin-left: 8px;"> 
+                  <img src="images/call.png" class="test1img" />  
+                  <p class="test1p">${user.contact}</p>
+              </div>
+              <div style="display: flex; flex-direction: row; margin-top: 8px; gap: 5px; margin-left: 8px;">
+                  <img src="images/mail.png" class="test1img"/>  
+                  <p class="test1p">${user.email}</p>
+              </div>
+          </div>
+          <div style="width: 25px; background-color: red;"></div>
+          <div style="display: flex; flex-direction: row; padding: 0px; gap: 10px; justify-content: center;">
+              <div style="background-color: #FFEFEA; width: 60px; border-radius: 8px; height: 20px; color: #FA6230; padding-top: 4px; font-size: 11px;">${user.users}</div>
+              <div style="background-color: #FFEFEA; width: 60px; border-radius: 8px; height: 20px; color: #FA6230; padding-top: 4px; font-size: 11px;">${user.staff}</div>
+          </div>
       </div>`;
     }).join('');
     
