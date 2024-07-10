@@ -3,9 +3,9 @@ import { Ionicons } from '@expo/vector-icons';
 import React from 'react'
 import colors from '../JSON AND COLOR/colors';
 
-export default function Recieve({navigation,windowWidth, windowheight}) {
+export default function Recieve({navigation}) {
   return (
-    <View  style={{marginTop:150,padding:19,height:windowWidth>400? 0:0,}}>
+    <View  style={{marginTop:150,padding:19,height:0}}>
          <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Receive BTC</Text>

@@ -7,7 +7,7 @@ import {Picker} from '@react-native-picker/picker';
 
 import { Ionicons,AntDesign,Entypo } from '@expo/vector-icons';
 
-export default function BankAccount({ windowWidth,windowheight}) {
+export default function BankAccount() {
   const navigation=useNavigation();
 
   const [userInfo, setuserInfo] = useState({
@@ -56,7 +56,7 @@ export default function BankAccount({ windowWidth,windowheight}) {
   console.log(selectedValue)
   console.log(userInfo)
   return (
-    <View  style={{padding:windowWidth>400?16:2}}>
+    <View  style={{padding:16}}>
       {emptyinput.length>0 ?
       <View >
        <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, height: 86, }}>
@@ -120,13 +120,13 @@ export default function BankAccount({ windowWidth,windowheight}) {
 
           
           :
-      <View style={{width:350,alignItems: 'center',justifyContent:"center",marginTop:90,height:windowWidth>400? 375.5:'60%',}}>
+      <View style={{width:350,alignItems: 'center',justifyContent:"center",marginTop:90,height:375.5}}>
        
                         <Image source={require("../image1/121ae49d6d59c5c625c765250127d215.png")} style={{width:181.05,height:216.79,}} />
                 <Text  style={{fontSize:24,fontWeight:"700",color:"#000000",lineHeight:26}}>No Linked Account</Text>
                 <Text style={{fontSize:14,fontWeight:"500",color:colors.neuralblack,lineHeight:22,width:279}}>To transfer to a bank account, you need to link a bank account to your wallet</Text>
                   
-                <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 109, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 9,marginLeft:-10}} onPress={()=>navigation.navigate("link",windowWidth={windowWidth} ,windowheight={windowheight})} >
+                <TouchableOpacity style={{ backgroundColor:colors.Orange, borderRadius: 8, marginTop: 109, height: 56, width: 350, alignItems: "center", padding: 10,paddingTop: 9,marginLeft:-10}} onPress={()=>navigation.navigate("link")} >
               <Text style={styles.buttonText}>Link Account</Text>
             </TouchableOpacity>
 </View>}

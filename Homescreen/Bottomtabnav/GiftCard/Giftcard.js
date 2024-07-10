@@ -1,4 +1,4 @@
-import { View, Text,TouchableOpacity,Image,StyleSheet,useWindowDimensions } from 'react-native'
+import { View, Text,TouchableOpacity,Image,StyleSheet } from 'react-native'
 import React, { useContext } from 'react'
 import colors from '../../JSON AND COLOR/colors'
 import { ThemeContext } from '../../Theme/ThemeContext'
@@ -6,8 +6,6 @@ import { ThemeContext } from '../../Theme/ThemeContext'
 export default function Giftcard({navigation}) {
   
 const theme=useContext(ThemeContext)
-  const windowWidth=useWindowDimensions().width
-  const windowheight=useWindowDimensions().height
   return (
     
 <View style={{ padding:39,backgroundColor:theme.backgroundColor}}>

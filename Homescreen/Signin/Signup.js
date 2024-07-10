@@ -1,4 +1,4 @@
-  import { View, Text, StyleSheet, TextInput, TouchableOpacity, useWindowDimensions, ScrollView, Alert } from 'react-native'
+  import { View, Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, Alert } from 'react-native'
 import React, { useState, useEffect,useContext } from 'react'
   import {useNavigation} from "@react-navigation/native";
 import PhoneInput  from 'react-native-phone-input'; 
@@ -11,9 +11,6 @@ import axios from "react-native-axios";
   
   export default  function Signup() {
   
-    const windowWidth=useWindowDimensions().width
-    const windowheight=useWindowDimensions().height
-
     const navigation=useNavigation();
     const [userInfor, setuserInfor] = useState({
       name: "",

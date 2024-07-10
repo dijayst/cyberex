@@ -5,7 +5,7 @@ import colors from '../JSON AND COLOR/colors';
 
 
 
-export default function Sell({navigation,windowWidth, windowheight}) {
+export default function Sell({navigation}) {
   
   const [userInfo, setuserInfo] = useState({
     amount: "",

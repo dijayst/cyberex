@@ -5,7 +5,7 @@ import colors from '../JSON AND COLOR/colors';
 
 
 
-export default function Send({navigation,windowWidth, windowheight}) {
+export default function Send({navigation}) {
   
 
   return (

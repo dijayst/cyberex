@@ -1,4 +1,4 @@
-import {  View,Image,  Text, SafeAreaView, ScrollView,FlatList,StyleSheet,  TouchableOpacity,useWindowDimensions} from 'react-native';
+import {  View,Image,  Text, SafeAreaView, ScrollView,FlatList,StyleSheet,  TouchableOpacity} from 'react-native';
 import Quickactions from './Quickactions';
 import React,{useState,useContext} from 'react';
 import Heading from './Heading';
@@ -12,8 +12,6 @@ export default function Home({navigation}) {
   
 const theme=useContext(ThemeContext)
   
-  const windowWidth=useWindowDimensions().width
-  const windowheight=useWindowDimensions().height
   
     const [gamesTab, setGamesTab] = useState(1);
    
@@ -35,7 +33,7 @@ const theme=useContext(ThemeContext)
   return (
     
     
-      <View style={{ flex: 1,padding: 29,backgroundColor:theme.backgroundColor}}>
+      <View style={{ flex: 1,padding: 25,backgroundColor:theme.backgroundColor}}>
      
               <ScrollView   showsVerticalScrollIndicator={false}>
           <View style={styles.ProfileMainContainer}>
@@ -50,7 +48,7 @@ const theme=useContext(ThemeContext)
 
               </View>
           </View>
-          <Heading windowWidth={windowWidth} windowheight={windowheight} />
+          <Heading  />
 
           <Quickactions text="Quick Actions"  style={{fontSize:16,color:colors.Textcolor}} />
               
@@ -59,7 +57,7 @@ const theme=useContext(ThemeContext)
 
 
 
-               <View  style={{backgroundColor:colors.white,borderRadius:8,height:windowheight>800? 101:101,width:windowWidth>400? 375:350,marginTop:35,display:"flex",flexDirection:"row"}}>
+               <View  style={{backgroundColor:colors.white,borderRadius:8,height:101,width:"100%",marginTop:35,display:"flex",flexDirection:"row"}}>
                <TouchableOpacity style={styles.container} onPress={()=>navigation.navigate("paybills")}>
                  
                  <View style={{backgroundColor:colors.Imagecolor,width:44,height:44,borderRadius:28,justifyContent:"center",alignItems:"center"}}>
@@ -139,7 +137,7 @@ const theme=useContext(ThemeContext)
 
 
                      
-             <TouchableOpacity style={{backgroundColor:colors.white,width:windowWidth>400? 375.5:350,height:windowheight>800? 96:96,borderRadius:8,marginTop:29,}} onPress={()=>navigation.navigate("link")} >
+             <TouchableOpacity style={{backgroundColor:colors.white,width:"100%",height:96,borderRadius:8,marginTop:29,}} onPress={()=>navigation.navigate("link")} >
              <View style={styles.ProfileContainer}> 
                 <Image source={require("../image1/img2.png")} style={styles.userimage2}/>
                 <View style={{gap:9,marginTop:12}}>
@@ -155,15 +153,15 @@ const theme=useContext(ThemeContext)
 
              {print.data?.length>0?  <FlatList
                 data={print.data}
-                style={{marginTop:35,backgroundColor:colors.white,height:windowheight>800? 320:320,width:windowWidth>400? 375.5:350,gap:28,padding:16,borderRadius:8}}
+                style={{marginTop:35,backgroundColor:colors.white,height:320,width:"100%",gap:28,padding:16,borderRadius:8}}
                 renderItem={({ item, index }) =>(
-                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.navigate("nairatrans",{item:item,windowWidth:{windowWidth} ,windowheight:{windowheight}})}>
+                  <TouchableOpacity style={styles.container2} onPress={()=>navigation.navigate("nairatrans",{item:item})}>
                   <Image source={item.image1} alt="img" style={styles.image}/>
                   <View style={styles.subcontainer}>
                       <Text style={{fontWeight:"700",color:colors.Textcolor,fontSize:16,height:22,gap:10}}>{item.title}</Text>
                       <Text style={{fontFamily:"outfit-bold",fontSize:13,color:colors.neuralblack}}>{item.time}</Text>
                   </View>
-                     <Text style={{ color: Colors[index % Colors.length],marginTop:windowWidth>400? 15:10,marginLeft:windowWidth>400? 119:94,fontWeight:"700",fontSize:16}}>{item.price}</Text>
+                     <Text style={{ color: Colors[index % Colors.length],marginTop:15,marginLeft:95,fontWeight:"700",fontSize:16}}>{item.price}</Text>
                      
              </TouchableOpacity>
           

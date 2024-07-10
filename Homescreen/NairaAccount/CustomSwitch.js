@@ -6,9 +6,7 @@ export default function CustomSwitch({
   selectionMode,
   option1,
   option2,
-  onSelectSwitch,
-  windowWidth,
-   windowheight
+  onSelectSwitch
 }) {
   const [getSelectionMode, setSelectionMode] = useState(selectionMode);
 

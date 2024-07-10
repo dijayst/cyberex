@@ -3,7 +3,7 @@ import React,{useState} from 'react'
 import colors from '../JSON AND COLOR/colors'
 import { Ionicons } from '@expo/vector-icons';
 
-export default function Deposit({navigation,windowWidth, windowheight}) {
+export default function Deposit({navigation}) {
   
   const [amount, setAmount] = useState('');
 

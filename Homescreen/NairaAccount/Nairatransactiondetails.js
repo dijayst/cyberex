@@ -3,47 +3,47 @@ import React from 'react';
 import { Ionicons,FontAwesome6 } from '@expo/vector-icons';
 import colors from '../JSON AND COLOR/colors';
 
-export default function Nairatransactiondetails({navigation,route,windowWidth, windowheight}) {
+export default function Nairatransactiondetails({navigation,route}) {
     const {price,Status,recipientnaira,transactionref,Charges,date,description}=route.params.item;
  
   return (
-    <View style={{padding:16,width:windowWidth>400? 375:392}}>
+    <View style={{padding:20}}>
         <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Transaction Details</Text>
             </TouchableOpacity>
-            <View style={{marginTop:windowheight>800? 90:90,alignItems: 'center',justifyContent:"center",}}>
+            <View style={{marginTop:90,alignItems: 'center',justifyContent:"center",}}>
                 <Text style={{fontSize:32,fontWeight:"700",lineHeight:43.2}}>{price}</Text>
                  </View>
    <View style={{backgroundColor:colors.white,display:"flex",marginTop:50,borderRadius:8,padding:16}}>
     <View style={{flexDirection:"row",height:22,width:318}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>DATE </Text>
-    <Text style={{marginLeft:windowheight>800? 190:175,fontSize:14,fontWeight:"700",lineHeight:18.9,color:colors.neural800}}>{date}</Text>
+    <Text style={{marginLeft:165,fontSize:14,fontWeight:"700",lineHeight:18.9,color:colors.neural800}}>{date}</Text>
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:15}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Status</Text>
-        <Text style={{marginLeft:windowheight>800? 229:215,color:colors.textgreen,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{Status}</Text>
+        <Text style={{marginLeft:199,color:colors.textgreen,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{Status}</Text>
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:19,}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Recipient</Text>
-    <Text style={{marginLeft:windowheight>800? 110:85,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{recipientnaira}</Text>
+    <Text style={{marginLeft:77,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{recipientnaira}</Text>
     </View>
    </View>
 
-   <View style={{backgroundColor:colors.white,display:"flex",marginTop:30,borderRadius:8,padding:16,}}>
+   <View style={{backgroundColor:colors.white,display:"flex",marginTop:30,borderRadius:8,padding:16}}>
     <View style={{flexDirection:"row",height:22,width:318,}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Transaction Ref</Text>
-    <Text  style={{marginLeft:windowheight>800? 100:80,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{transactionref}</Text>
+    <Text  style={{marginLeft:70,color:colors.neural800,fontSize:14,fontWeight:"700",lineHeight:18.9}}>{transactionref}</Text>
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:15}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Charges</Text>
-    <Text style={{marginLeft:windowheight>800? 240:223,color:"#000000",fontSize:14,fontWeight:"700",lineHeight:18.9}}>{Charges}</Text>
+    <Text style={{marginLeft:210,color:"#000000",fontSize:14,fontWeight:"700",lineHeight:18.9}}>{Charges}</Text>
     </View>
     <View style={{flexDirection:"row",height:22,width:318,marginTop:19}}>
         <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:"#000000"}}>Description</Text>
-    <Text  style={{marginLeft:windowheight>800? 240:223,color:colors.neural800,fontSize:12,fontWeight:"700",lineHeight:16.2}}>{description}</Text></View>
+    <Text  style={{marginLeft:210,color:colors.neural800,fontSize:12,fontWeight:"700",lineHeight:16.2}}>{description}</Text></View>
    </View>
-   <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 20, height: windowheight>800? 56:56, alignItems: "center", padding: 10 }}>
+   <TouchableOpacity style={{ backgroundColor: colors.Orange, borderRadius: 8, marginTop: 20, height:56, alignItems: "center", padding: 10 }}>
             <Text style={styles.buttonText}>Share Reciept</Text>
           </TouchableOpacity>
 

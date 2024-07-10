@@ -8,7 +8,7 @@ import {Picker} from '@react-native-picker/picker'
 
 
 
-export default function Linkbankaccount({navigation, windowWidth,windowheight}) {
+export default function Linkbankaccount({navigation}) {
 
     
   const [userInfo, setuserInfo] = useState({
@@ -54,15 +54,15 @@ export default function Linkbankaccount({navigation, windowWidth,windowheight}) 
   const [selectedValue, setSelectedValue] = useState("");
 console.log(selectedValue)
   return (
-    <View style={{ padding:19,marginTop:150,flex:1}}>
+    <View style={{ marginTop:150}}>
       <TouchableOpacity style={styles.backbtncontainer}   onPress={()=>navigation.goBack()}>
             <Ionicons name="arrow-back" size={24} color="black" />
             <Text style={{fontSize:16,fontWeight:"700",lineHeight:21.6,color:colors.Textcolor,marginLeft:90}}>Link BanK</Text>
             </TouchableOpacity>
         
-    <View style={{gap: 20,width:350,height:260,marginLeft:windowWidth>400? 29:15,alignContent:"center",justifyContent:"center",marginTop:60}}>
-     
-     <View style={{ display: "flex", flexDirection: "column", gap: 8, width: 350, height: 86 }}>
+    <View style={{gap: 20,width:350,height:260,marginLeft:29,alignContent:"center",justifyContent:"center"}}>
+   
+     <View style={{ display: "flex", flexDirection: "column", gap: 18, width: 350, height: 86,marginTop:180 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
               <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Bank Name</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
@@ -86,7 +86,7 @@ console.log(selectedValue)
             </View>
           </View>
 
-          <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
+          <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 18, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
               <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Account Number</Text>
               <Text style={{ color: colors.Orange }}>*</Text>
@@ -101,7 +101,7 @@ console.log(selectedValue)
               onChangeText={(val) =>handledeacctnum(val)}
             />
           </View>
-          <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
+          <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 18, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row" }}>
               <Text style={{ fontWeight: "600", color: colors.Textcolor, lineHeight: 19.2, fontSize: 16 }}>Holders Name</Text>
               <Text style={{ color: colors.Orange }}>*</Text>

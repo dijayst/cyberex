@@ -2,7 +2,7 @@ import { View, Text,TextInput,StyleSheet,TouchableOpacity, Alert } from 'react-n
 import React,{useState} from 'react'
 import colors from '../JSON AND COLOR/colors'
 import {Picker} from '@react-native-picker/picker'
-export default function Cyberexuser({ windowWidth,windowheight}) {
+export default function Cyberexuser() {
   
   const [userInfo, setuserInfo] = useState({
     
@@ -60,7 +60,7 @@ export default function Cyberexuser({ windowWidth,windowheight}) {
 
     console.log(userInfo)
   return (
-    <View style={{gap: 20,width:windowWidth>400? 29:360}}>
+    <View style={{gap: 20,width:29}}>
      
      <View style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 8, width: 350, height: 86 }}>
             <View style={{ display: "flex", flexDirection: "row",marginLeft:-10 }}>
