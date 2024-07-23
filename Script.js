@@ -292,8 +292,6 @@ const users=[{
     country:"USA",
     image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
     image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    
-  
     apple:"Apple Inc.",
     link:"Apple.com",
       user:"Admin1",
@@ -312,9 +310,9 @@ const users=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
     
@@ -334,7 +332,6 @@ const users=[{
     users:"Admin",
     staff:"Staff",
     price:"$10,000.00",
-    
     digit:"100",
     parentcurrency:"parent currency: $",
     naira:"naira value: 380.00",
@@ -342,9 +339,9 @@ const users=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
       
@@ -372,9 +369,9 @@ const users=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
    
@@ -403,9 +400,9 @@ const users=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
     
@@ -433,9 +430,9 @@ const users=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
   },{
@@ -462,9 +459,9 @@ const users=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
   },
@@ -492,9 +489,9 @@ const users=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
   },{
@@ -521,9 +518,9 @@ const users=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
   },{
@@ -546,9 +543,9 @@ const users=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
   },{
@@ -574,9 +571,9 @@ const users=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
   },{
@@ -602,9 +599,9 @@ const users=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
   },
@@ -619,9 +616,9 @@ const users3=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  email:"olamigokephys@gmail.com",
+  email:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
   
@@ -631,9 +628,9 @@ const users3=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  email:"olamigokephys@gmail.com",
+  email:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
 },{
@@ -643,9 +640,9 @@ const users3=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  email:"olamigokephys@gmail.com",
+  email:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
 },{
@@ -655,9 +652,9 @@ const users3=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  email:"olamigokephys@gmail.com",
+  email:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
   
@@ -669,9 +666,9 @@ const users3=[{
   bankdetails:"0014(0212243711)",
   accountname:"Olaolu Adedeji",
   contact:"+2348078868319",
-  useremail:"olamigokephys@gmail.com",
+  useremail:"Olamigokephys@gmail.com",
   fulfiled:"True",
-  fulfiledby:"olamigokephys@gmail.com",
+  fulfiledby:"Olamigokephys@gmail.com",
   timefulfiled:"June 9th,2020. 9:46pm",
   amount:"₦100,000"
 },{
@@ -680,9 +677,9 @@ const users3=[{
 bankdetails:"0014(0212243711)",
 accountname:"Olaolu Adedeji",
 contact:"+2348078868319",
-email:"olamigokephys@gmail.com",
+email:"Olamigokephys@gmail.com",
 fulfiled:"True",
-fulfiledby:"olamigokephys@gmail.com",
+fulfiledby:"Olamigokephys@gmail.com",
 timefulfiled:"June 9th,2020. 9:46pm",
 amount:"₦100,000"
 },];
@@ -702,15 +699,17 @@ const productsContainer = document.getElementById("test2");
 users.forEach(user => {
   const productDiv = document.createElement("div");
   productDiv.style.backgroundColor = "#FFFFFF";
-  productDiv.style.height = "150px";
+  productDiv.style.height = "185px";
+  productDiv.style.width = "195px";
   productDiv.style.textAlign = "center";
   productDiv.style.borderRadius = "8px";
   productDiv.style.border = "1px solid #DEDEDE";
-  productDiv.style.margin = "3px";
+  productDiv.style.margin = "5px";
+  productDiv.style.padding="20px 20px 20px 18px"
 
   productDiv.innerHTML = `
     
-    <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;color:#000000;font-weight: 700;gap:5px;"><p>${user.name}</p>
+    <div style="display: flex;flex-direction: row;justify-content: center;color:#000000;font-weight: 700;gap:5px;"><p>${user.name}</p>
     <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
     <p>${user.verified}</p></div>
     </div>
@@ -871,8 +870,8 @@ document.addEventListener("DOMContentLoaded", function() {
   if(test1Element){
     test1Element.innerHTML = users.map(user => { 
       return `<div class="test1div">
-        <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;color:#000000;font-weight: 700;gap:5px;"><p>${user.name}</p>
-        <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;"><p>${user.verified}</p></div>
+        <div style="display: flex;flex-direction: row;justify-content: center;gap:5px;"><p style=" font-size: 16px;color:#000000;font-weight: 700">${user.name}</p>
+        <div style="background-color:#FFEFEA;height:15px;width:50px ;border-radius: 25.6px;padding: 3px;margin-top: 2px;"><p style="font-size: 8px;font-weight: 700;color: #FA6230;">${user.verified}</p></div>
         </div>
         <div class="test1hash">
             <div class="userdiv1"> 
@@ -891,8 +890,8 @@ document.addEventListener("DOMContentLoaded", function() {
   if (test3Element) {
     test3Element.innerHTML = users.map(user => { 
       return `<div class="div0">
-      <img src=${user.image}  style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/>
-      <p style="font-weight: 700;">${user.user}</p>
+      <img src=${user.image}  style="border-radius: 90%;width: 90px;height: 90px;margin-top: 18px;"/>
+      <p style="font-weight: 700;margin-top: 8px; font-size:15px;">${user.user}</p>
       <div class="test2hash"> 
       <div style="display: flex;flex-direction: row;gap:5px;margin-left:8px;"> 
         <img src="./images/call.png"  class="test1img" />  
@@ -903,9 +902,9 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <div style="width: 25px;background-color:red;">
         </div>
-      <div style="display: flex;flex-direction: row;padding:0px;gap:10px;justify-content: center;">
-        <div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:20px;color:#FA6230;padding-top:4px; font-size: 11px;" >${user.users}</div>
-        <div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:20px;color:#FA6230;padding-top:4px; font-size: 11px;" >${user.staff}</div>
+      <div style="display: flex;flex-direction: row;padding:0px;gap:10px;justify-content: center;margin-top: 14px;">
+        <div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:22px;color:#FA6230;padding-top:4px; font-size: 12px; font-weight: 500;" >${user.users}</div>
+        <div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:22px;color:#FA6230;padding-top:4px; font-size: 12px; font-weight: 500;" >${user.staff}</div>
       </div>
       </div>`;
     }).join('');
@@ -932,15 +931,15 @@ document.addEventListener("DOMContentLoaded", function() {
   if(test5Element){
     test5Element.innerHTML = users.map(user => { 
   return `<div class="div0">
-  <img src=${user.image1}  style="border-radius: 90%;width: 58px;height: 58px;margin-top: 25px;"/> 
+  <img src=${user.image1}  style="border-radius: 90%;width: 90px;height: 90px;margin-top: 25px;"/> 
  
     
   <div style="display: flex;flex-direction: column;margin: 10px;border-radius: 4px;width: 159px;height:60px;">
         <div style="display: flex;flex-direction: row;justify-content: center;">
-            <p style="color:#000000;font-weight:600;font-size: 18px;">${user.apple}</p></div>
+            <p style="color:#000000;font-weight:600;font-size: 16px;">${user.apple}</p></div>
             <div style="display: flex;flex-direction: row;justify-content: center;">
 
-               <p style="color:#414141; font-size: 15px;">${user.link}</p></div>
+               <p style="color:#414141; font-size: 13px;">${user.link}</p></div>
 
     </div>
     <div class="test5div2" onclick="submitForm5()">Edit Company</div>
@@ -974,32 +973,30 @@ document.addEventListener("DOMContentLoaded", function() {
   
   if(test7Element){
     test7Element.innerHTML = users.map(user => { 
-     return `<div class="div0">
-          <img src="${user.image}" style="border-radius: 90%; width: 80px; height: 80px; margin-top: 25px;" />
-          <p style="font-weight: 700;">${user.user}</p>
-          <div class="test2hash"> 
-              <div style="display: flex; flex-direction: row; gap: 5px; margin-left: 8px;"> 
-                  <img src="images/call.png" class="test1img" />  
-                  <p class="test1p">${user.contact}</p>
-              </div>
-              <div style="display: flex; flex-direction: row; margin-top: 8px; gap: 5px; margin-left: 8px;">
-                  <img src="images/mail.png" class="test1img"/>  
-                  <p class="test1p">${user.email}</p>
-              </div>
+     return `<div class="divd">
+        <img src=${user.image1}  style="border-radius: 90%;width: 58px;height: 58px;"/> 
+       
+          
+        <div style="display: flex;flex-direction: column;margin-top: 10px;border-radius: 4px;width: 159px;height:60px;">
+              <div style="display: flex;flex-direction: row;justify-content: center;">
+                  <p style="color:#000000;font-weight:700;font-size: 16px;">${user.country}</p></div>
+                  <div style="display: flex;flex-direction: row;justify-content: center;">
+      
+                     <p style="color:#414141; font-size: 10px;white-space: nowrap;font-weight:500;">exchange per unit (CAD/naira)</p></div>
+      
           </div>
-          <div style="width: 25px; background-color: red;"></div>
-          <div style="display: flex; flex-direction: row; padding: 0px; gap: 10px; justify-content: center;">
-              <div style="background-color: #FFEFEA; width: 60px; border-radius: 8px; height: 20px; color: #FA6230; padding-top: 4px; font-size: 11px;">${user.users}</div>
-              <div style="background-color: #FFEFEA; width: 60px; border-radius: 8px; height: 20px; color: #FA6230; padding-top: 4px; font-size: 11px;">${user.staff}</div>
-          </div>
-      </div>`;
+          <div class="test5div3" onclick="submitForm6()">Edit Country</div>
+          
+      
+        </div>`;
     }).join('');
     
   }
   if(test8Element){
     test8Element.innerHTML = users.map(user => { 
       return `<div class="divd">
-     <P style="margin-top:40px;font-weight: 700;">${user.digit}</P>
+     <P style="font-weight: 700;
+  font-size: 18px;">${user.digit}</P>
      <div class="test1hash2">
        <p class="test1p">${user.parentcurrency}</p>
        <p class="test1p">${user.naira}</p>
@@ -1116,7 +1113,7 @@ if(tablebody4Element){
 <td>June 9th,2020. 9:46pm</td>
 <td>June 9th,2020. 9:46pm</td>
 <td >
-<div class="tablebtn">View Beneficiaries</div>
+<div class="tablebtn"><p>View Beneficiaries</p></div>
 
 </td>
 </tr>

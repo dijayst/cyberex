@@ -411,8 +411,8 @@ const users=[{
         productDetail.innerHTML = `
             
             <img  src=${product.image} class="productdetailimg" alt="profile"/>
-            <div  style="display: flex;flex-direction:column;margin-left:10px;line-height:0px;">
-            <h1>${product.user1}</h1>
+            <div  style="display: flex;flex-direction:column;margin-left:15px;line-height:0px;">
+            <h1 style="font-size: 24px;font-family: 700;">${product.user1}</h1>
             <div style="display: flex;flex-direction:row; ">
             <div  class="productdetailhash">
             <div  style="display: flex;flex-direction:row;">
@@ -420,8 +420,6 @@ const users=[{
             <div style="display: flex;flex-direction:row;"><img src="images/mail.png"  width="15px" height="15px" style=" margin-top: 22px;margin-left:10px;"/><p class="test1pp">${product.email}</p></div></div>
            <div style="display: flex;flex-direction:row;margin-top:-5px"><img src="images/Group.png"  width="15px" height="15px" style=" margin-top: 15px;"/> <p  class="test1pp1">${product.btcaddress}</p> <img src="images/file_copy.png"  width="15px" height="15px" style=" margin-top: 15px; margin-left: 15px;"/> </div> 
             </div>
-            <div class="deactive ">
-            <p >Deactivate</p></div>
             </div>
                 <!-- Add other detailed product information here -->
             </div>
