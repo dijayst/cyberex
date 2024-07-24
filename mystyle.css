@@ -213,7 +213,7 @@ flex-direction: row;
   background-color:#FA6230;
   color:#FFFFFF;
   width:207px;
-  height:px ;
+  height:38px ;
   border-radius: 8px;
   font-size: 17px;
 }
@@ -1182,13 +1182,14 @@ margin-left: 515px;
 }
 
 .modal33 {
+  
   display: none; /* Initially hide the modal */
   position: fixed;
-  margin-top: -715px;
+  margin-top: -855px;
   z-index: 1;
   width: 100%;
   height: 100%;
-  margin-left: -26.5%;
+  margin-left: -22.5%;
   color: #000000;
   background: rgba(14, 15, 14, 0.3)
   
@@ -1197,23 +1198,23 @@ margin-left: 515px;
 .modal10 {
   display: none; /* Initially hide the modal */
   position: fixed;
-  margin-top: -380px;
+ 
   z-index: 1;
   width: 100%;
   height: 100%;
-  margin-left: -26.4%;
+  
   color: #000000;
-  background: rgba(14, 15, 14, 0.3)
+  background: rgba(9, 139, 9, 0.3)
   
 }
 .modal13 {
   display: none; /* Initially hide the modal */
   position: fixed;
-  margin-top: -702px;
+  margin-top: -804px;
   z-index: 1;
   width: 100%;
   height: 100%;
-  margin-left: -26.4%;
+  margin-left: -21.4%;
   color: #000000;
   background: rgba(14, 15, 14, 0.3)
   
@@ -1223,11 +1224,11 @@ margin-left: 515px;
 .modal12 {
   display: none; /* Initially hide the modal */
   position: fixed;
-  margin-top: -632px;
+  margin-top: -725px;
   z-index: 1;
   width: 100%;
   height: 100%;
-  margin-left: -26.4%;
+  margin-left: -21.4%;
   color: #000000;
   background: rgba(14, 15, 14, 0.3)
 }
@@ -1359,10 +1360,26 @@ margin-left: 515px;
   justify-content: center;
   align-items: center;
   padding-top: 4px;
- padding-left: 10px;
+ padding-left: 50px;
   padding-bottom: 4px;
 }
 
+.test1prof2{
+  background-color: #FA6230;
+  height: 25px;
+  width:152px;
+  font-size: 11px;
+  color:#FFFFFF;
+  margin-top: 20px;
+  margin-left: 5px;
+  border-radius: 4px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+ padding-left: 15px;
+  padding-bottom: 4px;
+}
 
 .test1hash3{
   display: flex;
@@ -1528,13 +1545,18 @@ margin-left: 515px;
   border-radius: 4px;
    cursor: pointer;
   }
-   .tablebtn{
-    background-color: #FA6230;color: #FFFFFF;margin-top: 3px;height: 25px;text-align: center;padding-top: 5px;border-radius: 4px;justify-content: center;
-  width: 90px;
+  .tablebtn{
+    background-color: #FA6230;
+    color: #ffffff;margin-top: 3px;
+    height: 25px;text-align: center;
+    padding-top: 5px;border-radius: 4px;
+    justify-content: center;
+    width: 90px;
   }
    .tablebtn p{
 font-size: 10px;
    }
+   
    .table-body3{
     margin-left: 50px;height: 50px;
     font-weight: 500; 
@@ -2011,7 +2033,7 @@ width: 140px;
     font-size: 10px;
   }
   #table-body4{
-    border: 1px solid #DEDEDE;
+    border: 1px solid #dedede;
     border-radius: 4px;
     width: 100%;
     margin-top: 20px;

@@ -10,118 +10,119 @@
 </head>
 <body>
     <div class="tab-container">
-        <nav class="tab" id="myTab">
+        
+    <nav class="tab" id="myTab">
        
-            <div class="flexcontainer">
-   
-                   <img src="./images/Frame 117.png" width="44px" height="44px"/>
-              <div style="display: flex;flex-direction: row;margin-left: 12px; ">
-               <div id="admin">
-                   <h3 style="font-size: 21px;font-weight: 700px;color: #030E20;">
-                       Admin1
-                   </h3>
-                   <p style="color: #676A85;font: size 16px;font-weight: 500px;">Administrator</p>
-                   
-                  </div>
-          <div class="angle-down">
-           <i class="fa-solid fa-angle-down fa-1x"></i>
+        <div class="flexcontainer">
+
+               <img src="./images/Frame 117.png" width="44px" height="44px"/>
+          <div style="display: flex;flex-direction: row;margin-left: 12px; ">
+           <div id="admin">
+               <h3 style="font-size: 21px;font-weight: 700px;color: #030E20;">
+                   Admin1
+               </h3>
+               <p style="color: #676A85;font: size 16px;font-weight: 500px;">Administrator</p>
+               
+              </div>
+      <div class="angle-down">
+       <i class="fa-solid fa-angle-down fa-1x"></i>
+   </div>
+          </div>
+     
+      
        </div>
-              </div>
-         
+
+
+      
           
+      
+       <div  class="close" onclick="closeDrawer()"><i class="fa-solid fa-xmark fa-1x"></i></div>
+     
+       <div class="header">
+           <p style="color: #414141;font-size: 16px;font-weight: 500;" >General</p>
+       </div>
+
+
+       <div class="div">
+             <div class="tablinks" onclick="openCity(event, 'dashboard')"  >
+               <img src="./images/dashboard_customize.png" width="20px" height="20px"style="margin-top:-10px;"  />
+           <div style="margin-left: 6px;margin-top:-7px;font-size:14px;font-weight: 500;">
+               Dashboard</div>
+          </div>
+           <div class="tablinks" onclick="openCity(event, 'account')">
+               <img src="./images/account_circle.png" width="20px" height="20px" style="margin-top:-10px;" />
+           <div style="margin-left: 10px;margin-top: -7.5px;font-size:14px;font-weight: 500;">
+               Users</div>
+       </div>
+
+
+       <div class="tablinks" onclick="openCity(event, 'payments')" >
+           <img src="./images/payments.png" width="20px" height="20px" style="margin-top:-10px;"  />
+           <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;"  >
+               Deposit 2 User</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'debit')">
+           <img src="./images/payments.png" width="20px" height="20px" style="margin-top:-10px;" />
+           <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Debit Order</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'history')">
+           <img src="./images/deployed_code_history.png" width="20px" height="20px" style="margin-top:-10px;" />
+           <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Pending Transfers</div>
            </div>
-   
-   
-          
-              
-          
-           <div  class="close" onclick="closeDrawer()"><i class="fa-solid fa-xmark fa-1x"></i></div>
-         
-           <div class="header">
-               <p style="color: #414141;font-size: 16px;font-weight: 500;" >General</p>
            </div>
-   
-   
-           <div class="div">
-                 <div class="tablinks" onclick="openCity(event, 'dashboard')"  >
-                   <img src="./images/dashboard_customize.png" width="20px" height="20px"style="margin-top:-10px;"  />
-               <div style="margin-left: 6px;margin-top:-7px;font-size:14px;font-weight: 500;">
-                   Dashboard</div>
-              </div>
-               <div class="tablinks" onclick="openCity(event, 'account')">
-                   <img src="./images/account_circle.png" width="20px" height="20px" style="margin-top:-10px;" />
-               <div style="margin-left: 10px;margin-top: -7.5px;font-size:14px;font-weight: 500;">
-                   Users</div>
+
+
+       <div class="header">
+           <p style="color: #414141;font-size: 16px;font-weight: 500;" >Giftcard</p>
+       </div>
+       <div class="div">
+           <div class="tablinks" onclick="openCity(event, 'bookmark')"  >
+               <img src="./images/bookmark_manager.png" width="20px" height="20px" style="margin-top:-10px;"  />
+               <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">
+               Giftcard Manager</div>
            </div>
-   
-   
-           <div class="tablinks" onclick="openCity(event, 'payments')" >
-               <img src="./images/payments.png" width="20px" height="20px" style="margin-top:-10px;"  />
-               <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;"  >
-                   Deposit 2 User</div>
-           </div>
-           <div class="tablinks" onclick="openCity(event, 'debit')">
-               <img src="./images/payments.png" width="20px" height="20px" style="margin-top:-10px;" />
-               <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Debit Order</div>
-           </div>
-           <div class="tablinks" onclick="openCity(event, 'history')">
-               <img src="./images/deployed_code_history.png" width="20px" height="20px" style="margin-top:-10px;" />
-               <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Pending Transfers</div>
-               </div>
-               </div>
-   
-   
-           <div class="header">
-               <p style="color: #414141;font-size: 16px;font-weight: 500;" >Giftcard</p>
-           </div>
-           <div class="div">
-               <div class="tablinks" onclick="openCity(event, 'bookmark')"  >
-                   <img src="./images/bookmark_manager.png" width="20px" height="20px" style="margin-top:-10px;"  />
-                   <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">
-                   Giftcard Manager</div>
-               </div>
-               <div class="tablinks" onclick="openCity(event, 'contract')"id="defaultOpen"  >
-                   <img src="./images/contract.png" width="20px" height="20px" style="margin-top:-10px;" />
-                   <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">
-                       Giftcard Transaction</div>
-                    </div>
-                    </div>
-           
-                    
-           <div class="header">
-               <p style="color: #414141;font-size: 16px;font-weight: 500;">Admin & Others</p>
-           </div>
-   
-           <div class="div">
-               <div class="tablinks" onclick="openCity(event, 'featured')">
-                   <img src="./images/featured_seasonal_and_gifts.png" width="20px" height="20px" style="margin-top:-10px;" />
-                   <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;" >
-                   Promotional Offers</div>
-           </div>
-           <div class="tablinks" onclick="openCity(event, 'currency')"  >
-               <img src="./images/currency_exchange.png" width="20px" height="20px" style="margin-top:-10px;" />
-               <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Exchange Rate</div>
-           </div>
-           <div class="tablinks" onclick="openCity(event, 'finance')"  >
-               <img src="./images/finance.png" width="20px" height="20px" style="margin-top:-10px;" />
-               <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Revenue</div>
-           </div>
-           <div class="tablinks" onclick="openCity(event, 'notification')"  >
-               <img src="./images/notifications.png" width="20px" height="20px"style="margin-top:-10px;" />
-               <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Push Notification</div>
-           </div>
-           <div class="tablinks" onclick="openCity(event, 'person')" >
-               <img src="./images/person_apron.png" width="20px" height="20px" style="margin-top:-10px;" />
-               <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Staff Management</div>
-                </div> 
-           </div>
-              <div class="logout">  
-               <img src="./images/chip_extraction.png" width="20px" height="20px"style="margin-top:-10px;" />
-         <div style="margin-left: 10px;margin-top: -9px;font-size:14px;">Log Out</div></div>
-           
-          
-   
-         </nav>
+           <div class="tablinks" onclick="openCity(event, 'contract')" id="defaultOpen" >
+               <img src="./images/contract.png" width="20px" height="20px" style="margin-top:-10px;" />
+               <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">
+                   Giftcard Transaction</div>
+                </div>
+                </div>
+       
+                
+       <div class="header">
+           <p style="color: #414141;font-size: 16px;font-weight: 500;">Admin & Others</p>
+       </div>
+
+       <div class="div">
+           <div class="tablinks" onclick="openCity(event, 'featured')">
+               <img src="./images/featured_seasonal_and_gifts.png" width="20px" height="20px" style="margin-top:-10px;" />
+               <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;" >
+               Promotional Offers</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'currency')"  >
+           <img src="./images/currency_exchange.png" width="20px" height="20px" style="margin-top:-10px;" />
+           <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Exchange Rate</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'finance')"  >
+           <img src="./images/finance.png" width="20px" height="20px" style="margin-top:-10px;" />
+           <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Revenue</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'notification')"  >
+           <img src="./images/notifications.png" width="20px" height="20px"style="margin-top:-10px;" />
+           <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Push Notification</div>
+       </div>
+       <div class="tablinks" onclick="openCity(event, 'person')" >
+           <img src="./images/person_apron.png" width="20px" height="20px" style="margin-top:-10px;" />
+           <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Staff Management</div>
+            </div> 
+       </div>
+          <div class="logout">  
+           <img src="./images/chip_extraction.png" width="20px" height="20px"style="margin-top:-10px;" />
+     <div style="margin-left: 10px;margin-top: -9px;font-size:14px;">Log Out</div></div>
+       
+      
+
+     </nav>
      
 
   
@@ -695,6 +696,8 @@
             <!-- Table body will be generated dynamically -->
         </tbody>
     </table>
+
+
     </div>
             
     
@@ -927,7 +930,8 @@
 
 </div>
 </div>
-  <script src="./Script.js"></script>  
+  
+<script src="./Script.js"></script>  
   
   <script src="./Assigntoothers.js"></script>  
 

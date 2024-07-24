@@ -358,48 +358,6 @@ const users=[{
   amount:"₦100,000"
   },];
 
-  /**
-   
- 
-  
-  function renderProductproducts() {
-  // Render users on the page
-  const productsContainer = document.getElementById("test2");
-  users.forEach(user => {
-    const productDiv = document.createElement("div");
-    productDiv.style.backgroundColor = "#FFFFFF";
-    productDiv.style.width = "19.3%";
-    productDiv.style.height = "150px";
-    productDiv.style.textAlign = "center";
-    productDiv.style.borderRadius = "8px";
-    productDiv.style.border = "1px solid #DEDEDE";
-    productDiv.style.margin = "3px";
-  
-    productDiv.innerHTML = `
-      <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;">
-        <p>${user.name}</p>
-        <p style="color: #FA6230;font-size: 8px;">${user.verified}</p>
-      </div>
-      <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 159px;height:60px;">
-        <div style="display: flex;flex-direction: row;justify-content: center;">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <p>${user.contact}</p>
-        </div>
-        <div style="display: flex;flex-direction: row;justify-content: center;">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <p>${user.email}</p>
-        </div>
-      </div>
-      <div style="background-color: #FA6230;height: 20px;width:159px;color:black;margin: 10px;border-radius: 4px; cursor: pointer;" onclick="redirectToProductDetail(${user.id})">${user.prof}</div>
-    `;
-  
-    productsContainer.appendChild(productDiv);
-  });
-  }
-  
-  renderProductproducts();
-    */
-  
   function renderProductDetail() {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = parseInt(urlParams.get('id'));
@@ -521,79 +479,51 @@ function previewImage() {
 
 
 function submitForm() {
-  // You can handle form submission here if needed
-  // For demonstration purposes, this function just closes the dialog
   closeDialog();
   //window.open(`Addnewcountry.html`, "_self");
 }
 
 function submitForm2() {
-  // You can handle form submission here if needed
-  // For demonstration purposes, this function just closes the dialog
-  //closeDialog();
   window.open(`./Editdeals.html`, "_self");
 }
 
 
 
 function submitForm3() {
-  // You can handle form submission here if needed
-  // For demonstration purposes, this function just closes the dialog
   closeDialog4();
   window.open(`./Addnewdeal.html`, "_self");
 }
 
 
 function submitForm4() {
-  // You can handle form submission here if needed
-  // For demonstration purposes, this function just closes the dialog
-  //closeDialog();
  
 }
 
 function submitForm5() {
-  // You can handle form submission here if needed
-  // For demonstration purposes, this function just closes the dialog
-  //closeDialog();
   window.open(`./Addnewcountry.html`, "_self");
 }
 
 
 function submitForm6() {
-  // You can handle form submission here if needed
-  // For demonstration purposes, this function just closes the dialog
-  //closeDialog();
   window.open(`./Editcountry.html`, "_self");
 }
 
 function submitForm7() {
-  // You can handle form submission here if needed
-  // For demonstration purposes, this function just closes the dialog
-  //closeDialog();
   window.open(`./Addnewdeal.html`, "_self");
 }
 
 
 function submitForm8() {
-  // You can handle form submission here if needed
-  // For demonstration purposes, this function just closes the dialog
-  //closeDialog();
   window.open(`./Assigntoothers.html`, "_self");
 }
 
 
 function submitForm9() {
-  // You can handle form submission here if needed
-  // For demonstration purposes, this function just closes the dialog
-  //closeDialog();
   window.open(`./Chat.html`, "_self");
 }
 
 
 function submitForm10() {
-  // You can handle form submission here if needed
-  // For demonstration purposes, this function just closes the dialog
-  //closeDialog();
   window.open(`./Transaction.html`, "_self");
 }
 
@@ -730,22 +660,6 @@ document.getElementById("test1").innerHTML = users.map(user => {
   </div>`;
 }).join('');
 
-/*
-document.getElementById("test2").innerHTML = users.map(user => { 
-  return `<div style="background-color: #FFFFFF;width:19.3%;height: 150px; text-align: center; border-radius: 8px;border:1px solid #DEDEDE;margin:3px;">
-    <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;"><p>${user.name}<p style="color: #FA6230;font-size: 8px;">${user.verified}</p></p></div>
-    <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 159px;height:60px;">
-        <div style="display: flex;flex-direction: row;justify-content: center;"> <i class="fa-solid fa-magnifying-glass"></i>
-            <p >${user.contact}</p></div>
-            <div style="display: flex;flex-direction: row;justify-content: center;">
-                <i class="fa-solid fa-magnifying-glass"></i>
-               <p>${user.email}</p></div>
-
-    </div>
-    <div style="background-color: #FA6230;height: 20px;width:159px;color:black;margin: 10px;border-radius: 4px;">${user.prof}</div>
-
-  </div>`;
-}).join('');*/
 
 
 document.getElementById("test5").innerHTML = users.map(user => { 
@@ -809,19 +723,21 @@ document.getElementById("table-body3").innerHTML =users.map(item => `
     `).join('');
     
 document.getElementById("table-body4").innerHTML =users.map(item => `
-<tr style="margin-left: 50px;height: 50px;">
-    <td>${item.id}</td>
-    <td>another one(12)</td>
-    <td>1</td>
-    <td>${item.amount}</td>
-    <td>false</td>
-    <td>all users</td>
-    <td>june 9th,2020. 9:46pm</td>
-    <td>june 9th,2020. 9:46pm</td>
-    <td ><div style="background-color: #FA6230;color: #FFFFFF;height: 25px;padding-top :-5px;padding :10px;
-    border-radius: 4px;" > view beneficiaries</div>
-    </td>
-</tr>
+
+  <tr style="margin-left: 50px;height: 50px;">
+  <td>${item.id}</td>
+  <td>Another One(12)</td>
+  <td>1</td>
+  <td>${item.amount}</td>
+  <td>False</td>
+  <td>All Users</td>
+  <td>June 9th,2020. 9:46pm</td>
+  <td>June 9th,2020. 9:46pm</td>
+  <td >
+  <div class="tablebtn"><p>View Beneficiaries</p></div>
+  
+  </td>
+  </tr>
 `).join('');
 
 
@@ -864,25 +780,23 @@ document.getElementById("table-body6").innerHTML =users.map(item => `
 
 document.getElementById("test3").innerHTML = users.map(user => { 
   return `<div class="div0">
-  <img src=${user.image}  style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/>
-  <p style="
-  font-weight: 700;">${user.user}</p>
-  <div class="test2hash"> 
-  <div style="display: flex;flex-direction: row;gap:5px;margin-left:8px;"> 
-    <img src="./images/call.png"  class="test1img" />  
-        <p class="test1p">${user.contact}</p></div>
-        <div style="display: flex;flex-direction: row;gap:5px;margin-left: 8px;">
-        <img src="./images/mail.png"  class="test1img"/>  
-           <p class="test1p">${user.email}</p></div>
-
-    </div>
-    <div style="width: 25px;background-color:red;">
-    </div>
-<div style="display: flex;flex-direction: row;padding :0px;gap:10px;justify-content: center;">
-<div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:20px;color:#FA6230;padding-top :4px; font-size: 11px;" >${user.users}</div>
-<div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:20px;color:#FA6230;padding-top :4px; font-size: 11px;" >${user.staff}</div>
-</div>
-</div>`;
+      <img src=${user.image}  style="border-radius: 90%;width: 90px;height: 90px;margin-top: 18px;"/>
+      <p style="font-weight: 700;margin-top: 8px; font-size:15px;">${user.user}</p>
+      <div class="test2hash"> 
+      <div style="display: flex;flex-direction: row;gap:5px;margin-left:8px;"> 
+        <img src="./images/call.png"  class="test1img" />  
+            <p class="test1p">${user.contact}</p></div>
+            <div style="display: flex;flex-direction: row;gap:5px;margin-left: 8px;">
+            <img src="./images/mail.png"  class="test1img"/>  
+               <p class="test1p">${user.email}</p></div>
+        </div>
+        <div style="width: 25px;background-color:red;">
+        </div>
+      <div style="display: flex;flex-direction: row;padding:0px;gap:10px;justify-content: center;margin-top: 14px;">
+        <div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:22px;color:#FA6230;padding-top:4px; font-size: 12px; font-weight: 500;" >${user.users}</div>
+        <div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:22px;color:#FA6230;padding-top:4px; font-size: 12px; font-weight: 500;" >${user.staff}</div>
+      </div>
+      </div>`;
 }).join('');
 
 
@@ -956,35 +870,3 @@ document.getElementById("test6").innerHTML = users.map(user => {
 
 
 
-
-
-
-    /**
-     * 
-     * 
-  
-
-document.getElementById("test5").innerHTML = users.map(user => { 
-  return `<div style="background-color: #FFFFFF;width:19.3%;height: 150px; text-align: center; border-radius: 8px;border:1px solid #DEDEDE;margin:3px;">
-  <img src=${user.image1}/> 
-  <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;"><p>${user.apple}<p style="color: #FA6230;font-size: 8px;">${user.verified}</p></p></div>
-    <div style="display: flex;flex-direction: column;background-color: #F6F8FA; margin: 10px;border-radius: 4px;width: 159px;height:60px;">
-        <div style="display: flex;flex-direction: row;justify-content: center;"> <i class="fa-solid fa-magnifying-glass"></i>
-            <p >${user.link}</p></div>
-            <div style="display: flex;flex-direction: row;justify-content: center;">
-                <i class="fa-solid fa-magnifying-glass"></i>
-               <p>${user.email}</p></div>
-
-    </div>
-    <div style="background-color: #FA6230;height: 20px;width:159px;color:#FFFFFF;margin: 10px;border-radius: 4px;">edit company</div>
-    <div style="background-color: #FDE6E6;height: 20px;width:159px;color:#EA0000;margin: 10px;border-radius: 4px;">deactivate</div>
-
-  </div>`;
-}).join('');
-
-     */
-  
-  
-  
-  
-  
