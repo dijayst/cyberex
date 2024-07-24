@@ -12,23 +12,27 @@
                 font-family: Arial, sans-serif;
             }
             .container {
-                width: 410px;
-                height: 342px;
-                margin: auto ;
-                padding: 20px;
+                width: 610px;
+                height: 400px;
+                margin-left: 60px ;
+                padding: 20px  20px 20px 20px;
                 border: 1px solid #ccc;
+                margin-left: 400px;
                 border-radius: 5px;
             }
             input[type="text"], input[type="password"], input[type="submit"] {
-               
+               height: 50px;
+               width: 96%;
                 padding: 10px;
-                margin: 5px 0;
+                margin-top: 15px;
+                margin-left: 10px;
                 box-sizing: border-box;
             }
             input[type="submit"] {
                 margin-top: 30px;
                 background-color: #FA6230;
-                width: 100%;
+                width: 96%;
+                margin-left: 10px;
                 color: white;
                 border: none;
                 cursor: pointer;
@@ -40,6 +44,8 @@
             .error {
                 color: red;
                 font-size: 0.8em;
+                margin-left: 90px;
+                
             }
         </style>
          <link rel="stylesheet" href="mystyle.css">
@@ -49,7 +55,7 @@
 <div class="container">
     <h5>Admin Log In</h5>
     <div class="label1">
-    <P>Already have an account?</P><p style="color: #FA6230;"> Sign up</P>
+    <P style="color: #6A6C6C;">Already have an account?</P><p style="color: #FA6230;"> Sign up</P>
    </div>
 
         <form id="loginForm" onsubmit="return validateForm(event)">
@@ -66,7 +72,7 @@
 
 </div>
 <div>
-    <p style="margin-left: 240px;color: #FA6230;font-size: 15px;white-space: nowrap;">Forgot Password?</p>
+    <p style="margin-left: 400px;margin-top: 10px;color: #FA6230;font-size: 15px;white-space: nowrap;">Forgot Password?</p>
 </div>
         <input style="font-size: 16px;font-weight:700; border-radius: 4px;" type="submit" value="Login">
     </form>

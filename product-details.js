@@ -847,26 +847,3 @@ document.getElementById("test6").innerHTML = users.map(user => {
   </div>`;
 }).join('');
      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
