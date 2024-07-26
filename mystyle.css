@@ -70,7 +70,7 @@ body {
   background-color: #DEDEDE;height: 40px;width: 160px;padding-top: 15px; padding-left: 20px;border-radius: 5px;
   font-size: 12px;
 }
-.contentbtn{
+.content-button{
   background-color: #FA6230;
   font-size: 14px;
   font-family: 700;
@@ -91,10 +91,10 @@ body {
   display: flex;flex-direction:column;
   padding-left: 150px;padding-top: 20px;gap: 10px;
 }
-.modalhd{
+.modal-title{
   color: #000000;
 }
-.modal3btn{
+.modal-submit-button{
   background-color: #FA6230;
   color:#FFFFFF;border: 0px;
   height: 42px;
@@ -2484,7 +2484,7 @@ font-size: 14px;     }
   .staffdiv{
     display: flex;flex-direction:row;gap: 10px;height: 210px;margin-top: 15px;
   }
-  .modal3btn{
+  .modal-submit-button{
     background-color: #FA6230;color:#FFFFFF;border: 0px;height: 30px;width: 90px;margin-top: 50px;margin-left: 275px;border-radius: 4px;
   }
   
@@ -2497,7 +2497,7 @@ font-size: 14px;     }
     margin-left: 275px;border-radius: 4px;
   }
   
-  .modalhd{
+  .modal-title{
     color: #000000;padding: 15px;
   }
 
@@ -2507,7 +2507,7 @@ font-size: 14px;     }
   .modal7btn{
     background-color: #FA6230;color:#FFFFFF;border: 0px;height: 30px;width: 90px;margin-top: 30px;margin-left: 275px;border-radius: 4px;
   }
-  .contentbtn{
+  .content-button{
     background-color: #FA6230;
     
     color: #FFFFFF;
