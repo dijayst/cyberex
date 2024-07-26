@@ -52,11 +52,11 @@ function validateForm(event) {
 
 
 
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+function opennewtab(evt, cityName) {
+  var i, contentsection, tablinks;
+  contentsection = document.getElementsByClassName("contentsection");
+  for (i = 0; i < contentsection.length; i++) {
+    contentsection[i].style.display = "none";
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {

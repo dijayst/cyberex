@@ -227,15 +227,15 @@ function myFunction() {
   }
 }
 
-  function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+  function opennewtab(evt, cityName) {
+    var i, contentsection, menuitem;
+    contentsection = document.getElementsByClassName("contentsection");
+    for (i = 0; i < contentsection.length; i++) {
+      contentsection[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    menuitem = document.getElementsByClassName("menuitem");
+    for (i = 0; i < menuitem.length; i++) {
+      menuitem[i].className = menuitem[i].className.replace(" active", "");
     }
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
@@ -665,7 +665,7 @@ amount:"₦100,000"
 },];
 
 
-document.getElementById("table-body").innerHTML = users.map(item => {
+document.getElementById("top-users-table").innerHTML = users.map(item => {
 
   return `
   
@@ -688,7 +688,7 @@ window.open(`product-detail.html?id=${productId}`, "_self");
 
 function renderProductItems() {
 // Render users on the page
-const productsContainer = document.getElementById("test2");
+const productsContainer = document.getElementById("users-content");
 users.forEach(user => {
   const productDiv = document.createElement("div");
   productDiv.style.backgroundColor = "#FFFFFF";

@@ -8,7 +8,7 @@
 
 }
 
-.tab-container {
+.sidebar-container {
   display: flex;
   height: 100vh;
   overflow: hidden;
@@ -46,7 +46,7 @@ body {
     
    
 }
-.adminrow{
+.admin-list{
   display: flex;
   flex-direction:row;
   gap: 10px;
@@ -54,11 +54,11 @@ body {
   margin-top: 20px;}
 
  
-.tab .header{
+.tab .sidebar-header{
   gap: 15px;margin: 40px 0px 0px 0px;
  }
  
-.logout{
+.logout-button{
   background-color:   #FEE0D6;border-radius: 8px;width: 207px;height: 38px;font-weight: 700;color: #EA0000;margin-top: 20px; display: flex;flex-direction: row;padding-left: 15px;padding-top: 18px;
 }
 .searchicon{
@@ -113,7 +113,7 @@ body {
   display: flex;flex-direction:row;gap: 10px;height: 210px;margin-top: 15px;
 }
 
-.btcdiv{
+.btc-chart{
  height: 220px;
  background-color: #FFFFFF;
  border-radius: 8px;
@@ -151,7 +151,7 @@ body {
   padding-left: 15px;
   margin-left: -85px;
     }
-.admins{
+.admin-item{
   height: 244px;
   width: 900px;
   background-color: #FFFFFF;
@@ -186,7 +186,7 @@ border: 1px solid
 
 .tab::-webkit-scrollbar{display: none;}
 /* Style the buttons inside the tab */
-.div .tablinks {
+.menu-section .menuitem {
   display: flex;
 flex-direction: row;
   color: #414141;
@@ -199,7 +199,7 @@ flex-direction: row;
   
 }
 /* Change background color of buttons on hover */
-.div .tablinks:hover {
+.menu-section .menuitem:hover {
   background-color: #ddd;
   width:207px;
   height:38px ;
@@ -209,7 +209,7 @@ flex-direction: row;
   font-size: 17px;
 }
 /* Create an active/current "tab button" class */
-.div .tablinks.active {
+.menu-section .menuitem.active {
   background-color:#FA6230;
   color:#FFFFFF;
   width:207px;
@@ -233,12 +233,12 @@ flex-direction: row;
 /* Style the tab content 
 
 
-.tabcontent{
+.contentsection{
   display: none;
  width: 81.7;
 }
 */
-.tabcontent {
+.contentsection {
   border: 1px solid #FFFFFF;
   width: 100%;
   height: 100%;
@@ -251,7 +251,7 @@ flex-direction: row;
 
 
 
-.flexcontainer{
+.admin-info-container{
  
     display: flex;
     flex-direction: row;
@@ -259,7 +259,7 @@ flex-direction: row;
     margin-top: 30px;
     
 }
-.flexcontainer1{
+.top-bar{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -268,7 +268,7 @@ flex-direction: row;
     height: 69px;
     margin-top: 15px;
 }
-.dashtext{
+.top-bar-date{
     font-size: 11px;
     color:#444748;
     white-space: nowrap;
@@ -322,7 +322,7 @@ white-space: nowrap;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
 }
-search{
+search-input{
     padding: 10px;
     margin-left: 0px;
     margin-top: 12px;
@@ -349,7 +349,7 @@ icon{
 #signup{
     color: #F0592A;
 }/*
-#maindiv{
+#main-section{
     text-align: center;
 padding: 150px;
 width: 610px;
@@ -358,20 +358,20 @@ background-color:#F6F8FA;
 
 }*/
 
-.maindiv{
+.main-section{
     display: flex;
     flex-direction:row;
     gap: 15px;
     max-width:100% ;    
     }
 
-.insidediv{
+.overview-cards{
 display: flex;
 flex-direction: column;
 margin-left: -5px;
 margin-top: 10px;
 }
-.minidiv1{
+.overview-section{
   display: flex;
   flex-direction: column;
     background-color:#F6F8FA;
@@ -381,7 +381,7 @@ margin-top: 10px;
   padding: 10px 20px 20px 20px;
 }
 
-.minidiv2{
+.chart-section{
   width: 555px;
   height: 355px;
   background-color: #F6F8FA;
@@ -395,14 +395,14 @@ margin-top: 10px;
     
 }
 
-.divinside{
+.card-content{
     display: flex;
     flex-direction: column;
     gap: 5px;
 
 }
 
-.divinside1{
+.giftcard-content{
   display: flex;
   margin-top: 15px;
  
@@ -410,13 +410,13 @@ margin-top: 10px;
   gap: 5px;
  
 }
-.divinside1 .no{
+.giftcard-content .no{
   font-size: 16px;
   font-weight: 700;
   color: #000000;
 }
 
-.insidedivs{
+.overview-card{
     background-color: #FFFFFF;
    height: 74px;
    margin: 5px;
@@ -428,7 +428,7 @@ gap: 8px;
    /* Adjust gap as needed */
 }
 
-.insidedivs1{
+.giftcard-card{
    
     background-color: #FFFFFF;
   display: flex;
@@ -437,7 +437,7 @@ gap: 8px;
     height: 70px;
    width: 48%;
 }
-.divp{
+.card-title{
 font-size: 7px;
 white-space: nowrap;
 font-weight: 500;
@@ -446,26 +446,26 @@ color:#444748;
     
 }
 
-.divp1{
+.giftcard-title{
   font-size: 8px;
   white-space: nowrap;
  }
 .img{max-width: 100%;
 height: 25px;}
 
-.div2{
+.staff-management{
     width: 60%;
     background-color:#F6F8FA;
     border-radius: 8px;
    padding:40px 20px 0px 20px;
     height: 325px;
 }
-.imgdiv{
+.chart-info{
 display: flex;
 flex-direction: row;
 gap: 5px;
 }
-.pimg{
+.btc-value{
     margin-top: 3px;
     width: 190px;
     font-size: 20px;
@@ -479,7 +479,7 @@ gap: 5px;
 
 }
 
-.imgcenter1{width: 38px;
+.giftcard-image{width: 38px;
   margin-top: 15px;
   margin-left: 10px;
   height: 38px;
@@ -591,7 +591,7 @@ gap: 5px;
     }
         
       
-.search {
+.search-input {
   width: 400px;
   height: 50px;
   box-sizing: border-box;
@@ -607,13 +607,13 @@ gap: 5px;
   margin-top: 20px;
 }
   
-       .tab-content-container {
+       .content-container {
            flex: 1; 
            width: 81.7%;  
         }  
 
 
-.search1 {
+.search-input-users {
   width: 400px;
   height: 50px;
   box-sizing: border-box;
@@ -1018,7 +1018,7 @@ input[type='file'] {
   background-image: url('./images/expand_more\ \(1\).png');
   background-size: 8px 8px;
 }
-search1 {
+search-input-users {
   width: 100%;
   height: 40px;
   box-sizing: border-box;
@@ -1051,7 +1051,7 @@ margin-left: 515px;
 
 
 }
-.div{
+.menu-section{
   margin-left: -21px;
  border-width: 1px;
  width:318px;
@@ -1059,7 +1059,7 @@ margin-left: 515px;
   border-bottom: solid#E0E0E0 1px;
   
 }
-.AccountOverview{
+.account-overview{
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -1503,7 +1503,7 @@ margin-left: 515px;
   width: 15px;
   height: 15px;
 }
-.test2main{
+.users-content-container{
   display: flex;
   flex-wrap: wrap;
   border-radius: 8px;
@@ -1626,7 +1626,7 @@ font-size: 10px;
     justify-content: space-between;
     
    }
-.div3{
+.users-section{
   width: 38.3%;
   background-color:#F6F8FA;
   border-radius: 8px;
@@ -1634,14 +1634,14 @@ font-size: 10px;
   height: 325px;
 }
 
-.minigiftcard{
+.giftcard-overview{
   width: 38.7%;
   background-color:#F6F8FA;
   border-radius: 8px;
     padding: 20px 20px 0px 20px;
    height: 174px;
 }
-.user{
+.top-users{
   width: 59.7%;
   background-color:#F6F8FA;
   border-radius: 8px;
@@ -1649,7 +1649,7 @@ font-size: 10px;
   padding: 20px 20px 0px 20px;
 
 }
-.user::-webkit-scrollbar{display: none;}
+.top-users::-webkit-scrollbar{display: none;}
 
 .div0{
 
@@ -1717,7 +1717,7 @@ margin-top: 20px;
   display: flex;
   flex-direction: row;
   }
-  .staffhash{
+  .contact-info{
     background-color: #F6F8FA;
     margin-top: 15px;
     width: 220px;
@@ -1755,7 +1755,7 @@ margin-top: 20px;
     font-size: 11px;
   }
   
-  .hourdiv{
+  .timeframe-selector{
     color: #FA6230;
     background-color: #ffffff;
     font-weight: 700;
@@ -1790,7 +1790,7 @@ margin-top: 20px;
   display: flex;flex-direction: row;
   margin-top:-5px;gap:5px;margin-left: 8px;
 }
-.divinside1{
+.giftcard-content{
   display: flex;
   margin-top: 15px;
   margin-left: -2px;
@@ -1799,7 +1799,7 @@ margin-top: 20px;
  
 }
  
-.minigiftcard{
+.giftcard-overview{
   height:120px;
   width: 38.3%;
   background-color:#F6F8FA;
@@ -1807,7 +1807,7 @@ margin-top: 20px;
     padding: 10px;
     height: 145px;
 }
-.user{
+.top-users{
   width: 59.7%;
   background-color:#F6F8FA;
   border-radius: 8px;
@@ -1816,14 +1816,14 @@ margin-top: 20px;
   height: 145px;
 }
 
-.maindiv{
+.main-section{
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   
   max-width:100% ;    
   }
-.minidiv1{
+.overview-section{
   
   display: flex;
   flex-direction: column;
@@ -1838,7 +1838,7 @@ margin-top: 20px;
   display: flex;
   flex-direction: row;
 }
-.insidedivs { 
+.overview-card { 
   height: 70px;
   width: 50px;
    margin: 5px;
@@ -1851,7 +1851,7 @@ flex-grow: 1;
   
   
 }
-  .btcdiv{
+  .btc-chart{
   
        margin-bottom: 5px;
   }
@@ -1871,7 +1871,7 @@ margin-left:40px;
   margin:3px;
   
 }
-  .div2{
+  .staff-management{
     width: 63%;
     background-color:#F6F8FA;
     border-radius: 8px;
@@ -1879,7 +1879,7 @@ margin-left:40px;
     
   }
   
-.div3{
+.users-section{
   width: 35%;
   background-color:#F6F8FA;
   border-radius: 8px;
@@ -1887,10 +1887,10 @@ margin-left:40px;
   height: 300px;
   
 }
-.adminrow{
+.admin-list{
   display: flex;flex-direction:row;gap: 10px;height: auto;margin-top: 15px;flex-wrap: wrap;
 }
-  .admins{
+  .admin-item{
     height: 230px;
     width: 48.8%;
     background-color: #FFFFFF;
@@ -2012,7 +2012,7 @@ width: 140px;
   margin:3px;
   
 }
-.test2main{
+.users-content-container{
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
@@ -2073,7 +2073,7 @@ font-size: 28px;
     font-size: 28px;
    }
 
-    .staffhash{background-color: #F6F8FA;
+    .contact-info{background-color: #F6F8FA;
         padding-top: 9px;
         padding-bottom: 9px;
         width: 200px;
@@ -2131,7 +2131,7 @@ font-size: 28px;
        border-radius: 4px;
        padding-top: 5px;
       }
-   .dashtext{
+   .top-bar-date{
      font-size: 13px;
      color:#444748;
      margin-top: 0px;
@@ -2231,7 +2231,7 @@ font-size: 14px;     }
   transition: 0.5s;
   padding-top: 60px;
 }
-     .tab .flexcontainer {
+     .tab .admin-info-container {
       padding: 50px;
    width: 100%;
    color: #000000;
@@ -2258,7 +2258,7 @@ font-size: 14px;     }
   display: none;
   overflow:visible;
 }
-     .flexcontainer1{
+     .top-bar{
        margin-top: 60px;
       display: flex;
       flex-direction: row;
@@ -2266,14 +2266,14 @@ font-size: 14px;     }
        height: 69px;
        background-color: #FFFFFF;
      }
-     .search{
+     .search-input{
        margin-left: 322px;
     
      }
      .searc{
        margin-left:90px;
      }
-     .search1{
+     .search-input-users{
        margin-left: 338px;
      }
      .search3{
@@ -2381,7 +2381,7 @@ font-size: 14px;     }
       height: 100%;
     }
      
-     .tab .div{
+     .tab .menu-section{
       padding: 10px 56px;
        margin-left: 0px;
        height: auto;
@@ -2389,17 +2389,17 @@ font-size: 14px;     }
       
        
      }
-     .tab .header{
+     .tab .sidebar-header{
       gap: 15px;margin: 40px 0px 0px 40px;
      }
      nav button{
        font-size: 20px;
      }
-     .tabcontent{
+     .contentsection{
        width: 100%;
      }
      
-     .AccountOverview{
+     .account-overview{
     
        width: 100%;
        height: 100px;
@@ -2412,29 +2412,29 @@ font-size: 14px;     }
        height: 25px;
      }
      
-     .imgcenter1{
+     .giftcard-image{
       width: 25px;
       height: 25px;
     }
-   .divp{
+   .card-title{
      font-size: 6px;
    color: 
    #444748;
    }
 
-   .divp1{
+   .giftcard-title{
     font-size: 6px;
   color: 
   #444748;
   }
-   .hourdiv{
+   .timeframe-selector{
     background-color: #FFFFFF;
     margin-left: 39px;
    }
-   .divinside{
+   .card-content{
     margin-top: 15px;
    }
-   .divinside .no{
+   .card-content .no{
       font-size: 12px;
    }
    .angle-down{
@@ -2443,7 +2443,7 @@ font-size: 14px;     }
 
 
   
-   .div .tablinks {
+   .div .menuitem {
     display: flex;
   flex-direction: row;
     color: #414141;
@@ -2456,7 +2456,7 @@ font-size: 14px;     }
     font-size: 17px;
   }
   /* Change background color of buttons on hover */
-  .div .tablinks:hover {
+  .div .menuitem:hover {
     background-color: #ddd;
     white-space: nowrap;
     width:100%;
@@ -2467,7 +2467,7 @@ font-size: 14px;     }
     font-size: 17px;
   }
   /* Create an active/current "tab button" class */
-  .div .tablinks.active {
+  .div .menuitem.active {
     background-color:#FA6230;
     white-space: nowrap;
     
@@ -2522,7 +2522,7 @@ font-size: 14px;     }
 .date{
   background-color: #DEDEDE;height: 40px;width: 160px;padding-top: 15px; padding-left: 20px;border-radius: 5px;
 }
-.logout{
+.logout-button{
   background-color:   #FEE0D6;border-radius: 8px;width: 257px;height: 60px;font-weight: 700;color: #EA0000;margin-top: 20px; display: flex;flex-direction: row;margin-left: 45px;padding-top: 18px;
 }
    }
