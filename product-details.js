@@ -53,14 +53,14 @@ function validateForm(event) {
 
 
 function opennewtab(evt, cityName) {
-  var i, contentsection, tablinks;
+  var i, contentsection, menuitem;
   contentsection = document.getElementsByClassName("contentsection");
   for (i = 0; i < contentsection.length; i++) {
     contentsection[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  menuitem = document.getElementsByClassName("menuitem");
+  for (i = 0; i < menuitem.length; i++) {
+    menuitem[i].className = menuitem[i].className.replace(" active", "");
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
@@ -561,6 +561,7 @@ function myFunction() {
 
 
 
+  document.addEventListener('DOMContentLoaded', () => {
 
   
 const users3=[{
@@ -662,66 +663,138 @@ document.getElementById("test1").innerHTML = users.map(user => {
 
 
 
-document.getElementById("test5").innerHTML = users.map(user => { 
-  return `<div class="div0">
-  <img src=${user.image1}  style="border-radius: 90%;width: 58px;height: 58px;margin-top: 25px;"/> 
- 
+document.getElementById("topuserstable").innerHTML =users.map(item => `
+        
+  <tr style="margin-left: 50px;">
+      <td>${item.id}</td>
+      <td>${item.email}</td>
+      <td>300</td>
+      <td>${item.price}</td>
+  </tr>
+      `).join('');
+
+      
+document.getElementById("table-body2").innerHTML =users.map(item => `
+  <tr style="margin-left: 50px;height: 50px;">
+      <td>${item.id}</td>
+      <td>${item.email}</td>
+      <td>${item.amount}</td>
+      <td>June 18th,2020. 9:46pm</td>
+  </tr>
+  `).join('');
+  
+
+
+  document.getElementById("table-body3").innerHTML =users.map(item => `
+       
+    <tr class="table-body3">
+    <td>${item.id}</td>
+    <td>${item.useremail}</td>
+    <td>${item.amount}</td>
+    <td>${item.date}</td>
+    <td>${item.bankdetails}</td>
+    <td>${item.accountname}</td>
+    <td>${item.fulfiled}</td>
+    <td>${item.fulfiledby}</td>
+    <td>${item.timefulfiled}</td>
+  </tr>
+    `).join('');
+  document.getElementById("test5").innerHTML = users.map(user => { 
+    return `
     
-  <div style="display: flex;flex-direction: column;margin: 10px;border-radius: 4px;width: 159px;height:60px;">
-        <div style="display: flex;flex-direction: row;justify-content: center;">
-            <p style="color:#000000;font-weight:600;font-size: 18px;">${user.apple}</p></div>
-            <div style="display: flex;flex-direction: row;justify-content: center;">
-
-               <p style="color:#414141; font-size: 15px;">${user.link}</p></div>
-
+    <div class="div0">
+    <img src=${user.image1}  style="border-radius: 90%;width: 58px;height: 58px;margin-top: 25px;"/> 
+   
+      
+    <div style="display: flex;flex-direction: column;margin: 10px;border-radius: 4px;width: 159px;height:60px;">
+          <div style="display: flex;flex-direction: row;justify-content: center;">
+              <p style="color:#000000;font-weight:600;font-size: 18px;">${user.apple}</p></div>
+              <div style="display: flex;flex-direction: row;justify-content: center;">
+  
+                 <p style="color:#414141; font-size: 15px;">${user.link}</p></div>
+  
+      </div>
+      <div class="test5div5" onclick="submitForm5()">Edit Company</div>
+      <div class="test5div">Deactivate</div>
+  
+    </div>`;
+  }).join('');
+  
+  
+document.getElementById("test4").innerHTML = users.map(user => { 
+  return `<div class="div4">
+    <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;gap:10px;">
+    <p style="font-weight: 700;color: #000000;">${user.name}</p>
+    <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
+    <p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
     </div>
-    <div class="test5div2" onclick="submitForm5()">Edit Company</div>
-    <div class="test5div">Deactivate</div>
+    <div class="test1hash3">
 
-  </div>`;
+        <div style="display: flex;flex-direction:row;margin-left: 12px;gap:5px;"> <img src="./images/call.png"   class="test1img"/> <p class="test1p">${user.contact}</p> </div>
+        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"   class="test1img"/> <p class="test1p">${user.email}</p> </div>  
+    </div>
+    <div class="test2prof">Assign To Self</div>
+
+    <div class="testprof" onclick="submitForm8()">Assign To Others</div>
+
+    </div>`;
 }).join('');
 
 
 
 
+document.getElementById("test6").innerHTML = users.map(user => { 
+  return `<div class="div1">
+  <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;gap:10px;">
+  <p style="font-weight: 700;color: #000000;">${user.name}</p>
+  <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
+  <p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
+  </div>
+
+   
+    <div class="test5hash">
+        <div style="display: flex;flex-direction:row;margin-left: 12px;gap:5px;"> <img src="./images/call.png"  width="15px" height="15px"/> <p class="test1p">${user.contact}</p> </div>
+        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p class="test1p">${user.email}</p> </div>
+            
+    </div>
+    <div class="test2prof" onclick="submitForm9()">Enter Chat</div>
+  </div>`;
+}).join('');
 
 
 
-document.getElementById("table-body").innerHTML =users.map(item => `
-        <tr style="margin-left: 50px;">
-            <td>${item.id}</td>
-            <td>${item.email}</td>
-            <td>300</td>
-            <td>${item.price}</td>
-        </tr>
-    `).join('');
+document.getElementById("table-body6").innerHTML =users.map(item => `
+  <tr style="margin-left: 50px;height: 50px;">
+      <td>${item.id}</td>
+      <td>${item.useremail}</td>
+      <td>${item.amount}</td>
+      <td>${item.date}</td>
+      <td>${item.bankdetails}</td>
+      <td>${item.accountname}</td>
+      <td>${item.fulfiled}</td>
+      <td>${item.fulfiledby}</td>
+      <td>${item.timefulfiled}</td>
+  </tr>
+  `).join('');
+  
+  
 
-
-    
-document.getElementById("table-body2").innerHTML =users.map(item => `
-<tr style="margin-left: 50px;height: 50px;">
-    <td>${item.id}</td>
-    <td>${item.email}</td>
-    <td>${item.amount}</td>
-    <td>June 18th,2020. 9:46pm</td>
-</tr>
+  document.getElementById("table-body5").innerHTML =users.map(item => `
+    <tr style="margin-left: 50px;height: 50px;">
+        <td>${item.id}</td>
+        <td>${item.useremail}</td>
+        <td>${item.amount}</td>
+        <td>${item.date}</td>
+        <td>${item.bankdetails}</td>
+        <td>${item.accountname}</td>
+        <td>${item.fulfiled}</td>
+        <td>${item.fulfiledby}</td>
+        <td>${item.timefulfiled}</td>
+    </tr>
 `).join('');
 
 
-document.getElementById("table-body3").innerHTML =users.map(item => `
-        <tr style="margin-left: 50px;height: 50px;">
-            <td>${item.id}</td>
-            <td>${item.useremail}</td>
-            <td>${item.amount}</td>
-            <td>${item.date}</td>
-            <td>${item.bankdetails}</td>
-            <td>${item.accountname}</td>
-            <td>${item.fulfiled}</td>
-            <td>${item.fulfiledby}</td>
-            <td>${item.timefulfiled}</td>
-        </tr>
-    `).join('');
-    
+
 document.getElementById("table-body4").innerHTML =users.map(item => `
 
   <tr style="margin-left: 50px;height: 50px;">
@@ -740,43 +813,6 @@ document.getElementById("table-body4").innerHTML =users.map(item => `
   </tr>
 `).join('');
 
-
-
-document.getElementById("table-body5").innerHTML =users.map(item => `
-        <tr style="margin-left: 50px;height: 50px;">
-            <td>${item.id}</td>
-            <td>${item.useremail}</td>
-            <td>${item.amount}</td>
-            <td>${item.date}</td>
-            <td>${item.bankdetails}</td>
-            <td>${item.accountname}</td>
-            <td>${item.fulfiled}</td>
-            <td>${item.fulfiledby}</td>
-            <td>${item.timefulfiled}</td>
-        </tr>
-    `).join('');
-
-
-
-    
-document.getElementById("table-body6").innerHTML =users.map(item => `
-<tr style="margin-left: 50px;height: 50px;">
-    <td>${item.id}</td>
-    <td>${item.useremail}</td>
-    <td>${item.amount}</td>
-    <td>${item.date}</td>
-    <td>${item.bankdetails}</td>
-    <td>${item.accountname}</td>
-    <td>${item.fulfiled}</td>
-    <td>${item.fulfiledby}</td>
-    <td>${item.timefulfiled}</td>
-</tr>
-`).join('');
-  
-  
-  
-  
-      
 
 document.getElementById("test3").innerHTML = users.map(user => { 
   return `<div class="div0">
@@ -803,47 +839,14 @@ document.getElementById("test3").innerHTML = users.map(user => {
 
 
 
-document.getElementById("test4").innerHTML = users.map(user => { 
-  return `<div class="div4">
-    <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;gap:10px;">
-    <p style="font-weight: 700;color: #000000;">${user.name}</p>
-    <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
-    <p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
-    </div>
-    <div class="test1hash3">
 
-        <div style="display: flex;flex-direction:row;margin-left: 12px;gap:5px;"> <img src="./images/call.png"   class="test1img"/> <p class="test1p">${user.contact}</p> </div>
-        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"   class="test1img"/> <p class="test1p">${user.email}</p> </div>  
-    </div>
-    <div class="test2prof">Assign To Self</div>
-
-    <div class="testprof" onclick="submitForm8()">Assign To Others</div>
-
-    </div>`;
-}).join('');
+    
+    
 
 
 
-
-
-
-
-
-document.getElementById("test6").innerHTML = users.map(user => { 
-  return `<div class="div1">
-  <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;gap:10px;">
-  <p style="font-weight: 700;color: #000000;">${user.name}</p>
-  <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
-  <p style="color: #FA6230;font-size: 8px;">${user.verified}</p></div>
-  </div>
-
-   
-    <div class="test5hash">
-        <div style="display: flex;flex-direction:row;margin-left: 12px;gap:5px;"> <img src="./images/call.png"  width="15px" height="15px"/> <p class="test1p">${user.contact}</p> </div>
-        <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p class="test1p">${user.email}</p> </div>
-            
-    </div>
-    <div class="test2prof" onclick="submitForm9()">Enter Chat</div>
-  </div>`;
-}).join('');
+    
+  
+  
      
+  })

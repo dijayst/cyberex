@@ -274,7 +274,7 @@ flex-direction: row;
     white-space: nowrap;
     
 }
-.container{
+.top-bar-container{
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -446,7 +446,7 @@ color:#444748;
     
 }
 
-.giftcard-title{
+.giftcard-title1{
   font-size: 8px;
   white-space: nowrap;
  }
@@ -761,7 +761,7 @@ input[type='file'] {
   background-position: 10px 10px; 
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
-  margin-left: 350px;
+  margin-left: 425px;
  
   
 }
@@ -902,8 +902,7 @@ input[type='file'] {
   background-position: 10px 10px; 
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
-  margin-left: 350px;
-  margin-top: 20px;
+  margin-left: 425px;
 }
 
 .search19 {
@@ -1108,7 +1107,7 @@ margin-left: 515px;
 .modal7 {
   display: none; /* Initially hide the modal */
   position: fixed;
-  margin-top: -905px;
+  margin-top: -1000px;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -1158,7 +1157,7 @@ margin-left: 515px;
 .modal3 {
   display: none; /* Initially hide the modal */
   position: fixed;
-  margin-top: -1134px;
+  margin-top: -1135px;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -1236,7 +1235,22 @@ margin-left: 515px;
 .modal2 {
   display: none; /* Initially hide the modal */
   position: fixed;
-  margin-top: -882px;
+  margin-top: -725px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin-left: -21%;
+  color: #000000;
+  justify-content: center;
+  align-items: center;
+  background: rgba(14, 15, 14, 0.3);
+  
+  
+}
+.promotion-modal  {
+  display: none; /* Initially hide the modal */
+  position: fixed;
+  margin-top: -885px;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -1582,6 +1596,22 @@ font-size: 10px;
     width:160px;
     color:#FFFFFF;
     margin-top: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    justify-content: center;
+    padding-top: 4px;
+    align-items: center;
+    font-size: 12px;
+   }
+   
+
+   
+   .test5div5{
+    background-color: #FA6230;
+    height: 25px;
+    width:160px;
+    color:#FFFFFF;
+    margin-top: 12px;
     margin-left: 17px;
     font-weight: 700;
     border-radius: 4px;
@@ -1590,6 +1620,7 @@ font-size: 10px;
     align-items: center;
     font-size: 12px;
    }
+   
    .test4div{
     display: flex;
     flex-direction: column;
@@ -1694,11 +1725,11 @@ font-size: 10px;
 .divd{
   background-color: #FFFFFF;
   width:19.3%;
-  height: 210px; 
+  height: 240px; 
   text-align: center;
    border-radius: 8px;
   border:1px solid #DEDEDE;margin:3px;
-  padding:20px 20px 20px 20px;
+  padding:20px 20px 20px 15px;
   
   
 }
@@ -2066,7 +2097,7 @@ width: 140px;
      
    
    } 
-   .container{
+   .top-bar-container{
 font-size: 28px;
    }
    .staffcontainer{

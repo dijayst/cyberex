@@ -264,474 +264,532 @@ function myFunction() {
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen2").click();
 
-
-
-
-const users=[{
-    id:1,
-    country:"USA",
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    apple:"Apple Inc.",
-    link:"Apple.com",
-      user:"Admin1",
-    name:"Ayo",
-    verified:"Unverified",
-    contact:"+2348078868319",
-    email:"User123@gmail.com",
-    prof:"View Profile",
-    users:"Admin",
-    staff:"Staff",
-    price:"$10,000.00",
-    digit:"100",
-    parentcurrency:"parent currency: $",
-    naira:"naira value: 380.00",
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-    
-  },{
-    id:2,
-    country:"CDA",
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    apple:"Apple Inc.",
-    link:"Apple.com",
-    user:"Admin2",
-     name:"Ayo",
-    verified:"Unverified",
-    contact:"+2348078868319",
-    email:"User123@gmail.com",
-    prof:"View Profile",
-    users:"Admin",
-    staff:"Staff",
-    price:"$10,000.00",
-    digit:"100",
-    parentcurrency:"parent currency: $",
-    naira:"naira value: 380.00",
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-      
-  },{
-    id:3,
-    country:"USA",
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    apple:"Google",
-    link:"Apple.com",
-      user:"Admin3",
-     name:"Ayo",
-    verified:"Unverified",
-    contact:"+2348078868319",
-    email:"User123@gmail.com",
-    prof:"View Profile",
-    users:"Admin",
-    staff:"Staff",
-    price:"$10,000.00",
-    
-    digit:"100",
-    parentcurrency:"parent currency: $",
-    naira:"naira value: 380.00",
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
+  function redirectToProductDetail(productId) {
+    // window.location.href = `product-detail.html?id=${productId}`;
    
+   window.open(`product-detail.html?id=${productId}`, "_self");
+   }
+   
+
+    
+    /*
+    
+  function redirectToProductDetail(productId) {
+   // window.location.href = `product-detail.html?id=${productId}`;
+  
+  window.open(`product-detail.html?id=${productId}`, "_self");
+  }
+  
+  function renderProductItems() {
+  // Render users on the page
+  const productsContainer = document.getElementById("users-content");
+  users.forEach(user => {
+    const productDiv = document.createElement("div");
+    productDiv.style.backgroundColor = "#FFFFFF";
+    productDiv.style.height = "185px";
+    productDiv.style.width = "195px";
+    productDiv.style.textAlign = "center";
+    productDiv.style.borderRadius = "8px";
+    productDiv.style.border = "1px solid #DEDEDE";
+    productDiv.style.margin = "5px";
+    productDiv.style.padding="20px 20px 20px 18px"
+  
+    productDiv.innerHTML = `
       
-  },{
-    id:4,
-    country:"USA",
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    apple:"Apple Inc.",
-    link:"Apple.com",
-      user:"Admin4",
-    name:"Ayo",
-    verified:"Unverified",
-    contact:"+2348078868319",
-    email:"User123@gmail.com",
-    prof:"View Profile",
-    users:"Admin",
-    staff:"Staff",
-    price:"$10,000.00",
-    
-    digit:"100",
-    parentcurrency:"parent currency: $",
-    naira:"naira value: 380.00",
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-    
-  },
-  {
-    id:5,image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    apple:"Apple Inc.",
-    country:"CDA",
-    link:"Apple.com",
-    user:"Admin5",
-    users:"Admin",
-    staff:"Staff",
-    name:"Ayo",
-    verified:"Unverified",
-    contact:"+2348078868319",
-    email:"User123@gmail.com",
-    prof:"View Profile" ,
-    price:"$10,000.00"  ,
-    
-    digit:"100",
-    parentcurrency:"parent currency: $",
-    naira:"naira value: 380.00",
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-  },{
-    id:6,
-    country:"USA",
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    apple:"Apple Inc.",
-    link:"Apple.com",
-    user:"Admin6",
-    name:"Ayo",
-    users:"Admin",
-    staff:"Staff",
-    verified:"Unverified",
-    contact:"+2348078868319",
-    email:"User123@gmail.com",
-    prof:"View Profile",
-    price:"$10,000.00",
-    
-    digit:"100",
-    parentcurrency:"parent currency: $",
-    naira:"naira value: 380.00",
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-  },
-  {
-    id:7,
-    country:"USA",
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    apple:"Apple Inc.",
-    link:"Apple.com",
-    user:"Admin7",
-    name:"Ayo",
-    users:"Admin",
-    staff:"Staff",
-    verified:"Unverified",
-    contact:"+2348078868319",
-    email:"User123@gmail.com",
-    prof:"View Profile",
-    price:"$10,000.00",
-    
-    digit:"100",
-    parentcurrency:"parent currency: $",
-    naira:"naira value: 380.00",
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-  },{
-    id:8,
-    country:"CDA",
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    apple:"Apple Inc.",
-    link:"Apple.com",
-    user:"Admin8",
-    name:"Ayo",
-    users:"Admin",
-    staff:"Staff",
-    verified:"Unverified",
-    contact:"+2348078868319",
-    email:"User123@gmail.com",
-    prof:"View Profile",
-    price:"$10,000.00",
-    
-    digit:"100",
-    parentcurrency:"parent currency: $",
-    naira:"naira value: 380.00",
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-  },{
-    id:9,
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    apple:"Apple Inc.",
-    link:"Apple.com",
-    user:"Admin9",
-    name:"Ayo",
-    users:"Admin",
-    staff:"Staff",
-    verified:"Unverified",
-    contact:"+2348078868319",
-    email:"User123@gmail.com",
-    prof:"View Profile",
-    price:"$10,000.00",
-    country:"CDA",
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-  },{
-    id:10,
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    apple:"Apple Inc.",
-    link:"Apple.com",
-    user:"Admin10",
-    name:"Ayo",
-    users:"Admin",
-    staff:"Staff",
-    verified:"Unverified",
-    contact:"+2348078868319",
-    email:"User123@gmail.com",
-    prof:"View Profile",
-    price:"$10,000.00",
-    country:"USA",
-    digit:"100",
-    parentcurrency:"parent currency: $",
-    naira:"naira value: 380.00",
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-  },{
-    id:11,
-    image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
-    apple:"Apple Inc.",
-    link:"Apple.com",
-    user:"Admin11",
-    name:"Ayo",
-    users:"Admin",
-    staff:"Staff",
-    verified:"Unverified",
-    contact:"+2348078868319",
-    email:"User123@gmail.com",
-    prof:"View Profile",
-    price:"$10,000.00",
-    country:"USA",
-    digit:"100",
-    parentcurrency:"parent currency: $",
-    naira:"naira value: 380.00",
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-  },
-];
-
-    
-
-
-const users3=[{
-  id:1,
-    date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  email:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
+      <div style="display: flex;flex-direction: row;justify-content: center;color:#000000;font-weight: 700;gap:5px;"><p>${user.name}</p>
+      <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
+      <p>${user.verified}</p></div>
+      </div>
+      <div class="test1hash">
+      <div class="userdiv1"> 
+      <img src="./images/call.png"  class="test1img" />  
+          <p class="test1p">${user.contact}</p></div>
+          <div class="userdiv2">
+          <img src="./images/mail.png"  class="test1img"/>  
+             <p class="test1p">${user.email}</p></div>
   
-},{
-  id:2,
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  email:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-},{
-  id:3,
- 
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  email:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-},{
-  id:4,
+  </div>
+      <div class="test1prof2" onclick="redirectToProductDetail(${user.id})">${user.prof}</div>
   
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  email:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
+      `;
   
-},
-{
-  id:5,
+    productsContainer.appendChild(productDiv);
+  });
+  }
   
-  date:"Dec. 20,2023. 11:34pm",
-  bankdetails:"0014(0212243711)",
-  accountname:"Olaolu Adedeji",
-  contact:"+2348078868319",
-  useremail:"Olamigokephys@gmail.com",
-  fulfiled:"True",
-  fulfiledby:"Olamigokephys@gmail.com",
-  timefulfiled:"June 9th,2020. 9:46pm",
-  amount:"₦100,000"
-},{
-  id:6,
-  date:"Dec. 20,2023. 11:34pm",
-bankdetails:"0014(0212243711)",
-accountname:"Olaolu Adedeji",
-contact:"+2348078868319",
-email:"Olamigokephys@gmail.com",
-fulfiled:"True",
-fulfiledby:"Olamigokephys@gmail.com",
-timefulfiled:"June 9th,2020. 9:46pm",
-amount:"₦100,000"
-},];
-
-
-document.getElementById("top-users-table").innerHTML = users.map(item => {
-
-  return `
+  renderProductItems();
   
-<tr style="margin-left: 50px;">
-    <td>${item.id}</td>
-    <td>${item.email}</td>
-    <td>300</td>
-    <td>${item.price}</td>
-</tr>
-  `;
-}).join('');
-
-
   
-function redirectToProductDetail(productId) {
- // window.location.href = `product-detail.html?id=${productId}`;
 
-window.open(`product-detail.html?id=${productId}`, "_self");
-}
-
-function renderProductItems() {
-// Render users on the page
-const productsContainer = document.getElementById("users-content");
-users.forEach(user => {
-  const productDiv = document.createElement("div");
-  productDiv.style.backgroundColor = "#FFFFFF";
-  productDiv.style.height = "185px";
-  productDiv.style.width = "195px";
-  productDiv.style.textAlign = "center";
-  productDiv.style.borderRadius = "8px";
-  productDiv.style.border = "1px solid #DEDEDE";
-  productDiv.style.margin = "5px";
-  productDiv.style.padding="20px 20px 20px 18px"
-
-  productDiv.innerHTML = `
+  function redirectToProductDetail(productId) {
+    // window.location.href = `product-detail.html?id=${productId}`;
     
-    <div style="display: flex;flex-direction: row;justify-content: center;color:#000000;font-weight: 700;gap:5px;"><p>${user.name}</p>
-    <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
-    <p>${user.verified}</p></div>
+    window.open(`product-detail.html?id=${productId}`, "_self");
+    }
+    
+    function renderProductItems() {
+    // Render users on the page
+    const productsContainer = document.getElementById("test2");
+    users.forEach(user => {
+     const productDiv = document.createElement("div");
+     productDiv.style.backgroundColor = "#FFFFFF";
+     productDiv.style.height = "185px";
+     productDiv.style.textAlign = "center";
+     productDiv.style.borderRadius = "8px";
+     productDiv.style.border = "1px solid #DEDEDE";
+     productDiv.style.margin = "3px";
+    productDiv.style.padding="20px 20px 20px 18px";
+    
+     productDiv.innerHTML = `
+       
+       <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;color:#000000;font-weight: 700;gap:5px;"><p>${user.name}</p>
+       <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
+       <p>${user.verified}</p></div>
+       </div>
+       <div class="test1hash">
+       <div class="userdiv1"> 
+       <img src="./images/call.png"  class="test1img" />  
+           <p class="test1p">${user.contact}</p></div>
+           <div class="userdiv2">
+           <img src="./images/mail.png"  class="test1img"/>  
+              <p class="test1p">${user.email}</p></div>
+    
     </div>
-    <div class="test1hash">
-    <div class="userdiv1"> 
-    <img src="./images/call.png"  class="test1img" />  
-        <p class="test1p">${user.contact}</p></div>
-        <div class="userdiv2">
-        <img src="./images/mail.png"  class="test1img"/>  
-           <p class="test1p">${user.email}</p></div>
+       <div class="test1prof2" onclick="redirectToProductDetail(${user.id})">${user.prof}</div>
+    
+       `;
+    
+     productsContainer.appendChild(productDiv);
+    });
+    }
+    
+    renderProductItems();
+    */
+   
 
-</div>
-    <div class="test1prof2" onclick="redirectToProductDetail(${user.id})">${user.prof}</div>
-
-    `;
-
-  productsContainer.appendChild(productDiv);
-});
-}
-
-renderProductItems();
+  document.addEventListener('DOMContentLoaded', () => {
 
 
+    
+    const users=[{
+      id:1,
+      country:"USA",
+      image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      apple:"Apple Inc.",
+      link:"Apple.com",
+        user:"Admin1",
+      name:"Ayo",
+      verified:"Unverified",
+      contact:"+2348078868319",
+      email:"User123@gmail.com",
+      prof:"View Profile",
+      users:"Admin",
+      staff:"Staff",
+      price:"$10,000.00",
+      digit:"100",
+      parentcurrency:"parent currency: $",
+      naira:"naira value: 380.00",
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+      
+    },{
+      id:2,
+      country:"CDA",
+      image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      apple:"Apple Inc.",
+      link:"Apple.com",
+      user:"Admin2",
+       name:"Ayo",
+      verified:"Unverified",
+      contact:"+2348078868319",
+      email:"User123@gmail.com",
+      prof:"View Profile",
+      users:"Admin",
+      staff:"Staff",
+      price:"$10,000.00",
+      digit:"100",
+      parentcurrency:"parent currency: $",
+      naira:"naira value: 380.00",
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+        
+    },{
+      id:3,
+      country:"USA",
+      image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      apple:"Google",
+      link:"Apple.com",
+        user:"Admin3",
+       name:"Ayo",
+      verified:"Unverified",
+      contact:"+2348078868319",
+      email:"User123@gmail.com",
+      prof:"View Profile",
+      users:"Admin",
+      staff:"Staff",
+      price:"$10,000.00",
+      
+      digit:"100",
+      parentcurrency:"parent currency: $",
+      naira:"naira value: 380.00",
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+     
+        
+    },{
+      id:4,
+      country:"USA",
+      image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      apple:"Apple Inc.",
+      link:"Apple.com",
+        user:"Admin4",
+      name:"Ayo",
+      verified:"Unverified",
+      contact:"+2348078868319",
+      email:"User123@gmail.com",
+      prof:"View Profile",
+      users:"Admin",
+      staff:"Staff",
+      price:"$10,000.00",
+      
+      digit:"100",
+      parentcurrency:"parent currency: $",
+      naira:"naira value: 380.00",
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+      
+    },
+    {
+      id:5,image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      apple:"Apple Inc.",
+      country:"CDA",
+      link:"Apple.com",
+      user:"Admin5",
+      users:"Admin",
+      staff:"Staff",
+      name:"Ayo",
+      verified:"Unverified",
+      contact:"+2348078868319",
+      email:"User123@gmail.com",
+      prof:"View Profile" ,
+      price:"$10,000.00"  ,
+      
+      digit:"100",
+      parentcurrency:"parent currency: $",
+      naira:"naira value: 380.00",
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    },{
+      id:6,
+      country:"USA",
+      image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      apple:"Apple Inc.",
+      link:"Apple.com",
+      user:"Admin6",
+      name:"Ayo",
+      users:"Admin",
+      staff:"Staff",
+      verified:"Unverified",
+      contact:"+2348078868319",
+      email:"User123@gmail.com",
+      prof:"View Profile",
+      price:"$10,000.00",
+      
+      digit:"100",
+      parentcurrency:"parent currency: $",
+      naira:"naira value: 380.00",
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    },
+    {
+      id:7,
+      country:"USA",
+      image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      apple:"Apple Inc.",
+      link:"Apple.com",
+      user:"Admin7",
+      name:"Ayo",
+      users:"Admin",
+      staff:"Staff",
+      verified:"Unverified",
+      contact:"+2348078868319",
+      email:"User123@gmail.com",
+      prof:"View Profile",
+      price:"$10,000.00",
+      
+      digit:"100",
+      parentcurrency:"parent currency: $",
+      naira:"naira value: 380.00",
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    },{
+      id:8,
+      country:"CDA",
+      image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      apple:"Apple Inc.",
+      link:"Apple.com",
+      user:"Admin8",
+      name:"Ayo",
+      users:"Admin",
+      staff:"Staff",
+      verified:"Unverified",
+      contact:"+2348078868319",
+      email:"User123@gmail.com",
+      prof:"View Profile",
+      price:"$10,000.00",
+      
+      digit:"100",
+      parentcurrency:"parent currency: $",
+      naira:"naira value: 380.00",
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    },{
+      id:9,
+      image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      apple:"Apple Inc.",
+      link:"Apple.com",
+      user:"Admin9",
+      name:"Ayo",
+      users:"Admin",
+      staff:"Staff",
+      verified:"Unverified",
+      contact:"+2348078868319",
+      email:"User123@gmail.com",
+      prof:"View Profile",
+      price:"$10,000.00",
+      country:"CDA",
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    },{
+      id:10,
+      image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      apple:"Apple Inc.",
+      link:"Apple.com",
+      user:"Admin10",
+      name:"Ayo",
+      users:"Admin",
+      staff:"Staff",
+      verified:"Unverified",
+      contact:"+2348078868319",
+      email:"User123@gmail.com",
+      prof:"View Profile",
+      price:"$10,000.00",
+      country:"USA",
+      digit:"100",
+      parentcurrency:"parent currency: $",
+      naira:"naira value: 380.00",
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    },{
+      id:11,
+      image:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      image1:"./images/33fe647a46f9bf668322f8c1d94ed937.png",
+      apple:"Apple Inc.",
+      link:"Apple.com",
+      user:"Admin11",
+      name:"Ayo",
+      users:"Admin",
+      staff:"Staff",
+      verified:"Unverified",
+      contact:"+2348078868319",
+      email:"User123@gmail.com",
+      prof:"View Profile",
+      price:"$10,000.00",
+      country:"USA",
+      digit:"100",
+      parentcurrency:"parent currency: $",
+      naira:"naira value: 380.00",
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    },
+    ];
+    
+      
+    const users3=[{
+    id:1,
+      date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    email:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    
+    },{
+    id:2,
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    email:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    },{
+    id:3,
+    
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    email:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    },{
+    id:4,
+    
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    email:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    
+    },
+    {
+    id:5,
+    
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    useremail:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    },{
+    id:6,
+    date:"Dec. 20,2023. 11:34pm",
+    bankdetails:"0014(0212243711)",
+    accountname:"Olaolu Adedeji",
+    contact:"+2348078868319",
+    email:"Olamigokephys@gmail.com",
+    fulfiled:"True",
+    fulfiledby:"Olamigokephys@gmail.com",
+    timefulfiled:"June 9th,2020. 9:46pm",
+    amount:"₦100,000"
+    },];
+    
+    
+
+const test1Element = document.getElementById("test1");
+const test3Element = document.getElementById("test3");
+const test4Element = document.getElementById("test4");
+const test5Element = document.getElementById("test5");
+const test6Element = document.getElementById("test6");
+const test7Element = document.getElementById("test7");
+const test9Element = document.getElementById("test9");
+const test10Element = document.getElementById("test10");
+const test11Element = document.getElementById("test11");
+const topuserstableElement = document.getElementById("topuserstable");
+const tablebody2Element = document.getElementById("table-body2");
+const tablebody3Element = document.getElementById("table-body3");
+const tablebody4Element = document.getElementById("table-body4");
+const tablebody5Element = document.getElementById("table-body5");
+const tablebody6Element = document.getElementById("table-body6");
 
 
 
 
-document.getElementById("test1").innerHTML = users.map(user => { 
-  return `<div class="test1div">
+if(test1Element){
+  test1Element.innerHTML = users.map(user => { 
+    return `<div class="test1div">
     <div style="display: flex;flex-direction: row;justify-content: center;margin-top:10px;color:#000000;font-weight: 700;gap:5px;"><p>${user.name}</p>
     <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;"><p>${user.verified}</p></div>
     </div>
@@ -747,30 +805,79 @@ document.getElementById("test1").innerHTML = users.map(user => {
     <div class="test1prof">${user.prof}</div>
 
   </div>`;
-}).join('');
+    }).join('');}
 
-
-
-document.getElementById("table-body2").innerHTML = users.map(item => {
-
-  return `
   
-<tr style="margin-left: 50px;height: 50px;">
-<td>${item.id}</td>
-<td>${item.email}</td>
-<td>${item.amount}</td>
-<td>June 18th,2020. 9:46pm</td>
-</tr>
-  `;
-}).join('');
+    if(topuserstableElement){
+      topuserstableElement.innerHTML =users.map(item => `
+        
+    <tr style="margin-left: 50px;">
+        <td>${item.id}</td>
+        <td>${item.email}</td>
+        <td>300</td>
+        <td>${item.price}</td>
+    </tr>
+    `).join('');}
+    
+    
+    
+    function renderProductItems() {
+      // Render users on the page
+      const productsContainer = document.getElementById("users-content");
+      users.forEach(user => {
+        const productDiv = document.createElement("div");
+        productDiv.style.backgroundColor = "#FFFFFF";
+        productDiv.style.height = "185px";
+        productDiv.style.width = "195px";
+        productDiv.style.textAlign = "center";
+        productDiv.style.borderRadius = "8px";
+        productDiv.style.border = "1px solid #DEDEDE";
+        productDiv.style.margin = "5px";
+        productDiv.style.padding="20px 20px 20px 18px"
+      
+        productDiv.innerHTML = `
+          
+          <div style="display: flex;flex-direction: row;justify-content: center;color:#000000;font-weight: 700;gap:5px;"><p>${user.name}</p>
+          <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
+          <p>${user.verified}</p></div>
+          </div>
+          <div class="test1hash">
+          <div class="userdiv1"> 
+          <img src="./images/call.png"  class="test1img" />  
+              <p class="test1p">${user.contact}</p></div>
+              <div class="userdiv2">
+              <img src="./images/mail.png"  class="test1img"/>  
+                 <p class="test1p">${user.email}</p></div>
+      
+      </div>
+          <div class="test1prof2" onclick="redirectToProductDetail(${user.id})">${user.prof}</div>
+      
+          `;
+      
+        productsContainer.appendChild(productDiv);
+      });
+      }
+      
+      renderProductItems();
+      
+      
+    
 
+      if(tablebody2Element){
+        tablebody2Element.innerHTML =users.map(item => `
+        
+      <tr style="margin-left: 50px;height: 50px;">
+      <td>${item.id}</td>
+      <td>${item.email}</td>
+      <td>${item.amount}</td>
+      <td>June 18th,2020. 9:46pm</td>
+      </tr>
+      `).join('');}
+      
+if(tablebody3Element){
+  tablebody3Element.innerHTML =users.map(item => `
 
-
-
-document.getElementById("table-body3").innerHTML = users.map(item => {
-
-  return `
-<tr class="table-body3">
+    <tr class="table-body3">
     <td>${item.id}</td>
     <td>${item.useremail}</td>
     <td>${item.amount}</td>
@@ -781,13 +888,37 @@ document.getElementById("table-body3").innerHTML = users.map(item => {
     <td>${item.fulfiledby}</td>
     <td>${item.timefulfiled}</td>
 </tr>
+`).join('');}
+
+      
+  if(test5Element){
+    test5Element.innerHTML = users.map(user => { 
+  return `
+  <div class="div0">
+  <img src=${user.image1}  style="border-radius: 90%;width: 58px;height: 58px;margin-top: 25px;"/> 
+ 
+    
+  <div style="display: flex;flex-direction: column;margin: 10px;border-radius: 4px;width: 159px;height:60px;">
+        <div style="display: flex;flex-direction: row;justify-content: center;">
+            <p style="color:#000000;font-weight:600;font-size: 18px;">${user.apple}</p></div>
+            <div style="display: flex;flex-direction: row;justify-content: center;">
+
+               <p style="color:#414141; font-size: 15px;">${user.link}</p></div>
+
+    </div>
+    <div class="test5div5" onclick="submitForm5()">Edit Company</div>
+    <div class="test5div">Deactivate</div>
+
+  </div>
   `;
 }).join('');
+  }
 
 
-
-document.getElementById("test4").innerHTML = users.map(user => { 
-  return `<div class="div4">
+  if (test4Element) {
+    test4Element.innerHTML = users.map(user => { 
+      return `
+      <div class="div4">
     <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;gap:10px;">
     <p style="font-weight: 700;color: #000000;">${user.name}</p>
     <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
@@ -803,15 +934,15 @@ document.getElementById("test4").innerHTML = users.map(user => {
     <div class="testprof" onclick="submitForm8()">Assign To Others</div>
 
     </div>`;
-}).join('');
+    }).join('');
+  }
 
 
 
-
-
-
-document.getElementById("test6").innerHTML = users.map(user => { 
-  return `<div class="div1">
+  if(test6Element){
+    test6Element.innerHTML = users.map(user => { 
+  return `
+  <div class="div1">
   <div style="display: flex;flex-direction: row;margin-top:10px;margin-left:30px;gap:10px;">
   <p style="font-weight: 700;color: #000000;">${user.name}</p>
   <div style="color: #FA6230;font-size: 8px;background-color:#FFEFEA;height:15px;width:50px ;border-radius: 8px;padding: 3px;margin-top: 2px;">
@@ -825,37 +956,33 @@ document.getElementById("test6").innerHTML = users.map(user => {
             
     </div>
     <div class="test2prof" onclick="submitForm9()">Enter Chat</div>
-  </div>`;
-}).join('');
-
-
-
-
-document.getElementById("table-body6").innerHTML = users.map(item => {
-
-  return `
-  
-<tr style="margin-left: 50px;height: 50px;">
-<td>${item.id}</td>
-<td>${item.useremail}</td>
-<td>${item.amount}</td>
-<td>${item.date}</td>
-<td>${item.bankdetails}</td>
-<td>${item.accountname}</td>
-<td>${item.fulfiled}</td>
-<td>${item.fulfiledby}</td>
-<td>${item.timefulfiled}</td>
-</tr>
+  </div>
   `;
 }).join('');
 
+  }
 
 
-
-document.getElementById("table-body5").innerHTML = users.map(item => {
-
-  return `
+  if(tablebody6Element){
+    tablebody6Element.innerHTML =users.map(item => `
+      
+  <tr style="margin-left: 50px;height: 50px;">
+  <td>${item.id}</td>
+  <td>${item.useremail}</td>
+  <td>${item.amount}</td>
+  <td>${item.date}</td>
+  <td>${item.bankdetails}</td>
+  <td>${item.accountname}</td>
+  <td>${item.fulfiled}</td>
+  <td>${item.fulfiledby}</td>
+  <td>${item.timefulfiled}</td>
+  </tr>
+  `).join('');}
   
+
+
+if(tablebody5Element){
+  tablebody5Element.innerHTML =users.map(item => `
 <tr style="margin-left: 50px;height: 50px;">
     <td>${item.id}</td>
     <td>${item.useremail}</td>
@@ -867,39 +994,33 @@ document.getElementById("table-body5").innerHTML = users.map(item => {
     <td>${item.fulfiledby}</td>
     <td>${item.timefulfiled}</td>
 </tr>
-  `;
-}).join('');
+`).join('');}
 
 
 
-
-
-document.getElementById("table-body4").innerHTML = users.map(item => {
-
-  return `
+if(tablebody4Element){
+  tablebody4Element.innerHTML =users.map(item => `
+    
+  <tr style="margin-left: 50px;height: 50px;">
+  <td>${item.id}</td>
+  <td>Another One(12)</td>
+  <td>1</td>
+  <td>${item.amount}</td>
+  <td>False</td>
+  <td>All Users</td>
+  <td>June 9th,2020. 9:46pm</td>
+  <td>June 9th,2020. 9:46pm</td>
+  <td >
+  <div class="tablebtn"><p>View Beneficiaries</p></div>
   
-<tr style="margin-left: 50px;height: 50px;">
-<td>${item.id}</td>
-<td>Another One(12)</td>
-<td>1</td>
-<td>${item.amount}</td>
-<td>False</td>
-<td>All Users</td>
-<td>June 9th,2020. 9:46pm</td>
-<td>June 9th,2020. 9:46pm</td>
-<td >
-<div class="tablebtn"><p>View Beneficiaries</p></div>
-
-</td>
-</tr>
-  `;
-}).join('');
+  </td>
+  </tr>
+`).join('');}
 
 
-
-
-document.getElementById("test3").innerHTML = users.map(user => { 
-  return `<div class="div0">
+    if(test3Element){
+      test3Element.innerHTML = users.map(user => { 
+        return `<div class="div0">
   <img src=${user.image}  style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/>
   <p style="
   font-weight: 700;">${user.user}</p>
@@ -919,71 +1040,58 @@ document.getElementById("test3").innerHTML = users.map(user => {
 <div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:20px;color:#FA6230;padding-top :4px; font-size: 11px;" >${user.staff}</div>
 </div>
 </div>`;
+        }).join('');}
+
+       
+
+
+        if(test7Element){
+          test7Element.innerHTML = users.map(user => { 
+           return `
+           <div class="divd">
+              <img src=${user.image1}  style="border-radius: 90%;width: 58px;height: 58px;margin-top: 25px;"/> 
+             
+                
+              <div style="display: flex;flex-direction: column;margin: 10px;border-radius: 4px;width: 159px;height:60px;">
+                    <div style="display: flex;flex-direction: row;justify-content: center;">
+                        <p style="color:#000000;font-weight:600;font-size: 18px;margin-left: -25px;">${user.country}</p></div>
+                        <div style="display: flex;flex-direction: row;justify-content: center;">
+            
+                           <p style="color:#414141; font-size: 12px;white-space: nowrap;margin-left: -15px;">exchange per unit (CAD/naira)</p></div>
+            
+                </div>
+                <div class="test5div3" onclick="submitForm6()">Edit Country</div>
+                
+            
+              </div>
+           `;
+          }).join('');
+          
+        }
+  
+document.getElementById("test8").innerHTML = users.map(user => { 
+  return `<div class="divd">
+   <P style="font-weight: 700;
+font-size: 18px;">${user.digit}</P>
+   <div class="test1hash2">
+     <p class="test1p">${user.parentcurrency}</p>
+     <p class="test1p">${user.naira}</p>
+   
+  </div>
+      <div class="test5div2" onclick="submitForm2()" >Edit Deals</div>
+    </div>`;
 }).join('');
 
 
 
 
+        
 
+  if (test9Element) {
+    test9Element.innerHTML = users.map(user => { 
+      return `
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.getElementById("test5").innerHTML = users.map(user => { 
-  return `<div class="div0">
-  <img src=${user.image1}  style="border-radius: 90%;width: 58px;height: 58px;margin-top: 25px;"/> 
- 
-    
-  <div style="display: flex;flex-direction: column;margin: 10px;border-radius: 4px;width: 159px;height:60px;">
-        <div style="display: flex;flex-direction: row;justify-content: center;">
-            <p style="color:#000000;font-weight:600;font-size: 18px;">${user.apple}</p></div>
-            <div style="display: flex;flex-direction: row;justify-content: center;">
-
-               <p style="color:#414141; font-size: 15px;">${user.link}</p></div>
-
-    </div>
-    <div class="test5div2" onclick="submitForm5()">Edit Company</div>
-    <div class="test5div">Deactivate</div>
-
-  </div>`;
-}).join('');
-
-
-
-
-
-
-document.getElementById("test9").innerHTML = users.map(user => {
-
-  return `
-  <div class="div0">
+      <div class="div0">
       <img src=${user.image}  style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/>
       <p style="font-weight: 700;">${user.user}</p>
       <div class="test2hash"> 
@@ -1001,14 +1109,15 @@ document.getElementById("test9").innerHTML = users.map(user => {
         <div style="background-color:#FFEFEA;  width: 60px;border-radius: 8px;height:20px;color:#FA6230;padding-top:4px; font-size: 11px;" >${user.staff}</div>
       </div>
       </div>
-  `;
-}).join('');
+      `;
+    }).join('');
+  }
 
-
-
-document.getElementById("test10").innerHTML = users.map(user => {
-
+  
+  if (test10Element) {
+    test10Element.innerHTML = users.map(user => { 
   return `
+  
   <div class="div0">
   <img src=${user.image}  style="border-radius: 90%;width: 80px;height: 80px;margin-top: 25px;"/>
   <p style="
@@ -1035,4 +1144,9 @@ document.getElementById("test10").innerHTML = users.map(user => {
 
 
 
+
+  }
+
+
+});
 

@@ -13,10 +13,10 @@
    
 </head>
 <body>
-    <div class="tab-container">
-        <nav class="tab" id="myTab">
+    <div class="sidebar-container">
+          <nav class="tab" id="myTab">
        
-            <div class="flexcontainer">
+            <div class="admin-info-container">
    
                    <img src="./images/Frame 117.png" width="44px" height="44px"/>
               <div style="display: flex;flex-direction: row;margin-left: 12px; ">
@@ -27,7 +27,7 @@
                    <p style="color: #676A85;font: size 16px;font-weight: 500px;">Administrator</p>
                    
                   </div>
-          <div class="angle-down">
+          <div class="dropdown-icon">
            <i class="fa-solid fa-angle-down fa-1x"></i>
        </div>
               </div>
@@ -41,50 +41,50 @@
           
            <div  class="close" onclick="closeDrawer()"><i class="fa-solid fa-xmark fa-1x"></i></div>
          
-           <div class="header">
+           <div class="sidebar-header">
                <p style="color: #414141;font-size: 16px;font-weight: 500;" >General</p>
            </div>
    
    
-           <div class="div">
-                 <div class="tablinks" onclick="openCity(event, 'dashboard')" >
+           <div class="menu-section">
+                 <div class="menuitem" onclick="opennewtab(event, 'dashboard')"  >
                    <img src="./images/dashboard_customize.png" width="20px" height="20px"style="margin-top:-10px;"  />
                <div style="margin-left: 6px;margin-top:-7px;font-size:14px;font-weight: 500;">
                    Dashboard</div>
               </div>
-               <div class="tablinks" onclick="openCity(event, 'account')">
+               <div class="menuitem" onclick="opennewtab(event, 'account')">
                    <img src="./images/account_circle.png" width="20px" height="20px" style="margin-top:-10px;" />
                <div style="margin-left: 10px;margin-top: -7.5px;font-size:14px;font-weight: 500;">
                    Users</div>
            </div>
    
    
-           <div class="tablinks" onclick="openCity(event, 'payments')" >
+           <div class="menuitem" onclick="opennewtab(event, 'payments')" >
                <img src="./images/payments.png" width="20px" height="20px" style="margin-top:-10px;"  />
                <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;"  >
                    Deposit 2 User</div>
            </div>
-           <div class="tablinks" onclick="openCity(event, 'debit')">
+           <div class="menuitem" onclick="opennewtab(event, 'debit')">
                <img src="./images/payments.png" width="20px" height="20px" style="margin-top:-10px;" />
                <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Debit Order</div>
            </div>
-           <div class="tablinks" onclick="openCity(event, 'history')">
+           <div class="menuitem" onclick="opennewtab(event, 'history')">
                <img src="./images/deployed_code_history.png" width="20px" height="20px" style="margin-top:-10px;" />
                <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Pending Transfers</div>
                </div>
                </div>
    
    
-           <div class="header">
+           <div class="sidebar-header">
                <p style="color: #414141;font-size: 16px;font-weight: 500;" >Giftcard</p>
            </div>
-           <div class="div">
-               <div class="tablinks" onclick="openCity(event, 'bookmark')"  id="defaultOpen" >
+           <div class="menu-section">
+               <div class="menuitem" onclick="opennewtab(event, 'bookmark')" id="defaultOpen" >
                    <img src="./images/bookmark_manager.png" width="20px" height="20px" style="margin-top:-10px;"  />
                    <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">
                    Giftcard Manager</div>
                </div>
-               <div class="tablinks" onclick="openCity(event, 'contract')"  >
+               <div class="menuitem" onclick="opennewtab(event, 'contract')"  >
                    <img src="./images/contract.png" width="20px" height="20px" style="margin-top:-10px;" />
                    <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">
                        Giftcard Transaction</div>
@@ -92,34 +92,34 @@
                     </div>
            
                     
-           <div class="header">
+           <div class="sidebar-header">
                <p style="color: #414141;font-size: 16px;font-weight: 500;">Admin & Others</p>
            </div>
    
-           <div class="div">
-               <div class="tablinks" onclick="openCity(event, 'featured')">
+           <div class="menu-section">
+               <div class="menuitem" onclick="opennewtab(event, 'featured')">
                    <img src="./images/featured_seasonal_and_gifts.png" width="20px" height="20px" style="margin-top:-10px;" />
                    <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;" >
                    Promotional Offers</div>
            </div>
-           <div class="tablinks" onclick="openCity(event, 'currency1')"  >
+           <div class="menuitem" onclick="opennewtab(event, 'currency1')"  >
                <img src="./images/currency_exchange.png" width="20px" height="20px" style="margin-top:-10px;" />
                <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Exchange Rate</div>
            </div>
-           <div class="tablinks" onclick="openCity(event, 'finance')"  >
+           <div class="menuitem" onclick="opennewtab(event, 'finance')"  >
                <img src="./images/finance.png" width="20px" height="20px" style="margin-top:-10px;" />
                <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Revenue</div>
            </div>
-           <div class="tablinks" onclick="openCity(event, 'notification')"  >
+           <div class="menuitem" onclick="opennewtab(event, 'notification')"  >
                <img src="./images/notifications.png" width="20px" height="20px"style="margin-top:-10px;" />
                <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Push Notification</div>
            </div>
-           <div class="tablinks" onclick="openCity(event, 'person')" >
+           <div class="menuitem" onclick="opennewtab(event, 'person')" >
                <img src="./images/person_apron.png" width="20px" height="20px" style="margin-top:-10px;" />
                <div style="margin-left: 10px;margin-top: -9px;font-size:14px;font-weight: 500;">Staff Management</div>
                 </div> 
            </div>
-              <div class="logout">  
+              <div class="logout-button">  
                <img src="./images/chip_extraction.png" width="20px" height="20px"style="margin-top:-10px;" />
          <div style="margin-left: 10px;margin-top: -9px;font-size:14px;">Log Out</div></div>
            
@@ -130,8 +130,8 @@
 
 
 
-      <div class="tab-content-container">
-  <section id="bookmark" class="tabcontent">
+      <div class="content-container">
+  <section id="bookmark" class="contentsection">
      
 <div class="menu">
     <div   onclick="openDrawer()">
@@ -139,9 +139,9 @@
     </div>
     </div>
 
-     <div class="flexcontainer1" >
+     <div class="top-bar" >
         <div class="staffcontainer1"><p>Apple Inc Usa Giftcard Manager</p>
-            <p class="dashtext">Wed 7th March, 2024</p>
+            <p class="top-bar-date">Wed 7th March, 2024</p>
            </div>
            
             <input class="search17" placeholder="Search" />
@@ -182,7 +182,8 @@
 
 
     
-  <section id="dashboard" class="tabcontent">
+
+  <section id="dashboard" class="contentsection">
     
     <div class="menu">
         <div   onclick="openDrawer()">
@@ -190,30 +191,30 @@
         </div>
         </div>
     
-        <div class="flexcontainer1" >
-            <div class="container">
+        <div class="top-bar" >
+            <div class="top-bar-container">
                 <p style="
     font-size: 24px;
     font-weight: 700;
     ">Dashboard</p>
-                <p class="dashtext">Wed 7th March, 2024</p>
+                <p class="top-bar-date">Wed 7th March, 2024</p>
                </div>
               
                
-               <input class="search" placeholder="Search" />
+               <input class="search-input" placeholder="Search" />
          </div>
     
-        <div class="AccountOverview" >
-                <div class="maindiv">
-        <div class="minidiv1">
+        <div class="account-overview" >
+                <div class="main-section">
+        <div class="overview-section">
             <p style="color: #414141;font-weight: 700;margin-top: 26px;
     font-size: 18px;">Account Overview</p>
-            <div class="insidediv">
+            <div class="overview-cards">
                 <div class="insided">
-                    <div class="insidedivs">
+                    <div class="overview-card">
                          <img src="./images/Frame 1000003447.png" class="imgcenter"/>
-                   <div  class="divinside">
-                    <p class="divp">Overall Wallet Sum</p>
+                   <div  class="card-content">
+                    <p class="card-title">Overall Wallet Sum</p>
                    <p style="color: #000000;font-weight: 700; 
     font-size: 18px;
     font-weight: 700;
@@ -221,10 +222,10 @@
     ">₦157,108.79</p>
                    </div>
                                </div>
-                    <div class="insidedivs">      
+                    <div class="overview-card">      
                         <img src="./images/Frame 10000034479.png" class="imgcenter"/>
-                        <div  class="divinside">
-                            <p class="divp">User Statistics (Total Users)</p>
+                        <div  class="card-content">
+                            <p class="card-title">User Statistics (Total Users)</p>
                         <p style="color: #000000;
     font-size: 18px;
     font-weight: 700;
@@ -234,10 +235,10 @@
                     </div>    
                 </div>
                 <div class="insided">
-                    <div class="insidedivs"> 
+                    <div class="overview-card"> 
                             <img src="./images/Frame 1000003447 (1).png" class="imgcenter"/>
-                            <div  class="divinside">
-                                <p class="divp">All Time Transaction Volume</p>
+                            <div  class="card-content">
+                                <p class="card-title">All Time Transaction Volume</p>
                             <p style="color: #000000;
                             
     font-size: 18px;
@@ -246,10 +247,10 @@
                             </div>
                             
                     </div>
-                    <div class="insidedivs">    
+                    <div class="overview-card">    
                           <img src="./images/Frame 1000003447 (2).png" class="imgcenter"/>
-                          <div  class="divinside">
-                            <p class="divp">All Time Processed Transaction (Inflow)</p>
+                          <div  class="card-content">
+                            <p class="card-title">All Time Processed Transaction (Inflow)</p>
                           <p style="color: #000000;
     font-size: 18px;
     font-weight: 700;
@@ -258,19 +259,19 @@
                     </div>    
                 </div>
                 <div class="insided">
-                    <div class="insidedivs">      
+                    <div class="overview-card">      
                         <img src="./images/Frame 1000003447 (3).png" class="imgcenter"/>
-                        <div class="divinside">
-                            <p class="divp">All Time Processed Transaction (Intra)</p>
+                        <div class="card-content">
+                            <p class="card-title">All Time Processed Transaction (Intra)</p>
                         <p style="color: #000000;font-weight: 700;
     font-size: 18px;
     ">₦157,108.79</p>
                         </div>
                     </div>
-                    <div class="insidedivs">
+                    <div class="overview-card">
                         <img src="./images/Frame 1000003447 (4).png" class="imgcenter"/>
-                       <div class="divinside"> 
-                        <p class="divp">All Time Processed Transaction (Outflow)</p>
+                       <div class="card-content"> 
+                        <p class="card-title">All Time Processed Transaction (Outflow)</p>
                         <p style="color: #000000;
     font-size: 18px;
     font-weight: 700;">₦157,108.79</p></div>
@@ -280,44 +281,44 @@
                   </div>
         </div>
     
-        <div  class="minidiv2">
+        <div  class="chart-section">
             <div style="display: flex;flex-direction: row; margin-top: -25px;
       width: 509px;
       height: 69px;gap: 182px;">
                 <div style="display: flex;flex-direction: column;gap: 5px;" >
                     <p style="color: #414141;font-weight: 700;font-size: 15px;">Bitcoin Chart</p>
-                    <div class="imgdiv">
+                    <div class="chart-info">
                         <img src="./images/Group.png" class="img" width="38px" height="38px"/> 
-                        <p class="pimg">1 BTC= $64,000.00</p>
+                        <p class="btc-value">1 BTC= $64,000.00</p>
                             
                     </div>
                     
                     
                 </div>
                 
-                    <div class="hourdiv">
+                    <div class="timeframe-selector">
                       <p style=" font-size: 12px;">1 Hour</p> 
                           <i style="color:#FA6230;margin-left: 5px;" class="fa-solid fa-angle-down"></i>
                     </div>
                 
             </div>
             
-           <div class="btcdiv"></div>
+           <div class="btc-chart"></div>
             
     
         </div>
         </div>
-      <div class="maindiv">
-        <div class="div2">
+      <div class="main-section">
+        <div class="staff-management">
            
             <div style="display: flex;flex-direction: row;justify-content: space-between;" >
                 <p style="color: #414141;font-weight: 700;font-size: 18px;">Staff Management </p> <p style="color: #FA6230;font-size: 14px;font-weight: 700;">See all</p>
             </div>
-                <div class="adminrow">
-                    <div class="admins">
+                <div class="admin-list">
+                    <div class="admin-item">
                         <img src="./images/33fe647a46f9bf668322f8c1d94ed937.png"   style="border-radius: 170px;width: 90px;height: 90px;"/>
                         <p style="color: #000000;font-weight: 700;font-size: 20px;margin-top: 8px;">Admin 1</p>
-                        <div class="staffhash"> 
+                        <div class="contact-info"> 
                             <div style="display: flex;flex-direction: row;gap: 5px;">
                                 <img src="./images/call.png"  width="16px" height="16px" />
                                 <p style="color: #444748;font-size: 12px;margin-top: 3px;font-weight: 500;">+2348078868319</p>
@@ -330,10 +331,10 @@
                         </div>
                       
                 </div>
-                <div class="admins">
+                <div class="admin-item">
                     <img src="./images/Frame 1000003225.png" style="border-radius: 90%;width: 90px;height: 90px;"/> 
                   <p style="color: #000000;font-weight: 700;font-size: 20px;margin-top: 8px;">Admin 2</p>
-                  <div class="staffhash"> 
+                  <div class="contact-info"> 
                    <div style="display: flex;flex-direction: row;gap: 5px;">
                     <img src="./images/call.png"  width="16px" height="16px" />
                     <p style="color: #444748;font-size: 12px;font-weight: 500;">+2348078868319</p>
@@ -354,7 +355,7 @@
         
       </div>
       
-      <div class="div3">
+      <div class="users-section">
      
           <div style="display: flex;flex-direction: row;justify-content: space-between;">
               <p style="color: #414141;font-weight: 700;font-size: 16px;">Users </p> <p style="color: #FA6230;font-size: 14px;font-weight: 700;">See all</p></div>
@@ -371,33 +372,33 @@
     
     
     
-      <div class="maindiv">
-        <div class="minigiftcard">
+      <div class="main-section">
+        <div class="giftcard-overview">
             <div >
         <p style="color: #414141;font-weight: 700;font-size:20px">Giftcards</p></div>
         
         <div style="display: flex;flex-direction: row;margin-top: 24px;gap:8px;">
-        <div class="insidedivs1">
-            <img src="./images/Frame 1000003447 (4).png" class="imgcenter1"/>
-            <div class="divinside1"> 
-             <p class="divp1">Giftcard Trades (Transactions)</p>
+        <div class="giftcard-card">
+            <img src="./images/Frame 1000003447 (4).png" class="giftcard-image"/>
+            <div class="giftcard-content"> 
+             <p class="giftcard-title1">Giftcard Trades (Transactions)</p>
              <p class="no" >500</p></div>
       </div>
-        <div class="insidedivs1">
-            <img src="./images/Frame 1000003447 (4).png" class="imgcenter1"/>
-            <div class="divinside1"> 
-             <p class="divp1">Giftcard Volume</p>
+        <div class="giftcard-card">
+            <img src="./images/Frame 1000003447 (4).png" class="giftcard-image"/>
+            <div class="giftcard-content"> 
+             <p class="giftcard-title1">Giftcard Volume</p>
              <p class="no">₦12,157,108.79</p></div>
       </div>
         </div>
         
       </div> 
       
-        <div class="user">
+        <div class="top-users">
             <div style="display: flex;flex-direction: row;justify-content: space-between;">
                 <p style="color: #414141;font-weight: 700;font-size:20px;">Top Users </p> <p style="color: #FA6230;font-size:14px;font-weight: 700;">see all</p></div>
     <div style="width: 100%;height: 130px; overflow-y:scroll;">
-                <table id="data-table" style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 24px;text-align: center;color:#000000;">
+                <table id="topuserstable" style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 24px;text-align: center;color:#000000;">
                     <thead >
                         <tr style="margin-left: 50px;font-weight: 700;font-size:12px;">
                             <th>no</th>
@@ -406,7 +407,7 @@
                             <th>transaction volume</th>
                         </tr>
                     </thead>
-                    <tbody id="table-body" style="font-weight: 700;font-size:10px;" >
+                    <tbody id="topuserstable" style="font-weight: 700;font-size:10px;" >
                         <!-- Table body will be generated dynamically -->
                     </tbody>
                 </table>
@@ -422,7 +423,7 @@
     
     
       
-      <section id="account" class="tabcontent">
+      <section id="account" class="contentsection">
         
     <div class="menu">
         <div   onclick="openDrawer()">
@@ -430,18 +431,18 @@
         </div>
         </div>
     
-        <div class="flexcontainer1" >
-            <div class="container"><p>Users</p>
-                <p class="dashtext">Wed 7th March, 2024</p>
+        <div class="top-bar" >
+            <div class="top-bar-container"><p>Users</p>
+                <p class="top-bar-date">Wed 7th March, 2024</p>
                </div>
               
-                <input class="search1" placeholder="Search" />
+                <input class="search-input-users" placeholder="Search" />
              
              
         </div>
             <!-- Other content -->
             
-            <div id="test2" class="test2main">
+            <div id="users-content" class="users-content-container">
                
             </div>
     
@@ -449,7 +450,7 @@
       
     
     
-    <section id="payments" class="tabcontent">
+    <section id="payments" class="contentsection">
     
             
     <div class="menu">
@@ -458,9 +459,9 @@
         </div>
         </div>
     
-            <div class="flexcontainer1" >
-                <div class="container"><p>Deposit</p>
-                    <p class="dashtext">Wed 7th March, 2024</p>
+            <div class="top-bar" >
+                <div class="top-bar-container"><p>Deposit</p>
+                    <p class="top-bar-date">Wed 7th March, 2024</p>
                    </div>
                   
                     <input class="search8" placeholder="Search" />
@@ -506,22 +507,22 @@
         </section>
     
     
-      <section id="debit" class="tabcontent">
+      <section id="debit" class="contentsection">
     
     <div class="menu">
         <div   onclick="openDrawer()">
             <i class="fa-solid fa-bars fa-2xl"></i>
         </div>
         </div>
-        <div class="flexcontainer1" >
+        <div class="top-bar" >
             <div class="staffcontainer"><p>Debit Order</p>
-                <p class="dashtext">Wed 7th March, 2024</p>
+                <p class="top-bar-date">Wed 7th March, 2024</p>
                </div>
                 <input class="search9" placeholder="Search" />
              
              
         </div>
-        <div class="contentbtn">Initiate Debit Order</div>
+        <div class="content-button">Initiate Debit Order</div>
       
       <table style="border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;text-align: center;">
         <thead style="gap: 5px;height: 50px;">
@@ -540,7 +541,7 @@
       </section>
     
       
-      <section id="history" class="tabcontent"> 
+      <section id="history" class="contentsection"> 
     
         
     <div class="menu">
@@ -548,9 +549,9 @@
             <i class="fa-solid fa-bars fa-2xl"></i>
         </div>
         </div>
-        <div class="flexcontainer1" >
+        <div class="top-bar" >
             <div class="staffcontainer"><p>All Transfers</p>
-                <p class="dashtext">Wed 7th March, 2024</p>
+                <p class="top-bar-date">Wed 7th March, 2024</p>
                </div>
               
                 <input class="search4" placeholder="Search" />
@@ -587,8 +588,7 @@
     
     
     
-    
-      <section id="contract" class="tabcontent">
+      <section id="contract" class="contentsection">
         
     <div class="menu">
         <div   onclick="openDrawer()">
@@ -596,9 +596,9 @@
         </div>
         </div>
     
-        <div class="flexcontainer1" >
+        <div class="top-bar" >
             <div class="staffcontainer"><p>Giftcard Transaction</p>
-                <p class="dashtext">Wed 7th March, 2024</p>
+                <p class="top-bar-date">Wed 7th March, 2024</p>
                </div>
                
                 <input class="search10" placeholder="Search" />
@@ -625,6 +625,8 @@
             </div>
         </div>
         <div id="resolved" class="tabcontent2"> 
+            <div style=" height: 30%;width: 100%;margin-top: 40px; border: 1px solid #DEDEDE;
+            border-radius: 8px;padding: 20px 40px 20px 40px;">
             <div style="display: flex;flex-direction: row;justify-content: space-between;"><p>Analytics</p> <div class="date">12th March, 2024<i class="fa-solid fa-angle-down"></i></div></div>
          <div style="display: flex;flex-direction: row;margin-top: 10px;">
              <p style="margin-top: 20px;"><p style="font-weight: 700;">1</p> Transactions Rejected <p style="font-weight: 700;margin-left: 5px;"> / 50</p>
@@ -639,9 +641,10 @@
             <div style="display: flex;flex-direction: row;"><div style="background-color:#0A7C00;width: 13px;height: 13px;margin-left: 10px;"></div><p>Transaction Failed</p></div>
             <div style="display: flex;flex-direction: row;"><div style="background-color:#EA0000;width: 13px;height: 13px;margin-left: 10px;"></div><p>Transaction Failed</p></div>
         </div>
-        <h4 style="margin-top: 10px;">Transaction Details</h4>
+        </div>
+        <h4 style="margin-top: 50px;">Transaction Details</h4>
         <div class="table-container">
-      <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
+      <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 20px;
         text-align: center;font-size: 12px;">
         <thead style="height: 50px;">
             <tr >
@@ -708,8 +711,7 @@
     
     
     
-    
-      <section id="featured" class="tabcontent">
+      <section id="featured" class="contentsection">
         
     <div class="menu">
         <div   onclick="openDrawer()">
@@ -717,16 +719,16 @@
         </div>
         </div>
     
-        <div class="flexcontainer1" >
+        <div class="top-bar" >
             <div class="staffcontainer"><p>Promotional Offers</p>
-                <p class="dashtext">Wed 7th March, 2024</p>
+                <p class="top-bar-date">Wed 7th March, 2024</p>
                </div>
                 
                 <input class="search11" placeholder="Search" />
              
              
         </div>
-        <div class="contentbtn" onclick="openDialog3()">Create Giveaway</div>
+        <div class="content-button" onclick="openDialog3()">Create Giveaway</div>
         <div class="table-container">
         <table style="gap: 50px;border: 1px solid #DEDEDE;border-radius: 4px;width: 100%;margin-top: 50px;
         text-align: center;font-size: 12px; 
@@ -751,14 +753,14 @@
     </div>
             
     
-    <div id="myModal3" class="modal2">
+    <div id="myModal3" class="promotion-modal">
         <div class="modal-content3">
            <div style="display: flex;
       flex-direction: row;
       justify-content: space-between; ">
             <h3 style="color: #000000; font-size: 23px;
       font-family: 700;">New Giveaway</h3>
-            <div  class="close2" onclick="closeDialog3()"><i class="fa-solid fa-xmark fa-1x"></i></div>  
+            <div  class="modal-close" onclick="closeDialog3()"><i class="fa-solid fa-xmark fa-1x"></i></div>  
         </div>
             
             <div style="margin-top: 30px;">
@@ -791,7 +793,7 @@
     
     
     
-      <section id="currency1" class="tabcontent">
+      <section id="currency1" class="contentsection">
     
         
     <div class="menu">
@@ -800,9 +802,9 @@
         </div>
         </div>
     
-         <div class="flexcontainer1" >
+         <div class="top-bar" >
         <div class="staffcontainer"><p>Exchange Rates</p>
-            <p class="dashtext">Wed 7th March, 2024</p>
+            <p class="top-bar-date">Wed 7th March, 2024</p>
            </div>
                
             <input class="search12" placeholder="Search" />
@@ -843,7 +845,7 @@
       
     
     
-      <section id="finance" class="tabcontent">
+      <section id="finance" class="contentsection">
         
     <div class="menu">
         <div   onclick="openDrawer()">
@@ -851,9 +853,9 @@
         </div>
         </div>
     
-        <div class="flexcontainer1" >
+        <div class="top-bar" >
         <div class="staffcontainer"><p>Platform Revenue</p>
-            <p class="dashtext">Wed 7th March, 2024</p>
+            <p class="top-bar-date">Wed 7th March, 2024</p>
            </div>
                
             <input class="search13" placeholder="Search" />
@@ -871,16 +873,16 @@
     
     
     
-      <section id="notification" class="tabcontent">
+      <section id="notification" class="contentsection">
         
     <div class="menu">
         <div   onclick="openDrawer()">
             <i class="fa-solid fa-bars fa-2xl"></i>
         </div>
         </div>
-        <div class="flexcontainer1" >
+        <div class="top-bar" >
             <div class="staffcontainer"><p>General Notification To Customers</p>
-                <p class="dashtext">Wed 7th March, 2024</p>
+                <p class="top-bar-date">Wed 7th March, 2024</p>
                </div>
                <div class="searchdiv">
                
@@ -917,7 +919,7 @@
     
     
     
-      <section id="person" class="tabcontent">
+      <section id="person" class="contentsection">
         
     <div class="menu">
         <div   onclick="openDrawer()">
@@ -925,10 +927,10 @@
         </div>
         </div>
     
-        <div class="flexcontainer1" >
+        <div class="top-bar" >
             <div class="staffcontainer">
                 <p>Staff Management</p>
-                <p class="dashtext">Wed 7th March, 2024</p>
+                <p class="top-bar-date">Wed 7th March, 2024</p>
                </div>
                
                 <input class="search3" placeholder="Search" />
@@ -937,7 +939,7 @@
              
         </div>
          
-         <div class="contentbtn" onclick="openDialog2()">Support New Company</div>
+         <div class="content-button" onclick="openDialog2()">Support New Company</div>
       
         <div id="test3" style="display: flex;flex-wrap: wrap;padding: 10px;border-radius: 8px;margin-top:15px;width:100%;">
                
@@ -951,8 +953,7 @@
                 justify-content: space-between; ">
                 <h3 style="color: #000000;padding: 15px;">Enroll New Staff</h3>
              
-                <div  class="close2" onclick="closeDialog2()"><i class="fa-solid fa-xmark fa-1x"></i></div>
-      
+                <div  class="modal-close" onclick="closeDialog2()"><i class="fa-solid fa-xmark fa-1x"></i></div>
           
                  </div>
                 <form id="myForm" onsubmit="return false;" style=" padding: 20px;">
@@ -978,7 +979,8 @@
     
       </section>
     
-
+    
+    
 </div>
     </div>
   <script src="Script.js"></script>  
