@@ -150,19 +150,19 @@ function previewImage() {
   }
 }
 
-function submitForm() {
+function handleclick() {
   closeDialog();
   //window.open(`Addnewcountry.html`, "_self");
 }
 
-function submitForm2() {
+function openeditdealspage() {
   //closeDialog();
   window.open(`./Editdeals.html`, "_self");
 }
 
 
 
-function submitForm3() {
+function openAddnewdealpage() {
   closeDialog4();
   window.open(`./Addnewdeal.html`, "_self");
 }
@@ -173,38 +173,38 @@ function submitForm4() {
  
 }
 
-function submitForm5() {
+function openAddnewcountrypage() {
   //closeDialog();
   window.open(`./Addnewcountry.html`, "_self");
 }
 
 
-function submitForm6() {
+function openEditcountrypage() {
   //closeDialog();
   window.open(`./Editcountry.html`, "_self");
 }
 
-function submitForm7() {
+function openAddnewdealpage() {
   //closeDialog();
   window.open(`./Addnewdeal.html`, "_self");
 }
 
 
-function submitForm8() {
+function openAssigntootherspage() {
   //closeDialog();
   window.open(`./Assigntoothers.html`, "_self");
 }
 
 
-function submitForm9() {
+function openChatpage() {
   //closeDialog();
   window.open(`./Chat.html`, "_self");
 }
 
 
-function submitForm10() {
+function handlegoback() {
   //closeDialog();
-  window.open(`./Transaction.html`, "_self");
+  window.open(`./Giftcard-transaction.html`, "_self");
 }
 
 
@@ -906,7 +906,7 @@ if(tablebody3Element){
                <p style="color:#414141; font-size: 15px;">${user.link}</p></div>
 
     </div>
-    <div class="test5div5" onclick="submitForm5()">Edit Company</div>
+    <div class="test5div5" onclick="openAddnewcountrypage()">Edit Company</div>
     <div class="test5div">Deactivate</div>
 
   </div>
@@ -931,7 +931,7 @@ if(tablebody3Element){
     </div>
     <div class="test2prof">Assign To Self</div>
 
-    <div class="testprof" onclick="submitForm8()">Assign To Others</div>
+    <div class="testprof" onclick="openAssigntootherspage()">Assign To Others</div>
 
     </div>`;
     }).join('');
@@ -955,7 +955,7 @@ if(tablebody3Element){
         <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p class="test1p">${user.email}</p> </div>
             
     </div>
-    <div class="test2prof" onclick="submitForm9()">Enter Chat</div>
+    <div class="test2prof" onclick="openChatpage()">Enter Chat</div>
   </div>
   `;
 }).join('');
@@ -1060,7 +1060,7 @@ if(tablebody4Element){
                            <p style="color:#414141; font-size: 12px;white-space: nowrap;margin-left: -15px;">exchange per unit (CAD/naira)</p></div>
             
                 </div>
-                <div class="test5div3" onclick="submitForm6()">Edit Country</div>
+                <div class="test5div3" onclick="openEditcountrypage()">Edit Country</div>
                 
             
               </div>
@@ -1078,7 +1078,7 @@ font-size: 18px;">${user.digit}</P>
      <p class="test1p">${user.naira}</p>
    
   </div>
-      <div class="test5div2" onclick="submitForm2()" >Edit Deals</div>
+      <div class="test5div2" onclick="openeditdealspage()" >Edit Deals</div>
     </div>`;
 }).join('');
 

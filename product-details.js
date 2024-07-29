@@ -478,18 +478,18 @@ function previewImage() {
 
 
 
-function submitForm() {
+function handleclick() {
   closeDialog();
   //window.open(`Addnewcountry.html`, "_self");
 }
 
-function submitForm2() {
+function openAddnewdealpage() {
   window.open(`./Editdeals.html`, "_self");
 }
 
 
 
-function submitForm3() {
+function openAddnewdealpage() {
   closeDialog4();
   window.open(`./Addnewdeal.html`, "_self");
 }
@@ -499,32 +499,32 @@ function submitForm4() {
  
 }
 
-function submitForm5() {
+function openAddnewcountrypage() {
   window.open(`./Addnewcountry.html`, "_self");
 }
 
 
-function submitForm6() {
+function openEditcountrypage() {
   window.open(`./Editcountry.html`, "_self");
 }
 
-function submitForm7() {
+function openAddnewdealpage() {
   window.open(`./Addnewdeal.html`, "_self");
 }
 
 
-function submitForm8() {
+function openAssigntootherspage() {
   window.open(`./Assigntoothers.html`, "_self");
 }
 
 
-function submitForm9() {
+function openChatpage() {
   window.open(`./Chat.html`, "_self");
 }
 
 
-function submitForm10() {
-  window.open(`./Transaction.html`, "_self");
+function handlegoback() {
+  window.open(`./Giftcard-transaction.html`, "_self");
 }
 
 
@@ -714,7 +714,7 @@ document.getElementById("table-body2").innerHTML =users.map(item => `
                  <p style="color:#414141; font-size: 15px;">${user.link}</p></div>
   
       </div>
-      <div class="test5div5" onclick="submitForm5()">Edit Company</div>
+      <div class="test5div5" onclick="openAddnewcountrypage()">Edit Company</div>
       <div class="test5div">Deactivate</div>
   
     </div>`;
@@ -735,7 +735,7 @@ document.getElementById("test4").innerHTML = users.map(user => {
     </div>
     <div class="test2prof">Assign To Self</div>
 
-    <div class="testprof" onclick="submitForm8()">Assign To Others</div>
+    <div class="testprof" onclick="openAssigntootherspage()">Assign To Others</div>
 
     </div>`;
 }).join('');
@@ -757,7 +757,7 @@ document.getElementById("test6").innerHTML = users.map(user => {
         <div style="display: flex;flex-direction:row;margin-left: 12px;margin-top: 5px;gap:5px;"> <img src="./images/mail.png"  width="15px" height="15px"/> <p class="test1p">${user.email}</p> </div>
             
     </div>
-    <div class="test2prof" onclick="submitForm9()">Enter Chat</div>
+    <div class="test2prof" onclick="openChatpage()">Enter Chat</div>
   </div>`;
 }).join('');
 
