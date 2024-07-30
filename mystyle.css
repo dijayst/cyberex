@@ -8,6 +8,9 @@
 
 }
 
+.dropdown-icon{
+ margin-left: 20px;
+}
 .sidebar-container {
   display: flex;
   height: 100vh;
@@ -68,6 +71,9 @@ body {
 }
 .date{
   background-color: #DEDEDE;height: 40px;width: 160px;padding-top: 15px; padding-left: 20px;border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
   font-size: 12px;
 }
 .content-button{
@@ -554,7 +560,7 @@ gap: 5px;
  table { 
             border-collapse: collapse; 
             width: 90%; 
-            
+           
         } 
           
 

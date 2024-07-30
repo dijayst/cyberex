@@ -413,7 +413,7 @@ document.getElementById("test12").innerHTML = users.map(user => {
             </div>
         </div>
         <div style="width: 25px; background-color: red;"></div>
-        <div style="display: flex; flex-direction: row; padding: 0px; gap: 10px; justify-content: center;">
+        <div style="display: flex; flex-direction: row; padding: 0px; gap: 10px; justify-content: center;margin-top:15px;">
             <div style="background-color: #FFEFEA; width: 60px; border-radius: 8px; height: 20px; color: #FA6230; padding-top: 4px; font-size: 11px;">${user.users}</div>
             <div style="background-color: #FFEFEA; width: 60px; border-radius: 8px; height: 20px; color: #FA6230; padding-top: 4px; font-size: 11px;">${user.staff}</div>
         </div>
